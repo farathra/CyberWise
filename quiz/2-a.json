@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "2-a-001",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Sistem komputasi digital merepresentasikan seluruh data menggunakan sistem bilangan...",
+      "options": [
+        "Desimal (basis 10)",
+        "Oktal (basis 8)",
+        "Biner (basis 2: angka 0 dan 1)",
+        "Heksadesimal (basis 16)"
+      ],
+      "answer": 2,
+      "explanation": "Sistem digital bekerja menggunakan kode biner (bit 0 dan 1) yang merepresentasikan ada atau tidaknya sinyal listrik pada sirkuit semikonduktor.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-002",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Perbedaan utama antara sinyal analog dan sinyal digital adalah...",
+      "options": [
+        "Sinyal analog berbentuk gelombang kontinu, sedangkan sinyal digital berbentuk pulsa diskrit",
+        "Sinyal analog lebih cepat daripada sinyal digital",
+        "Sinyal digital tidak membutuhkan arus listrik",
+        "Sinyal analog tidak pernah mengalami derau (noise)"
+      ],
+      "answer": 0,
+      "explanation": "Sinyal analog bersifat kontinu seiring waktu, sementara sinyal digital tersusun atas nilai diskrit (0 dan 1) yang presisi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-003",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Proses konversi dokumen kertas atau suara analog menjadi berkas digital disebut...",
+      "options": [
+        "Defragmentasi",
+        "Digitalisasi (Digitization)",
+        "Kompilasi",
+        "Overheating"
+      ],
+      "answer": 1,
+      "explanation": "Digitalisasi adalah proses mengubah representasi informasi fisik atau analog menjadi format biner digital.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-004",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Komponen elektronika mikroskopis yang bertindak sebagai sakelar digital biner di dalam prosesor modern adalah...",
+      "options": [
+        "Transistor",
+        "Transformator",
+        "Kapasitor elektrolit",
+        "Tabung filamen"
+      ],
+      "answer": 0,
+      "explanation": "Transistor adalah komponen inti sirkuit terpadu yang dapat dinyalakan (1) atau dimatikan (0) miliaran kali per detik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-005",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Keunggulan utama data digital dalam hal penggandaan (duplikasi) adalah...",
+      "options": [
+        "Salinan digital selalu mengalami penurunan kualitas sebesar 10%",
+        "Salinan digital dapat dibuat identik 100% tanpa penurunan mutu (lossless replication)",
+        "Membutuhkan perangkat keras khusus bersertifikat militer",
+        "Hanya dapat digandakan satu kali dalam setahun"
+      ],
+      "answer": 1,
+      "explanation": "Karena data digital adalah kumpulan angka diskrit, menduplikasi berkas digital menghasilkan salinan yang persis sempurna dengan aslinya.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-a-006",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Satuan unit terkecil dari data dalam sistem komputasi digital disebut...",
+      "options": [
+        "Byte",
+        "Bit (Binary Digit)",
+        "Hertz",
+        "Pixel"
+      ],
+      "answer": 1,
+      "explanation": "Bit adalah kependekan dari Binary Digit, yaitu nilai tunggal 0 atau 1 yang merupakan unit dasar komputasi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-007",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Satu Byte dalam standar komputasi modern terdiri dari berapa bit?",
+      "options": [
+        "4 bit",
+        "8 bit",
+        "16 bit",
+        "32 bit"
+      ],
+      "answer": 1,
+      "explanation": "Secara standar internasional, 1 Byte tersusun atas kombinasi 8 bit, yang cukup untuk merepresentasikan satu karakter teks ASCII.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-008",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Perangkat yang bertugas mengubah sinyal analog dari dunia nyata menjadi sinyal digital untuk diproses komputer disebut...",
+      "options": [
+        "ADC (Analog-to-Digital Converter)",
+        "DAC (Digital-to-Analog Converter)",
+        "CPU (Central Processing Unit)",
+        "RAM (Random Access Memory)"
+      ],
+      "answer": 0,
+      "explanation": "ADC mengonversi gelombang analog (seperti gelombang suara mikrofon) menjadi serangkaian angka biner diskrit.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-009",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Ketika Anda mendengarkan musik digital melalui earphone, komponen yang mengubah file MP3 kembali menjadi gelombang suara fisik adalah...",
+      "options": [
+        "DAC (Digital-to-Analog Converter)",
+        "ADC (Analog-to-Digital Converter)",
+        "Firewall",
+        "Heatsink"
+      ],
+      "answer": 0,
+      "explanation": "DAC mengubah bit-bit biner kembali menjadi tegangan listrik analog yang menggetarkan membran speaker atau earphone.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-010",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Mengapa sinyal digital jauh lebih tahan terhadap gangguan derau (noise) dibandingkan sinyal analog?",
+      "options": [
+        "Karena sinyal digital menggunakan kabel yang lebih tebal",
+        "Karena sistem digital hanya perlu membedakan dua kondisi tegas (tinggi/rendah atau 1/0), bukan nilai tegangan presisi yang fluktuatif",
+        "Karena sinyal digital tidak merambat melalui udara",
+        "Karena sinyal digital kebal terhadap hukum fisika"
+      ],
+      "answer": 1,
+      "explanation": "Sedikit gangguan derau tidak akan mengubah nilai 1 menjadi 0 selama tegangan listrik masih berada dalam ambang batas deteksi biner.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-a-011",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Logika matematika yang mendasari cara kerja sirkuit gerbang logika di dalam prosesor digital adalah...",
+      "options": [
+        "Aljabar Boolean (Boolean Algebra)",
+        "Geometri Euklides",
+        "Kalkulus Integral",
+        "Trigonometri Segitiga"
+      ],
+      "answer": 0,
+      "explanation": "Aljabar Boolean, dengan operasi logika AND, OR, dan NOT, adalah dasar matematis perancangan sirkuit mikroprosesor digital.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-012",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Teknologi penyimpanan digital yang tidak memiliki komponen mekanis bergerak dan mengandalkan sel memori kilat (flash memory) disebut...",
+      "options": [
+        "Solid State Drive (SSD)",
+        "Hard Disk Drive (HDD)",
+        "Floppy Disk",
+        "Kaset Pita Magnetik"
+      ],
+      "answer": 0,
+      "explanation": "SSD menyimpan data secara elektronik murni pada chip semikonduktor tanpa piringan berputar, sehingga jauh lebih cepat dan tahan guncangan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-013",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Dua tahapan utama dalam proses digitalisasi suara analog adalah...",
+      "options": [
+        "Sampling (pencuplikan) dan Kuantisasi (quantization)",
+        "Pencetakan dan Pengetikan",
+        "Pemanasan dan Pendinginan",
+        "Enkapsulasi dan Polimerisasi"
+      ],
+      "answer": 0,
+      "explanation": "Sampling mengukur amplitudo gelombang secara berkala tiap detik, dan kuantisasi membulatkan nilai tersebut ke tingkat biner terdekat.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-a-014",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Perbedaan antara kompresi data 'lossless' dan 'lossy' adalah...",
+      "options": [
+        "Lossless mengembalikan data 100% utuh tanpa pengurangan detail, sedangkan lossy membuang sebagian data yang kurang terlihat/terdengar manusia demi ukuran file lebih kecil",
+        "Lossless hanya untuk video, sedangkan lossy hanya untuk teks",
+        "Lossless selalu menghasilkan file berukuran lebih kecil dari lossy",
+        "Lossy tidak dapat dibuka kembali oleh komputer"
+      ],
+      "answer": 0,
+      "explanation": "Kompresi lossless (seperti ZIP atau PNG) mempertahankan semua bit asli, sementara lossy (seperti JPEG atau MP3) memangkas data non-esensial.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-015",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Berapa kapasitas kombinasi nilai unik yang dapat direpresentasikan oleh deretan 8 bit (1 byte)?",
+      "options": [
+        "8 kombinasi",
+        "64 kombinasi",
+        "256 kombinasi (2 pangkat 8)",
+        "1024 kombinasi"
+      ],
+      "answer": 2,
+      "explanation": "Dengan 8 bit biner, rumus kombinasi adalah 2^8 = 256 nilai unik yang berbeda (mulai dari 00000000 hingga 11111111).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-016",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Mengapa teknologi digital memungkinkan transmisi data jarak jauh tanpa distorsi yang parah?",
+      "options": [
+        "Karena pengulang digital (repeater) dapat meregenerasi sinyal biner bersih dan menghilangkan derau di perjalanan",
+        "Karena kabel digital tidak terpengaruh oleh jarak fisik bumi",
+        "Karena sinyal digital bergerak lebih cepat dari kecepatan cahaya",
+        "Karena satelit internet memancarkan gelombang tanpa energi"
+      ],
+      "answer": 0,
+      "explanation": "Repeater digital membaca nilai 1 dan 0 yang masuk, lalu memancarkan ulang sinyal baru yang bersih tanpa mewariskan derau sebelumnya.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-a-017",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Media penyimpanan optik seperti CD atau DVD membaca data biner menggunakan teknologi...",
+      "options": [
+        "Sinar laser yang mendeteksi lekukan mikroskopis (pits and lands) pada piringan",
+        "Jarum magnetik yang menggores permukaan kaset",
+        "Arus listrik bertegangan tinggi 220 Volt",
+        "Cairan kimia pengembang foto"
+      ],
+      "answer": 0,
+      "explanation": "Laser optik membaca perbedaan pantulan cahaya dari lekukan pits dan dataran lands pada lapisan reflektif cakram untuk diterjemahkan menjadi 0 dan 1.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-018",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Salah satu kelemahan teknologi kaset pita analog dibandingkan file audio digital adalah...",
+      "options": [
+        "Kaset pita mudah diputar di laptop modern",
+        "Kualitas rekaman kaset pita menurun setiap kali diputar ulang atau digandakan (generasi degradasi)",
+        "Kaset pita tidak dapat disentuh secara fisik",
+        "Kaset pita membutuhkan koneksi internet stabil"
+      ],
+      "answer": 1,
+      "explanation": "Media analog mengalami keausan fisik dan degradasi kualitas audio setiap kali disalin atau diputar.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-019",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Istilah 'Bandwidth' dalam jaringan digital mengukur...",
+      "options": [
+        "Berat fisik router dalam kilogram",
+        "Kapasitas maksimum volume data yang dapat ditransmisikan melalui saluran komunikasi dalam periode waktu tertentu (misal Mbps)",
+        "Jarak geografis antara dua menara pemancar",
+        "Jumlah tombol pada keyboard komputer"
+      ],
+      "answer": 1,
+      "explanation": "Bandwidth menyatakan kapasitas transfer data per detik, biasanya diukur dalam Megabit per detik (Mbps) atau Gigabit per detik (Gbps).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-020",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Apa peran sistem operasi (Operating System) dalam menjembatani pengguna dengan perangkat keras digital?",
+      "options": [
+        "Menjadi perantara yang mengelola sumber daya perangkat keras dan menyediakan antarmuka bagi aplikasi serta pengguna",
+        "Menggantikan fungsi kabel daya listrik komputer",
+        "Membuat komputer kebal terhadap sengatan petir",
+        "Menghilangkan kebutuhan memori RAM"
+      ],
+      "answer": 0,
+      "explanation": "Sistem operasi (seperti Windows, Linux, Android) mengabstraksi kompleksitas biner perangkat keras menjadi tampilan antarmuka yang mudah digunakan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-021",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Konsep 'Universal Turing Machine' yang digagas oleh Alan Turing menjadi dasar bagi komputer modern karena membuktikan bahwa...",
+      "options": [
+        "Satu mesin yang dapat diprogram mampu menjalankan algoritma komputasi apa pun",
+        "Komputer hanya bisa digunakan untuk menghitung pajak",
+        "Komputer harus dibuat dari bahan kayu",
+        "Internet tidak membutuhkan protokol komunikasi"
+      ],
+      "answer": 0,
+      "explanation": "Mesin Turing adalah model teoritis komputer serbaguna yang dapat mengeksekusi instruksi program perangkat lunak apa pun.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-a-022",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Standar pengkodean karakter internasional yang mencakup seluruh huruf alfabet dunia, simbol, dan emoji dalam format biner disebut...",
+      "options": [
+        "Unicode (UTF-8)",
+        "Morse Code",
+        "Braille Code",
+        "Barcode EAN-13"
+      ],
+      "answer": 0,
+      "explanation": "Unicode (terutama UTF-8) adalah standar digital global yang memetakan karakter dari hampir semua bahasa di dunia ke dalam nilai biner.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-023",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Resolusi gambar digital '1920 x 1080' piksel berarti...",
+      "options": [
+        "Gambar tersebut memiliki 1920 piksel horizontal dan 1080 piksel vertikal",
+        "Gambar tersebut memiliki berat 1920 gram",
+        "Gambar tersebut hanya bisa dilihat selama 1080 detik",
+        "Gambar tersebut hanya memiliki warna hitam dan putih"
+      ],
+      "answer": 0,
+      "explanation": "Resolusi piksel mendefinisikan kerapatan titik warna diskrit dalam kisi matriks layar atau gambar digital.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-024",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Di dalam mikroprosesor, instruksi program dan data biner diproses pada bagian yang disebut...",
+      "options": [
+        "ALU (Arithmetic Logic Unit)",
+        "VGA Fan",
+        "Optical Drive Tray",
+        "Power Supply Unit"
+      ],
+      "answer": 0,
+      "explanation": "ALU adalah komponen inti prosesor yang mengeksekusi operasi aritmetika (tambah, kurang) dan operasi logika biner (AND, OR, NOT).",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-a-025",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Mengapa data biner '0' dan '1' dipilih untuk mewakili komputasi elektronik daripada angka desimal 0 sampai 9?",
+      "options": [
+        "Karena sirkuit elektronik jauh lebih mudah, stabil, dan andal membedakan dua status fisik (ada tegangan vs tidak ada tegangan) daripada 10 tingkat tegangan berbeda",
+        "Karena angka selain 0 dan 1 belum ditemukan saat komputer diciptakan",
+        "Agar manusia tidak bisa membaca data komputer",
+        "Karena desimal membutuhkan tinta cair di dalam prosesor"
+      ],
+      "answer": 0,
+      "explanation": "Membedakan ON (ada arus) dan OFF (tidak ada arus) secara elektronik sangat stabil dan minim kesalahan dibandingkan mengukur 10 voltase presisi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-026",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Karakteristik 'programmable' (dapat diprogram) pada teknologi digital berarti...",
+      "options": [
+        "Fungsi perangkat keras dapat diubah dan diperluas hanya dengan memperbarui perangkat lunak tanpa membongkar sirkuit fisik",
+        "Perangkat otomatis rusak jika listrik padam",
+        "Perangkat tidak dapat dihubungkan ke komputer lain",
+        "Pengguna harus membuat perangkat keras baru setiap hari"
+      ],
+      "answer": 0,
+      "explanation": "Fleksibilitas utama komputer digital adalah kemampuannya menjalankan berbagai macam tugas berbeda cukup dengan mengubah instruksi program perangkat lunak.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-027",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Teknologi semikonduktor modern sebagian besar diproduksi menggunakan bahan dasar kimia...",
+      "options": [
+        "Silikon (Silicon)",
+        "Batu bara",
+        "Tembaga murni",
+        "Plastik polimer"
+      ],
+      "answer": 0,
+      "explanation": "Silikon adalah bahan semikonduktor melimpah yang sifat konduktivitas listriknya dapat dimanipulasi secara presisi untuk memproduksi chip transistor.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-a-028",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Proses mengubah file teks berukuran 100 MB menjadi file arsip berukuran 20 MB tanpa kehilangan satu kata pun merupakan contoh...",
+      "options": [
+        "Lossless data compression",
+        "Lossy audio filtering",
+        "Analog modulation",
+        "Memory leak"
+      ],
+      "answer": 0,
+      "explanation": "Kompresi data lossless (seperti format ZIP atau GZ) memampatkan ukuran file teks secara matematis dan dapat dipulihkan 100% sempurna.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-029",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Apa yang dimaksud dengan 'Latensi' (Latency) dalam komunikasi digital?",
+      "options": [
+        "Waktu jeda atau penundaan yang dibutuhkan sebuah paket data untuk berpindah dari sumber ke tujuannya",
+        "Jumlah warna yang dapat ditampilkan oleh layar monitor",
+        "Berat fisik kabel serat optik",
+        "Panjang kata sandi yang digunakan pengguna"
+      ],
+      "answer": 0,
+      "explanation": "Latensi adalah waktu tempuh paket data melintasi jaringan, diukur dalam milidetik (ms). Latensi rendah sangat krusial dalam video call dan game daring.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-a-030",
+      "chapterId": "2",
+      "subchapterId": "2-a",
+      "question": "Manakah kesimpulan yang paling tepat mengenai revolusi teknologi digital bagi peradaban manusia?",
+      "options": [
+        "Teknologi digital mengubah informasi menjadi kode biner terukur, memungkinkan penyimpanan tanpa batas, transmisi instan, dan otomatisasi komputasi yang mentransformasi seluruh peradaban",
+        "Teknologi digital hanya tren sementara yang akan segera ditinggalkan kembali ke era analog murni",
+        "Teknologi digital hanya bermanfaat untuk industri hiburan dan game",
+        "Teknologi digital tidak membawa perubahan apapun pada cara kerja manusia"
+      ],
+      "answer": 0,
+      "explanation": "Digitalisasi merevolusi cara manusia menyimpan, memproses, dan membagikan pengetahuan secara global dan instan.",
+      "difficulty": "hard"
+    }
+  ]
+}

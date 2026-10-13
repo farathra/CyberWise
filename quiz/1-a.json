@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "1-a-001",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Apa yang dimaksud dengan keamanan digital (cybersecurity)?",
+      "options": [
+        "Perlindungan sistem komputer dari ancaman fisik dan bencana alam saja",
+        "Praktik melindungi informasi, sistem, dan jaringan digital dari ancaman serta serangan siber",
+        "Penggunaan kata sandi sederhana yang mudah diingat pada media sosial",
+        "Pemasangan program pembersih memori pada perangkat ponsel pintar"
+      ],
+      "answer": 1,
+      "explanation": "Keamanan digital adalah praktik komprehensif dalam melindungi perangkat keras, perangkat lunak, jaringan, dan data dari akses tanpa izin, kerusakan, atau pencurian siber.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-002",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Tiga pilar utama dalam konsep keamanan informasi dikenal sebagai...",
+      "options": [
+        "Triad CIA (Confidentiality, Integrity, Availability)",
+        "Model AAA (Authentication, Authorization, Accounting)",
+        "Protokol TCP/IP (Transmission, Internet, Protocol)",
+        "Metode CRUD (Create, Read, Update, Delete)"
+      ],
+      "answer": 0,
+      "explanation": "Triad CIA (Confidentiality/Kerahasiaan, Integrity/Integritas, Availability/Ketersediaan) merupakan model dasar perancangan sistem keamanan informasi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-003",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Pilar 'Confidentiality' (Kerahasiaan) dalam Triad CIA bertujuan untuk...",
+      "options": [
+        "Memastikan sistem komputasi selalu beroperasi tanpa gangguan",
+        "Menjamin data tidak mengalami korupsi atau manipulasi saat disimpan",
+        "Memastikan bahwa informasi hanya dapat diakses oleh pihak yang berwenang",
+        "Mempercepat proses transmisi data melalui jaringan nirkabel"
+      ],
+      "answer": 2,
+      "explanation": "Confidentiality berfokus pada pencegahan kebocoran data sensitif agar hanya pihak yang memiliki otorisasi sah yang dapat mengaksesnya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-004",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Manakah contoh ancaman yang secara langsung menyerang pilar 'Integrity' (Integritas)?",
+      "options": [
+        "Peretas mengubah nilai saldo rekening bank nasabah secara tidak sah di basis data",
+        "Server web mengalami kelebihan beban sehingga tidak dapat diakses publik",
+        "Pencuri menyalin berkas rahasia perusahaan tanpa mengubah isinya",
+        "Pengguna lupa kata sandi akun surat elektronik pribadinya"
+      ],
+      "answer": 0,
+      "explanation": "Integritas berkaitan dengan keaslian dan akurasi data. Mengubah data tanpa izin merupakan pelanggaran langsung terhadap pilar integritas.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-005",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Serangan siber jenis Denial of Service (DoS) paling berdampak pada pilar Triad CIA yang mana?",
+      "options": [
+        "Confidentiality (Kerahasiaan)",
+        "Integrity (Integritas)",
+        "Availability (Ketersediaan)",
+        "Non-repudiation (Anti-penyangkalan)"
+      ],
+      "answer": 2,
+      "explanation": "Serangan DoS membanjiri server dengan lalu lintas palsu agar layanan lumpuh, sehingga melanggar pilar ketersediaan (availability) bagi pengguna yang sah.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-a-006",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Mengapa jaringan Wi-Fi publik tanpa kata sandi di kafe berisiko tinggi bagi keamanan digital pengguna?",
+      "options": [
+        "Karena kecepatan unduhannya selalu dibatasi oleh penyedia layanan",
+        "Karena lalu lintas data yang tidak terenkripsi dapat disadap menggunakan teknik packet sniffing oleh pihak lain di jaringan yang sama",
+        "Karena perangkat pengguna otomatis menghapus seluruh berkas saat terhubung",
+        "Karena baterai ponsel akan terkuras dua kali lebih cepat"
+      ],
+      "answer": 1,
+      "explanation": "Jaringan Wi-Fi publik terbuka memungkinkan peretas di jaringan yang sama memantau dan menyadap lalu lintas data pengguna yang tidak terenkripsi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-007",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Teknik pencurian data dengan menyadap paket data yang melintas pada jaringan komputer disebut...",
+      "options": [
+        "Packet sniffing",
+        "Disk defragmentation",
+        "Port forwarding",
+        "Overclocking"
+      ],
+      "answer": 0,
+      "explanation": "Packet sniffing adalah metode menangkap dan menganalisis paket data yang bergerak di jaringan, sering disalahgunakan untuk mencuri informasi sensitif.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-008",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Apa fungsi utama dari Autentikasi Dua Faktor (2FA) dalam melindungi akun digital?",
+      "options": [
+        "Membuat kata sandi menjadi lebih pendek agar mudah diingat",
+        "Memberikan lapisan perlindungan tambahan sehingga akun tidak bisa diakses hanya dengan kata sandi",
+        "Mempercepat waktu login ke aplikasi tanpa perlu verifikasi",
+        "Menghapus riwayat pencarian peramban secara berkala"
+      ],
+      "answer": 1,
+      "explanation": "2FA mewajibkan dua bukti identitas (misalnya kata sandi ditambah kode OTP dari aplikasi), sehingga peretas yang mengetahui kata sandi tetap tidak bisa masuk.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-009",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Manakah yang merupakan contoh data identitas pribadi digital yang wajib dilindungi kerahasiaannya?",
+      "options": [
+        "Nomor Induk Kependudukan (NIK) dan kode OTP perbankan",
+        "Nama presiden Republik Indonesia pertama",
+        "Alamat situs resmi perpustakaan nasional",
+        "Jadwal tayang film bioskop di akhir pekan"
+      ],
+      "answer": 0,
+      "explanation": "NIK dan OTP adalah data pribadi dan kredensial sensitif yang jika bocor dapat disalahgunakan untuk penipuan finansial atau pencurian identitas.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-010",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Sebuah rumah sakit tidak dapat membuka data rekam medis pasien darurat karena server database terkunci serangan ransomware. Pilar CIA manakah yang terganggu?",
+      "options": [
+        "Availability (Ketersediaan)",
+        "Authenticity (Keaslian)",
+        "Auditability (Keterlacakan)",
+        "Scalability (Skalabilitas)"
+      ],
+      "answer": 0,
+      "explanation": "Ketika data atau sistem tidak dapat diakses saat dibutuhkan oleh pengguna yang berwenang, pilar ketersediaan (availability) sedang mengalami kegagalan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-011",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Jika seorang karyawan perusahaan sengaja membocorkan dokumen strategi bisnis rahasia kepada kompetitor, pilar Triad CIA yang dilanggar adalah...",
+      "options": [
+        "Integrity",
+        "Confidentiality",
+        "Availability",
+        "Efficiency"
+      ],
+      "answer": 1,
+      "explanation": "Pembocoran rahasia perusahaan kepada pihak luar yang tidak berhak merupakan pelanggaran langsung terhadap kerahasiaan (confidentiality).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-012",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Untuk membuktikan bahwa dokumen digital tidak mengalami modifikasi selama pengiriman, teknologi yang umum digunakan adalah...",
+      "options": [
+        "Fungsi hash kriptografi dan tanda tangan digital",
+        "Penyimpanan berkas dalam format gambar JPEG",
+        "Mengganti nama berkas dengan huruf kapital",
+        "Memperkecil ukuran berkas menggunakan kompresi ZIP"
+      ],
+      "answer": 0,
+      "explanation": "Hash kriptografi dan digital signature memverifikasi integritas data; jika data berubah satu karakter saja, nilai hash akan berubah drastis.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-013",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Tindakan apa yang paling disarankan ketika seseorang terpaksa menggunakan koneksi Wi-Fi publik?",
+      "options": [
+        "Menonaktifkan firewall perangkat",
+        "Menggunakan Virtual Private Network (VPN) terpercaya dan memastikan koneksi HTTPS",
+        "Membagikan folder penyimpanan lokal ke jaringan umum",
+        "Melakukan transaksi perbankan dalam jumlah besar"
+      ],
+      "answer": 1,
+      "explanation": "VPN mengenkripsi seluruh lalu lintas data antara perangkat pengguna dan server tujuan, melindungi data dari intipan di jaringan publik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-014",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Mengapa perlindungan terhadap infrastruktur siber pada fasilitas pembangkit listrik dan rumah sakit digolongkan sebagai prioritas keamanan nasional?",
+      "options": [
+        "Karena fasilitas tersebut menggunakan komputer dengan spesifikasi gaming",
+        "Karena gangguan siber pada sektor kritis dapat melumpuhkan layanan publik dan mengancam keselamatan jiwa manusia",
+        "Agar biaya tagihan listrik bulanan masyarakat menjadi gratis",
+        "Karena infrastruktur siber hanya dirawat oleh organisasi internasional"
+      ],
+      "answer": 1,
+      "explanation": "Infrastruktur kritis mengontrol fungsi penting kehidupan masyarakat. Serangan siber padanya dapat berdampak fatal pada keselamatan fisik dan stabilitas negara.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-015",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Manakah pernyataan berikut yang BENAR mengenai hubungan antara keamanan digital dan privasi pengguna?",
+      "options": [
+        "Keamanan digital tidak memiliki kaitan apapun dengan privasi pengguna",
+        "Keamanan digital menyediakan mekanisme teknis untuk menjaga agar data pribadi tetap terlindungi dari penyalahgunaan",
+        "Semakin rendah keamanan digital suatu aplikasi, semakin tinggi privasi pengguna",
+        "Privasi pengguna hanya penting bagi pejabat pemerintah, bukan masyarakat umum"
+      ],
+      "answer": 1,
+      "explanation": "Keamanan digital adalah fondasi teknis yang menjamin perlindungan privasi. Tanpa keamanan yang memadai, privasi data pengguna tidak dapat dipertahankan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-016",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Istilah 'Data Breach' dalam konteks keamanan digital diartikan sebagai...",
+      "options": [
+        "Penghapusan berkas sampah secara otomatis oleh sistem operasi",
+        "Insiden keamanan di mana data rahasia atau terlindungi diakses, disalin, atau dicuri oleh pihak yang tidak berwenang",
+        "Peningkatan kapasitas hard disk komputer menggunakan kabel tambahan",
+        "Proses penggabungan dua jaringan komputer lokal menjadi satu"
+      ],
+      "answer": 1,
+      "explanation": "Data breach (kebocoran data) adalah insiden terlepasnya informasi rahasia ke lingkungan yang tidak terpercaya atau ke tangan pihak tidak berwenang.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-017",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Sita menerima surel yang mengaku dari banknya dan meminta ia mengklik tautan untuk memasukkan PIN ATM. Tindakan ini merupakan indikasi serangan...",
+      "options": [
+        "Phishing",
+        "Defragmentation",
+        "Buffer Overflow",
+        "SQL Formatting"
+      ],
+      "answer": 0,
+      "explanation": "Phishing adalah upaya penipuan rekayasa sosial untuk memancing korban memberikan kredensial rahasia melalui pesan atau situs tiruan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-018",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Apa peran sistem cadangan data (backup) dalam menjaga pilar Availability pada Triad CIA?",
+      "options": [
+        "Mencegah pengguna salah memasukkan kata sandi",
+        "Memungkinkan pemulihan sistem dan data dengan cepat apabila terjadi kerusakan perangkat keras atau serangan ransomware",
+        "Menggantikan fungsi antivirus dalam memindai berkas unduhan",
+        "Mempercepat kecepatan browsing internet di peramban"
+      ],
+      "answer": 1,
+      "explanation": "Cadangan data memastikan data tetap dapat dipulihkan dan tersedia kembali saat sistem utama mengalami kegagalan, menjaga ketersediaan informasi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-019",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Jika seorang hacker menyusup ke server sekolah dan mengubah nilai rapor siswa dari C menjadi A, pilar keamanan manakah yang telah dijebol?",
+      "options": [
+        "Availability",
+        "Integrity",
+        "Scalability",
+        "Usability"
+      ],
+      "answer": 1,
+      "explanation": "Mengubah data secara ilegal merusak kebenaran dan keabsahan informasi, yang merupakan pelanggaran terhadap integritas (integrity).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-020",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Perlindungan data 'at rest' dalam keamanan digital merujuk pada pengamanan data saat...",
+      "options": [
+        "Sedang dikirimkan melalui jaringan internet",
+        "Sedang disimpan di media penyimpanan seperti hard disk atau server",
+        "Sedang diproses di memori RAM oleh CPU",
+        "Sedang dihapus oleh pengguna dari tempat sampah (recycle bin)"
+      ],
+      "answer": 1,
+      "explanation": "Data at rest adalah istilah untuk data yang tidak aktif bergerak di jaringan, melainkan tersimpan diam di media penyimpanan fisik maupun awan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-a-021",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Perlindungan data 'in transit' merujuk pada pengamanan data saat...",
+      "options": [
+        "Sedang disimpan di kartu memori ponsel",
+        "Sedang berpindah atau dikirimkan melalui jaringan komunikasi",
+        "Sedang dicetak ke lembaran kertas menggunakan printer",
+        "Sedang dimatikan daya listrik komputernya"
+      ],
+      "answer": 1,
+      "explanation": "Data in transit (atau in motion) adalah data yang sedang bergerak melintasi jaringan internet atau lokal, misalnya saat mengunggah berkas.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-022",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Protokol keamanan web yang ditandai dengan ikon gembok dan awalan 'https://' pada peramban berfungsi untuk...",
+      "options": [
+        "Mengenkripsi komunikasi antara peramban pengguna dan server web",
+        "Menjamin bahwa situs web tersebut pasti tidak berisi berita bohong",
+        "Menghilangkan seluruh iklan di halaman web",
+        "Menyediakan akses internet gratis tanpa kuota data"
+      ],
+      "answer": 0,
+      "explanation": "HTTPS (Hypertext Transfer Protocol Secure) menggunakan TLS/SSL untuk mengenkripsi pertukaran data sehingga tidak dapat disadap di perjalanan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-023",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Apakah konsep keamanan digital hanya melibatkan aspek teknis perangkat lunak dan perangkat keras?",
+      "options": [
+        "Ya, keamanan digital murni persoalan bahasa pemrograman",
+        "Tidak, keamanan digital juga mencakup aspek manusia (kesadaran pengguna) dan prosedur/kebijakan organisasi",
+        "Ya, manusia tidak memiliki andil dalam keamanan siber",
+        "Tidak, keamanan digital hanya berlaku untuk sistem perbankan"
+      ],
+      "answer": 1,
+      "explanation": "Keamanan siber bertumpu pada tritunggal People (manusia), Process (proses/kebijakan), dan Technology (teknologi). Manusia kerap menjadi mata rantai terlemah.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-024",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Serangan Man-in-the-Middle (MitM) adalah ancaman di mana peretas...",
+      "options": [
+        "Mematikan daya listrik seluruh gedung secara tiba-tiba",
+        "Menyusup di tengah-tengah jalur komunikasi antara dua pihak untuk mencegat atau mengubah percakapan tanpa disadari",
+        "Mengganti monitor komputer korban dengan monitor yang rusak",
+        "Menghapus program antivirus dari toko aplikasi resmi"
+      ],
+      "answer": 1,
+      "explanation": "Dalam serangan MitM, penyerang memposisikan dirinya di antara pengirim dan penerima komunikasi untuk mencuri data atau memanipulasi pesan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-a-025",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Mengapa penggunaan kata sandi yang sama di semua akun media sosial dan perbankan sangat berbahaya?",
+      "options": [
+        "Karena jika satu layanan mengalami kebocoran data, peretas dapat mencoba kombinasi tersebut untuk membobol seluruh akun lainnya (credential stuffing)",
+        "Karena sistem operasi ponsel akan menolak kata sandi yang duplikat",
+        "Karena kuota internet akan lebih cepat habis",
+        "Karena peramban web tidak dapat menyimpan kata sandi yang berulang"
+      ],
+      "answer": 0,
+      "explanation": "Praktik password reuse membuka celah serangan credential stuffing: peretas memanfaatkan data bocor dari satu situs untuk mengakses akun korban di situs lain.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-026",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Budi ingin menjual ponsel lamanya. Langkah keamanan digital yang paling tepat dilakukan Budi sebelum menyerahkan ponsel tersebut adalah...",
+      "options": [
+        "Cukup menghapus foto-foto profil di galeri utama",
+        "Keluar dari semua akun, melakukan pencadangan, lalu melakukan reset ke setelan pabrik (factory reset) dengan penghapusan menyeluruh",
+        "Mematikan koneksi Bluetooth saja",
+        "Mengganti wallpaper layar kunci dengan gambar polos"
+      ],
+      "answer": 1,
+      "explanation": "Factory reset menghapus kredensial, token akun, berkas pribadi, dan basis data lokal sehingga pemilik baru tidak dapat mengakses data pribadi lama.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-027",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Konsep 'Non-repudiation' (Anti-penyangkalan) dalam keamanan informasi bertujuan untuk...",
+      "options": [
+        "Menjamin bahwa pengirim pesan tidak dapat menyangkal bahwa dialah yang telah mengirimkan pesan tersebut",
+        "Menjamin komputer tidak dapat dimatikan oleh sistem otomatis",
+        "Menolak seluruh koneksi jaringan yang masuk tanpa pemberitahuan",
+        "Menghapus riwayat transaksi perbankan setelah 24 jam"
+      ],
+      "answer": 0,
+      "explanation": "Non-repudiation memastikan seseorang tidak dapat membantah keaslian tanda tangannya pada dokumen atau pengiriman transaksi digital tertentu.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-a-028",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Apa risiko terbesar jika sebuah institusi pendidikan mengabaikan pilar Integrity pada sistem basis data nilai siswanya?",
+      "options": [
+        "Komputer guru akan memerlukan waktu booting lebih lama",
+        "Kepercayaan terhadap keabsahan dokumen ijazah dan riwayat akademik siswa runtuh karena data dapat dimanipulasi tanpa jejak",
+        "Siswa tidak dapat bermain game online saat istirahat sekolah",
+        "Jumlah murid baru tahun depan otomatis menurun drastis"
+      ],
+      "answer": 1,
+      "explanation": "Hilangnya integritas data menghancurkan kredibilitas informasi. Dokumen resmi yang dihasilkan tidak lagi dapat dipercaya keabsahannya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-a-029",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Sebuah sistem pembayaran digital menerapkan enkripsi end-to-end, firewall berlapis, dan pemantauan transaksi real-time. Upaya ini merupakan penerapan dari...",
+      "options": [
+        "Keamanan digital untuk melindungi aset finansial dan privasi nasabah",
+        "Trik pemasaran untuk menaikkan harga saham perusahaan semata",
+        "Metode penghindaran pajak penghasilan perusahaan",
+        "Proses penurunan mutu perangkat keras perbankan"
+      ],
+      "answer": 0,
+      "explanation": "Penerapan enkripsi, firewall, dan monitoring adalah arsitektur keamanan digital komprehensif demi menjaga integritas dan kerahasiaan dana nasabah.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-a-030",
+      "chapterId": "1",
+      "subchapterId": "1-a",
+      "question": "Di antara skenario berikut, manakah yang paling mencerminkan penerapan ketiga pilar Triad CIA secara seimbang?",
+      "options": [
+        "Sistem perpustakaan online mengunci seluruh koleksi buku selamanya sehingga tidak ada yang bisa membacanya",
+        "Portal akademik sekolah mengenkripsi data nilai (Confidentiality), mencatat riwayat perubahan nilai oleh guru berwenang (Integrity), dan memiliki server cadangan agar portal dapat diakses siswa 24/7 (Availability)",
+        "Situs e-commerce mempublikasikan nomor kartu kredit seluruh pembeli secara terbuka agar mudah diakses semua orang",
+        "Aplikasi perbankan mengizinkan siapa saja mentransfer uang tanpa perlu kata sandi demi kenyamanan pengguna"
+      ],
+      "answer": 1,
+      "explanation": "Penerapan seimbang mencakup proteksi data dari intipan (C), jaminan keabsahan data tanpa pemalsuan (I), dan kemudahan akses bagi pengguna sah kapan pun dibutuhkan (A).",
+      "difficulty": "hard"
+    }
+  ]
+}

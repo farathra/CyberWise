@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "2-d-001",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Manakah di bawah ini yang merupakan dampak positif teknologi digital bagi pelaku UMKM?",
+      "options": [
+        "Biaya operasional sewa gedung fisik melonjak tinggi",
+        "Dapat memperluas jangkauan pemasaran produk ke tingkat nasional dan global melalui e-commerce",
+        "Waktu pembuatan produk menjadi lebih lambat",
+        "Penjualan barang hanya dibatasi secara tunai"
+      ],
+      "answer": 1,
+      "explanation": "Platform e-commerce dan media sosial memungkinkan UMKM menjangkau pasar tanpa batasan lokasi geografis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-002",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Tindakan intimidasi, pelecehan, atau penghinaan terhadap seseorang yang dilakukan melalui media sosial disebut...",
+      "options": [
+        "Phishing",
+        "Cyberbullying (Perundungan Siber)",
+        "Spamming",
+        "Clickbait"
+      ],
+      "answer": 1,
+      "explanation": "Cyberbullying adalah bentuk perundungan yang terjadi secara online melalui media sosial, aplikasi pesan, atau platform game.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-003",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Fenomena psikologis di mana seseorang merasa cemas tertinggal dari tren atau kegiatan seru teman-temannya di media sosial dikenal dengan istilah...",
+      "options": [
+        "FOMO (Fear of Missing Out)",
+        "Phubbing",
+        "Digital Divide",
+        "Doxing"
+      ],
+      "answer": 0,
+      "explanation": "FOMO adalah kecemasan sosial akibat melihat aktivitas orang lain di media sosial secara terus-menerus.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-004",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Mengapa penyebaran berita bohong (hoaks) di media sosial berlangsung sangat cepat?",
+      "options": [
+        "Karena algoritma media sosial selalu menghapus konten yang viral",
+        "Karena konten provokatif dan sensasional memicu reaksi emosional sehingga cepat dibagikan oleh pengguna",
+        "Karena internet hanya dapat diakses pada jam kerja tertentu",
+        "Karena semua pengguna internet telah terverifikasi secara hukum"
+      ],
+      "answer": 1,
+      "explanation": "Judul sensasional memicu emosi pembaca sehingga berita bohong kerap dibagikan ulang sebelum kebenarannya sempat diverifikasi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-005",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Praktik menyebarluaskan data pribadi orang lain secara ilegal di media sosial dengan maksud mempermalukan atau mengancam disebut...",
+      "options": [
+        "Phishing",
+        "Doxing",
+        "Trolling",
+        "Spoofing"
+      ],
+      "answer": 1,
+      "explanation": "Doxing adalah tindakan membongkar dan menyebarkan informasi pribadi seseorang tanpa izin untuk tujuan pelecehan publik.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-d-006",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Kondisi di mana algoritma media sosial hanya menyajikan konten yang sesuai dengan pandangan pengguna sehingga mengurung mereka dalam opini sempit disebut...",
+      "options": [
+        "Echo Chamber / Filter Bubble",
+        "Deepfake",
+        "Digital Wellbeing",
+        "Crowdfunding"
+      ],
+      "answer": 0,
+      "explanation": "Echo chamber dan filter bubble membatasi paparan sudut pandang berbeda, memperkuat bias kognitif dan polarisasi masyarakat.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-d-007",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Perilaku mengabaikan orang di sekitar atau teman bicara karena asyik menatap layar ponsel dikenal dengan istilah...",
+      "options": [
+        "Phubbing (Phone Snubbing)",
+        "Doxing",
+        "Phishing",
+        "Trolling"
+      ],
+      "answer": 0,
+      "explanation": "Phubbing adalah gabungan kata phone dan snubbing, menggambarkan kebiasaan buruk mengabaikan lawan bicara demi layar gawai.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-008",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Penggalangan dana massal berbasis daring melalui platform internet untuk membantu korban bencana alam disebut...",
+      "options": [
+        "Crowdfunding",
+        "Cyberbullying",
+        "Phishing",
+        "Cryptojacking"
+      ],
+      "answer": 0,
+      "explanation": "Crowdfunding (seperti platform Kitabisa) memanfaatkan solidaritas jaringan digital untuk mengumpulkan donasi publik secara transparan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-009",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Teknologi kecerdasan buatan yang mampu memanipulasi video atau rekaman suara seseorang hingga tampak sangat nyata dan mengucapkan hal palsu disebut...",
+      "options": [
+        "Deepfake",
+        "Photoshop biasa",
+        "Barcode scanner",
+        "Screen recorder"
+      ],
+      "answer": 0,
+      "explanation": "Deepfake menggunakan jaringan syaraf tiruan (GAN) untuk menghasilkan video/audio rekayasa realistis yang sering disalahgunakan untuk fitnah atau penipuan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-010",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Dampak negatif dari paparan cahaya biru (blue light) layar gawai pada malam hari sebelum tidur adalah...",
+      "options": [
+        "Menghambat produksi hormon melatonin sehingga mengganggu siklus tidur alami",
+        "Meningkatkan nafsu makan secara berlebihan",
+        "Membuat ponsel kehabisan baterai lebih cepat",
+        "Menghapus riwayat panggilan otomatis"
+      ],
+      "answer": 0,
+      "explanation": "Cahaya biru menekan sekresi melatonin di otak, membuat tubuh mengira masih siang hari sehingga memicu insomnia.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-011",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Kesenjangan kemampuan dan akses terhadap teknologi informasi dan internet antardaerah perkotaan dan pelosok terpencil disebut...",
+      "options": [
+        "Kesenjangan Digital (Digital Divide)",
+        "Digital Footprint",
+        "Digital Immigrant",
+        "Digital Native"
+      ],
+      "answer": 0,
+      "explanation": "Digital divide mencerminkan ketidaksetaraan akses infrastruktur internet dan perangkat keras antarkelompok masyarakat.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-012",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Praktik aplikasi pinjaman online (pinjol) ilegal yang menyedot seluruh kontak buku telepon pengguna di ponsel melanggar prinsip...",
+      "options": [
+        "Privasi data dan hak perlindungan data pribadi konsumen",
+        "Ketentuan warna logo aplikasi",
+        "Standar ukuran tombol layar",
+        "Kecepatan pengetikan pesan"
+      ],
+      "answer": 0,
+      "explanation": "Mengakses data kontak tanpa izin yang sah untuk intimidasi penagihan melanggar hukum perlindungan data pribadi dan regulasi OJK.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-013",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Judi daring (judi online) yang kerap menyamar sebagai game ponsel kasual berdampak buruk karena...",
+      "options": [
+        "Memicu kecanduan patologis, kerugian finansial berat, dan gangguan kesehatan mental pada korbannya",
+        "Mengurangi kapasitas baterai ponsel",
+        "Menghilangkan sinyal Wi-Fi di rumah",
+        "Membuat layar ponsel menjadi buram"
+      ],
+      "answer": 0,
+      "explanation": "Judi online dirancang dengan manipulasi psikologis dopamin yang membuat pengguna kecanduan dan terjerumus utang finansial berat.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-014",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Jejak aktivitas online yang ditinggalkan seseorang saat berselancar di internet (seperti postingan, komentar, riwayat pencarian) disebut...",
+      "options": [
+        "Jejak Digital (Digital Footprint)",
+        "Digital Camera",
+        "Digital Clock",
+        "Digital Audio"
+      ],
+      "answer": 0,
+      "explanation": "Jejak digital bersifat semi-permanen dan dapat dilacak oleh calon pemberi kerja, kampus, atau pihak lain di masa depan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-015",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Bagaimana demokratisasi informasi melalui internet membawa dampak positif bagi pelajar di desa terpencil?",
+      "options": [
+        "Mereka dapat mengakses bahan ajar, ensiklopedia gratis, dan kursus daring yang sama berkualitasnya dengan siswa di kota besar",
+        "Mereka tidak perlu lagi belajar matematika",
+        "Mereka bisa bermain game daring sepanjang hari tanpa batas",
+        "Gedung sekolah fisik di desa otomatis berubah menjadi gedung bertingkat"
+      ],
+      "answer": 0,
+      "explanation": "Internet menghapus sekat geografis, memungkinkan akses ke perpustakaan digital dunia dari mana saja secara cuma-cuma.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-016",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Tindakan provokasi dengan sengaja menulis komentar pedas dan menghasut di forum online untuk memancing kemarahan orang lain disebut...",
+      "options": [
+        "Trolling",
+        "Fact-checking",
+        "Coding",
+        "Debugging"
+      ],
+      "answer": 0,
+      "explanation": "Trolling adalah perilaku destruktif di internet di mana pelaku (troll) sengaja mengacaukan diskusi dan menyulut pertengkaran emosional.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-017",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Apa bahaya dari fenomena 'Doomscrolling' (kebiasaan terus-menerus menelusuri berita negatif di media sosial tanpa henti)?",
+      "options": [
+        "Dapat memicu kecemasan kronis, stres berkepanjangan, dan penurunan kualitas hidup psikologis",
+        "Menghilangkan seluruh data di ponsel cerdas",
+        "Menaikkan tarif listrik rumah tangga",
+        "Mematikan fungsi kamera ponsel secara permanen"
+      ],
+      "answer": 0,
+      "explanation": "Doomscrolling membuat otak terus menerima stimulus ancaman berita buruk, memicu respons stres yang mengganggu kesejahteraan mental.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-018",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Dampak positif penggunaan kecerdasan buatan (AI) di bidang kedokteran adalah...",
+      "options": [
+        "Membantu radiolog menganalisis hasil foto rontgen dan mendeteksi tanda kanker paru-paru lebih dini dan akurat",
+        "Menggantikan seluruh obat kimia dengan sinyal Wi-Fi",
+        "Menghilangkan kebutuhan ruangan operasi di rumah sakit",
+        "Membuat pasien tidak perlu istirahat lagi"
+      ],
+      "answer": 0,
+      "explanation": "Model computer vision AI mampu mendeteksi anomali pada citra medis dengan tingkat akurasi tinggi, mendukung keputusan dokter.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-019",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Penipuan bermodus undangan pernikahan digital atau surat tilang format berkas '.APK' yang dikirim melalui WhatsApp bertujuan untuk...",
+      "options": [
+        "Menyusupkan malware spyware peretas SMS untuk mencuri kode OTP perbankan korban",
+        "Memberikan hadiah uang tunai langsung",
+        "Mempercepat kinerja baterai ponsel",
+        "Membersihkan cache aplikasi WhatsApp"
+      ],
+      "answer": 0,
+      "explanation": "Berkas APK berbahaya mengeksploitasi izin akses SMS pengguna untuk menyadap OTP m-banking dan membobol tabungan korban.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-d-020",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Salah satu dampak negatif belanja online berfitur 'PayLater' bagi generasi muda yang kurang berhati-hati adalah...",
+      "options": [
+        "Perilaku konsumtif impulsif yang berujung pada jeratan bunga pinjaman dan riwayat kredit keuangan (SLIK OJK) yang buruk",
+        "Barang belanjaan tidak akan pernah dikirimkan",
+        "Harga barang otomatis menjadi dua kali lipat saat diterima",
+        "Kurir paket menolak mengantarkan barang"
+      ],
+      "answer": 0,
+      "explanation": "Kemudahan berhutang instan tanpa perencanaan matang kerap memicu gagal bayar yang merusak skor kredit finansial masa depan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-021",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Mengapa penggunaan bot dan akun palsu di media sosial dapat merusak kehidupan berdemokrasi?",
+      "options": [
+        "Karena bot dapat memanipulasi opini publik dengan memperbanyak tagar palsu dan menyebarkan propaganda kebencian secara masif",
+        "Karena bot menghabiskan kuota internet seluruh warga negara",
+        "Karena bot dapat mematikan stasiun televisi nasional",
+        "Karena bot menolak adanya pemilu umum"
+      ],
+      "answer": 0,
+      "explanation": "Pasukan siber (bot army) menciptakan ilusi dukungan massa palsu (astroturfing) untuk mengarahkan opini publik secara manipulatif.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-d-022",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Dalam konteks lingkungan hidup, dampak negatif dari pesatnya pergantian gawai digital adalah...",
+      "options": [
+        "Tumpukan limbah elektronik (E-Waste) beracun seperti timbal dan merkuri yang mencemari tanah dan air",
+        "Pohon-pohon di hutan tumbuh terlalu cepat",
+        "Suhu udara kutub menjadi dingin beku",
+        "Batu karang laut bertambah banyak"
+      ],
+      "answer": 0,
+      "explanation": "Limbah elektronik mengandung logam berat berbahaya yang sulit terurai dan dapat meracuni ekosistem jika tidak didaur ulang secara khusus.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-023",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Dampak positif teknologi digital dalam pengurangan penggunaan kertas (Paperless) adalah...",
+      "options": [
+        "Mengurangi penebangan pohon di hutan dan menghemat ruang fisik penyimpanan arsip",
+        "Menghilangkan kebutuhan membaca buku pelajaran",
+        "Membuat tinta pulpen menjadi tidak berguna selamanya",
+        "Menaikkan harga jual pohon kayu jati"
+      ],
+      "answer": 0,
+      "explanation": "Dokumen digital meminimalkan limbah kertas, menurunkan jejak karbon kantor, dan mempermudah pengarsipan awan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-024",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Praktik 'Clickbait' pada portal berita daring berdampak negatif terhadap pembaca karena...",
+      "options": [
+        "Menggunakan judul sensasional yang tidak sesuai dengan isi berita hanya demi menjebak pembaca agar membuka iklan",
+        "Menyajikan analisis berita yang terlalu ilmiah dan mendalam",
+        "Menolak menerima iklan komersial dari sponsor",
+        "Memberikan langganan koran gratis kepada pembaca"
+      ],
+      "answer": 0,
+      "explanation": "Clickbait mengecoh ekspektasi pembaca demi monetisasi tayangan iklan dan sering kali mengorbankan integritas jurnalisme.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-025",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Bagaimana teknologi digital membantu penyandang disabilitas dalam beraktivitas mandiri?",
+      "options": [
+        "Menyediakan fitur pembaca layar (screen reader) bagi tunanetra dan teks otomatis (live caption) bagi tunarungu",
+        "Menghilangkan kebutuhan fasilitas trotoar umum",
+        "Menyembuhkan seluruh disabilitas fisik secara instan",
+        "Menggantikan kursi roda dengan drone terbang"
+      ],
+      "answer": 0,
+      "explanation": "Aksesibilitas digital (screen reader, haptic feedback, voice control) membuka akses pendidikan dan pekerjaan inklusif bagi difabel.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-026",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Fenomena 'Infobesity' atau 'Information Overload' merujuk pada kondisi di mana...",
+      "options": [
+        "Seseorang menerima volume informasi digital yang teramat masif sehingga mengalami kesulitan memproses, menyaring, dan mengambil keputusan",
+        "Seseorang memakan makanan berlemak saat bermain komputer",
+        "Server komputer kehabisan hard disk penyimpanan",
+        "Jaringan internet terputus total selama 24 jam"
+      ],
+      "answer": 0,
+      "explanation": "Information overload adalah kejenuhan mental akibat banjir arus informasi tanpa henti yang menurunkan konsentrasi dan daya pikir kritis.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-d-027",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Tindakan perundungan siber (cyberbullying) sering kali berdampak lebih kejam dibanding perundungan fisik konvensional karena...",
+      "options": [
+        "Jejak digital perundungan dapat tersebar luas ke ribuan orang, dapat diakses kapan saja tanpa batas ruang/waktu, dan pelaku bersembunyi di balik anonimitas",
+        "Korban perundungan siber tidak dapat mematikan ponselnya",
+        "Polisi tidak bisa melacak kejahatan siber",
+        "Perundungan siber hanya terjadi di sekolah internasional"
+      ],
+      "answer": 0,
+      "explanation": "Anonimitas pelaku dan jangkauan internet yang tak terbatas membuat korban merasa tidak memiliki tempat aman untuk berlindung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-028",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Dampak positif teknologi digital dalam sistem transportasi umum perkotaan modern adalah...",
+      "options": [
+        "Sistem tiket terintegrasi nirsentuh, pelacakan kedatangan bus/kereta secara real-time, dan rute navigasi efisien",
+        "Menghilangkan seluruh lampu lalu lintas di jalan raya",
+        "Membuat kecepatan kendaraan tidak terbatas di jalan kota",
+        "Meniadakan kebutuhan pengemudi kereta api secara mendadak"
+      ],
+      "answer": 0,
+      "explanation": "Sistem digital cerdas mengoptimalkan jadwal, pembayaran tiket satu kartu, dan ketepatan waktu moda transportasi publik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-d-029",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Serangan siber jenis Ransomware berdampak sangat destruktif bagi instansi pelayanan publik karena...",
+      "options": [
+        "Menyandera seluruh data penting dengan enkripsi dan melumpuhkan layanan kepada masyarakat hingga uang tebusan dibayarkan",
+        "Mengganti gambar latar belakang desktop menjadi warna biru",
+        "Menurunkan kecepatan putaran kipas angin kantor",
+        "Membuat layar monitor komputer menjadi hemat energi"
+      ],
+      "answer": 0,
+      "explanation": "Ransomware mengunci operasional data, memaksa korban memilih antara kehilangan data permanen atau membayar pemerasan peretas.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-d-030",
+      "chapterId": "2",
+      "subchapterId": "2-d",
+      "question": "Kesimpulan paling seimbang mengenai dampak teknologi digital dalam kehidupan adalah...",
+      "options": [
+        "Teknologi digital adalah instrumen penguat: jika dimanfaatkan dengan literasi dan etika akan melipatgandakan kemajuan, namun jika disalahgunakan tanpa kesadaran keamanan akan memicu kerugian fatal",
+        "Teknologi digital 100% berbahaya dan harus dilarang undang-undang",
+        "Teknologi digital 100% sempurna tanpa ada celah risiko apapun",
+        "Teknologi digital hanya boleh dikuasai oleh negara maju"
+      ],
+      "answer": 0,
+      "explanation": "Teknologi digital adalah alat netral; dampak yang dihasilkannya ditentukan oleh literasi, regulasi, dan etika penggunaannya.",
+      "difficulty": "easy"
+    }
+  ]
+}

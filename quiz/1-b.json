@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "1-b-001",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Apa fokus utama dari keamanan data (data security)?",
+      "options": [
+        "Perlindungan data digital dari akses tidak sah, kerusakan, atau pencurian sepanjang siklus hidupnya",
+        "Pembuatan kebijakan tata kelola dokumen cetak di lemari arsip",
+        "Pemeriksaan kesehatan fisik perangkat komputer oleh teknisi",
+        "Pengaturan tata letak kabel jaringan lokal di kantor"
+      ],
+      "answer": 0,
+      "explanation": "Keamanan data berfokus secara teknis pada perlindungan data digital dari korupsi, akses ilegal, atau pencurian selama siklus hidupnya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-002",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Perbedaan utama antara keamanan data dan keamanan informasi adalah...",
+      "options": [
+        "Keamanan data hanya berlaku untuk jaringan nirkabel, sedangkan informasi untuk jaringan kabel",
+        "Keamanan informasi mencakup data digital maupun bentuk non-digital (seperti dokumen cetak dan kebijakan)",
+        "Keamanan data tidak memerlukan enkripsi sama sekali",
+        "Keamanan informasi hanya mengatur sistem operasi Linux"
+      ],
+      "answer": 1,
+      "explanation": "Keamanan informasi (InfoSec) memiliki cakupan lebih luas yang meliputi kebijakan, manusia, serta aset informasi digital maupun fisik/cetak.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-003",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Manakah di bawah ini yang tergolong sebagai 'Data Pribadi Spesifik/Sensitif' menurut regulasi perlindungan data?",
+      "options": [
+        "Judul buku yang sedang dibaca di perpustakaan umum",
+        "Rekam medis kesehatan dan data biometrik individu",
+        "Nama jalan tempat gedung sekolah berada",
+        "Prakiraan cuaca harian di suatu kota"
+      ],
+      "answer": 1,
+      "explanation": "Rekam medis dan data biometrik diklasifikasikan sebagai data pribadi sensitif yang memerlukan perlindungan tingkat tinggi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-004",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Fase dalam siklus hidup data (data lifecycle) yang melibatkan penghapusan data secara permanen dan aman disebut...",
+      "options": [
+        "Data Storage",
+        "Data Processing",
+        "Data Destruction / Disposal",
+        "Data Transmission"
+      ],
+      "answer": 2,
+      "explanation": "Fase pemusnahan (destruction/disposal) memastikan bahwa data yang sudah tidak digunakan dihapus secara menyeluruh sehingga tidak dapat dipulihkan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-005",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Tindakan mewajibkan karyawan menandatangani Non-Disclosure Agreement (NDA) merupakan contoh penerapan...",
+      "options": [
+        "Keamanan Fisik Perangkat Keras",
+        "Keamanan Informasi di tingkat kebijakan dan tata kelola",
+        "Enkripsi Kriptografi Asimetris",
+        "Pembaruan Firmware Mikroprosesor"
+      ],
+      "answer": 1,
+      "explanation": "Perjanjian kerahasiaan (NDA) adalah instrumen kebijakan hukum dalam tata kelola keamanan informasi organisasi.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-b-006",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Urutan siklus hidup data (data lifecycle) yang tepat dalam ekosistem digital adalah...",
+      "options": [
+        "Creation -> Storage -> Processing -> Transmission -> Destruction",
+        "Destruction -> Creation -> Transmission -> Storage -> Processing",
+        "Storage -> Destruction -> Creation -> Processing -> Transmission",
+        "Processing -> Destruction -> Transmission -> Creation -> Storage"
+      ],
+      "answer": 0,
+      "explanation": "Siklus hidup data dimulai dari pembuatan (creation), penyimpanan (storage), pemrosesan (processing), pengiriman (transmission), hingga pemusnahan (destruction).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-007",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Kategori data yang dapat diakses oleh masyarakat luas tanpa batasan kerahasiaan diklasifikasikan sebagai...",
+      "options": [
+        "Data Rahasia (Confidential)",
+        "Data Publik (Public Data)",
+        "Data Internal",
+        "Data Biometrik Sensitif"
+      ],
+      "answer": 1,
+      "explanation": "Data publik adalah data yang ditujukan untuk konsumsi umum dan tidak menimbulkan risiko kerahasiaan jika diakses khalayak, seperti pengumuman resmi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-008",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Pedoman kerja internal dan notula rapat divisi yang hanya boleh dibaca oleh pegawai perusahaan diklasifikasikan sebagai...",
+      "options": [
+        "Data Publik",
+        "Data Internal",
+        "Data Terbuka",
+        "Data Komersial Terbuka"
+      ],
+      "answer": 1,
+      "explanation": "Data internal adalah data operasional sehari-hari yang tidak membahayakan bisnis secara fatal namun tidak diperuntukkan bagi konsumsi publik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-009",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Undang-Undang Republik Indonesia yang secara khusus mengatur tata kelola dan sanksi pelanggaran perlindungan data pribadi adalah...",
+      "options": [
+        "UU Perlindungan Data Pribadi (UU PDP No. 27 Tahun 2022)",
+        "UU Lalu Lintas dan Angkutan Jalan",
+        "UU Ketenagakerjaan",
+        "UU Perbankan Syariah"
+      ],
+      "answer": 0,
+      "explanation": "Indonesia mengesahkan UU PDP (UU No. 27 Tahun 2022) sebagai payung hukum utama yang mewajibkan pengendali dan prosesor data melindungi hak privasi subjek data.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-010",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Di Uni Eropa, regulasi komprehensif yang mengatur privasi dan perlindungan data dikenal dengan singkatan...",
+      "options": [
+        "GDPR (General Data Protection Regulation)",
+        "HIPAA (Health Insurance Portability Act)",
+        "PCI-DSS (Payment Card Standard)",
+        "SOX (Sarbanes-Oxley Act)"
+      ],
+      "answer": 0,
+      "explanation": "GDPR adalah regulasi perlindungan data terkemuka di Uni Eropa yang menjadi acuan standar privasi digital global.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-011",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Ketika staf rumah sakit mengunci lemari arsip kertas rekam medis pasien di ruang terkunci, staf tersebut sedang menjalankan aspek...",
+      "options": [
+        "Keamanan Informasi fisik",
+        "Enkripsi perangkat lunak",
+        "Cloud computing",
+        "Virtual Private Network"
+      ],
+      "answer": 0,
+      "explanation": "Keamanan informasi mencakup perlindungan dokumen fisik non-digital melalui pengamanan akses fisik seperti lemari terkunci dan CCTV.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-012",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Ketika seorang insinyur menerapkan enkripsi algoritma AES-256 pada database pelanggan di server, tindakan tersebut merupakan bentuk...",
+      "options": [
+        "Keamanan Data secara teknis",
+        "Pelatihan kesadaran karyawan",
+        "Penyusunan kode etik organisasi",
+        "Pemeriksaan kesehatan fisik ruangan"
+      ],
+      "answer": 0,
+      "explanation": "Penerapan enkripsi matematis langsung pada file data digital adalah contoh nyata dari instrumen teknis keamanan data (data security).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-013",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Mengapa sekadar menekan tombol 'Delete' pada komputer belum cukup untuk pemusnahan data rahasia yang aman?",
+      "options": [
+        "Karena tombol delete akan merusak layar monitor",
+        "Karena operasi delete standar hanya menghapus penunjuk file (pointer), sedangkan data magnetik masih tersisa di hard disk dan dapat dipulihkan dengan aplikasi pemulihan data",
+        "Karena komputer akan otomatis mengunggah file tersebut ke internet",
+        "Karena file tersebut otomatis tercetak ke printer"
+      ],
+      "answer": 1,
+      "explanation": "Penghapusan biasa hanya menandai sektor penyimpanan sebagai kosong. Data asli tetap utuh sampai ditimpa (overwritten) data baru.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-b-014",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Metode pemusnahan data fisik pada media magnetik menggunakan medan magnet kuat untuk merusak seluruh data tersimpan disebut...",
+      "options": [
+        "Degaussing",
+        "Overclocking",
+        "Compiling",
+        "Defragmenting"
+      ],
+      "answer": 0,
+      "explanation": "Degaussing memanfaatkan medan magnet berdaya tinggi untuk merusak susunan partikel magnetik pada hard drive dan pita kaset penyimpanan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-b-015",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Manakah yang merupakan contoh data rahasia perusahaan (confidential business data)?",
+      "options": [
+        "Resep rahasia produk minuman kemasan dan kode sumber aplikasi inti",
+        "Alamat situs web resmi perusahaan di internet",
+        "Brosur promosi diskon produk yang dibagikan di jalan raya",
+        "Warna seragam karyawan yang terlihat publik"
+      ],
+      "answer": 0,
+      "explanation": "Resep rahasia dan kode sumber merupakan kekayaan intelektual bernilai tinggi yang jika bocor dapat menghancurkan keunggulan kompetitif bisnis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-016",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Program pelatihan rutin bagi seluruh staf kantor untuk mengenali tautan email mencurigakan disebut...",
+      "options": [
+        "Security Awareness Training",
+        "Physical Cable Management",
+        "Data Compression Training",
+        "Hardware Soldering Workshop"
+      ],
+      "answer": 0,
+      "explanation": "Pelatihan kesadaran keamanan (Security Awareness Training) bertujuan meningkatkan kepekaan pengguna terhadap taktik penipuan siber seperti phishing.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-017",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Mengapa klasifikasi data berdasarkan tingkat sensitivitas sangat penting dilakukan oleh suatu organisasi?",
+      "options": [
+        "Agar seluruh data organisasi wajib diperlakukan dengan tingkat pengamanan militer termahal tanpa terkecuali",
+        "Agar organisasi dapat mengalokasikan sumber daya keamanan secara proporsional sesuai risiko masing-masing jenis data",
+        "Agar kapasitas hard disk komputer menjadi dua kali lipat lebih besar",
+        "Agar organisasi tidak perlu lagi menggunakan kata sandi pada komputer"
+      ],
+      "answer": 1,
+      "explanation": "Klasifikasi data memastikan data yang sangat sensitif diberi proteksi maksimal, sedangkan data publik tidak membebani anggaran keamanan yang berlebihan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-018",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Dalam konteks siklus hidup data, fase 'Data Transmission' mengacu pada...",
+      "options": [
+        "Penciptaan dokumen baru melalui pengetikan",
+        "Perpindahan data dari satu titik ke titik lain melalui jaringan kabel maupun nirkabel",
+        "Penghancuran server komputer yang sudah usang",
+        "Penyimpanan berkas ke dalam laci meja"
+      ],
+      "answer": 1,
+      "explanation": "Data transmission adalah fase saat data bergerak melalui media komunikasi, di mana enkripsi saluran (seperti TLS atau VPN) sangat krusial.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-019",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Perlindungan data 'in use' berfokus pada pengamanan data saat...",
+      "options": [
+        "Sedang disimpan di flashdisk yang dicabut dari komputer",
+        "Sedang diproses secara aktif oleh prosesor (CPU) dan berada di memori RAM",
+        "Sedang dicadangkan ke pita magnetik offline",
+        "Sedang dihapus oleh petugas kebersihan"
+      ],
+      "answer": 1,
+      "explanation": "Data in use adalah data yang sedang diolah di memori aktif, yang memerlukan proteksi terhadap pembacaan memori ilegal (memory dumping/snooping).",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-b-020",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Kebijakan meja bersih (Clean Desk Policy) di kantor, di mana karyawan dilarang meninggalkan dokumen rahasia tergeletak saat pulang, adalah bagian dari...",
+      "options": [
+        "Tata kelola Keamanan Informasi",
+        "Pembaruan driver kartu grafis",
+        "Instalasi perangkat lunak open source",
+        "Percepatan koneksi internet broadband"
+      ],
+      "answer": 0,
+      "explanation": "Clean Desk Policy adalah kebijakan operasional dalam keamanan informasi untuk mencegah pengunjung atau pihak internal melihat informasi sensitif fisik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-021",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Jika sebuah perusahaan ecommerce menyimpan data nomor kartu kredit nasabah dalam bentuk teks biasa (plaintext) tanpa enkripsi, perusahaan tersebut melanggar prinsip...",
+      "options": [
+        "Keamanan data teknis dan standar kepatuhan pembayaran (PCI-DSS)",
+        "Ketentuan kecepatan pengiriman barang",
+        "Tata cara penulisan alamat konsumen",
+        "Standar resolusi foto katalog produk"
+      ],
+      "answer": 0,
+      "explanation": "Menyimpan data kartu kredit tanpa enkripsi melanggar standar keamanan data teknis dan regulasi industri keuangan seperti PCI-DSS.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-022",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Hak subjek data dalam UU PDP yang memungkinkan individu meminta penghapusan data pribadinya dari sistem pengendali data dikenal sebagai...",
+      "options": [
+        "Hak untuk dilupakan (Right to erasure / Right to be forgotten)",
+        "Hak untuk menggandakan server",
+        "Hak untuk mengubah nama perusahaan",
+        "Hak untuk mendapatkan perangkat gratis"
+      ],
+      "answer": 0,
+      "explanation": "Hak penghapusan (right to erasure/forgotten) memberikan wewenang kepada individu untuk meminta penghapusan data pribadinya jika sudah tidak relevan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-b-023",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Siapakah yang bertanggung jawab atas keamanan informasi di sebuah institusi?",
+      "options": [
+        "Hanya staf magang di divisi teknologi informasi",
+        "Seluruh elemen institusi, mulai dari pimpinan eksekutif, staf teknis, hingga seluruh karyawan",
+        "Petugas keamanan pintu gerbang kantor saja",
+        "Penyedia jasa listrik nasional"
+      ],
+      "answer": 1,
+      "explanation": "Keamanan informasi adalah tanggung jawab kolektif seluruh orang dalam organisasi, karena kesalahan satu pengguna dapat membahayakan seluruh sistem.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-024",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Sebuah klinik kecantikan membuang berkas formulir pendaftaran pelanggan ke tempat sampah umum tanpa dihancurkan (shredded). Hal ini berisiko memicu kebocoran data melalui teknik...",
+      "options": [
+        "Dumpster diving",
+        "DDoS attack",
+        "Cross-site scripting",
+        "Zero-day exploit"
+      ],
+      "answer": 0,
+      "explanation": "Dumpster diving adalah metode mencari informasi sensitif dari dokumen fisik yang dibuang sembarangan ke tempat sampah tanpa dihancurkan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-025",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Data masking atau penyembunyian data sering diterapkan pada tampilan nomor kartu kredit, misalnya '4111-XXXX-XXXX-1234'. Tujuannya adalah...",
+      "options": [
+        "Mengurangi penggunaan tinta printer saat mencetak struk",
+        "Melindungi keamanan data dengan membatasi visibilitas data sensitif kepada pihak yang tidak perlu melihat nomor lengkap",
+        "Mempercepat proses transaksi pembayaran",
+        "Menghindari kesalahan input oleh kasir"
+      ],
+      "answer": 1,
+      "explanation": "Data masking menyamarkan bagian penting data sensitif sehingga hanya sebagian kecil yang terlihat untuk verifikasi tanpa membocorkan nomor utuh.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-026",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Dalam tata kelola keamanan informasi, penilaian risiko (Risk Assessment) bertujuan untuk...",
+      "options": [
+        "Menghitung harga beli komputer di pasaran",
+        "Mengidentifikasi aset informasi berharga, menganalisis ancaman potensial, dan menentukan langkah mitigasi yang tepat",
+        "Memilih desain interior ruang kerja yang modern",
+        "Menghapus seluruh berkas lama tanpa pengecekan"
+      ],
+      "answer": 1,
+      "explanation": "Penilaian risiko menganalisis kerentanan dan potensi ancaman terhadap aset informasi agar langkah perlindungan dapat dirancang secara efektif.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-b-027",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Pemusnahan perangkat penyimpanan digital dengan cara menghancurkannya secara mekanis menjadi serpihan kecil menggunakan mesin penghancur disebut...",
+      "options": [
+        "Physical shredding",
+        "Defragmentation",
+        "Formatting FAT32",
+        "File compression"
+      ],
+      "answer": 0,
+      "explanation": "Physical shredding menghancurkan hard drive atau chip memori secara fisik berkeping-keping sehingga tidak ada kemungkinan data dapat dirangkai kembali.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-028",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Contoh data pribadi umum menurut UU Perlindungan Data Pribadi di Indonesia meliputi...",
+      "options": [
+        "Nama lengkap, jenis kelamin, kewarganegaraan, dan agama",
+        "Data genetika dan rekam jejak kejahatan pidana",
+        "Data biometrik retina mata dan sidik jari",
+        "Rekam data keuangan pribadi spesifik"
+      ],
+      "answer": 0,
+      "explanation": "UU PDP mengkategorikan nama lengkap, jenis kelamin, kewarganegaraan, dan data yang terkombinasi mengidentifikasi seseorang sebagai data pribadi umum.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-b-029",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Manakah di bawah ini yang paling tepat menggambarkan hubungan hierarki antara keamanan data dan keamanan informasi?",
+      "options": [
+        "Keamanan data adalah bagian spesifik yang berada di dalam lingkup keamanan informasi yang lebih luas",
+        "Keamanan informasi adalah bagian kecil dari keamanan kabel data",
+        "Keduanya adalah dua hal yang sama sekali bertentangan dan tidak dapat disatukan",
+        "Keamanan data hanya berlaku untuk perusahaan asing, bukan di Indonesia"
+      ],
+      "answer": 0,
+      "explanation": "Keamanan data berfokus teknis pada aset data digital, yang merupakan subset dari disiplin keamanan informasi (InfoSec) yang mencakup orang, proses, dan data.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-b-030",
+      "chapterId": "1",
+      "subchapterId": "1-b",
+      "question": "Suatu bank menerapkan enkripsi database nasabah, SOP larangan membawa flashdisk ke ruang server, dan CCTV 24 jam. Ini adalah bukti integrasi antara...",
+      "options": [
+        "Keamanan data teknis dan kebijakan keamanan informasi komprehensif",
+        "Sistem pendingin ruangan dan pembersih lantai kantor",
+        "Strategi periklanan dan penurunan bunga pinjaman",
+        "Metode pembongkaran gedung lama bank"
+      ],
+      "answer": 0,
+      "explanation": "Kombinasi enkripsi (keamanan data) bersama SOP dan pengamanan fisik ruang server (keamanan informasi) menciptakan benteng pertahanan terpadu.",
+      "difficulty": "hard"
+    }
+  ]
+}

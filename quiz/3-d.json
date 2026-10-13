@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "3-d-001",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Wabah ransomware global pada tahun 2017 yang melumpuhkan sistem komputer ratusan rumah sakit dan instansi di 150 negara adalah...",
+      "options": [
+        "ILOVEYOU",
+        "WannaCry",
+        "CIH / Chernobyl",
+        "Melissa"
+      ],
+      "answer": 1,
+      "explanation": "WannaCry menyebar masif pada Mei 2017 memanfaatkan exploit EternalBlue untuk mengenkripsi ratusan ribu sistem komputer secara global.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-d-002",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Celah keamanan protokol yang dieksploitasi oleh ransomware WannaCry untuk menyebar otomatis antar-komputer Windows adalah...",
+      "options": [
+        "HTTP Port 80",
+        "SMBv1 (Server Message Block versi 1)",
+        "FTP Port 21",
+        "SMTP Port 25"
+      ],
+      "answer": 1,
+      "explanation": "WannaCry menyebar melalui celah SMBv1 (EternalBlue) yang belum ditambal pada komputer-komputer berbasis sistem operasi Windows.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-003",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Malware canggih pertama di dunia yang dirancang secara spesifik untuk merusak mesin fisik pengayaan uranium di fasilitas nuklir Natanz Iran adalah...",
+      "options": [
+        "Stuxnet",
+        "NotPetya",
+        "Conficker",
+        "Zeus"
+      ],
+      "answer": 0,
+      "explanation": "Stuxnet (ditemukan tahun 2010) adalah senjata siber yang menyasar sistem industri SCADA/PLC untuk menghancurkan mesin sentrifugal nuklir secara fisik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-004",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Mengapa malware NotPetya (2017) dikategorikan sebagai 'Wiper' dan bukan sekadar ransomware murni?",
+      "options": [
+        "Karena menghapus virus lain dari komputer",
+        "Karena sengaja dirancang untuk memusnahkan data secara permanen tanpa mekanisme pemulihan kunci dekripsi yang valid",
+        "Karena hanya membersihkan file sampah di peramban",
+        "Karena tidak memerlukan koneksi internet"
+      ],
+      "answer": 1,
+      "explanation": "NotPetya merusak tabel partisi dan kunci enkripsi secara permanen sehingga data korban tidak mungkin dipulihkan meskipun korban membayar tebusan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-005",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Pelajaran terpenting dari insiden kelumpuhan perusahaan pelayaran global Maersk akibat serangan NotPetya adalah...",
+      "options": [
+        "Tidak perlu memperbarui sistem komputer",
+        "Pentingnya memiliki salinan cadangan data yang tersimpan secara terpisah dan terisolasi dari jaringan utama (offline backup)",
+        "Semua komputer kantor harus selalu terhubung ke Wi-Fi publik",
+        "Menghapus kata sandi agar lebih mudah diakses"
+      ],
+      "answer": 1,
+      "explanation": "Maersk berhasil memulihkan operasinya berkat satu server cadangan di Ghana yang selamat karena sedang offline saat serangan melanda.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-006",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Bagaimana cara peneliti keamanan Marcus Hutchins secara tidak sengaja menghentikan penyebaran massal ransomware WannaCry?",
+      "options": [
+        "Dengan mematikan seluruh satelit navigasi global",
+        "Dengan mendaftarkan nama domain unik yang ditemukan dalam kode malware yang berfungsi sebagai tombol pemutus darurat (Kill Switch)",
+        "Dengan mentransfer seluruh tebusan ke dompet penyerang",
+        "Dengan mengirimkan kode tandingan ke peretas"
+      ],
+      "answer": 1,
+      "explanation": "Marcus Hutchins menemukan dan mendaftarkan domain uji yang dicek oleh WannaCry; ketika domain itu aktif dan merespons, fungsi penyebaran WannaCry terhenti secara otomatis.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-007",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Eksploit 'EternalBlue' yang menjadi motor penyebaran otomatis WannaCry pada awalnya merupakan senjata siber rahasia milik...",
+      "options": [
+        "Kementerian Komunikasi dan Informatika RI",
+        "Perusahaan pengembang video game konsol",
+        "Organisasi riset mahasiswa universitas swasta",
+        "Badan Keamanan Nasional Amerika Serikat (NSA) yang bocor ke publik"
+      ],
+      "answer": 3,
+      "explanation": "EternalBlue dikembangkan oleh NSA, lalu dicuri dan dibocorkan ke publik oleh kelompok peretas Shadow Brokers sebelum dimanfaatkan oleh pembuat WannaCry.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-008",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Mengapa sistem kesehatan Layanan Kesehatan Nasional (NHS) di Inggris lumpuh sangat parah saat serangan WannaCry melanda?",
+      "options": [
+        "Karena rumah sakit di Inggris tidak memakai komputer sama sekali",
+        "Karena saluran telepon kabel diputus secara fisik",
+        "Banyak komputer rumah sakit masih memakai Windows lama dan belum memasang patch keamanan SMBv1 yang telah dirilis Microsoft",
+        "Karena dokter dilarang menggunakan perangkat lunak resmi"
+      ],
+      "answer": 2,
+      "explanation": "Keterlambatan pemasangan patch keamanan MS17-010 pada sistem Windows rumah sakit membuat EternalBlue dengan mudah menginfeksi dan mengunci data medis NHS.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-009",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Di Indonesia, dua rumah sakit besar di Jakarta yang dilaporkan terdampak parah akibat serangan WannaCry pada Mei 2017 adalah...",
+      "options": [
+        "RS Harapan Kita dan RS Dharmais",
+        "RS Pertamina dan RS Cipto Mangunkusumo",
+        "RS Fatmawati dan RS Tarakan",
+        "RS Siloam dan RS Mayapada"
+      ],
+      "answer": 0,
+      "explanation": "RS Jantung Harapan Kita dan RS Kanker Dharmais di Jakarta mengalami gangguan operasional pendaftaran dan rekam medis digital akibat terkunci oleh WannaCry.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-010",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Vektor infeksi awal yang digunakan oleh malware NotPetya untuk menyusup ke ribuan korporasi multinasional adalah...",
+      "options": [
+        "Pesan siaran SMS ke telepon seluler karyawan",
+        "Kaset video rekaman yang dikirimkan lewat pos",
+        "Penyusupan fisik lewat stasiun bumi satelit",
+        "Penyusupan pintu belakang ke server pembaruan resmi perangkat lunak akuntansi Ukraina M.E.Doc (Supply Chain Attack)"
+      ],
+      "answer": 3,
+      "explanation": "NotPetya menyusup melalui mekanisme pembaruan resmi software akuntansi M.E.Doc Ukraina, menjadikannya contoh paling terkenal dari serangan rantai pasok (supply chain attack).",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-011",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Istilah 'Air-Gapped Network' pada kasus serangan Stuxnet mengacu pada...",
+      "options": [
+        "Jaringan komputer dengan sistem pendingin freon",
+        "Jaringan Wi-Fi komersial di kabin pesawat terbang",
+        "Sistem komputer yang terisolasi secara fisik dan tidak terhubung ke internet maupun jaringan publik luar",
+        "Jaringan transmisi kabel serat optik bawah laut"
+      ],
+      "answer": 2,
+      "explanation": "Air-gap adalah pemisahan fisik total antara jaringan komputasi aman dengan jaringan eksternal untuk menghentikan akses peretasan jarak jauh.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-012",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Bagaimana malware Stuxnet berhasil menembus isolasi sistem air-gapped di fasilitas nuklir Natanz Iran?",
+      "options": [
+        "Melalui pancaran gelombang radio FM lokal",
+        "Melalui sinar laser dari luar area fasilitas",
+        "Melalui panggilan suara telepon seluler",
+        "Melalui flashdisk USB yang dibawa masuk dan dicolokkan oleh teknisi fasilitas (jalur fisik/insider)"
+      ],
+      "answer": 3,
+      "explanation": "Stuxnet menyeberangi celah air-gap melalui media penyimpanan flashdisk USB yang dicolokkan oleh teknisi yang bekerja di dalam fasilitas nuklir Natanz.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-013",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Komponen sistem industri spesifik yang dimanipulasi secara diam-diam oleh Stuxnet hingga rusak fisik adalah...",
+      "options": [
+        "Layar monitor tabung di pos pengamanan luar",
+        "Kipas pendingin prosesor laptop staf administrasi",
+        "Programmable Logic Controller (PLC) Siemens yang mengatur kecepatan putar mesin sentrifugal",
+        "Mesin pendingin ruangan kantor kepala fasilitas"
+      ],
+      "answer": 2,
+      "explanation": "Stuxnet menyabotase pengontrol logika terprogram (PLC) Siemens S7-300 untuk memutar turbin sentrifugal melebihi batas toleransi hingga rusak berantakan secara fisik.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-014",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Serangan ransomware pada Pusat Data Nasional Sementara (PDNS) Indonesia pada Juni 2024 menggunakan varian malware bernama...",
+      "options": [
+        "Brain Cipher (turunan LockBit 3.0)",
+        "ILOVEYOU",
+        "Melissa",
+        "Conficker"
+      ],
+      "answer": 0,
+      "explanation": "Insiden PDNS pada Juni 2024 disebabkan oleh serangan ransomware varian Brain Cipher yang berbasis pada kode sumber LockBit 3.0.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-015",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Dampak langsung yang paling dirasakan oleh masyarakat luas saat insiden ransomware PDNS Juni 2024 terjadi adalah kelumpuhan pada...",
+      "options": [
+        "Sistem pemeriksaan perlintasan imigrasi di bandara internasional dan portal pendaftaran pendidikan",
+        "Seluruh jaringan listrik nasional yang padam total",
+        "Semua stasiun televisi nasional yang berhenti bersiaran",
+        "Sistem navigasi kapal nelayan tradisional"
+      ],
+      "answer": 0,
+      "explanation": "Kelumpuhan PDNS berdampak langsung pada sistem autogate imigrasi bandara internasional sehingga menimbulkan antrean panjang, serta gangguan portal layanan publik lainnya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-d-016",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Faktor kelemahan tata kelola paling krusial yang terungkap pasca-insiden ransomware PDNS 2024 adalah...",
+      "options": [
+        "Suhu ruangan server terlalu dingin",
+        "Pusat data tidak menggunakan kabel serat optik",
+        "Pegawai dilarang menggunakan monitor komputer",
+        "Banyak data kementerian/lembaga tidak memiliki salinan cadangan terpisah (cold backup) dan Disaster Recovery Plan yang teruji"
+      ],
+      "answer": 3,
+      "explanation": "Ketiadaan pencadangan data mandiri yang terisolasi dan Disaster Recovery Plan yang matang membuat proses pemulihan data instansi pemerintah memakan waktu sangat lama.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-017",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Undang-Undang Republik Indonesia yang disahkan pada tahun 2022 untuk mengatur kewajiban perlindungan dan sanksi kebocoran data pribadi adalah...",
+      "options": [
+        "UU Nomor 1 Tahun 1945",
+        "UU Nomor 20 Tahun 2003",
+        "UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP)",
+        "UU Nomor 32 Tahun 2004"
+      ],
+      "answer": 2,
+      "explanation": "UU No. 27 Tahun 2022 (UU PDP) menjadi landasan hukum utama di Indonesia yang mewajibkan kepatuhan keamanan data bagi seluruh pengendali data publik maupun swasta.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-d-018",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Serangan ransomware terhadap jaringan pipa bahan bakar Colonial Pipeline di Amerika Serikat pada 2021 bermula dari celah...",
+      "options": [
+        "Pemotongan pipa baja secara fisik di jalan tol",
+        "Pembersihan tangki minyak dengan air bertekanan",
+        "Serangan granat pada kilang pengolahan minyak",
+        "Satu akun VPN karyawan lama yang tidak mengaktifkan Multi-Factor Authentication (MFA) dan kata sandinya bocor"
+      ],
+      "answer": 3,
+      "explanation": "Penyerang membobol jaringan Colonial Pipeline hanya berbekal satu username dan password VPN lama yang bocor karena tidak menerapkan verifikasi otentikasi dua faktor (MFA).",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-019",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Worm legendaris 'ILOVEYOU' yang menyebar masif pada Mei tahun 2000 menipu korban di seluruh dunia melalui surel dengan lampiran...",
+      "options": [
+        "SECURITY_UPDATE.exe",
+        "INVOICE_BILLING.pdf",
+        "LOVE-LETTER-FOR-YOU.TXT.vbs",
+        "BANK_TRANSFER.doc"
+      ],
+      "answer": 2,
+      "explanation": "Worm ILOVEYOU memanfaatkan rekayasa sosial rasa penasaran korban melalui lampiran skrip VBScript bernama 'LOVE-LETTER-FOR-YOU.TXT.vbs'.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-d-020",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Serangan 'Mirai Botnet' pada tahun 2016 mencatatkan rekor serangan DDoS terbesar di dunia dengan membajak ribuan...",
+      "options": [
+        "Perangkat Internet of Things (IoT) seperti kamera CCTV dan router yang masih menggunakan username dan password default pabrik",
+        "Superkomputer milik badan antariksa internasional",
+        "Mesin cetak buku analog di perpustakaan nasional",
+        "Satelit pemantau cuaca di orbit bumi"
+      ],
+      "answer": 0,
+      "explanation": "Mirai meretas ribuan perangkat IoT yang tidak mengganti kredensial default bawaan pabrik (seperti admin/admin), menyatukannya menjadi botnet peluncur DDoS raksasa.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-021",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Dalam insiden peretasan SolarWinds (2020), malware jenis apa yang disuntikkan oleh penyerang ke dalam pembaruan software Orion?",
+      "options": [
+        "Backdoor trojan tersembunyi bernama Sunburst",
+        "Macro virus dokumen teks biasa",
+        "Adware pop-up komersial",
+        "Game teka-teki silang offline"
+      ],
+      "answer": 0,
+      "explanation": "Pelaku menyusupkan backdoor trojan bernama Sunburst ke dalam build software manajemen jaringan Orion milik SolarWinds dalam serangan spionase rantai pasok.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-022",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Perbedaan mendasar antara 'Hot Backup' dan 'Cold/Offline Backup' dalam menghadapi ancaman ransomware adalah...",
+      "options": [
+        "Hot backup memakai suhu hangat, sedangkan cold backup dimasukkan ke freezer",
+        "Hot backup hanya untuk berkas dokumen, cold backup untuk video",
+        "Hot backup terhubung terus ke jaringan (sehingga ikut rentan terenkripsi ransomware), sedangkan cold backup terputus fisik dari jaringan saat tidak digunakan",
+        "Cold backup tidak dapat dibaca oleh komputer masa kini"
+      ],
+      "answer": 2,
+      "explanation": "Cold backup yang terputus secara fisik dari jaringan (air-gapped) tidak dapat dijangkau oleh ransomware yang menyisir dan mengenkripsi seluruh penyimpanan lokal.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-023",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Dalam rencana pemulihan bencana (Disaster Recovery), istilah RPO (Recovery Point Objective) mengukur...",
+      "options": [
+        "Batas toleransi maksimal kehilangan data yang dapat diterima organisasi (diukur dalam rentang waktu sejak backup terakhir)",
+        "Berapa lama teknisi IT boleh beristirahat ketika server padam",
+        "Jumlah kabel jaringan yang harus diganti setiap bulan",
+        "Kecepatan putaran kipas pendingin pada server cadangan"
+      ],
+      "answer": 0,
+      "explanation": "RPO mengukur batas waktu data yang hilang yang dapat ditoleransi organisasi, menentukan frekuensi jadwal pencadangan data harus dilakukan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-024",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Fase pertama dalam Siklus Penanganan Insiden Keamanan Siber (Incident Response Life Cycle) menurut standar NIST adalah...",
+      "options": [
+        "Eradication (Pemusnahan)",
+        "Containment (Penahanan)",
+        "Post-Incident Activity (Evaluasi)",
+        "Preparation (Persiapan)"
+      ],
+      "answer": 3,
+      "explanation": "Fase Preparation mencakup pembentukan tim respons insiden, pelatihan, penyiapan alat analisis, dan prosedur operasi standar sebelum serangan terjadi.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-d-025",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Mengapa serangan Stuxnet dianggap menandai era baru dalam sejarah peperangan siber (cyber warfare)?",
+      "options": [
+        "Karena dibuat oleh anak sekolah menengah pertama",
+        "Karena Stuxnet membuktikan bahwa kode biner perangkat lunak dapat menyebabkan kerusakan fisik mekanis nyata pada infrastruktur industri strategis",
+        "Karena Stuxnet menghapus seluruh riwayat peramban web",
+        "Karena Stuxnet hanya menyerang jam weker digital"
+      ],
+      "answer": 1,
+      "explanation": "Stuxnet adalah bukti pertama bahwa senjata digital dapat merusak infrastruktur fisik industri nyata di dunia nyata tanpa bantuan ledakan senjata konvensional.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-026",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Pelajaran utama dari insiden kebocoran jutaan data kependudukan dan kesehatan konsumen di pasar gelap bagi pengelola data adalah...",
+      "options": [
+        "Pengelola data tidak perlu mengenkripsi database pengguna",
+        "Cukup memasang spanduk peringatan di gerbang kantor",
+        "Data konsumen tidak memiliki nilai komersial atau privasi",
+        "Kewajiban menerapkan enkripsi database yang kuat, kontrol hak akses ketat, dan audit keamanan sistem secara berkala"
+      ],
+      "answer": 3,
+      "explanation": "Perlindungan data wajib mencakup enkripsi komprehensif baik at-rest maupun in-transit, pembatasan hak akses berbasis least privilege, dan audit berkala.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-d-027",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Kasus kelumpuhan Maersk akibat NotPetya membuktikan bahwa kegagalan sistem digital pada satu korporasi besar dapat...",
+      "options": [
+        "Membuat kapal berlayar dua kali lebih cepat",
+        "Menghentikan operasional pelabuhan peti kemas dan melumpuhkan rantai pasok perdagangan logistik global",
+        "Menghilangkan kewajiban membayar pajak bea cukai",
+        "Memperbaiki mesin kapal secara nirkabel"
+      ],
+      "answer": 1,
+      "explanation": "NotPetya pada Maersk menghentikan operasional di 76 pelabuhan kargo dunia, membuktikan bagaimana serangan siber dapat menimbulkan disrupsi ekonomi rantai pasok global.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-d-028",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Bagaimana cara penyerang malware WannaCry menuntut uang tebusan dari ratusan ribu korbannya?",
+      "options": [
+        "Mengirim surat tagihan fisik bermaterai lewat kurir pos",
+        "Meminta korban datang ke kantor polisi untuk membayar tunai",
+        "Menampilkan pesan tebusan di layar dengan instruksi pembayaran sebesar $300 dalam bentuk mata uang kripto Bitcoin",
+        "Memotong saldo rekening bank korban secara otomatis"
+      ],
+      "answer": 2,
+      "explanation": "WannaCry menampilkan antarmuka bertuliskan pesan tebusan serta instruksi pengiriman transfer Bitcoin senilai $300 ke alamat dompet penyerang.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-029",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Dalam siklus penanganan insiden keamanan siber, tahap 'Containment' (Penahanan) bertujuan untuk...",
+      "options": [
+        "Membeli server baru sebanyak mungkin",
+        "Menghapus seluruh file laporan keuangan perusahaan",
+        "Mengumumkan kebangkrutan ke media massa",
+        "Mencegah perluasan penyebaran malware dan mengisolasi sistem yang terinfeksi dari sisa jaringan organisasi"
+      ],
+      "answer": 3,
+      "explanation": "Containment membatasi ruang gerak malware dengan mengisolasi host atau subnet yang terdampak agar tidak menginfeksi sistem lain yang masih bersih.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-d-030",
+      "chapterId": "3",
+      "subchapterId": "3-d",
+      "question": "Manakah kesimpulan paling tepat yang dapat dipetik dari berbagai studi kasus serangan malware besar dalam sejarah komputasi?",
+      "options": [
+        "Serangan siber hanyalah fiksi ilmiah yang tidak menimbulkan dampak kerugian nyata",
+        "Hanya pengguna komputer pribadi yang berisiko terkena malware",
+        "Keamanan siber adalah pilar vital kelangsungan hidup operasional, stabilitas ekonomi, dan keselamatan masyarakat yang menuntut mitigasi proaktif",
+        "Menghindari pembaruan perangkat lunak adalah cara terbaik mencegah masuknya virus"
+      ],
+      "answer": 2,
+      "explanation": "Semua preseden historis membuktikan bahwa ketahanan siber dan kesiapsiagaan mitigasi adalah kebutuhan mutlak demi menjaga stabilitas dan kelangsungan hidup organisasi modern.",
+      "difficulty": "medium"
+    }
+  ]
+}

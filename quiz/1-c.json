@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "1-c-001",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Apakah perbedaan konseptual paling mendasar antara data dan informasi?",
+      "options": [
+        "Data berukuran besar, sedangkan informasi selalu berukuran kecil",
+        "Data adalah fakta mentah tanpa konteks, sedangkan informasi adalah data yang telah diolah dan bermakna",
+        "Data hanya ada di komputer lama, sedangkan informasi hanya ada di cloud",
+        "Data tidak dapat disimpan, sedangkan informasi dapat dicetak"
+      ],
+      "answer": 1,
+      "explanation": "Data merupakan simbol atau angka mentah yang belum bermakna, sedangkan informasi adalah hasil olahan data yang memiliki konteks dan kegunaan nyata.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-002",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah di bawah ini yang merupakan contoh dari data mentah (raw data)?",
+      "options": [
+        "Laporan laba rugi tahunan perusahaan",
+        "Daftar ranking prestasi siswa kelas 9A",
+        "Deretan angka acak: 82, 91, 75, 64",
+        "Grafik tren kenaikan harga beras bulan ini"
+      ],
+      "answer": 2,
+      "explanation": "Deretan angka tanpa keterangan atau konteks merupakan contoh murni dari data mentah.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-003",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Dalam konteks keamanan siber, proses enkripsi terhadap data mentah menghasilkan...",
+      "options": [
+        "Informasi yang siap dipublikasikan ke media sosial",
+        "Ciphertext yang tetap ada secara digital namun kehilangan maknanya bagi yang tidak berhak",
+        "Penghapusan berkas secara permanen dari hard disk",
+        "Peningkatan resolusi gambar digital"
+      ],
+      "answer": 1,
+      "explanation": "Enkripsi mengacak data mentah menjadi ciphertext sehingga siapapun yang menyadapnya tidak dapat mengekstrak informasi bermakna tanpa kunci dekripsi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-004",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Mengapa penggabungan beberapa potongan data (data correlation) dapat menimbulkan ancaman privasi?",
+      "options": [
+        "Karena memperlambat kecepatan koneksi internet",
+        "Karena potongan data anonim yang digabungkan dapat mengungkap identitas asli seseorang",
+        "Karena menghabiskan memori RAM komputer secara drastis",
+        "Karena otomatis merusak sistem pendingin prosesor"
+      ],
+      "answer": 1,
+      "explanation": "Korelasi data memungkinkan penyerang menyatukan remah-remah data mentah publik menjadi profil informasi sensitif tentang individu tertentu.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-005",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Teknik keamanan yang menghilangkan atribut identitas pribadi dari kumpulan data disebut...",
+      "options": [
+        "Overclocking",
+        "Anonimisasi Data (Data Anonymization)",
+        "Formatting",
+        "Virtualisasi"
+      ],
+      "answer": 1,
+      "explanation": "Anonimisasi data adalah teknik mengubah informasi sensitif menjadi data agregat tanpa keterkaitan langsung dengan identitas subjek data.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-006",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Jika sebuah catatan hanya berisi teks '120/80', teks tersebut dikategorikan sebagai...",
+      "options": [
+        "Informasi diagnosis medis lengkap",
+        "Data mentah tanpa konteks pasien",
+        "Sistem operasi komputer",
+        "Kebijakan hukum perbankan"
+      ],
+      "answer": 1,
+      "explanation": "Angka '120/80' tanpa identitas pemiliknya hanyalah data mentah yang belum memiliki konteks medis spesifik individu.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-007",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Kapan sekumpulan data mentah berubah menjadi informasi yang memiliki nilai intelijen bagi peretas?",
+      "options": [
+        "Ketika data tersebut dihapus dari server",
+        "Ketika data tersebut dihubungkan dengan konteks tertentu, seperti nama pemilik atau nomor rekening",
+        "Ketika komputer dimatikan",
+        "Ketika kabel jaringan dilepaskan dari router"
+      ],
+      "answer": 1,
+      "explanation": "Data mentah menjadi bernilai tinggi bagi peretas saat diberi konteks yang mengidentifikasi entitas nyata, seperti kredensial atau rekening.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-008",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Fenomena di mana penggabungan banyak informasi publik yang tampak sepele dapat menghasilkan informasi rahasia tingkat tinggi dikenal sebagai...",
+      "options": [
+        "Efek Mosaik (Mosaic Effect)",
+        "Efek Rumah Kaca",
+        "Efek Doppler",
+        "Efek Tyndall"
+      ],
+      "answer": 0,
+      "explanation": "Mosaic effect adalah prinsip intelijen di mana kepingan-kepingan data terbuka jika disatukan membentuk gambaran utuh informasi rahasia.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-009",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Tindakan mengganti nama asli pasien dalam database penelitian dengan kode acak seperti 'SUBJ-9041' disebut...",
+      "options": [
+        "Pseudonimisasi (Pseudonymization)",
+        "Defragmentasi",
+        "Overclocking",
+        "Formatting"
+      ],
+      "answer": 0,
+      "explanation": "Pseudonimisasi mengganti data pengenal langsung dengan kode samaran untuk memisahkan data dari identitas asli subjek data.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-010",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Di tingkat arsitektur keamanan, perlindungan terhadap data mentah umumnya mengandalkan instrumen...",
+      "options": [
+        "Matematis dan kriptografis seperti enkripsi, hashing, dan kontrol integritas file",
+        "Pemberian brosur panduan kepada tamu kantor",
+        "Pemasangan tirai jendela ruang kerja",
+        "Pemilihan warna cat dinding server"
+      ],
+      "answer": 0,
+      "explanation": "Data mentah diamankan pada level bit dan byte menggunakan teknik komputasi seperti algoritma enkripsi dan fungsi hash.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-011",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Di tingkat aplikasi, perlindungan terhadap informasi umumnya mengandalkan mekanisme...",
+      "options": [
+        "Kontrol akses pengguna (Access Control), otorisasi peran, dan kebijakan privasi",
+        "Pembersihan debu pada kipas casing komputer",
+        "Pengaturan kecerahan layar monitor",
+        "Penggantian kabel mouse nirkabel"
+      ],
+      "answer": 0,
+      "explanation": "Informasi dilindungi dengan mengatur siapa yang berhak melihat, mengedit, atau membagikan makna dari data tersebut.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-012",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah yang menjelaskan mengapa informasi medis pasien memiliki nilai jual tinggi di pasar gelap (dark web)?",
+      "options": [
+        "Karena informasi medis tidak dapat diubah seumur hidup dan dapat disalahgunakan untuk klaim asuransi fiktif serta pemerasan",
+        "Karena berkas rekam medis berukuran file sangat besar",
+        "Karena informasi medis hanya ditulis dalam bahasa Latin",
+        "Karena berkas rekam medis mempercepat koneksi Wi-Fi"
+      ],
+      "answer": 0,
+      "explanation": "Berbeda dengan kata sandi yang bisa diganti, riwayat medis bersifat permanen dan sangat bernilai bagi penipu asuransi dan pemeras.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-013",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Sebuah toko buku online mengumpulkan data judul buku yang sering dibeli oleh pelanggan untuk membuat rekomendasi bacaan. Kumpulan data judul tersebut diolah menjadi...",
+      "options": [
+        "Informasi preferensi minat konsumen",
+        "Perangkat keras penyimpanan baru",
+        "Sistem pendingin cairan prosesor",
+        "Protokol jaringan kabel internasional"
+      ],
+      "answer": 0,
+      "explanation": "Pengolahan dan analisis pola pembelian mengubah data mentah riwayat transaksi menjadi informasi preferensi yang bernilai bisnis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-014",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Dalam konteks keamanan basis data, apa tujuan penerapan prinsip pemisahan tugas (Separation of Duties)?",
+      "options": [
+        "Mencegah satu individu memiliki kendali mutlak untuk mengubah data dan menyalahgunakan informasi",
+        "Membuat staf bekerja dua kali lebih lama setiap hari",
+        "Mengurangi jumlah komputer yang terhubung ke internet",
+        "Menghilangkan kewajiban menggunakan kata sandi"
+      ],
+      "answer": 0,
+      "explanation": "Pemisahan tugas membagi kewenangan kritis sehingga tidak ada satu orang pun yang bisa memanipulasi data tanpa pengawasan pihak lain.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-015",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Sebuah file teks dienkripsi menjadi serangkaian karakter acak: '7a9f1b2c4e...'. Dalam kondisi ini, status konten tersebut adalah...",
+      "options": [
+        "Data mentah terselubung (ciphertext) yang telah dicabut konteks informasinya bagi pihak yang tidak memegang kunci dekripsi",
+        "File yang rusak dan tidak akan pernah bisa dibuka kembali",
+        "File sistem operasi Windows yang sedang diperbarui",
+        "Virus komputer yang siap meledakkan komputer"
+      ],
+      "answer": 0,
+      "explanation": "Enkripsi mencabut lapisan informasi dari data; data tetap ada secara matematis namun tidak menyampaikan informasi bermakna bagi penyadap.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-016",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah contoh tindakan yang melindungi DATA MENTAH secara langsung di lapisan penyimpanan fisik?",
+      "options": [
+        "Mengaktifkan enkripsi disk penuh (Full Disk Encryption seperti BitLocker)",
+        "Menulis tata tertib penggunaan internet di mading kantor",
+        "Mengadakan seminar motivasi kerja karyawan",
+        "Mematikan lampu ruangan saat istirahat"
+      ],
+      "answer": 0,
+      "explanation": "Full Disk Encryption mengenkripsi sektor-sektor data mentah pada drive fisik secara langsung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-017",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah contoh tindakan yang melindungi INFORMASI di lapisan interaksi manusia?",
+      "options": [
+        "Mewajibkan dokter dan perawat merahasiakan rekam medis pasien sesuai kode etik kedokteran",
+        "Memasang hard disk dengan kecepatan putaran 7200 RPM",
+        "Mengganti kabel monitor komputer setiap enam bulan",
+        "Menginstal aplikasi kalkulator terbaru"
+      ],
+      "answer": 0,
+      "explanation": "Kode etik kerahasiaan dan kepatuhan hukum mengatur perilaku manusia dalam memperlakukan makna informasi yang mereka ketahui.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-018",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Mengapa data lokasi GPS mentah dari ponsel cerdas pengguna jika dianalisis selama 30 hari dapat berubah menjadi informasi berisiko tinggi?",
+      "options": [
+        "Karena lokasi GPS dapat merusak chip baterai ponsel",
+        "Karena pola koordinat harian mengungkap pola hidup, alamat rumah, tempat kerja, dan rute perjalanan pribadi pengguna",
+        "Karena GPS membutuhkan kuota data tak terbatas",
+        "Karena satelit luar angkasa akan mengirimkan radiasi berbahaya"
+      ],
+      "answer": 1,
+      "explanation": "Koordinat GPS hanyalah angka mentah, namun analisis agregat mengungkap informasi pola hidup dan kebiasaan pribadi yang sangat sensitif.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-019",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Proses mengubah data menjadi informasi yang berguna umumnya melalui siklus...",
+      "options": [
+        "Input (Masukan Data) -> Processing (Pengolahan) -> Output (Keluaran Informasi)",
+        "Output -> Input -> Processing",
+        "Destruction -> Transmission -> Input",
+        "Storage -> Destruction -> Formatting"
+      ],
+      "answer": 0,
+      "explanation": "Siklus pemrosesan informasi standar komputasi adalah Input (data mentah), Processing (pengolahan dalam konteks), dan Output (informasi bermakna).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-020",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Jika seorang administrator basis data melihat tabel berisi hash kata sandi: '$2y$12$e8vK...Q8m', administrator tersebut melihat...",
+      "options": [
+        "Data mentah satu arah yang tidak menampilkan informasi kata sandi asli",
+        "Kata sandi teks biasa yang bisa langsung dipakai login",
+        "Nama lengkap pengguna",
+        "Nomor telepon pemilik akun"
+      ],
+      "answer": 0,
+      "explanation": "Hash kriptografi adalah data mentah matematis satu arah yang menyembunyikan informasi kata sandi asli secara permanen.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-021",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Apa bahaya dari teknik 'OSINT' (Open Source Intelligence) yang memanfaatkan data publik di internet?",
+      "options": [
+        "Peretas dapat mengumpulkan serpihan data publik di media sosial korban untuk menyusun profil informasi lengkap guna melancarkan penipuan",
+        "OSINT menyebabkan situs web resmi pemerintah mati lampu",
+        "OSINT menghapus akun email pengguna tanpa konfirmasi",
+        "OSINT meningkatkan biaya langganan internet bulanan"
+      ],
+      "answer": 0,
+      "explanation": "OSINT mengumpulkan data publik tak berbahaya, lalu mengorelasikannya menjadi informasi intelijen yang dapat dimanfaatkan untuk rekayasa sosial.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-022",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah dari berikut ini yang merupakan contoh transformasi data mentah menjadi informasi keuangan?",
+      "options": [
+        "Mengumpulkan angka-angka saldo transaksi lalu menyusunnya menjadi Neraca Laba Rugi Perusahaan Kuartal I",
+        "Membeli kalkulator fisik baru di toko alat tulis",
+        "Menghapus angka-angka transaksi dari buku kas",
+        "Mencetak lembaran kertas kosong tanpa tulisan"
+      ],
+      "answer": 0,
+      "explanation": "Menyusun angka transaksi menjadi laporan neraca adalah proses pemberian konteks bisnis sehingga data menjadi informasi bernilai.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-023",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Konsep 'Differential Privacy' dalam sains data dan keamanan bertujuan untuk...",
+      "options": [
+        "Membagikan data riset agregat kepada publik sambil menjamin secara matematis bahwa data individu tidak dapat diekstraksi kembali",
+        "Mematikan koneksi internet saat malam hari",
+        "Menghapus seluruh database kependudukan nasional",
+        "Menjual data pengguna ke pengiklan pihak ketiga secara bebas"
+      ],
+      "answer": 0,
+      "explanation": "Differential privacy memasukkan derau (noise) matematis terukur agar informasi agregat akurat tanpa mengungkap identitas individual.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "1-c-024",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Mengapa perlindungan informasi juga harus mencakup pengendalian terhadap media lisan dan visual (misalnya saat rapat atau presentasi)?",
+      "options": [
+        "Karena informasi dapat bocor melalui pembicaraan yang didengar orang luar (eavesdropping) atau layar proyektor yang terlihat tanpa izin",
+        "Karena suara manusia dapat merusak mikrofon komputer",
+        "Karena presentasi selalu menghabiskan daya baterai laptop",
+        "Karena proyektor memancarkan gelombang elektromagnetik berbahaya"
+      ],
+      "answer": 0,
+      "explanation": "Informasi tidak terbatas pada file digital. Percakapan dan tampilan visual juga merupakan bentuk informasi yang rentan penyadapan fisik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-025",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Sebuah organisasi menerapkan 'Role-Based Access Control' (RBAC). Ini berarti hak untuk mengakses INFORMASI diberikan berdasarkan...",
+      "options": [
+        "Peran atau jabatan kerja resmi pengguna dalam organisasi",
+        "Merek laptop yang digunakan oleh pengguna",
+        "Kecepatan pengetikan pengguna di keyboard",
+        "Warna pakaian kerja yang dikenakan hari itu"
+      ],
+      "answer": 0,
+      "explanation": "RBAC membatasi akses informasi berdasarkan peran kerja individu, memastikan pengguna hanya melihat informasi yang sesuai kewenangannya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-026",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah di bawah ini yang menggambarkan kegagalan keamanan di tingkat DATA MENTAH?",
+      "options": [
+        "Hard disk server rusak terbakar dan tidak ada salinan cadangan",
+        "Karyawan menceritakan rahasia kantor saat mengobrol di kafe",
+        "Pimpinan rapat lupa mengunci ruang konferensi",
+        "Pencuri menyalin buku pedoman cetak di meja tamu"
+      ],
+      "answer": 0,
+      "explanation": "Kerusakan fisik hard disk tanpa backup adalah kehilangan data mentah secara permanen di lapisan penyimpanan fisik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-027",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Manakah di bawah ini yang menggambarkan kebocoran di tingkat INFORMASI tanpa melibatkan pembobolan server komputer?",
+      "options": [
+        "Staf membicarakan rahasia tender proyek di lift umum dan didengar oleh perwakilan perusahaan pesaing",
+        "Peretas menembus firewall menggunakan serangan exploit zero-day",
+        "Kabel serat optik bawah laut putus digigit ikan hiu",
+        "Sistem database terkunci otomatis oleh antivirus"
+      ],
+      "answer": 0,
+      "explanation": "Membicarakan rahasia di tempat umum membocorkan informasi bernilai secara lisan tanpa ada serangan siber pada server.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "1-c-028",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Audit log yang mencatat: 'User admin_01 mengunduh file laporan_gaji.xlsx pada pukul 14.30' merupakan...",
+      "options": [
+        "Informasi jejak audit yang berguna untuk akuntabilitas dan investigasi forensik keamanan",
+        "Virus komputer jenis trojan horse",
+        "Perangkat lunak bajakan yang ilegal",
+        "Spam email yang harus segera dihapus"
+      ],
+      "answer": 0,
+      "explanation": "Audit trail memberikan konteks operasional (siapa, apa, kapan) yang menjadi informasi vital saat menyelidiki insiden keamanan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-029",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Data sanitization (sanitasi data) sebelum data dibagikan kepada pihak ketiga bertujuan untuk...",
+      "options": [
+        "Membersihkan kuman fisik pada casing komputer",
+        "Menghilangkan informasi pengenal sensitif sehingga data yang dibagikan aman dari risiko pelanggaran privasi",
+        "Menambah kapasitas memori hard disk eksternal",
+        "Mengganti sistem operasi komputer dengan versi lama"
+      ],
+      "answer": 1,
+      "explanation": "Sanitasi data memilah dan membersihkan data dari elemen pengenal pribadi sebelum data dibagikan untuk riset atau publikasi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "1-c-030",
+      "chapterId": "1",
+      "subchapterId": "1-c",
+      "question": "Secara holistik, mengapa sistem keamanan siber yang baik harus mengamankan DATA dan INFORMASI secara bersamaan?",
+      "options": [
+        "Karena jika data mentah bocor dalam bentuk terenkripsi, data tersebut aman; namun jika lapisan aplikasi membocorkan informasi yang sudah didekripsi, perlindungan enkripsi menjadi sia-sia",
+        "Agar anggaran belanja divisi TI perusahaan dapat dihabiskan sepenuhnya",
+        "Karena komputer tidak dapat menyala jika hanya mengamankan salah satunya",
+        "Hanya sekadar formalitas agar mendapatkan sertifikat piagam penghargaan"
+      ],
+      "answer": 0,
+      "explanation": "Keamanan data (enkripsi) melindungi data mentah saat dicuri, sedangkan keamanan informasi (kontrol akses) memastikan informasi yang terdekripsi tidak disalahgunakan.",
+      "difficulty": "hard"
+    }
+  ]
+}

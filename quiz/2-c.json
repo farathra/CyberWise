@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "2-c-001",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Komputer generasi pertama seperti ENIAC pada era 1940-an menggunakan komponen...",
+      "options": [
+        "Transistor silikon",
+        "Tabung hampa udara (vacuum tubes)",
+        "Mikroprosesor multi-core",
+        "Kecerdasan buatan"
+      ],
+      "answer": 1,
+      "explanation": "Komputer awal generasi pertama mengandalkan ribuan tabung hampa udara yang besar, panas, dan memakan daya listrik tinggi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-002",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Jaringan riset militer dan akademik di Amerika Serikat yang menjadi cikal bakal internet global bernama...",
+      "options": [
+        "ARPANET",
+        "Ethernet",
+        "Intranet",
+        "Usenet"
+      ],
+      "answer": 0,
+      "explanation": "ARPANET (Advanced Research Projects Agency Network) yang dikembangkan pada akhir 1960-an merupakan fondasi awal internet modern.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-003",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Siapakah ilmuwan komputer yang menemukan World Wide Web (WWW) pada tahun 1989?",
+      "options": [
+        "Alan Turing",
+        "Steve Jobs",
+        "Sir Tim Berners-Lee",
+        "Bill Gates"
+      ],
+      "answer": 2,
+      "explanation": "Sir Tim Berners-Lee merancang protokol HTML, HTTP, dan konsep World Wide Web saat bekerja di CERN pada tahun 1989.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-004",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Hukum empiris yang menyatakan bahwa jumlah transistor pada mikroprosesor berlipat ganda kira-kira setiap dua tahun disebut...",
+      "options": [
+        "Hukum Newton",
+        "Hukum Moore (Moore's Law)",
+        "Hukum Ohm",
+        "Hukum Pascal"
+      ],
+      "answer": 1,
+      "explanation": "Hukum Moore, dicetuskan oleh Gordon Moore salah satu pendiri Intel, menggambarkan laju pertumbuhan kecepatan prosesor secara eksponensial.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-005",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Teknologi komputasi yang menyediakan sumber daya penyimpanan dan pemrosesan melalui internet tanpa server fisik lokal disebut...",
+      "options": [
+        "Komputasi Analog",
+        "Komputasi Awan (Cloud Computing)",
+        "Dial-up Networking",
+        "Mainframe Batching"
+      ],
+      "answer": 1,
+      "explanation": "Cloud computing memungkinkan pengguna mengakses komputasi, basis data, dan penyimpanan server secara fleksibel melalui internet.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-c-006",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Komputer generasi kedua (akhir 1950-an) menandai lompatan besar karena tabung hampa udara digantikan oleh...",
+      "options": [
+        "Transistor",
+        "Lampu pijar",
+        "Kabel tembaga",
+        "Piringan laser"
+      ],
+      "answer": 0,
+      "explanation": "Penemuan transistor di Bell Labs memungkinkan komputer menjadi jauh lebih kecil, hemat energi, dan tidak mudah terbakar panas.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-007",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Komponen revolusioner yang memadukan ribuan transistor ke dalam satu keping semikonduktor silikon tunggal pada generasi ketiga adalah...",
+      "options": [
+        "Integrated Circuit (IC / Sirkuit Terpadu)",
+        "Hard disk magnetik",
+        "Baterai lithium",
+        "Kartu punch kertas"
+      ],
+      "answer": 0,
+      "explanation": "Sirkuit Terpadu (IC) yang digagas Jack Kilby dan Robert Noyce menjadi tonggak lahirnya komputer generasi ketiga.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-008",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Mikroprosesor komersial pertama di dunia yang dirilis oleh Intel pada tahun 1971 adalah...",
+      "options": [
+        "Intel Core i7",
+        "Intel Pentium 4",
+        "Intel 4004",
+        "Intel 8086"
+      ],
+      "answer": 2,
+      "explanation": "Intel 4004 adalah mikroprosesor 4-bit pertama di dunia yang memadatkan seluruh unit pemrosesan pusat (CPU) ke dalam satu chip tunggal.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-c-009",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Sebelum monitor dan keyboard populer, media masukan (input) utama pada komputer generasi pertama dan kedua menggunakan...",
+      "options": [
+        "Layar sentuh kapasitif",
+        "Kartu berlubang (Punched Cards)",
+        "Mouse optik nirkabel",
+        "Koneksi bluetooth"
+      ],
+      "answer": 1,
+      "explanation": "Punched card berisi lubang-lubang pola tertentu yang dibaca oleh mesin pembaca mekanik sebagai input instruksi biner.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-010",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Protokol standar komunikasi data dasar yang menjadi fondasi pengalamatan dan transmisi internet hingga saat ini adalah...",
+      "options": [
+        "TCP/IP (Transmission Control Protocol / Internet Protocol)",
+        "Bluetooth 5.0",
+        "USB 3.0",
+        "VGA / HDMI"
+      ],
+      "answer": 0,
+      "explanation": "TCP/IP, dirancang oleh Vint Cerf dan Bob Kahn, adalah bahasa komunikasi universal yang menghubungkan jaringan komputer di seluruh dunia.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-011",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Era komputer pribadi (Personal Computer / PC) mulai merambah rumah tangga dan perkantoran secara massal pada dekade...",
+      "options": [
+        "Tahun 1940-an",
+        "Tahun 1950-an",
+        "Tahun 1970-an hingga 1980-an (Apple II, IBM PC)",
+        "Tahun 2020-an"
+      ],
+      "answer": 2,
+      "explanation": "Akhir 1970-an dan era 1980-an menandai demokratisasi komputer pribadi berkat kehadiran Apple II dan IBM PC di pasaran konsumen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-012",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Peramban web grafis pertama yang mempopulerkan penjelajahan internet bagi masyarakat umum pada tahun 1993 adalah...",
+      "options": [
+        "NCSA Mosaic",
+        "Google Chrome",
+        "Mozilla Firefox",
+        "Microsoft Edge"
+      ],
+      "answer": 0,
+      "explanation": "NCSA Mosaic adalah web browser pertama yang menampilkan gambar langsung bersamaan dengan teks dalam satu halaman web.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-c-013",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Generasi jaringan seluler pertama (1G) yang diperkenalkan pada tahun 1980-an mengandalkan teknologi transmisi...",
+      "options": [
+        "Sinyal analog suara murni tanpa transfer data internet",
+        "Sinyal 4G LTE berkecepatan tinggi",
+        "Streaming video 4K",
+        "Komputasi kuantum"
+      ],
+      "answer": 0,
+      "explanation": "1G (seperti standar AMPS) bekerja menggunakan transmisi radio analog yang hanya bisa melayani panggilan suara dan rentan penyadapan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-014",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Layanan pesan singkat teks (SMS) pertama kali lahir pada generasi jaringan seluler...",
+      "options": [
+        "1G",
+        "2G (GSM)",
+        "4G",
+        "5G"
+      ],
+      "answer": 1,
+      "explanation": "Generasi 2G mendigitalisasi transmisi seluler, memperkenalkan enkripsi panggilan suara serta fitur berkirim pesan teks SMS.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-015",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Peluncuran ponsel pintar layar sentuh modern dengan ekosistem toko aplikasi pada era 2007–2008 dipelopori oleh kehadiran...",
+      "options": [
+        "Apple iPhone dan sistem operasi Android",
+        "Telepon kabel putar",
+        "Pager radio beeper",
+        "Mesin faksimili kantor"
+      ],
+      "answer": 0,
+      "explanation": "iPhone (2007) dan Android (2008) mengubah paradigma telepon seluler menjadi komputer saku multifungsi dengan toko aplikasi terbuka.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-016",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Komputer generasi kelima difokuskan pada pengembangan teknologi komputasi...",
+      "options": [
+        "Kecerdasan Buatan (AI), pemrosesan paralel masif, dan komputasi kuantum",
+        "Tabung hampa udara berbahan kaca tebal",
+        "Kartu punch manual berbahan karton",
+        "Sinyal telegram morse kawat"
+      ],
+      "answer": 0,
+      "explanation": "Generasi kelima berorientasi pada sistem cerdas yang mampu belajar secara adaptif, memproses bahasa manusia, dan komputasi masa depan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-017",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Komputer mekanik 'Analytical Engine' yang dirancang pada abad ke-19 oleh tokoh yang dijuluki Bapak Komputer adalah karya...",
+      "options": [
+        "Charles Babbage",
+        "Nikola Tesla",
+        "Albert Einstein",
+        "Thomas Edison"
+      ],
+      "answer": 0,
+      "explanation": "Charles Babbage merancang konsep mesin hitung mekanis terprogram pertama, sementara Ada Lovelace menulis algoritma program perdananya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-018",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Perempuan ilmuwan matematika yang diakui sebagai programmer komputer pertama di dunia berkat karyanya untuk Analytical Engine adalah...",
+      "options": [
+        "Ada Lovelace",
+        "Marie Curie",
+        "Grace Hopper",
+        "Katherine Johnson"
+      ],
+      "answer": 0,
+      "explanation": "Ada Lovelace menulis algoritma pertama yang dimaksudkan untuk dieksekusi oleh mesin Babbage, menjadikannya programmer perdana dunia.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-019",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Istilah 'Bug' dalam dunia komputasi pertama kali dipopulerkan oleh Laksamana Grace Hopper ketika komputernya mogok akibat...",
+      "options": [
+        "Seekor ngengat (serangga/moth) fisik terselip di dalam relai mekanis komputer Mark II",
+        "Kabel listrik dicuri tikus",
+        "Virus worm menembus firewall",
+        "Hard disk komputer kehabisan memori"
+      ],
+      "answer": 0,
+      "explanation": "Grace Hopper menemukan serangga ngengat asli yang menempel di relai komputer pada tahun 1947 dan mencatatnya sebagai 'First actual case of bug being found'.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-020",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Evolusi jaringan seluler dari 3G ke 4G LTE membawa perubahan drastis berupa...",
+      "options": [
+        "Kecepatan transfer data broadband tinggi yang memungkinkan streaming video HD dan aplikasi interaktif lancar di ponsel",
+        "Penghapusan seluruh fungsi kamera pada ponsel",
+        "Kewajiban menyambungkan kabel telepon rumah ke ponsel",
+        "Penurunan kualitas suara telepon menjadi analog"
+      ],
+      "answer": 0,
+      "explanation": "4G LTE mengalihkan seluruh arsitektur jaringan berbasis IP dengan latensi rendah dan kecepatan broadband, memicu ledakan ekonomi aplikasi mobile.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-021",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Teknologi jaringan 5G memiliki keunggulan utama dibandingkan 4G dalam hal...",
+      "options": [
+        "Kecepatan sangat tinggi (multi-Gbps), latensi ultra-rendah (<1 ms), dan kapasitas menghubungkan jutaan perangkat IoT secara masif",
+        "Dapat digunakan tanpa membutuhkan daya baterai ponsel",
+        "Menggantikan fungsi satelit ruang angkasa secara penuh",
+        "Menghilangkan kebutuhan antena pemancar di bumi"
+      ],
+      "answer": 0,
+      "explanation": "5G dirancang untuk aplikasi kritis waktu-nyata seperti operasi bedah jarak jauh, kendaraan otonom, dan pabrik cerdas berlatensi ultra-rendah.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-022",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Koneksi internet rumahan era 1990-an yang menghubungkan komputer ke saluran telepon rumah dan mengeluarkan bunyi desing nada saat terhubung adalah...",
+      "options": [
+        "Dial-up modem (koneksi 56 Kbps)",
+        "Serat optik gigabit FTTH",
+        "Jaringan 5G nirkabel",
+        "Wi-Fi 6E"
+      ],
+      "answer": 0,
+      "explanation": "Dial-up modem mengonversi sinyal digital komputer menjadi nada audio analog yang dikirim melalui saluran telepon kabel PSTN.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-023",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Perangkat floppy disk (disket) berukuran 3,5 inci yang populer di era 1980-an dan 1990-an memiliki kapasitas penyimpanan umum sebesar...",
+      "options": [
+        "1,44 Megabyte (MB)",
+        "100 Gigabyte (GB)",
+        "1 Terabyte (TB)",
+        "500 Kilobyte (KB)"
+      ],
+      "answer": 0,
+      "explanation": "Kapasitas standar disket 3,5 inci HD adalah 1,44 MB, yang kini bahkan tidak cukup untuk menampung satu buah foto kamera smartphone beresolusi tinggi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-024",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Konsep arsitektur komputer 'Von Neumann Architecture' yang menjadi standar komputasi hingga kini memiliki karakteristik...",
+      "options": [
+        "Memori tunggal digunakan untuk menyimpan instruksi program sekaligus data kerja komputasi",
+        "Instruksi program harus selalu diketik manual oleh pengguna setiap detik",
+        "Data hanya boleh disimpan dalam bentuk cetak kertas",
+        "Komputer tidak boleh memiliki prosesor pusat"
+      ],
+      "answer": 0,
+      "explanation": "Arsitektur Von Neumann menyimpan data dan program bersama di memori utama yang dieksekusi secara berurutan oleh CPU.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-c-025",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Sistem operasi grafis (GUI) yang mempopulerkan interaksi jendela visual, ikon, dan mouse bagi pengguna rumahan di era 1980-an dipelopori oleh...",
+      "options": [
+        "Xerox PARC, Apple Macintosh, dan Microsoft Windows",
+        "Sistem berbasis command prompt teks DOS saja",
+        "Mesin ketik manual Remington",
+        "Kamera foto polaroid instan"
+      ],
+      "answer": 0,
+      "explanation": "Antarmuka grafis (GUI) yang dikembangkan di Xerox PARC lalu disempurnakan oleh Apple Mac dan Windows menggantikan perintah ketik teks yang rumit.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-026",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Perkembangan kabel jaringan bawah laut serat optik (fiber optic) revolusioner karena mentransmisikan data dalam bentuk...",
+      "options": [
+        "Denyut pulsa cahaya kaca dengan kecepatan mendekati kecepatan cahaya dan kapasitas terabit per detik",
+        "Aliran air laut bertekanan tinggi",
+        "Gelombang suara lumba-lumba",
+        "Percikan api listrik baterai"
+      ],
+      "answer": 0,
+      "explanation": "Kabel serat optik membawa lebih dari 95% lalu lintas internet antardua benua menggunakan sinyal cahaya laser berkecepatan sangat tinggi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-027",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Sebelum kemunculan format penyimpanan Flashdisk USB di awal tahun 2000-an, media penyimpanan portabel yang umum digunakan siswa adalah...",
+      "options": [
+        "Disket (Floppy Disk) dan cakram CD-R/CD-RW",
+        "Penyimpanan awan Google Drive",
+        "Kartu microSD 512 GB",
+        "SSD NVMe eksternal"
+      ],
+      "answer": 0,
+      "explanation": "Disket dan cakram CD adalah media transfer berkas utama sebelum flash drive berbasis USB menggantikannya secara luas.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-c-028",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Istilah 'Web 2.0' pada pertengahan era 2000-an menandai perubahan internet dari sekadar halaman statis yang dibaca pasif menjadi...",
+      "options": [
+        "Web partisipatif dan interaktif di mana pengguna dapat membuat konten sendiri (User-Generated Content seperti media sosial dan blog)",
+        "Penutupan seluruh situs web di dunia",
+        "Penggantian internet dengan siaran radio swasta",
+        "Internet yang hanya boleh diakses oleh ilmuwan fisika"
+      ],
+      "answer": 0,
+      "explanation": "Web 2.0 melahirkan era media sosial, berbagi video, dan kolaborasi daring di mana audiens menjadi produsen informasi sekaligus.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-c-029",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Komputasi kuantum (Quantum Computing) yang saat ini sedang dikembangkan memanfaatkan fenomena mekanika kuantum bernama...",
+      "options": [
+        "Superposisi dan Keterikatan (Superposition & Entanglement) menggunakan Qubit",
+        "Penguapan air panas mendidih",
+        "Pembakaran arang batu bara",
+        "Peregangan pegas baja"
+      ],
+      "answer": 0,
+      "explanation": "Qubit kuantum dapat berada dalam status 0, 1, atau keduanya sekaligus (superposisi), memungkinkan kalkulasi paralel rumit yang melampaui superkomputer biasa.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-c-030",
+      "chapterId": "2",
+      "subchapterId": "2-c",
+      "question": "Benang merah utama dari evolusi teknologi digital dari era 1940-an hingga saat ini adalah...",
+      "options": [
+        "Perangkat komputasi menjadi semakin kecil, semakin cepat, semakin murah, dan semakin terhubung secara global dalam kehidupan manusia",
+        "Komputer menjadi semakin besar, semakin panas, dan semakin mahal",
+        "Jumlah pengguna teknologi digital terus menurun dari tahun ke tahun",
+        "Teknologi digital tidak pernah mengalami perubahan kecepatan prosesor"
+      ],
+      "answer": 0,
+      "explanation": "Miniaturisasi transistor dan konektivitas jaringan mendorong komputer dari mesin seukuran ruangan menjadi chip pintar mikroskopis di saku manusia.",
+      "difficulty": "easy"
+    }
+  ]
+}

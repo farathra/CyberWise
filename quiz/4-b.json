@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "4-b-001",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Metode pengamanan akun yang mewajibkan pengguna memasukkan faktor tambahan (seperti kode OTP dari aplikasi) setelah kata sandi disebut...",
+      "options": [
+        "Single Sign-On",
+        "Autentikasi Dua Faktor (2FA / Two-Factor Authentication)",
+        "Captive Portal",
+        "Data Mining"
+      ],
+      "answer": 1,
+      "explanation": "2FA menambahkan lapisan keamanan kedua sehingga meskipun kata sandi dicuri, akun tetap terlindungi tanpa kode verifikasi sekunder.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-002",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Aturan pencadangan data 'Strategi Backup 3-2-1' merekomendasikan...",
+      "options": [
+        "3 salinan data, disimpan dalam 2 jenis media berbeda, dengan setidaknya 1 salinan disimpan di lokasi terpisah/offline",
+        "3 kata sandi berbeda, diubah setiap 2 hari, untuk 1 komputer",
+        "3 perangkat antivirus, diinstal dalam 2 partisi, oleh 1 teknisi",
+        "3 kali login salah, tunggu 2 jam, sebelum mencoba 1 kali lagi"
+      ],
+      "answer": 0,
+      "explanation": "Strategi 3-2-1 adalah standar emas pencadangan: memiliki 3 salinan data di 2 media penyimpanan berbeda dan 1 salinan disimpan terpisah di luar lokasi (offsite/cold storage).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-003",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Manakah kriteria kata sandi yang PALING KUAT dan aman dari serangan brute-force?",
+      "options": [
+        "admin12345",
+        "TanggalLahir2008",
+        "Kombinasi acak minimal 14-16 karakter yang terdiri atas huruf besar, huruf kecil, angka, dan simbol (misal: K9#mP!v8$xL2@qZ)",
+        "NamaLengkapTanpaSpasi"
+      ],
+      "answer": 2,
+      "explanation": "Kata sandi yang panjang, acak, dan bervariasi membutuhkan waktu komputasi ribuan tahun untuk dipecahkan dengan metode brute-force.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-004",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Mengapa penggunaan aplikasi Password Manager (seperti Bitwarden) sangat dianjurkan?",
+      "options": [
+        "Karena menghapus kebutuhan koneksi internet",
+        "Karena memungkinkan kita membuat kata sandi unik yang kuat untuk setiap situs tanpa perlu menghafalnya secara manual",
+        "Karena otomatis meretas akun media sosial orang lain",
+        "Karena membuat komputer bekerja lebih dingin"
+      ],
+      "answer": 1,
+      "explanation": "Password manager mengenkripsi dan mengelola kredensial unik untuk setiap layanan, memutus risiko credential stuffing jika salah satu situs bocor.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-005",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Fitur enkripsi drive penuh bawaan pada sistem operasi Windows yang melindungi data laptop saat perangkat dicuri secara fisik bernama...",
+      "options": [
+        "BitLocker",
+        "FileVault",
+        "Windows Defender Firewall",
+        "DirectX"
+      ],
+      "answer": 0,
+      "explanation": "BitLocker adalah teknologi enkripsi volume penuh pada sistem Windows yang mengamankan data disk dari akses tanpa izin jika perangkat dicuri.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-b-006",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Serangan 'Credential Stuffing' terjadi ketika peretas menggunakan...",
+      "options": [
+        "Komputer berpendingin air untuk memecahkan kata sandi Wi-Fi kantor",
+        "Satu monitor raksasa untuk memantau puluhan kamera CCTV",
+        "Kumpulan data nama pengguna dan kata sandi yang bocor dari satu situs web untuk membobol akun korban di berbagai layanan web lainnya secara otomatis",
+        "Perangkat kabel USB khusus untuk mengukur kecepatan pengetikan pengguna"
+      ],
+      "answer": 2,
+      "explanation": "Credential stuffing memanfaatkan kebiasaan buruk pengguna mendaur ulang kata sandi yang sama di berbagai platform; kebocoran satu situs langsung mengancam situs lain.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-007",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Mengapa verifikasi dua faktor (2FA) menggunakan SMS dinilai kurang aman dibandingkan aplikasi otentikator mandiri?",
+      "options": [
+        "Karena SMS tidak bisa dikirim ke luar negeri",
+        "Karena telepon seluler selalu memblokir pesan SMS secara otomatis",
+        "Karena pesan SMS membutuhkan kuota internet berkecepatan tinggi",
+        "Karena pesan SMS rentan disadap melalui jaringan seluler dan rentan terhadap pembajakan nomor kartu SIM (SIM Swapping)"
+      ],
+      "answer": 3,
+      "explanation": "SIM Swapping memungkinkan peretas mengambil alih nomor telepon korban melalui rekayasa sosial ke operator seluler, mencegat kode OTP SMS yang dikirimkan bank.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-008",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Algoritma TOTP (Time-based One-Time Password) pada aplikasi otentikator menghasilkan kode verifikasi yang...",
+      "options": [
+        "Berubah secara otomatis setiap 30 detik berdasarkan perhitungan matematis waktu dan kunci rahasia bersama",
+        "Sama persis sepanjang tahun dan tidak pernah berganti",
+        "Dihitung berdasarkan jumlah huruf pada nama pemilik ponsel",
+        "Dikirimkan oleh operator telekomunikasi melalui surat fisik"
+      ],
+      "answer": 0,
+      "explanation": "Aplikasi TOTP menghitung kode 6 digit secara lokal menggunakan kunci rahasia bersama dan waktu presisi perangkat tanpa memerlukan koneksi jaringan internet atau seluler.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-009",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Teknologi otentikasi fisik modern seperti kunci keamanan FIDO2 / YubiKey memiliki keunggulan mutlak dibandingkan kode OTP karena...",
+      "options": [
+        "Mampu menyimpan file film berukuran ratusan gigabyte",
+        "Membuat baterai laptop tidak akan pernah habis",
+        "Dapat digunakan tanpa perlu menyentuh komputer sama sekali",
+        "Kebal terhadap serangan phishing (Phishing-Resistant) karena kunci terikat secara kriptografis pada domain situs web yang sah"
+      ],
+      "answer": 3,
+      "explanation": "Kunci FIDO2/WebAuthn memverifikasi domain situs tujuan secara kriptografis; jika korban tertipu membuka situs phishing tiruan, kunci tidak akan memberikan kredensial.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-b-010",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Fitur enkripsi volume penyimpanan penuh bawaan pada sistem operasi macOS milik Apple disebut...",
+      "options": [
+        "BitLocker",
+        "DirectX",
+        "FileVault",
+        "Time Machine"
+      ],
+      "answer": 2,
+      "explanation": "FileVault adalah sistem Full Disk Encryption terintegrasi pada macOS yang mengenkripsi seluruh penyimpanan drive Mac demi mencegah akses data tanpa izin.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-011",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Protokol HTTPS melindungi data pengguna yang sedang transit di jaringan internet dengan mengenkripsi sesi komunikasi menggunakan protokol...",
+      "options": [
+        "FTP",
+        "Telnet",
+        "SNMP",
+        "TLS (Transport Layer Security)"
+      ],
+      "answer": 3,
+      "explanation": "HTTPS menggunakan enkripsi TLS untuk mengamankan pertukaran data antara browser pengguna dan web server dari penyadapan dan pemalsuan data.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-012",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Fungsi utama menggunakan layanan Virtual Private Network (VPN) saat terhubung ke jaringan Wi-Fi publik di tempat umum adalah...",
+      "options": [
+        "Menghapus seluruh file cookie peramban secara instan",
+        "Menggandakan kecepatan internet menjadi sepuluh kali lipat",
+        "Mengisi daya baterai smartphone secara nirkabel",
+        "Membentuk saluran terowongan terenkripsi (encrypted tunnel) yang melindungi seluruh lalu lintas data Anda dari penyadapan pihak lain di jaringan lokal"
+      ],
+      "answer": 3,
+      "explanation": "VPN mengenkripsi semua transmisi data perangkat, melindungi Anda dari serangan Man-in-the-Middle atau penyadapan oleh peretas di jaringan Wi-Fi publik yang sama.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-013",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Jenis pencadangan data di mana sistem hanya menyalin berkas yang mengalami perubahan sejak pencadangan terakhir (baik full maupun incremental) disebut...",
+      "options": [
+        "Full Backup",
+        "Static Backup",
+        "Incremental Backup (Cadangan Inkremental)",
+        "Manual Backup"
+      ],
+      "answer": 2,
+      "explanation": "Incremental backup hanya merekam data yang baru atau diubah sejak cadangan terakhir dibuat, sangat efisien dalam waktu eksekusi dan konsumsi ruang disk.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-b-014",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Jenis pencadangan data 'Differential Backup' bekerja dengan cara menyalin berkas yang...",
+      "options": [
+        "Mengalami perubahan sejak pencadangan penuh (Full Backup) terakhir dilakukan",
+        "Dibuat oleh pengguna lain di luar organisasi",
+        "Berukuran lebih kecil dari 1 kilobyte saja",
+        "Telah dihapus ke tempat sampah Recycle Bin"
+      ],
+      "answer": 0,
+      "explanation": "Differential backup menyimpan semua perubahan kumulatif yang terjadi sejak Full Backup terakhir, mempermudah pemulihan karena hanya butuh 2 berkas cadangan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-b-015",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Istilah 'Shoulder Surfing' dalam ancaman keamanan informasi mengacu pada aksi...",
+      "options": [
+        "Menyelam di laut sambil mengoperasikan laptop",
+        "Mengunduh berkas video bajakan di internet",
+        "Mengirim surel penipuan massal ke seluruh dunia",
+        "Mengintip secara fisik dari balik pundak atau samping untuk mencuri PIN, kata sandi, atau pola kunci saat korban mengetiknya"
+      ],
+      "answer": 3,
+      "explanation": "Shoulder surfing adalah aksi spionase fisik langsung di mana pelaku mengamati layar atau jari korban saat memasukkan kredensial rahasia di tempat umum.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-016",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Mengapa sekadar menekan tombol 'Delete' atau mengosongkan Recycle Bin tidak cukup untuk menghapus data sensitif secara permanen?",
+      "options": [
+        "Karena berkas otomatis terkirim ke alamat email pembuat laptop",
+        "Karena tombol delete hanya berfungsi pada berkas gambar",
+        "Karena hard disk akan berbunyi alarm jika file dihapus",
+        "Karena sistem operasi hanya menghapus penunjuk indeks berkas, sedangkan data biner aslinya masih tertinggal di sektor disk dan bisa dipulihkan"
+      ],
+      "answer": 3,
+      "explanation": "Penghapusan standar hanya melepaskan pointer file; bit data fisik tetap berada di media penyimpanan sampai ditimpa oleh data baru (data wiping).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-017",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Tindakan pengamanan data sensitif dengan menimpa (overwrite) sektor penyimpanan berkali-kali menggunakan pola biner acak agar tidak dapat dipulihkan disebut...",
+      "options": [
+        "Data Formatting biasa",
+        "Data Mining",
+        "Data Sanitization / Secure Data Wiping (Penghapusan Aman)",
+        "Data Compression"
+      ],
+      "answer": 2,
+      "explanation": "Secure Data Wiping menimpa blok penyimpanan dengan pola acak sehingga jejak magnetik data lama hancur total dan tidak dapat dipulihkan oleh software forensik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-018",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Apa risiko privasi dari metadata 'EXIF Data' yang tersimpan di dalam foto kamera smartphone jika diunggah langsung ke media sosial tanpa disaring?",
+      "options": [
+        "Foto otomatis terhapus dalam waktu 24 jam",
+        "Warna foto berubah menjadi monokrom hitam putih",
+        "Dapat membocorkan koordinat GPS lokasi rumah, waktu pengambilan foto, dan tipe perangkat secara rinci kepada publik",
+        "Ukuran berkas foto membesar menjadi 1 terabyte"
+      ],
+      "answer": 2,
+      "explanation": "Metadata EXIF menyertakan informasi geolokasi GPS presisi dan cap waktu yang dapat dieksploitasi oleh pelaku kejahatan untuk melacak keberadaan fisik seseorang.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-019",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Pada contoh kasus dalam modul pembelajaran, mengapa Budi selalu mencabut kabel hard disk eksternalnya setelah selesai melakukan backup mingguan?",
+      "options": [
+        "Agar komputer tidak kehabisan daya listrik",
+        "Untuk menciptakan cadangan terisolasi offline (air-gapped) sehingga data cadangan kebal dari serangan ransomware jika komputernya terserang di kemudian hari",
+        "Karena kabel hard disk eksternal tidak boleh dipasang lebih dari 10 menit",
+        "Agar hard disk tidak berdebu"
+      ],
+      "answer": 1,
+      "explanation": "Mencabut sambungan fisik hard disk menciptakan offline/air-gapped backup; malware tidak dapat menjangkau atau mengenkripsi media penyimpanan yang tidak tersambung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-020",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Fitur 'Passkeys' yang kini didukung oleh berbagai platform teknologi besar menggunakan standar FIDO yang bertujuan untuk...",
+      "options": [
+        "Mengganti kata sandi tradisional dengan pasangan kunci kriptografi publik-privat yang lebih aman, praktis, dan tahan phishing",
+        "Menghapus akun media sosial yang tidak aktif",
+        "Membatasi penggunaan internet maksimal 2 jam per hari",
+        "Mewajibkan pengguna membayar biaya langganan setiap kali login"
+      ],
+      "answer": 0,
+      "explanation": "Passkeys mengeliminasi kata sandi tradisional menggunakan kriptografi asimetris; kunci privat tersimpan di perangkat dan diverifikasi secara lokal menggunakan biometrik.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-b-021",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Konsep enkripsi 'End-to-End Encryption' (E2EE) pada aplikasi perpesanan instan menjamin bahwa...",
+      "options": [
+        "Pesan dapat dibaca oleh penyedia aplikasi kapan saja",
+        "Hanya pihak pengirim dan penerima yang memiliki kunci untuk mendekripsi dan membaca pesan, bahkan server penyedia layanan tidak bisa membacanya",
+        "Semua pesan otomatis dihapus dalam waktu 1 detik setelah dikirim",
+        "Pesan hanya bisa dikirim jika kedua ponsel bersentuhan fisik"
+      ],
+      "answer": 1,
+      "explanation": "E2EE menjamin kerahasiaan absolut di mana pesan dienkripsi di perangkat pengirim dan hanya didekripsi di perangkat penerima, tanpa celah intip bagi server perantara.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-022",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Manakah tindakan pencegahan yang paling bijak saat menerima tautan URL yang dipendekkan (shortened link seperti bit.ly) dari pengirim tidak dikenal?",
+      "options": [
+        "Langsung klik tautan tersebut tanpa ragu",
+        "Teruskan tautan ke seluruh grup obrolan keluarga",
+        "Matikan sambungan Wi-Fi rumah selamanya",
+        "Gunakan alat pemeriksa URL (URL Expander) untuk melihat alamat asli tujuan tautan sebelum memutuskan untuk membukanya"
+      ],
+      "answer": 3,
+      "explanation": "Pemendek tautan kerap digunakan untuk menyamarkan tautan phishing atau malware. Layanan URL expander memungkinkan inspeksi domain asli tanpa mengeksekusinya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-023",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Manakah dari kombinasi kata sandi berikut yang paling rentan terhadap serangan kamus (Dictionary Attack)?",
+      "options": [
+        "password123",
+        "X7$kL#92!pM@vWq",
+        "kucing-terbang-minum-kopi-dingin-2026!",
+        "Tr#9$bX1!zQ8@kL"
+      ],
+      "answer": 0,
+      "explanation": "Kata sandi yang menggunakan kata-kata umum dari kamus atau pola dasar seperti 'password123' dapat dipecahkan dalam sepersekian detik oleh alat kamus peretas.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-024",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Konsep 'Passphrase' (Frasa Sandi) yang terdiri dari rangkaian 4-5 kata acak (misalnya: `pohon-sepatu-awan-kopi-lari`) disukai pakar keamanan karena...",
+      "options": [
+        "Hanya bisa diketik oleh superkomputer militer",
+        "Membuat peramban web bekerja dua kali lebih cepat",
+        "Sangat panjang sehingga memiliki entropi tinggi dan sulit ditebak mesin, namun jauh lebih mudah dihafal oleh ingatan manusia",
+        "Secara otomatis menghapus virus dari komputer"
+      ],
+      "answer": 2,
+      "explanation": "Frasa sandi menawarkan kombinasi ideal antara panjang karakter masif (ketahanan superior terhadap brute-force) dan kemudahan untuk diingat oleh pengguna.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-025",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Apa risiko keamanan terbesar dari menggunakan fitur 'Simpan Kata Sandi' di peramban web pada komputer umum atau komputer kantor bersama?",
+      "options": [
+        "Komputer publik akan mengalami ledakan pada layar monitor",
+        "Situs web akan menghapus akun Anda secara permanen",
+        "Pengguna lain yang menggunakan komputer tersebut setelah Anda dapat mengakses akun Anda tanpa perlu mengetahui kata sandi Anda",
+        "Monitor komputer akan menampilkan layar biru"
+      ],
+      "answer": 2,
+      "explanation": "Menyimpan kredensial di peramban komputer bersama memberikan akses instan bagi siapa pun pengguna berikutnya untuk masuk ke akun pribadi Anda.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-026",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Mengapa pembaruan otomatis (Automatic Update) pada peramban web (browser) sangat krusial bagi keamanan digital?",
+      "options": [
+        "Karena peramban adalah pintu gerbang utama ke internet, dan patch rutin menutup celah eksekusi kode jarak jauh dan zero-day exploit",
+        "Agar warna tema peramban berganti setiap minggu",
+        "Untuk memperkecil jendela peramban menjadi setengah layar",
+        "Agar peramban tidak dapat membuka situs berita luar negeri"
+      ],
+      "answer": 0,
+      "explanation": "Peramban web menghadapi ancaman eksploitasi web setiap hari; penambalan keamanan otomatis memastikan kerentanan kode ditutup sebelum dieksploitasi penyerang.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-027",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Apa manfaat utama mengaktifkan fitur 'Kunci Layar Otomatis' (Screen Lock Timeout) berdurasi singkat pada laptop dan ponsel pintar?",
+      "options": [
+        "Mencegah orang asing mengakses perangkat dan sesi akun saat perangkat ditinggal sejenak tanpa pengawasan",
+        "Mempercepat penurunan performa pemrosesan grafis",
+        "Menghapus semua aplikasi yang tidak dipakai dalam 24 jam",
+        "Menghentikan seluruh pembaruan sistem operasi secara permanen"
+      ],
+      "answer": 0,
+      "explanation": "Kunci layar otomatis melindungi privasi dan akun aktif dari akses fisik tanpa izin ketika pengguna meninggalkan meja kerja atau perangkatnya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-b-028",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Ketika mendaftarkan akun di internet, mengapa memberikan jawaban jujur pada 'Pertanyaan Keamanan' (seperti nama gadis ibu kandung) justru berisiko?",
+      "options": [
+        "Karena informasi tersebut sering kali dapat dicari peretas melalui riwayat media sosial atau catatan publik (teknik OSINT)",
+        "Karena sistem komputer tidak bisa membaca nama orang tua",
+        "Karena jawaban tersebut otomatis dipublikasikan di media massa",
+        "Karena membuat akun tidak bisa diakses selamanya"
+      ],
+      "answer": 0,
+      "explanation": "Jawaban atas pertanyaan keamanan standar mudah dilacak melalui rekayasa sosial atau penelusuran digital (OSINT); pakar menyarankan menggunakan jawaban acak yang disimpan di password manager.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-029",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Mengapa memasang ekstensi pemblokir iklan dan pelacak (seperti uBlock Origin) di peramban web sangat dianjurkan dari sudut pandang keamanan?",
+      "options": [
+        "Karena membuat koneksi internet mati total",
+        "Karena memblokir muatan berbahaya dari sindikat malvertising dan skrip pelacak pihak ketiga sebelum sempat dieksekusi di peramban",
+        "Karena menghapus seluruh dokumen Word dari memori komputer",
+        "Karena membatasi kemampuan prosesor memutar suara"
+      ],
+      "answer": 1,
+      "explanation": "Pemblokir konten memotong jalur distribusi malvertising dan skrip pihak ketiga yang berpotensi menyuntikkan malware atau mengarahkan ke halaman phishing.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-b-030",
+      "chapterId": "4",
+      "subchapterId": "4-b",
+      "question": "Manakah kesimpulan yang paling tepat mengenai penerapan teknik dan strategi penggunaan data dalam kehidupan digital sehari-hari?",
+      "options": [
+        "Keamanan digital adalah tanggung jawab pabrik laptop semata tanpa perlu peran pengguna",
+        "Penerapan disiplin kata sandi unik, 2FA, enkripsi, cadangan 3-2-1, dan pembaruan berkala adalah perisai terpadu yang menyelamatkan privasi dan aset digital kita",
+        "Menggunakan satu kata sandi sederhana untuk semua akun adalah cara terbaik agar tidak lupa",
+        "Tidak ada gunanya mengamankan data karena semua komputer pasti akan diretas"
+      ],
+      "answer": 1,
+      "explanation": "Kombinasi proaktif antara kata sandi kuat, otentikasi multi-faktor, enkripsi penyimpanan, cadangan terisolasi, dan pembaruan sistem adalah benteng perlindungan digital paling kokoh.",
+      "difficulty": "easy"
+    }
+  ]
+}

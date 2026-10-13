@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "4-a-001",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip keamanan yang menetapkan bahwa sistem harus memiliki beberapa lapis pertahanan bertingkat disebut...",
+      "options": [
+        "Defense in Depth (Pertahanan Berlapis)",
+        "Single Point of Failure",
+        "Open Door Policy",
+        "Single Sign-On"
+      ],
+      "answer": 0,
+      "explanation": "Defense in Depth menerapkan banyak lapisan keamanan (fisik, jaringan, host, aplikasi, data) sehingga penembusan satu lapis tidak langsung melumpuhkan sistem.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-002",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Apa inti dari prinsip 'Least Privilege' (Hak Akses Minimal)?",
+      "options": [
+        "Memberikan hak administrator penuh kepada seluruh karyawan baru",
+        "Setiap pengguna atau program hanya diberi hak akses minimum yang mutlak diperlukan untuk menyelesaikan tugasnya",
+        "Membagikan kata sandi master ke seluruh staf divisi IT",
+        "Menghilangkan sistem otentikasi agar proses kerja cepat"
+      ],
+      "answer": 1,
+      "explanation": "Principle of Least Privilege meminimalkan dampak potensi kebocoran akun dengan membatasi wewenang setiap akun hanya pada fungsinya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-003",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Semboyan utama dari filosofi arsitektur keamanan modern 'Zero Trust' adalah...",
+      "options": [
+        "Trust everyone inside the office network",
+        "Never trust, always verify (Jangan pernah percaya, selalu verifikasi)",
+        "Security is an optional feature",
+        "Assume no attacker can break a password"
+      ],
+      "answer": 1,
+      "explanation": "Zero Trust mengasumsikan ancaman dapat berasal dari dalam maupun luar jaringan, sehingga setiap permintaan akses harus selalu diverifikasi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-004",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Penerapan sistem audit log yang tidak dapat diubah (immutable logs) bertujuan mendukung pilar Triad CIA yang mana?",
+      "options": [
+        "Integrity (Integritas dan Akuntabilitas)",
+        "Bandwidth maximization",
+        "Display brightness",
+        "Lossless compression"
+      ],
+      "answer": 0,
+      "explanation": "Log yang tidak bisa dimanipulasi menjamin integritas catatan jejak aktivitas sistem sehingga insiden peretasan dapat diinvestigasi secara valid.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-005",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Manakah di bawah ini yang merupakan contoh implementasi keamanan fisik dalam konsep Defense in Depth?",
+      "options": [
+        "Pemasangan sertifikat SSL/TLS pada domain web",
+        "Penggunaan kartu akses RFID dan kamera CCTV di pintu masuk ruang pusat server",
+        "Konfigurasi aturan pemblokiran port pada software firewall",
+        "Pengaturan algoritma enkripsi database MySQL"
+      ],
+      "answer": 1,
+      "explanation": "Kontrol akses fisik seperti kunci pintu, kartu RFID, dan CCTV melindungi perangkat keras server dari intrusi fisik orang yang tidak berwenang.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-006",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip desain keamanan 'Fail-Safe Defaults' menetapkan bahwa jika terjadi kegagalan atau ketiadaan aturan izin yang eksplisit, sistem harus...",
+      "options": [
+        "Membuka seluruh akses secara bebas kepada siapa saja",
+        "Menghapus seluruh file data pengguna secara permanen",
+        "Secara default menolak akses (Default Deny) demi menjamin keamanan",
+        "Mematikan pasokan daya listrik gedung secara mendadak"
+      ],
+      "answer": 2,
+      "explanation": "Fail-Safe Defaults memastikan sistem mengunci akses secara bawaan (default deny), kecuali ada instruksi otoritas eksplisit yang memberikan izin.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-007",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip 'Pemisahan Kewajiban' (Separation of Duties) dalam tata kelola keamanan informasi bertujuan untuk...",
+      "options": [
+        "Mewajibkan semua pegawai bekerja dari rumah",
+        "Memisahkan kabel internet berdasarkan warna pelindungnya",
+        "Menghapus wewenang pimpinan dalam memonitor keuangan perusahaan",
+        "Mencegah kecurangan atau penyalahgunaan wewenang dengan membagi tugas berisiko tinggi kepada lebih dari satu orang"
+      ],
+      "answer": 3,
+      "explanation": "Separation of Duties mencegah satu orang memiliki kendali mutlak atas suatu proses kritis tanpa adanya mekanisme pengawasan dan verifikasi silang pihak lain.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-008",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip Kerckhoffs dalam kriptografi dan keamanan informasi menyatakan bahwa keamanan suatu sistem harus...",
+      "options": [
+        "Bergantung sepenuhnya pada kerahasiaan algoritma enkripsinya",
+        "Hanya dapat dioperasikan oleh penemu sistem tersebut",
+        "Tetap aman meskipun seluruh cara kerja algoritmanya diketahui publik, asalkan kunci privatnya tetap terjaga kerahasiaannya",
+        "Memerlukan penggantian kata sandi setiap sepuluh detik"
+      ],
+      "answer": 2,
+      "explanation": "Prinsip Kerckhoffs menegaskan keamanan sistem tidak boleh bertumpu pada kerahasiaan algoritma, melainkan pada keandalan perlindungan kunci kriptografi.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-009",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Sistem kontrol akses yang memberikan izin berdasarkan peran jabatan pengguna di organisasi (seperti 'Dokter', 'Perawat', 'Kasir') disebut...",
+      "options": [
+        "Role-Based Access Control (RBAC)",
+        "Manual File Transmission",
+        "Open Source Infrastructure",
+        "Public Key Distribution"
+      ],
+      "answer": 0,
+      "explanation": "RBAC (Role-Based Access Control) menetapkan hak akses sistem berdasarkan peran fungsi pekerjaan pengguna di dalam organisasi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-010",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Dalam arsitektur Defense in Depth, perangkat Web Application Firewall (WAF) beroperasi pada lapisan...",
+      "options": [
+        "Lapisan Keamanan Fisik Gedung",
+        "Lapisan Kabel Serat Optik Bawah Laut",
+        "Lapisan Aplikasi (Application Layer)",
+        "Lapisan Generator Listrik Cadangan"
+      ],
+      "answer": 2,
+      "explanation": "WAF beroperasi pada lapisan aplikasi untuk menginspeksi lalu lintas web dan menangkal ancaman seperti SQL Injection dan Cross-Site Scripting (XSS).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-011",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Kondisi di mana kegagalan satu komponen tunggal (seperti satu router inti) dapat melumpuhkan seluruh operasional sistem disebut...",
+      "options": [
+        "High Availability",
+        "Distributed Computing",
+        "Load Balancing",
+        "Single Point of Failure (SPoF)"
+      ],
+      "answer": 3,
+      "explanation": "Single Point of Failure (SPoF) adalah kelemahan arsitektur di mana malafungsi pada satu bagian saja dapat meruntuhkan seluruh layanan secara total.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-012",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Strategi arsitektur utama untuk mengeliminasi Single Point of Failure (SPoF) demi menjaga Ketersediaan (Availability) adalah...",
+      "options": [
+        "Menerapkan redundansi komponen (seperti server klaster dan catu daya ganda UPS)",
+        "Menghapus semua kata sandi dari sistem operasional",
+        "Mengurangi kapasitas penyimpanan hard disk server",
+        "Mematikan sambungan internet setiap malam hari"
+      ],
+      "answer": 0,
+      "explanation": "Redundansi menyediakan komponen cadangan siap pakai (failover) sehingga ketika satu perangkat rusak, layanan tetap berjalan tanpa henti.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-013",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip 'Nir-sangkal' (Non-Repudiation) dalam keamanan informasi memastikan bahwa...",
+      "options": [
+        "Pengguna tidak dapat mengakses internet pada hari libur",
+        "Sistem komputer tidak pernah memerlukan perbaikan perangkat lunak",
+        "Pelaku transaksi digital tidak dapat menyangkal perbuatannya, dibuktikan melalui tanda tangan digital atau bukti kriptografis autentik",
+        "Semua berkas di dalam sistem dapat dibagikan secara bebas tanpa izin"
+      ],
+      "answer": 2,
+      "explanation": "Nir-sangkal memberikan pembuktian tak terbantahkan atas keaslian pengirim dan integritas pesan sehingga pengirim tidak dapat mengelak atas tindakannya.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-014",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Dalam arsitektur Zero Trust, teknik 'Mikro-segmentasi' (Microsegmentation) diterapkan dengan cara...",
+      "options": [
+        "Membagi monitor komputer menjadi empat jendela kecil",
+        "Membeli komputer dengan ukuran fisik lebih kecil",
+        "Memecah jaringan internal menjadi zona-zona terisolasi kecil dengan aturan akses ketat guna membatasi pergerakan lateral penyerang",
+        "Memperkecil ukuran font pada formulir dokumen"
+      ],
+      "answer": 2,
+      "explanation": "Mikro-segmentasi mengisolasi segmen jaringan internal, mencegah penyerang yang berhasil menembus satu komputer berpindah bebas ke aset jaringan lain.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-015",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip 'Economy of Mechanism' dalam perancangan sistem keamanan menyatakan bahwa...",
+      "options": [
+        "Sistem keamanan harus dibeli dari vendor yang menawarkan harga paling murah",
+        "Gaji staf IT harus ditekan seminimal mungkin",
+        "Sistem tidak boleh menggunakan perhitungan algoritma matematika",
+        "Mekanisme keamanan harus dirancang sesederhana dan seringkas mungkin agar mudah diuji, diverifikasi, dan tidak menyimpan celah tersembunyi"
+      ],
+      "answer": 3,
+      "explanation": "Semakin kompleks suatu arsitektur keamanan, semakin tinggi probabilitas munculnya celah logika yang luput dari pengawasan. Desain ringkas lebih aman.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-016",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Proses pengelompokan data ke dalam kategori seperti Publik, Internal, Rahasia, dan Sangat Rahasia disebut...",
+      "options": [
+        "Data Compression",
+        "Data Formatting",
+        "Data Defragmentation",
+        "Klasifikasi Data (Data Classification)"
+      ],
+      "answer": 3,
+      "explanation": "Klasifikasi data menentukan perlakuan dan tingkat pengamanan yang tepat bagi aset informasi berdasarkan sensitivitas dan risiko dampaknya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-017",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Sistem Data Loss Prevention (DLP) dirancang dengan tujuan utama untuk...",
+      "options": [
+        "Mendeteksi dan mencegah kebocoran atau pengiriman data sensitif keluar dari jaringan organisasi tanpa izin",
+        "Menghapus isi penyimpanan hard disk saat komputer dimatikan",
+        "Mempercepat proses pengunduhan video di media sosial",
+        "Mencetak laporan keuangan secara fisik setiap jam"
+      ],
+      "answer": 0,
+      "explanation": "DLP memantau lalu lintas berkas untuk memblokir eksfiltrasi data rahasia seperti nomor kartu kredit atau data pelanggan ke pihak luar tanpa izin.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-018",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Konsep 'Security by Design' menegaskan bahwa aspek keamanan siber harus...",
+      "options": [
+        "Hanya dipikirkan setelah produk mengalami kebocoran data pertama",
+        "Dikelola secara mandiri oleh pengguna akhir tanpa arahan pengembang",
+        "Dihapus dari kurikulum pendidikan teknik informatika",
+        "Diintegrasikan sejak tahap awal perencanaan dan perancangan sistem, bukan sekadar dipasang sebagai tambalan di akhir proses"
+      ],
+      "answer": 3,
+      "explanation": "Security by Design menanamkan prinsip perlindungan sejak penetapan arsitektur awal, meminimalkan kerentanan struktural yang sulit ditambal di kemudian hari.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-019",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip 'Complete Mediation' dalam arsitektur keamanan mengharuskan sistem untuk...",
+      "options": [
+        "Memeriksa izin dan hak akses setiap kali sebuah permintaan akses diajukan, tanpa mengandalkan cache izin masa lalu",
+        "Menutup seluruh kantor cabang perusahaan di seluruh dunia",
+        "Mengizinkan akses tanpa henti selamanya setelah login pertama berhasil",
+        "Menghapus riwayat transaksi basis data setiap akhir pekan"
+      ],
+      "answer": 0,
+      "explanation": "Complete Mediation menjamin otorisasi diperiksa secara berkelanjutan setiap saat objek diakses, mencegah pemanfaatan hak akses usang yang belum dicabut.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-020",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip 'Psychological Acceptability' dalam rekayasa keamanan sistem menekankan bahwa...",
+      "options": [
+        "Sistem keamanan wajib mempekerjakan psikiater setiap hari",
+        "Kata sandi harus terdiri dari seratus karakter acak tanpa dicatat",
+        "Komputer harus dimatikan saat staf merasa jenuh",
+        "Mekanisme keamanan tidak boleh terlalu rumit atau menghambat pekerjaan sehingga memicu pengguna mencari jalan pintas untuk melanggar aturan"
+      ],
+      "answer": 3,
+      "explanation": "Kontrol keamanan harus ramah pengguna; jika prosedur terlalu berbelit-belit, pengguna akan tergoda mengakali atau menonaktifkannya demi kenyamanan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-021",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Tindakan 'Hardening' pada sistem operasi atau server dalam konsep Defense in Depth mencakup langkah...",
+      "options": [
+        "Mencelupkan prosesor komputer ke dalam cairan nitrogen",
+        "Memasang casing pelindung laptop dari pelat baja anti peluru",
+        "Menyalakan komputer tanpa henti selama lima tahun berturut-turut",
+        "Menonaktifkan port jaringan tak terpakai, menghapus layanan default yang rentan, dan mengonfigurasi parameter proteksi optimal"
+      ],
+      "answer": 3,
+      "explanation": "System hardening mempersempit bidang permukaan serangan (attack surface) dengan mematikan fitur, layanan, dan port yang tidak mutlak dibutuhkan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-022",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Pada contoh kasus perbankan di materi pembelajaran, mengapa staf kasir hanya diberi akses melihat saldo dan memproses setoran tanpa wewenang mengubah kode sistem?",
+      "options": [
+        "Karena staf kasir dilarang menggunakan monitor komputer",
+        "Sebagai penerapan prinsip Least Privilege untuk membatasi dampak bahaya jika akun kasir disusupi penyerang",
+        "Agar koneksi internet kantor cabang tidak lambat",
+        "Karena kode sistem bank hanya boleh dicetak di atas kertas"
+      ],
+      "answer": 1,
+      "explanation": "Penerapan hak akses minimal (Least Privilege) mengisolasi potensi dampak; jika akun teller diretas, penyerang tidak dapat merusak basis data atau kode inti bank.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-023",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Penggunaan protokol TLS 1.3 pada sesi komunikasi aplikasi mobile banking melindungi pilar Triad CIA yang mana?",
+      "options": [
+        "Kerahasiaan (Confidentiality) dan Integritas (Integrity) selama data transit di jaringan",
+        "Hanya kapasitas baterai ponsel cerdas",
+        "Hanya daya tahan fisik layar sentuh smartphone",
+        "Sistem pendingin ruangan gedung kantor cabang"
+      ],
+      "answer": 0,
+      "explanation": "TLS 1.3 mengamankan data yang bergerak dari penyadapan pihak ketiga (kerahasiaan) dan dari modifikasi jahat di tengah jalan (integritas).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-024",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Prinsip 'Open Design' berbeda dengan konsep 'Security through Obscurity' karena Open Design...",
+      "options": [
+        "Membagikan kata sandi administrator kepada semua pengunjung situs",
+        "Mewajibkan pintu ruang kantor bank dibuka lebar setiap saat",
+        "Menghapus fungsi enkripsi dari seluruh perangkat lunak",
+        "Mengasumsikan bahwa keamanan sistem tetap kokoh meskipun cara kerja algoritmanya diketahui publik, asalkan kuncinya aman"
+      ],
+      "answer": 3,
+      "explanation": "Open Design meyakini desain yang ditinjau secara terbuka oleh publik dan pakar lebih teruji kekuatannya daripada menyembunyikan kelemahan di balik kerahasiaan semu.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-025",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Mengapa pendekatan 'Security through Obscurity' (mengandalkan kerahasiaan mekanisme sebagai satu-satunya pertahanan) dipandang sebagai praktik yang buruk?",
+      "options": [
+        "Karena peretas pada akhirnya akan mampu merekayasa balik (reverse engineering) sistem tersebut, meruntuhkan pertahanan yang tidak memiliki kontrol hakiki",
+        "Karena membuat tagihan listrik menjadi sangat mahal",
+        "Karena dilarang oleh standar kabel jaringan",
+        "Karena sistem operasi komputer tidak dapat membaca kode rahasia"
+      ],
+      "answer": 0,
+      "explanation": "Menyembunyikan mekanisme tanpa enkripsi dan autentikasi kokoh hanya memberikan rasa aman palsu yang langsung runtuh begitu peretas membedah kodenya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-026",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Dalam Triad CIA, penerapan fungsi hash kriptografi (seperti SHA-256) paling tepat digunakan untuk memvalidasi...",
+      "options": [
+        "Kecepatan putaran kipas prosesor",
+        "Kerapian tata letak kabel jaringan",
+        "Integritas berkas (memastikan data tidak mengalami perubahan sedikit pun selama penyimpanan atau transmisi)",
+        "Ukuran fisik hard disk komputer"
+      ],
+      "answer": 2,
+      "explanation": "Fungsi hash menghasilkan sidik jari biner tetap; jika ada perubahan 1 karakter saja pada berkas, nilai hash akan berubah drastis, membuktikan rusaknya integritas.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "4-a-027",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Kelemahan paling mendasar dari model perimeter tradisional 'Kastil dan Parit' (Castle-and-Moat) yang mendorong beralihnya industri ke Zero Trust adalah...",
+      "options": [
+        "Parit air di sekitar gedung kantor terlalu dalam",
+        "Benteng tradisional tidak memiliki pintu gerbang darurat",
+        "Biaya pembangunan kastil terlalu mahal",
+        "Siapa pun yang berhasil menembus perimeter luar dianggap tepercaya secara otomatis dan memiliki akses bebas bergerak di jaringan internal"
+      ],
+      "answer": 3,
+      "explanation": "Model kastil berasumsi lingkungan internal selalu aman; jika penyusup menembus satu titik, mereka leluasa menjelajah seluruh jaringan tanpa hambatan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-028",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Manakah tindakan yang mencerminkan penerapan prinsip 'Vendor Diversity' dalam strategi Defense in Depth?",
+      "options": [
+        "Membeli semua perlengkapan kantor hanya dari satu toko yang sama",
+        "Menggunakan firewall jaringan, antivirus endpoint, dan deteksi intrusi dari vendor yang berbeda agar kelemahan satu vendor ditutupi produk lain",
+        "Menggunakan satu kata sandi yang sama untuk semua akun dinas",
+        "Menyewa satu penyedia layanan internet untuk semua lokasi"
+      ],
+      "answer": 1,
+      "explanation": "Diversitas vendor mencegah kegagalan tunggal sistemis jika terjadi cacat celah keamanan pada produk dari satu produsen perangkat keamanan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "4-a-029",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Manakah contoh situasi yang menunjukkan pelanggaran terhadap prinsip 'Separation of Duties'?",
+      "options": [
+        "Dua staf berwenang harus memasukkan kunci bersama untuk membuka brankas",
+        "Satu orang karyawan memiliki wewenang sekaligus membuat pengajuan transfer dana, menyetujuinya sendiri, dan mengeksekusi transfer tersebut tanpa verifikasi pihak lain",
+        "Staf IT meminta persetujuan kepala divisi sebelum memperbarui sistem server",
+        "Pengguna harus memasukkan kode OTP setelah mengetik kata sandi"
+      ],
+      "answer": 1,
+      "explanation": "Membiarkan satu orang mengeksekusi dan menyetujui transaksi secara mandiri melanggar prinsip pemisahan tugas, membuka peluang kecurangan tanpa kontrol.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4-a-030",
+      "chapterId": "4",
+      "subchapterId": "4-a",
+      "question": "Manakah kesimpulan yang paling tepat mengenai perancangan arsitektur keamanan data dan informasi?",
+      "options": [
+        "Keamanan dapat dicapai seratus persen hanya dengan membeli satu antivirus terbaik di dunia",
+        "Prinsip keamanan hanya berlaku untuk organisasi perbankan dan militer saja",
+        "Keamanan adalah proses holistik berkelanjutan yang mengintegrasikan pertahanan berlapis, hak akses minimal, verifikasi tanpa henti, dan disiplin tata kelola pengguna",
+        "Membuka seluruh akses sistem kepada semua orang adalah cara terbaik meningkatkan ketersediaan data"
+      ],
+      "answer": 2,
+      "explanation": "Keamanan informasi yang efektif bukanlah solusi sekali jadi, melainkan ekosistem berkesinambungan antara pertahanan berlapis, kontrol akses ketat, dan kesadaran manusia.",
+      "difficulty": "easy"
+    }
+  ]
+}

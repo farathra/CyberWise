@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "3-a-001",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Kata 'Malware' merupakan lakuran (gabungan) dari dua kata dalam bahasa Inggris, yaitu...",
+      "options": [
+        "Mailing dan Software",
+        "Malicious dan Software",
+        "Multitasking dan Hardware",
+        "Manual dan Warehousing"
+      ],
+      "answer": 1,
+      "explanation": "Malware adalah singkatan dari Malicious Software (perangkat lunak berbahaya) yang dirancang dengan niat jahat untuk merusak sistem komputasi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-002",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Manakah pernyataan yang BENAR mengenai hakikat malware?",
+      "options": [
+        "Malware adalah kerusakan fisik pada prosesor akibat debu",
+        "Malware sengaja dirancang oleh pembuatnya untuk merusak, mencuri, atau mengeksploitasi sistem tanpa izin",
+        "Malware terjadi akibat pemadaman listrik secara mendadak",
+        "Semua berkas yang berukuran lebih dari 1 GB otomatis menjadi malware"
+      ],
+      "answer": 1,
+      "explanation": "Malware bukan kegagalan perangkat keras atau bug tak disengaja, melainkan program yang secara sengaja diciptakan untuk aksi jahat.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-003",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Server yang digunakan oleh penyerang siber untuk mengirim perintah jarak jauh dan menerima data curian dari komputer korban disebut...",
+      "options": [
+        "DNS Root Server",
+        "Command and Control (C2) Server",
+        "DHCP Server",
+        "NTP Time Server"
+      ],
+      "answer": 1,
+      "explanation": "Server Command and Control (C2) adalah infrastruktur kendali yang digunakan pembuat malware untuk mengendalikan botnet dan mengekstrak data.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-004",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Fase di mana malware berusaha mempertahankan keberadaannya agar tetap aktif meski komputer dimatikan dan dinyalakan ulang disebut...",
+      "options": [
+        "Persistensi (Persistence)",
+        "Dekompresi",
+        "Overclocking",
+        "Standby Mode"
+      ],
+      "answer": 0,
+      "explanation": "Persistensi adalah teknik malware menanamkan diri ke startup registry atau layanan sistem agar selalu aktif otomatis saat booting.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-005",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Apa motif yang paling mendominasi di balik pembuatan dan penyebaran malware di era modern?",
+      "options": [
+        "Membantu produsen memproduksi prosesor baru",
+        "Keuntungan finansial ilegal (seperti pemerasan dan pencurian rekening)",
+        "Meningkatkan kecepatan koneksi internet dunia",
+        "Membersihkan virus dari komputer korban"
+      ],
+      "answer": 1,
+      "explanation": "Kejahatan siber modern beroperasi sebagai industri kriminal bermotif ekonomi tinggi, memanfaatkan ransomware dan infostealer untuk meraup uang.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-006",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Apa perbedaan mendasar antara 'bug' dalam perangkat lunak dan 'malware'?",
+      "options": [
+        "Bug hanya menyerang jaringan, sedangkan malware hanya menginfeksi perangkat keras",
+        "Bug dibuat secara sengaja oleh pengembang, sedangkan malware timbul dari kekeliruan penulisan kode",
+        "Bug adalah kekeliruan logika pemrograman yang tidak disengaja, sedangkan malware sengaja diciptakan untuk aksi jahat",
+        "Bug tidak dapat diperbaiki, sedangkan malware selalu menghilang dengan sendirinya"
+      ],
+      "answer": 2,
+      "explanation": "Bug adalah kesalahan pemrograman yang tidak disengaja, sedangkan malware secara sengaja dirancang untuk aksi destruktif atau eksploitatif.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-007",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Komponen inti dari malware yang mengeksekusi instruksi destruktif utama (seperti mengenkripsi data atau mencuri kata sandi) disebut...",
+      "options": [
+        "Firmware",
+        "Compiler",
+        "Payload",
+        "Hypervisor"
+      ],
+      "answer": 2,
+      "explanation": "Payload (muatan) adalah bagian dari kode malware yang menjalankan aksi jahat sesungguhnya pada sistem target.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-008",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Tindakan malware mengeksploitasi kerentanan sistem operasi untuk menaikkan hak akses pengguna biasa menjadi administrator/root disebut...",
+      "options": [
+        "Data Loss Prevention",
+        "Memory Optimization",
+        "Buffer Overflow Shield",
+        "Privilege Escalation (Eskalasi Hak Akses)"
+      ],
+      "answer": 3,
+      "explanation": "Privilege Escalation adalah metode eksploitasi di mana malware meraih hak akses istimewa setara administrator atau root dari akun dengan izin terbatas.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-009",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Aktivitas malware membajak daya komputasi perangkat korban (CPU/GPU) secara diam-diam untuk menambang mata uang kripto disebut...",
+      "options": [
+        "Cryptojacking",
+        "Phishing",
+        "Defragmentation",
+        "Load Balancing"
+      ],
+      "answer": 0,
+      "explanation": "Cryptojacking adalah penyalahgunaan sumber daya komputasi perangkat korban tanpa izin untuk menambang aset kripto demi keuntungan penyerang.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-010",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Mengapa program bajakan yang dilengkapi 'crack' atau 'keygen' sering menjadi sarana efektif bagi penyebaran malware?",
+      "options": [
+        "Karena produsen resmi mewajibkan pembuat crack memasukkan malware",
+        "Karena semua crack hanya dapat beroperasi jika ada virus di sistem",
+        "Karena berkas crack dibuat otomatis oleh sistem operasi saat offline",
+        "Pengguna sering menonaktifkan antivirus dan memberi izin administrator agar aplikasi bajakan dapat berjalan"
+      ],
+      "answer": 3,
+      "explanation": "Pelaku memanfaatkan kecerobohan pengguna yang rela mematikan pertahanan antivirus dan memberi hak akses penuh demi menjalankan software bajakan gratis.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-011",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Dalam arsitektur infeksi malware, berkas pembawa yang bertugas mengekstrak dan memasang malware utama ke sistem korban disebut...",
+      "options": [
+        "Patch",
+        "Firewall",
+        "Dropper",
+        "Defragmenter"
+      ],
+      "answer": 2,
+      "explanation": "Dropper adalah program penyamar yang dirancang untuk menyelundupkan, mengekstrak, dan mengeksekusi payload malware utama ke dalam perangkat target.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-012",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Manakah di bawah ini yang merupakan indikasi kuat bahwa sebuah komputer telah terinfeksi malware aktif?",
+      "options": [
+        "Kinerja sistem tiba-tiba sangat lambat dengan penggunaan CPU/RAM tinggi pada proses yang mencurigakan di latar belakang",
+        "Kecepatan kipas laptop mati total dan suhu komputer menjadi sangat dingin",
+        "Kapasitas hard drive bertambah dua kali lipat secara otomatis",
+        "Resolusi layar monitor meningkat menjadi 8K tanpa pembaruan perangkat keras"
+      ],
+      "answer": 0,
+      "explanation": "Perlambatan drastis dan pemakaian CPU/RAM tinggi oleh proses tidak dikenal merupakan indikator klasik adanya aktivitas malware di latar belakang.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-013",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Lingkungan virtual terisolasi yang digunakan analis keamanan untuk mengeksekusi dan mengamati perilaku malware secara aman disebut...",
+      "options": [
+        "Overclock Zone",
+        "Registry Cleaner",
+        "Sandbox (Sandboxing)",
+        "Virtual RAID"
+      ],
+      "answer": 2,
+      "explanation": "Sandbox adalah lingkungan terisolasi yang aman untuk mengamati dan menganalisis perilaku malware tanpa risiko merusak sistem asli.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-014",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Sinyal berkala yang dikirimkan oleh malware ke server Command and Control (C2) untuk melaporkan status keaktifan perangkat korban disebut...",
+      "options": [
+        "Handshake SSL",
+        "Broadcast Ping",
+        "Echo Reply",
+        "Beacon (Beaconing)"
+      ],
+      "answer": 3,
+      "explanation": "Beaconing adalah lalu lintas sinyal periodik dari agen malware ke server C2 pengendali untuk mengonfirmasi status dan meminta instruksi lanjutan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-015",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Kelompok ancaman siber canggih yang biasanya didanai negara untuk melakukan spionase siber terstruktur jangka panjang disebut...",
+      "options": [
+        "Advanced Persistent Threat (APT)",
+        "Script Kiddies",
+        "White Hat Community",
+        "Open Source Maintainer Group"
+      ],
+      "answer": 0,
+      "explanation": "APT (Advanced Persistent Threat) adalah kelompok penyerang berkemampuan tinggi dengan sokongan sumber daya besar yang menyusup ke target strategis dalam jangka panjang.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-016",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Serangan malware yang menargetkan fasilitas industri strategis (seperti jaringan listrik atau pengolahan air) digolongkan ke dalam motif...",
+      "options": [
+        "Riset komputasi kuantum",
+        "Pemasaran produk konsumen",
+        "Sabotase siber dan perang siber",
+        "Peningkatan efisiensi energi"
+      ],
+      "answer": 2,
+      "explanation": "Serangan terhadap infrastruktur sipil atau militer penting bertujuan untuk sabotase siber guna melumpuhkan fasilitas musuh atau lawan politik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-017",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Metode pendeteksian antivirus tradisional berbasis 'signature' bekerja dengan cara...",
+      "options": [
+        "Memeriksa keaslian tanda tangan manual pemilik komputer",
+        "Menghitung jumlah karakter nama pemilik laptop",
+        "Mencocokkan pola biner atau nilai hash berkas dengan basis data sampel malware yang sudah dikenal",
+        "Mematikan komputer setiap kali ada berkas baru yang diunduh"
+      ],
+      "answer": 2,
+      "explanation": "Deteksi signature memeriksa kecocokan pola biner atau cryptographic hash suatu berkas dengan katalog malware yang telah didokumentasikan di laboratorium keamanan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-018",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Kelemahan paling mendasar dari metode pendeteksian antivirus berbasis signature adalah...",
+      "options": [
+        "Tidak mampu mengenali malware varian baru atau serangan Zero-Day yang belum terdaftar dalam basis data",
+        "Menghapus berkas dokumen teks secara acak setiap kali komputer menyala",
+        "Menyebabkan perangkat keras komputer terbakar secara spontan",
+        "Hanya berfungsi jika perangkat komputer tidak terhubung ke listrik"
+      ],
+      "answer": 0,
+      "explanation": "Pendeteksian signature bersifat reaktif; jika sampel malware belum pernah ditemukan dan dicatat sebelumnya, antivirus tidak akan mengenalinya sebagai ancaman.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-019",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Metode pendeteksian keamanan yang menganalisis tindakan mencurigakan suatu program saat dijalankan (seperti memodifikasi file sistem) disebut...",
+      "options": [
+        "Analisis Fonetik",
+        "Pencocokan Tipografi",
+        "Verifikasi Sertifikat",
+        "Deteksi Heuristik / Berbasis Perilaku (Behavioral Detection)"
+      ],
+      "answer": 3,
+      "explanation": "Deteksi heuristik dan analisis perilaku memantau aktivitas program secara dinamis untuk menemukan tindakan berbahaya meskipun polanya belum memiliki signature.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-020",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Kemampuan malware untuk secara otomatis mengubah struktur kode atau kunci enkripsinya pada setiap replikasi agar lolos deteksi disebut...",
+      "options": [
+        "Polimorfisme (Polymorphism)",
+        "Digitalisasi",
+        "Defragmentasi",
+        "Overclocking"
+      ],
+      "answer": 0,
+      "explanation": "Malware polimorfik mengubah wujud kodenya setiap kali menginfeksi berkas baru sehingga nilai hash dan tanda tangan binernya selalu berbeda.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-021",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Manakah perilaku pengguna yang paling berisiko memudahkan malware menembus sistem pertahanan komputer?",
+      "options": [
+        "Memperbarui sistem operasi secara teratur",
+        "Menggunakan pengelola kata sandi untuk membuat kata sandi acak",
+        "Mematikan perlindungan antivirus dan mengabaikan peringatan keamanan demi menginstal aplikasi ilegal",
+        "Membuat cadangan berkas secara rutin ke penyimpanan awan"
+      ],
+      "answer": 2,
+      "explanation": "Mematikan perangkat lunak antivirus dan mengabaikan peringatan keamanan membiarkan malware masuk dan merusak sistem tanpa rintangan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-022",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Mengapa malware sering memanipulasi berkas hosts atau pengaturan DNS pada komputer korban?",
+      "options": [
+        "Untuk membersihkan memori cache peramban web",
+        "Untuk mempercepat koneksi Wi-Fi komputer",
+        "Untuk mengompresi gambar dan video agar hemat penyimpanan",
+        "Untuk mengalihkan alamat situs web resmi yang diketik pengguna ke situs web phishing palsu"
+      ],
+      "answer": 3,
+      "explanation": "Pembajakan DNS atau berkas hosts membelokkan lalu lintas pengguna dari situs asli (seperti portal bank) menuju situs kloningan berbahaya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-023",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Bagaimana cara kerja persistensi malware yang menargetkan startup registry pada sistem operasi Windows?",
+      "options": [
+        "Malware mencabut kabel daya komputer secara otomatis",
+        "Malware menyisipkan jalurnya ke entri registry run agar dieksekusi otomatis setiap kali komputer dinyalakan",
+        "Malware menghapus seluruh akun pengguna selain akun tamu",
+        "Malware mengubah wallpaper desktop menjadi satu warna hitam"
+      ],
+      "answer": 1,
+      "explanation": "Entri run pada Windows Registry dieksekusi setiap kali sesi pengguna dimulai; malware memanfaatkannya agar tetap berjalan meski komputer di-restart.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-024",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Istilah 'Zero-Day Vulnerability' dalam konteks eksploitasi malware mengacu pada...",
+      "options": [
+        "Hari libur nasional di mana serangan siber tidak terjadi",
+        "Program komputer yang masa pakainya habis dalam waktu nol hari",
+        "Antivirus yang hanya dapat diperbarui satu tahun sekali",
+        "Celah keamanan yang belum diketahui publik atau belum memiliki tambalan perbaikan resmi dari pengembang"
+      ],
+      "answer": 3,
+      "explanation": "Celah Zero-Day adalah kerentanan keamanan yang belum memiliki patch resmi, memberikan keunggulan mutlak bagi penyerang untuk menyusup tanpa tertahan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-025",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Mengapa prinsip Least Privilege (hak akses terendah) efektif membatasi kerusakan akibat malware?",
+      "options": [
+        "Karena membuat pengguna tidak perlu lagi mengingat kata sandi perangkat",
+        "Malware yang menginfeksi akun biasa tidak langsung memperoleh izin administratif untuk mengubah sistem inti",
+        "Karena membatasi kemampuan prosesor dalam memproses grafis komputer",
+        "Agar komputer tidak memerlukan pembaruan perangkat lunak seumur hidup"
+      ],
+      "answer": 1,
+      "explanation": "Tanpa izin administrator, malware yang masuk ke akun biasa tidak dapat memodifikasi berkas kernel, registri global, atau layanan sistem penting.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-026",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Apa tujuan utama penyerang melakukan perusakan tampilan halaman utama situs web (website defacement)?",
+      "options": [
+        "Membantu pemilik situs memperbarui layout antarmuka",
+        "Menghapus seluruh database tanpa meninggalkan jejak",
+        "Menyediakan tautan unduhan program open-source",
+        "Vandalisme digital untuk memamerkan keahlian peretasan atau menyampaikan pesan opini/politis tertentu"
+      ],
+      "answer": 3,
+      "explanation": "Defacement adalah bentuk vandalisme digital untuk mempermalukan pemilik web, pamer kebolehan teknis di komunitas peretas, atau menyebarkan pesan politik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-027",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Pada contoh kasus dalam modul pembelajaran, jenis malware apa yang tersembunyi di balik aplikasi bajakan yang diunduh Fahmi?",
+      "options": [
+        "Program antivirus pihak ketiga",
+        "Adware yang memunculkan iklan banner belanja",
+        "Keylogger yang merekam ketukan tombol keyboard untuk mencuri kata sandi perbankan",
+        "Aplikasi kalkulator keuangan standar"
+      ],
+      "answer": 2,
+      "explanation": "Aplikasi bajakan Fahmi menyembunyikan keylogger yang secara diam-diam merekam pengetikan akun dan password lalu mengirimkannya ke server penyerang.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-a-028",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Manakah tindakan darurat pertama yang paling tepat diambil jika sebuah komputer dicurigai terinfeksi malware aktif?",
+      "options": [
+        "Segera putuskan koneksi internet dan jaringan lokal (cabut kabel LAN / matikan Wi-Fi)",
+        "Buka peramban dan masukkan kata sandi ke seluruh akun media sosial",
+        "Nyalakan ulang komputer sebanyak sepuluh kali berturut-turut",
+        "Hubungkan semua flashdisk yang ada untuk memindahkan seluruh isi file"
+      ],
+      "answer": 0,
+      "explanation": "Memutus sambungan jaringan secara instan mencegah malware mengekstrak data ke server C2 dan menghentikan infeksi menyebar ke komputer lain di jaringan lokal.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-a-029",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Teknik 'Obfuscation' dalam rekayasa kode malware bertujuan untuk...",
+      "options": [
+        "Mengubah teks program menjadi format dokumen PDF",
+        "Menghapus baris kode agar ukuran program menjadi 0 kilobyte",
+        "Menghubungkan komputer secara otomatis ke proyektor eksternal",
+        "Mengaburkan kode agar sulit dibaca, dianalisis, dan dideteksi oleh antivirus maupun analis keamanan"
+      ],
+      "answer": 3,
+      "explanation": "Obfuscation adalah teknik menyamarkan logika dan struktur kode biner sehingga perangkat lunak analisis keamanan kesulitan mendeteksi niat jahat di dalamnya.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-a-030",
+      "chapterId": "3",
+      "subchapterId": "3-a",
+      "question": "Manakah pernyataan yang paling tepat mengenai peran kesadaran pengguna (human awareness) dalam mencegah serangan malware?",
+      "options": [
+        "Sistem keamanan secanggih apa pun dapat runtuh jika pengguna sendiri mengizinkan dan menjalankan berkas berbahaya tanpa verifikasi",
+        "Perangkat lunak antivirus modern mampu mencegah 100% kesalahan pengguna secara otomatis",
+        "Pengguna tidak memiliki tanggung jawab karena keamanan adalah urusan penyedia internet semata",
+        "Kesadaran pengguna hanya berguna jika perangkat komputer menggunakan sistem operasi lama"
+      ],
+      "answer": 0,
+      "explanation": "Faktor manusia sering kali menjadi titik terlemah keamanan siber. Kesadaran dan kewaspadaan pengguna adalah benteng pertahanan paling krusial.",
+      "difficulty": "medium"
+    }
+  ]
+}

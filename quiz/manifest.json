@@ -1,0 +1,18 @@
+{
+  "subchapters": [
+    { "id": "1-a", "chapterId": "1", "file": "quiz/1-a.json", "requiredCount": 30 },
+    { "id": "1-b", "chapterId": "1", "file": "quiz/1-b.json", "requiredCount": 30 },
+    { "id": "1-c", "chapterId": "1", "file": "quiz/1-c.json", "requiredCount": 30 },
+    { "id": "2-a", "chapterId": "2", "file": "quiz/2-a.json", "requiredCount": 30 },
+    { "id": "2-b", "chapterId": "2", "file": "quiz/2-b.json", "requiredCount": 30 },
+    { "id": "2-c", "chapterId": "2", "file": "quiz/2-c.json", "requiredCount": 30 },
+    { "id": "2-d", "chapterId": "2", "file": "quiz/2-d.json", "requiredCount": 30 },
+    { "id": "2-e", "chapterId": "2", "file": "quiz/2-e.json", "requiredCount": 30 },
+    { "id": "3-a", "chapterId": "3", "file": "quiz/3-a.json", "requiredCount": 30 },
+    { "id": "3-b", "chapterId": "3", "file": "quiz/3-b.json", "requiredCount": 30 },
+    { "id": "3-c", "chapterId": "3", "file": "quiz/3-c.json", "requiredCount": 30 },
+    { "id": "3-d", "chapterId": "3", "file": "quiz/3-d.json", "requiredCount": 30 },
+    { "id": "4-a", "chapterId": "4", "file": "quiz/4-a.json", "requiredCount": 30 },
+    { "id": "4-b", "chapterId": "4", "file": "quiz/4-b.json", "requiredCount": 30 }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "2-b-001",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Penerapan teknologi digital dalam bidang pendidikan yang memungkinkan pembelajaran jarak jauh disebut...",
+      "options": [
+        "E-Commerce",
+        "E-Learning",
+        "E-Budgeting",
+        "E-Tilang"
+      ],
+      "answer": 1,
+      "explanation": "E-Learning adalah pemanfaatan platform digital dan internet untuk menyelenggarakan proses belajar-mengajar tanpa batasan ruang kelas fisik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-002",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Standar pembayaran digital berbasis kode QR yang diresmikan oleh Bank Indonesia bernama...",
+      "options": [
+        "NFC Pay",
+        "QRIS (Quick Response Code Indonesian Standard)",
+        "SWIFT Code",
+        "Barcode Universal"
+      ],
+      "answer": 1,
+      "explanation": "QRIS adalah standar nasional kode pembayaran QR di Indonesia yang mengintegrasikan seluruh aplikasi dompet digital dan perbankan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-003",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Layanan konsultasi medis dan peresepan obat jarak jauh melalui aplikasi pintar disebut...",
+      "options": [
+        "Telemedisin (Telemedicine)",
+        "Telekomunikasi Seluler",
+        "Televisi Digital",
+        "Telepati Komputasi"
+      ],
+      "answer": 0,
+      "explanation": "Telemedisin memanfaatkan teknologi komunikasi digital untuk menghubungkan pasien dengan tenaga medis secara efisien.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-004",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Manakah manfaat utama dari penerapan konsep 'Smart Governance' di sektor pelayanan publik?",
+      "options": [
+        "Mengharuskan warga datang antre sejak subuh di kantor dinas",
+        "Membuat proses birokrasi, pembayaran pajak, dan izin usaha menjadi lebih cepat, transparan, dan dapat diakses daring",
+        "Membatasi akses masyarakat terhadap anggaran pemerintah daerah",
+        "Menghilangkan seluruh arsip data kependudukan lama"
+      ],
+      "answer": 1,
+      "explanation": "Smart Governance mendigitalisasi layanan birokrasi sehingga masyarakat dapat mengurus dokumen secara praktis dan transparan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-005",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Penggunaan sensor cerdas dan internet untuk menghubungkan peralatan rumah tangga (seperti lampu dan pendingin ruangan) dikenal sebagai...",
+      "options": [
+        "Cloud Storage",
+        "Internet of Things (IoT)",
+        "Virtual Reality (VR)",
+        "Blockchain"
+      ],
+      "answer": 1,
+      "explanation": "Internet of Things (IoT) adalah jaringan objek fisik yang dilengkapi sensor dan perangkat lunak untuk saling bertukar data melalui internet.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-b-006",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Penerapan sistem tilang elektronik berbasis kamera CCTV pintar di jalan raya Indonesia dikenal dengan singkatan...",
+      "options": [
+        "ETLE (Electronic Traffic Law Enforcement)",
+        "E-KTP",
+        "BPJS Kesehatan",
+        "SKCK Online"
+      ],
+      "answer": 0,
+      "explanation": "ETLE memanfaatkan kamera cerdas dengan pengenalan pelat nomor otomatis untuk mendeteksi pelanggaran lalu lintas secara digital.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-007",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Aplikasi navigasi modern seperti Google Maps memanfaatkan kombinasi teknologi digital...",
+      "options": [
+        "Satelit GPS, pemrosesan data lalu lintas waktu-nyata (real-time), dan pemetaan digital",
+        "Gelombang radio AM dan kaset magnetik",
+        "Kompas magnetik manual tanpa koneksi data",
+        "Pencetakan peta kertas skala mikro"
+      ],
+      "answer": 0,
+      "explanation": "Navigasi digital mengintegrasikan koordinat satelit GPS dengan pelaporan kepadatan lalu lintas real-time dari jutaan pengguna jalan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-008",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Platform Learning Management System (LMS) seperti Google Classroom atau Moodle berfungsi untuk...",
+      "options": [
+        "Membeli baju dan sepatu secara online",
+        "Mengelola materi pelajaran, mengumpulkan tugas siswa, dan memfasilitasi diskusi kelas secara digital",
+        "Memperbaiki kabel listrik sekolah yang rusak",
+        "Mencetak buku paket pelajaran dalam jumlah ribuan"
+      ],
+      "answer": 1,
+      "explanation": "LMS adalah platform perangkat lunak pendidikan yang mengorganisir materi kurikulum, evaluasi, dan interaksi pengajaran.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-009",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Bagaimana teknologi digital memberdayakan pengemudi ojek pangkalan menjadi mitra transportasi daring?",
+      "options": [
+        "Mengharuskan pengemudi menunggu penumpang tanpa kepastian di pangkalan",
+        "Menghubungkan pengemudi langsung dengan calon penumpang terdekat menggunakan aplikasi pencocokan algoritma dan tarif transparan",
+        "Menghapus penggunaan ponsel pintar bagi pengemudi",
+        "Mewajibkan pembayaran hanya menggunakan koin logam"
+      ],
+      "answer": 1,
+      "explanation": "Aplikasi ride-hailing mengoptimalkan pertemuan antara penawaran dan permintaan secara efisien melalui geolokasi digital.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-010",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Konsep 'Cashless Society' (Masyarakat Tanpa Uang Tunai) didorong oleh kemajuan teknologi...",
+      "options": [
+        "Pencetakan uang kertas berbahan polimer",
+        "Dompet digital (e-wallet), mobile banking, kartu nirsentuh (contactless), dan QRIS",
+        "Penyimpanan uang tunai di brankas besi",
+        "Penggunaan sistem barter barang pertanian"
+      ],
+      "answer": 1,
+      "explanation": "Cashless society adalah ekosistem di mana transaksi finansial beralih dari uang fisik ke sistem pembayaran elektronik yang cepat dan tercatat.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-011",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Dalam dunia kerja modern, aplikasi kolaborasi awan seperti Google Docs atau Microsoft 365 memungkinkan...",
+      "options": [
+        "Beberapa orang di lokasi berbeda menyunting dokumen yang sama secara bersamaan (real-time collaboration)",
+        "Komputer bekerja tanpa sambungan listrik",
+        "Pencetakan dokumen tanpa menggunakan kertas",
+        "Penghapusan seluruh file secara acak"
+      ],
+      "answer": 0,
+      "explanation": "Alat kolaborasi awan memfasilitasi kerja tim jarak jauh dengan sinkronisasi instan dan riwayat versi dokumen yang transparan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-012",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Fitur pelacakan paket ekspedisi (tracking resi) pada belanja online memberikan manfaat bagi konsumen berupa...",
+      "options": [
+        "Diskon harga barang sebesar 90%",
+        "Transparansi posisi dan status pengiriman barang secara akurat kapan pun",
+        "Garansi barang tidak akan pernah rusak selamanya",
+        "Pengiriman instan dalam hitungan satu detik"
+      ],
+      "answer": 1,
+      "explanation": "Sistem pelacakan digital terintegrasi memindai barcode di setiap pos transit logistik untuk mengabari pembeli secara berkala.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-013",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Manakah contoh penerapan Internet of Things (IoT) di sektor pertanian modern (Smart Agriculture)?",
+      "options": [
+        "Petani membajak sawah menggunakan kerbau tradisional",
+        "Sensor tanah otomatis mendeteksi kelembapan dan mengaktifkan pompa penyiram air pintar secara terukur",
+        "Petani mencatat hasil panen di buku tulis manual",
+        "Penggunaan cangkul berbahan baja tahan karat"
+      ],
+      "answer": 1,
+      "explanation": "Smart agriculture menggunakan sensor IoT tanah dan cuaca untuk mengotomatisasi irigasi dan pemupukan secara presisi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-014",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Pemanfaatan kecerdasan buatan (Artificial Intelligence) dalam layanan pelanggan e-commerce umumnya diwujudkan dalam bentuk...",
+      "options": [
+        "Chatbot cerdas yang dapat menjawab pertanyaan umum pembeli selama 24 jam sehari",
+        "Pemberian kupon fisik lewat pos surat",
+        "Penutupan toko daring pada hari libur nasional",
+        "Pemasangan spanduk kain di pinggir jalan"
+      ],
+      "answer": 0,
+      "explanation": "Chatbot AI menggunakan pemrosesan bahasa alami (NLP) untuk melayani ribuan pertanyaan konsumen secara instan dan otomatis tanpa henti.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-015",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Dalam bidang perbankan, fitur verifikasi biometrik pada aplikasi perbankan seluler memanfaatkan...",
+      "options": [
+        "Kunci pintu fisik kantor cabang bank",
+        "Pemindaian sidik jari atau pengenalan wajah pengguna sebagai faktor autentikasi",
+        "Buku tabungan cetak bermaterai",
+        "Tanda tangan basah di lembaran formulir"
+      ],
+      "answer": 1,
+      "explanation": "Biometrik digital membaca karakteristik fisiologis unik manusia untuk memverifikasi identitas pengguna secara cepat dan aman.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-016",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Apa peran teknologi komputasi awan (Cloud Computing) bagi pelajar dalam mengerjakan tugas sekolah?",
+      "options": [
+        "Memungkinkan pelajar menyimpan dan mengakses tugas dari berbagai perangkat (laptop, ponsel) tanpa takut flashdisk hilang",
+        "Menghilangkan kewajiban membaca buku referensi",
+        "Menjamin nilai rapor selalu mendapat peringkat pertama",
+        "Membuat layar ponsel anti-pecah"
+      ],
+      "answer": 0,
+      "explanation": "Penyimpanan awan (seperti Google Drive atau OneDrive) mengamankan data pelajar secara terpusat dan dapat dibuka dari mana saja.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-017",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Sistem presensi kehadiran siswa berbasis kartu RFID atau pemindai sidik jari di sekolah membantu pihak sekolah dalam...",
+      "options": [
+        "Mencatat data kehadiran secara otomatis, akurat, dan langsung mengirimkan notifikasi ke orang tua siswa",
+        "Memaksa siswa pulang lebih awal setiap hari",
+        "Menghapus absensi pelajaran olahraga",
+        "Menghitung berat badan siswa secara akurat"
+      ],
+      "answer": 0,
+      "explanation": "Presensi digital mengotomatisasi pencatatan kehadiran secara transparan dan meminimalkan kecurangan titip absen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-018",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Bagaimana teknologi digital membantu penanganan bencana alam secara cepat?",
+      "options": [
+        "Sistem peringatan dini (Early Warning System) menyebarkan pesan siaga darurat melalui SMS broadcast dan sirene otomatis dalam hitungan detik",
+        "Mencegah terjadinya gempa bumi secara mutlak",
+        "Menghilangkan hujan badai dari langit",
+        "Mengubah arah tiupan angin topan"
+      ],
+      "answer": 0,
+      "explanation": "Sensor seismik yang terhubung jaringan internet memicu sistem peringatan dini otomatis ke ponsel warga sebelum gelombang destruktif tiba.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-019",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Kunci pintu pintar (Smart Door Lock) yang dapat dibuka dengan kode PIN, sidik jari, atau aplikasi ponsel adalah contoh penerapan teknologi digital di bidang...",
+      "options": [
+        "Smart Home Security",
+        "Pertambangan Minyak Lepas Pantai",
+        "Pengolahan Limbah Nuklir",
+        "Satelit Luar Angkasa"
+      ],
+      "answer": 0,
+      "explanation": "Smart door lock adalah perangkat IoT rumah pintar yang meningkatkan keamanan hunian melalui kontrol akses elektronik nir-kunci fisik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-020",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Dalam industri hiburan, platform streaming musik (seperti Spotify) menggantikan toko kaset fisik berkat model bisnis...",
+      "options": [
+        "Langganan digital berbasis komputasi awan yang menyediakan akses jutaan lagu instan kapan saja",
+        "Penjualan piringan hitam pos keliling",
+        "Penyewaan walkman baterai",
+        "Perekaman suara dari radio FM manual"
+      ],
+      "answer": 0,
+      "explanation": "Streaming on-demand berbasis cloud menghilangkan kebutuhan kepemilikan media fisik, menawarkan akses katalog tak terbatas melalui internet.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-021",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Penerapan rekam medis elektronik (RME) yang terintegrasi antarrumah sakit mempermudah pasien karena...",
+      "options": [
+        "Pasien tidak perlu membawa berkas rontgen atau riwayat obat tebal secara manual saat berpindah rumah sakit rujukan",
+        "Pasien dibebaskan dari biaya pengobatan selamanya",
+        "Dokter tidak perlu memeriksa kondisi fisik pasien lagi",
+        "Rumah sakit tidak memerlukan apoteker obat"
+      ],
+      "answer": 0,
+      "explanation": "RME memungkinkan dokter di rumah sakit rujukan langsung membaca riwayat kesehatan pasien secara aman, menghindari salah diagnosis.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-022",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Aplikasi dompet digital sering kali meminta konfirmasi kode PIN atau biometrik sebelum menyetujui transaksi transfer. Hal ini merupakan penerapan...",
+      "options": [
+        "Autentikasi keamanan finansial untuk mencegah transaksi tidak sah jika ponsel dipinjam orang lain",
+        "Iklan promosi komersial",
+        "Uji coba ketahanan layar sentuh",
+        "Proses penurunan kuota internet ponsel"
+      ],
+      "answer": 0,
+      "explanation": "Verifikasi PIN pada setiap transaksi memastikan otorisasi sah dari pemilik dana sebelum saldo berpindah tangan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-023",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Manakah di bawah ini yang merupakan risiko dari ketergantungan penuh masyarakat terhadap sistem pembayaran digital (cashless)?",
+      "options": [
+        "Jika jaringan internet atau sistem perbankan nasional lumpuh, masyarakat tidak dapat membeli kebutuhan pokok secara instan",
+        "Dompet fisik menjadi terlalu tebal karena koin",
+        "Uang kertas menjadi langka di museum",
+        "Toko kelontong kehilangan pelanggan selamanya"
+      ],
+      "answer": 0,
+      "explanation": "Ketergantungan infrastruktur digital memerlukan ketahanan sistem tinggi; gangguan listrik atau internet dapat melumpuhkan transaksi harian.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-024",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Fitur 'Find My Device' (Temukan Perangkat Saya) pada ponsel cerdas memanfaatkan koordinat GPS dan jaringan seluler untuk...",
+      "options": [
+        "Melacak lokasi ponsel yang hilang, menguncinya dari jarak jauh, atau menghapus data sensitif",
+        "Mempercepat pengisian daya baterai ponsel",
+        "Mengganti nomor telepon secara otomatis",
+        "Mendengarkan panggilan telepon orang lain"
+      ],
+      "answer": 0,
+      "explanation": "Find My Device adalah alat keamanan darurat untuk mengamankan data pribadi saat ponsel dicuri atau tertinggal di tempat umum.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-025",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Konsep 'Smart Meter' pada instalasi listrik PLN digital di rumah-rumah modern berfungsi untuk...",
+      "options": [
+        "Mencatat dan mengirimkan data konsumsi listrik secara otomatis dan akurat ke pusat data tanpa petugas harus datang mencatat manual",
+        "Mematikan kulkas setiap dua jam sekali",
+        "Mengubah arus listrik menjadi sinyal televisi",
+        "Menghilangkan kabel stopkontak di dinding"
+      ],
+      "answer": 0,
+      "explanation": "Smart meter IoT mentransmisikan data penggunaan energi secara real-time untuk penagihan yang akurat dan deteksi kebocoran arus.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-b-026",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Bagi seorang penulis atau jurnalis, alat perekam suara digital dengan fitur 'Speech-to-Text' otomatis bermanfaat untuk...",
+      "options": [
+        "Mengonversi rekaman wawancara audio menjadi transkrip teks tertulis secara cepat, menghemat waktu pengetikan",
+        "Mengubah suara rekaman menjadi suara robot asing",
+        "Menghapus suara narasumber secara permanen",
+        "Mencetak koran fisik dalam waktu satu menit"
+      ],
+      "answer": 0,
+      "explanation": "Fitur Speech-to-Text memanfaatkan model kecerdasan buatan pengenal suara untuk mengotomatisasi transkripsi wawancara.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-027",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Mengapa penggunaan e-toll (kartu tol elektronik) berbasis RFID di gerbang tol jalan bebas hambatan sangat penting?",
+      "options": [
+        "Mengurangi waktu transaksi pembayaran secara drastis sehingga mencegah antrean kemacetan panjang di gerbang tol",
+        "Membuat mobil melaju lebih cepat di jalan tol",
+        "Menghilangkan kebutuhan ban cadangan",
+        "Mengisi bahan bakar bensin secara nirkabel"
+      ],
+      "answer": 0,
+      "explanation": "Transaksi nirkontak otomatis mempersingkat waktu pembayaran dari hitungan menit tunai menjadi hitungan detik digital.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-028",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Dalam konteks transparansi publik, portal e-budgeting pemerintah daerah memungkinkan masyarakat untuk...",
+      "options": [
+        "Memantau rencana anggaran pendapatan dan belanja daerah secara terbuka guna mencegah penyelewengan dana APBD",
+        "Meminjam uang kas daerah untuk keperluan pribadi",
+        "Mengubah nominal pajak bumi dan bangunan sesuka hati",
+        "Menghapus proyek pembangunan jalan raya"
+      ],
+      "answer": 0,
+      "explanation": "Transparansi anggaran digital memungkinkan kontrol sosial masyarakat terhadap alokasi penggunaan uang rakyat oleh pejabat pemerintah.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-b-029",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Teknologi video conference (seperti Zoom atau Google Meet) merevolusi dunia kerja global dengan cara...",
+      "options": [
+        "Memungkinkan pertemuan tatap muka virtual tanpa membuang waktu dan biaya tiket perjalanan antarkota/negara",
+        "Mewajibkan pekerja tinggal di dalam kantor perusahaan",
+        "Menghilangkan kebutuhan presentasi materi",
+        "Mematikan jaringan telepon rumah secara permanen"
+      ],
+      "answer": 0,
+      "explanation": "Rapat video jarak jauh memangkas biaya mobilitas dan memungkinkan terbentuknya tim kerja internasional yang fleksibel.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-b-030",
+      "chapterId": "2",
+      "subchapterId": "2-b",
+      "question": "Sikap paling bijak dalam memanfaatkan kemudahan teknologi digital dalam kehidupan sehari-hari adalah...",
+      "options": [
+        "Memanfaatkan teknologi untuk meningkatkan produktivitas, belajar, dan efisiensi, namun tetap menjaga etika, privasi, dan batasan waktu layar yang sehat",
+        "Menolak seluruh bentuk teknologi digital dan hidup mengisolasi diri di hutan",
+        "Menghabiskan seluruh waktu 24 jam di depan gawai tanpa berinteraksi dengan keluarga",
+        "Membagikan seluruh kata sandi akun pribadi kepada siapa pun yang meminta"
+      ],
+      "answer": 0,
+      "explanation": "Keseimbangan antara pemanfaatan produktif dan kewaspadaan keamanan digital adalah kunci hidup cerdas di abad ke-21.",
+      "difficulty": "medium"
+    }
+  ]
+}

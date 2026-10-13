@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "3-b-001",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Jenis malware yang mengunci atau mengenkripsi data korban lalu menuntut pembayaran tebusan adalah...",
+      "options": [
+        "Adware",
+        "Ransomware",
+        "Spyware",
+        "Keylogger"
+      ],
+      "answer": 1,
+      "explanation": "Ransomware secara khusus mengunci berkas atau sistem dan meminta pembayaran tebusan finansial untuk memberikan kunci pembukanya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-b-002",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Perbedaan karakteristik utama antara Virus dan Worm adalah...",
+      "options": [
+        "Virus menyamar sebagai aplikasi bermanfaat, sedangkan Worm mencuri kata sandi",
+        "Virus membutuhkan interaksi manusia (eksekusi berkas inang) untuk menyebar, sedangkan Worm menyebar mandiri melalui jaringan",
+        "Virus tidak berbahaya, sedangkan Worm selalu merusak fisik komputer",
+        "Worm hanya menginfeksi ponsel, sedangkan Virus hanya menginfeksi printer"
+      ],
+      "answer": 1,
+      "explanation": "Virus memerlukan berkas inang yang dijalankan manusia, sedangkan worm memiliki kemampuan replikasi mandiri lintas jaringan tanpa campur tangan pengguna.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-003",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Malware yang menyamar sebagai program yang sah atau menarik (misalnya game bajakan atau utilitas gratis) disebut...",
+      "options": [
+        "Trojan Horse",
+        "Rootkit",
+        "Firewall",
+        "Antivirus"
+      ],
+      "answer": 0,
+      "explanation": "Trojan Horse menipu pengguna dengan kedok program bermanfaat, tetapi membawa kode berbahaya yang membuka pintu belakang bagi peretas.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-b-004",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Varian spyware yang secara spesifik merekam setiap ketukan tombol keyboard untuk mencuri kata sandi disebut...",
+      "options": [
+        "Adware",
+        "Keylogger",
+        "Ransomware",
+        "Bootloader"
+      ],
+      "answer": 1,
+      "explanation": "Keylogger memantau dan mencatat input papan ketik untuk merekam informasi sensitif seperti username, password, dan pesan pribadi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-005",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Jenis malware tingkat lanjut yang mampu bersembunyi di lapisan terdalam sistem operasi (kernel) agar tidak terdeteksi antivirus adalah...",
+      "options": [
+        "Rootkit",
+        "Macro virus",
+        "Pop-up banner",
+        "Spam filter"
+      ],
+      "answer": 0,
+      "explanation": "Rootkit memiliki hak akses tingkat tinggi pada kernel sistem operasi yang memungkinkannya menyembunyikan proses jahat dari pemindai keamanan standar.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-006",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Jenis malware yang menyusup ke dokumen perkantoran (seperti lembar kerja atau teks) dengan memanfaatkan skrip otomasi bawaan aplikasi disebut...",
+      "options": [
+        "Rootkit kernel",
+        "Macro Virus",
+        "Logic Bomb",
+        "Hardware Keylogger"
+      ],
+      "answer": 1,
+      "explanation": "Macro virus menyusup ke dalam fitur makro dokumen aplikasi perkantoran (seperti skrip VBA) dan dieksekusi saat dokumen dibuka.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-007",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Jaringan komputer terinfeksi yang dapat dikendalikan dari jarak jauh secara serentak oleh peretas untuk melancarkan serangan siber massal (seperti DDoS) disebut...",
+      "options": [
+        "Cloud Serverless",
+        "Hypervisor Cluster",
+        "Botnet (Jaringan Zombie)",
+        "Superkomputer Terdistribusi"
+      ],
+      "answer": 2,
+      "explanation": "Botnet adalah sekumpulan perangkat terinfeksi (disebut bot/zombie) yang dikendalikan oleh penyerang untuk melancarkan serangan terkoordinasi berskala besar.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-008",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Dalam dunia keamanan siber, istilah RAT merupakan singkatan dari...",
+      "options": [
+        "Random Access Transmission",
+        "Routing Algorithm Toolkit",
+        "Rapid Antivirus Troubleshooting",
+        "Remote Access Trojan"
+      ],
+      "answer": 3,
+      "explanation": "RAT (Remote Access Trojan) adalah program Trojan yang memberikan kendali jarak jauh penuh kepada penyerang atas sistem komputer korban.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-009",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Kode berbahaya yang ditanamkan dalam sistem dan baru aktif saat kondisi tertentu terpenuhi (misalnya tanggal tertentu atau aksi pemicu tertentu) disebut...",
+      "options": [
+        "Logic Bomb (Bom Logika)",
+        "Bootkit",
+        "Adware",
+        "Macro Virus"
+      ],
+      "answer": 0,
+      "explanation": "Logic Bomb adalah kode berbahaya tersembunyi yang tetap diam hingga dipicu oleh kondisi atau peristiwa logis tertentu yang telah ditentukan sebelumnya.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-010",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Taktik pemerasan ganda (Double Extortion) pada serangan ransomware modern dilakukan dengan cara...",
+      "options": [
+        "Menuntut tebusan dalam dua mata uang fisik yang berbeda",
+        "Mengunci monitor sekaligus merusak stopkontak listrik",
+        "Meminta pembayaran uang muka sebelum mengenkripsi berkas korban",
+        "Mencuri dan menyalin data sensitif terlebih dahulu sebelum enkripsi, lalu mengancam membocorkannya jika tebusan tak dibayar"
+      ],
+      "answer": 3,
+      "explanation": "Double Extortion menggabungkan enkripsi berkas lokal dengan ancaman kebocoran data rahasia ke publik (data breach) jika korban menolak membayar tebusan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-011",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Perangkat fisik berukuran kecil yang dipasang secara diam-diam di antara konektor kabel keyboard dan port USB komputer untuk merekam ketikan adalah...",
+      "options": [
+        "USB Dongle Wi-Fi",
+        "Sound Card Eksternal",
+        "RAM Booster",
+        "Hardware Keylogger"
+      ],
+      "answer": 3,
+      "explanation": "Hardware keylogger adalah modul fisik penyadap sinyal ketukan keyboard yang beroperasi independen dari sistem operasi sehingga tidak terdeteksi oleh antivirus perangkat lunak.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-012",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Malware yang menampilkan peringatan palsu mengerikan bahwa komputer korban terinfeksi virus akut, lalu mendesak korban membeli lisensi 'antivirus' palsu disebut...",
+      "options": [
+        "Rootkit",
+        "Worm",
+        "Scareware (Rogueware)",
+        "Firmware"
+      ],
+      "answer": 2,
+      "explanation": "Scareware memanipulasi kepanikan pengguna dengan peringatan bahaya palsu agar korban membayar perangkat lunak keamanan bodong atau mengunduh malware lebih lanjut.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-b-013",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Perbedaan mendasar antara 'Ransomware' dan 'Wiper' adalah...",
+      "options": [
+        "Ransomware mengenkripsi data dengan opsi tebusan, sedangkan Wiper menghancurkan data secara permanen tanpa opsi pemulihan",
+        "Ransomware hanya menyerang smartphone, sedangkan Wiper menyerang satelit",
+        "Ransomware dibuat oleh pemerintah, sedangkan Wiper dibuat oleh anak sekolah",
+        "Ransomware memperbaiki sistem yang rusak, sedangkan Wiper mencuri uang tunai"
+      ],
+      "answer": 0,
+      "explanation": "Wiper adalah malware yang dirancang murni untuk sabotase dan perusakan permanen tanpa menyediakan kunci dekripsi, berbeda dengan ransomware yang bermotif pemerasan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-014",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Varian rootkit yang menginfeksi tahap booting awal komputer (seperti Master Boot Record atau firmware UEFI) disebut...",
+      "options": [
+        "Pop-up Adware",
+        "Macro Script",
+        "Infostealer",
+        "Bootkit"
+      ],
+      "answer": 3,
+      "explanation": "Bootkit menginfeksi komponen bootloader atau firmware UEFI, memungkinkannya aktif sebelum kernel sistem operasi dan modul antivirus sempat dimuat.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-015",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Malware yang beroperasi langsung di memori RAM dan memanfaatkan alat administratif bawaan sistem operasi tanpa menyimpan file di penyimpanan disebut...",
+      "options": [
+        "Hardware Malware",
+        "Fileless Malware (Malware Tanpa Berkas)",
+        "Static Virus",
+        "Analog Trojan"
+      ],
+      "answer": 1,
+      "explanation": "Fileless malware berjalan secara in-memory dan menyalahgunakan utilitas sah sistem operasi (Living off the Land) sehingga sangat sulit dideteksi pemindai berkas biasa.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-016",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Kategori malware yang secara spesifik dirancang untuk mencuri kredensial peramban, cookie sesi, dan dompet aset kripto korban disebut...",
+      "options": [
+        "Defragmenter",
+        "Logic Bomb",
+        "Infostealer (Stealer)",
+        "Adware Banner"
+      ],
+      "answer": 2,
+      "explanation": "Infostealer adalah malware pencuri data yang menargetkan kredensial login, sesi peramban web, riwayat akun, dan dompet kripto yang tersimpan di perangkat korban.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-017",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Pada contoh kasus di materi pembelajaran, teknik manipulasi ekstensi `Invoice_Oktober_2026.pdf.exe` memanfaatkan konfigurasi standar Windows yang...",
+      "options": [
+        "Memblokir semua berkas bernama Invoice",
+        "Menghapus berkas yang memiliki ekstensi ganda",
+        "Mengubah semua program menjadi berkas gambar",
+        "Menyembunyikan ekstensi berkas yang sudah dikenal (Hide extensions for known file types)"
+      ],
+      "answer": 3,
+      "explanation": "Konfigurasi bawaan Windows menyembunyikan ekstensi berkas yang umum, sehingga berkas berbahaya berekstensi .exe tampak seolah-olah berformat .pdf biasa bagi pengguna awam.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-018",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Malware jenis 'Banker Trojan' dirancang dengan fokus spesifik untuk...",
+      "options": [
+        "Membantu nasabah menghitung bunga simpanan tabungan",
+        "Mempercepat proses penarikan uang di mesin ATM",
+        "Menghapus akun media sosial pengguna",
+        "Mencuri kredensial perbankan elektronik (e-banking) dan memanipulasi transaksi transfer online"
+      ],
+      "answer": 3,
+      "explanation": "Banker Trojan menyuntikkan formulir palsu (web inject) ke sesi internet banking korban untuk mencuri username, password, dan kode otentikasi transaksi keuangan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-019",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Mengapa uang tebusan pada serangan ransomware hampir selalu diminta dalam bentuk mata uang kripto (seperti Bitcoin)?",
+      "options": [
+        "Karena transfer kripto diwajibkan oleh aturan perbankan nasional",
+        "Karena mata uang fisik tidak dapat disimpan di internet",
+        "Karena transaksi kripto bersifat terdesentralisasi dan semi-anonim sehingga sulit dilacak dan dibekukan oleh otoritas",
+        "Karena mata uang kripto tidak bernilai riil"
+      ],
+      "answer": 2,
+      "explanation": "Sifat terdesentralisasi dan semi-anonim cryptocurrency mempersulit aparat penegak hukum dalam membekukan rekening atau melacak identitas fisik pelaku pemerasan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-020",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Manakah tindakan yang PALING direkomendasikan para pakar keamanan siber saat menghadapi infeksi ransomware?",
+      "options": [
+        "Jangan membayar uang tebusan; pulihkan data dari cadangan offline yang bersih dan laporkan insiden ke pihak berwenang",
+        "Langsung bayar seluruh tebusan yang diminta sesegera mungkin",
+        "Hapus semua komputer tanpa memeriksa celah masuknya penyerang",
+        "Matikan sambungan listrik gedung selama satu tahun penuh"
+      ],
+      "answer": 0,
+      "explanation": "Membayar tebusan tidak menjamin data akan kembali dan justru mendanai kejahatan siber lebih lanjut. Memulihkan dari backup offline terisolasi adalah respons terbaik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-021",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Program yang membajak preferensi peramban web korban, mengubah beranda dan mesin pencari default tanpa izin, disebut...",
+      "options": [
+        "Kernel Rootkit",
+        "Browser Hijacker",
+        "Bootloader",
+        "Compiler Glitch"
+      ],
+      "answer": 1,
+      "explanation": "Browser Hijacker memodifikasi pengaturan browser tanpa izin untuk mengarahkan pengguna ke situs iklan tertentu demi menghasilkan pendapatan promosi ilegal.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-b-022",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Virus komputer pertama yang menyerang komputer pribadi berbasis MS-DOS pada tahun 1986 dan menginfeksi sektor boot disket adalah...",
+      "options": [
+        "ILOVEYOU",
+        "WannaCry",
+        "Brain",
+        "Stuxnet"
+      ],
+      "answer": 2,
+      "explanation": "Virus Brain yang dibuat pada tahun 1986 secara luas diakui sebagai virus komputer PC pertama yang menyebar melalui sektor boot disket MS-DOS.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-023",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Fitur keamanan modern pada sistem operasi seperti 'Secure Boot' di UEFI dirancang khusus untuk menangkal jenis malware...",
+      "options": [
+        "Adware iklan pop-up",
+        "Macro script lembar kerja",
+        "Bootkit dan rootkit tingkat rendah sebelum sistem operasi dimuat",
+        "Keylogger fisik di port USB"
+      ],
+      "answer": 2,
+      "explanation": "Secure Boot memverifikasi tanda tangan digital kode booting untuk memastikan tidak ada bootkit atau malware tingkat firmware yang dieksekusi saat komputer menyala.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-024",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Salah satu cara worm komputer melumpuhkan jaringan perkantoran secara masif adalah dengan...",
+      "options": [
+        "Mengirim paket replikasi secara terus-menerus ke ribuan alamat IP sehingga menghabiskan bandwidth jaringan",
+        "Membakar antena router secara fisik",
+        "Memotong kabel transmisi secara mekanis",
+        "Mengubah semua wallpaper monitor komputer di kantor"
+      ],
+      "answer": 0,
+      "explanation": "Aktivitas pemindaian otomatis dan pengiriman salinan worm secara masif membanjiri pita jaringan (bandwidth exhaustion) hingga jaringan mengalami kongesti total.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-025",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Tindakan pencegahan paling efektif terhadap infeksi macro virus dalam dokumen pengolah dokumen adalah...",
+      "options": [
+        "Menonaktifkan eksekusi otomatis makro dari sumber yang tidak tepercaya di pengaturan aplikasi",
+        "Selalu mengklik tombol 'Enable Content' pada dokumen dari surel asing",
+        "Mengubah warna teks dokumen menjadi hitam",
+        "Menghapus program kalkulator dari komputer"
+      ],
+      "answer": 0,
+      "explanation": "Menonaktifkan makro secara default mencegah kode skrip VBA berbahaya dieksekusi saat membuka dokumen yang diunduh dari internet.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-b-026",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Program pemantau komersial (seperti aplikasi parental control) dapat digolongkan sebagai spyware ilegal (stalkerware) JIKA...",
+      "options": [
+        "Diinstal dengan izin penuh dari pengguna perangkat",
+        "Digunakan untuk membatasi durasi layar anak",
+        "Diinstal secara diam-diam tanpa izin pemilik perangkat untuk memata-matai privasi pribadinya",
+        "Memiliki ukuran berkas lebih dari 10 megabyte"
+      ],
+      "answer": 2,
+      "explanation": "Jika perangkat lunak pemantau dipasang secara tersembunyi tanpa persetujuan subjek yang diawasi, itu diklasifikasikan sebagai spyware/stalkerware ilegal.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-b-027",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Mengapa program Rootkit jauh lebih sulit dibersihkan dibandingkan virus atau adware biasa?",
+      "options": [
+        "Karena rootkit beroperasi di level kernel dan mampu memanipulasi API sistem operasi untuk menyembunyikan berkas dan prosesnya",
+        "Karena rootkit terbuat dari komponen logam di dalam hard disk",
+        "Karena rootkit tidak membutuhkan daya listrik",
+        "Karena rootkit selalu menghapus keyboard komputer"
+      ],
+      "answer": 0,
+      "explanation": "Rootkit memiliki hak istimewa setara inti sistem (ring 0) sehingga dapat mencegat panggilan sistem dan menyembunyikan dirinya dari Task Manager dan antivirus biasa.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-b-028",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Istilah 'Locker Ransomware' merujuk pada varian ransomware yang...",
+      "options": [
+        "Mengunci laci meja kerja secara fisik",
+        "Menghapus seluruh file dokumen secara permanen",
+        "Menyembunyikan ikon shortcut desktop saja",
+        "Mengunci akses ke antarmuka sistem operasi secara keseluruhan, memblokir layar login pengguna"
+      ],
+      "answer": 3,
+      "explanation": "Locker ransomware memblokir akses pengguna ke antarmuka sistem operasi secara total, berbeda dari Crypto Ransomware yang mengenkripsi file dokumen satu demi satu.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-029",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Apa peran utama komponen 'Downloader' atau 'Loader' dalam arsitektur serangan Trojan?",
+      "options": [
+        "Membersihkan berkas sementara di komputer korban",
+        "Memutar file media secara otomatis saat startup",
+        "Menghubungi server jarak jauh untuk mengunduh dan mengeksekusi modul malware tahap lanjutan yang lebih berbahaya",
+        "Menyimpan cadangan kontak pengguna ke cloud"
+      ],
+      "answer": 2,
+      "explanation": "Downloader adalah program pembuka jalan yang bertugas mengunduh dan menginstal komponen malware tahap berikutnya dari server milik penyerang.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-b-030",
+      "chapterId": "3",
+      "subchapterId": "3-b",
+      "question": "Manakah kesimpulan yang paling akurat mengenai keanekaragaman bentuk malware di era modern?",
+      "options": [
+        "Semua malware masa kini hanya berupa virus sederhana yang mudah dibersihkan",
+        "Sistem operasi saat ini sudah 100% bebas dari segala jenis ancaman malware",
+        "Malware modern sering bersifat hibrida, menggabungkan karakteristik penyamaran Trojan, penyebaran Worm, dan payload Ransomware",
+        "Malware hanya dapat menyerang komputer kantor bank dan tidak bisa menginfeksi ponsel"
+      ],
+      "answer": 2,
+      "explanation": "Serangan siber modern sering memanfaatkan malware hibrida yang mengombinasikan berbagai keunggulan varian malware berbeda untuk memaksimalkan dampak kerusakan.",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "3-c-001",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Metode penyebaran malware melalui surel palsu yang menyamar sebagai instansi terpercaya dikenal sebagai...",
+      "options": [
+        "Phishing (atau Malspam)",
+        "Overclocking",
+        "Formatting",
+        "Defragmenting"
+      ],
+      "answer": 0,
+      "explanation": "Phishing adalah teknik penipuan rekayasa sosial yang menggunakan surel atau pesan tipuan untuk menyusupkan malware atau mencuri data kredensial.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-002",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Mengapa mengunduh perangkat lunak bajakan (cracked software) sangat berbahaya bagi keamanan perangkat?",
+      "options": [
+        "Karena aplikasi bajakan selalu menghabiskan baterai dalam 1 menit",
+        "Karena berkas crack sering kali telah disisipi Trojan dan malware oleh pembuatnya tanpa disadari pengguna",
+        "Karena ukuran file bajakan selalu lebih kecil daripada file asli",
+        "Karena file bajakan tidak bisa dipasang di Windows"
+      ],
+      "answer": 1,
+      "explanation": "Aplikasi bajakan sering disusupi malware berbahaya seperti infostealer atau miner untuk memanfaatkan perangkat korban.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-003",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Serangan 'Drive-by Download' terjadi ketika...",
+      "options": [
+        "Pengguna secara sengaja membeli software di toko fisik",
+        "Malware terunduh dan terpasang otomatis di perangkat hanya karena pengguna mengunjungi situs web yang telah disusupi skrip berbahaya",
+        "Pengguna mematikan komputer saat sedang mendengarkan musik",
+        "Kabel pengisi daya ponsel dicabut secara mendadak"
+      ],
+      "answer": 1,
+      "explanation": "Drive-by download mengeksploitasi kerentanan peramban web untuk mengunduh malware tanpa memerlukan persetujuan eksplisit dari korban.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-004",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Teknik manipulasi psikologis yang memperdaya rasa penasaran atau ketakutan manusia untuk membocorkan informasi atau membuka celah keamanan disebut...",
+      "options": [
+        "Rekayasa Sosial (Social Engineering)",
+        "Rekayasa Perangkat Lunak (Software Engineering)",
+        "Rekayasa Genetika",
+        "Rekayasa Lalu Lintas"
+      ],
+      "answer": 0,
+      "explanation": "Social engineering menargetkan kelemahan psikologis manusia alih-alih meretas celah teknis komputer secara langsung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-005",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Skenario di mana penyerang sengaja meninggalkan flashdisk terinfeksi di tempat umum agar dicolokkan oleh korban yang penasaran disebut...",
+      "options": [
+        "Watering Hole Attack",
+        "USB Baiting",
+        "Man-in-the-Middle",
+        "DNS Spoofing"
+      ],
+      "answer": 1,
+      "explanation": "USB Baiting menggunakan perangkap flashdisk fisik dengan label menggoda untuk memancing korban mengeksekusi malware secara sukarela.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-006",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Penyusupan malware melalui iklan daring berbahaya yang ditayangkan di situs web berita terpercaya tanpa sepengetahuan pemilik situs disebut...",
+      "options": [
+        "Defragmentasi massal",
+        "Malvertising (Malicious Advertising)",
+        "Firmware injection",
+        "Search Engine Optimization"
+      ],
+      "answer": 1,
+      "explanation": "Malvertising menyalahgunakan jaringan periklanan daring untuk menayangkan iklan berbahaya yang mengarahkan pengunjung ke exploit kit atau mengunduh malware.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-007",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Metode serangan siber yang meretas situs web tertentu yang biasa dikunjungi oleh kelompok korban sasaran demi menginfeksi perangkat mereka disebut...",
+      "options": [
+        "Brute Force Attack",
+        "SQL Injection",
+        "Watering Hole Attack (Serangan Sumber Air)",
+        "Denial of Service"
+      ],
+      "answer": 2,
+      "explanation": "Watering Hole Attack menginfeksi situs pihak ketiga yang sering dikunjungi oleh target spesifik, layaknya predator mengintai mangsa di kubangan air.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-008",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Modus penipuan di mana penyerang mendaftarkan domain web yang sangat mirip situs populer namun memiliki sedikit salah ketik (misalnya `paypa1.com`) disebut...",
+      "options": [
+        "DNS Amplification",
+        "Bandwidth Throttling",
+        "Port Scanning",
+        "Typosquatting (URL Hijacking)"
+      ],
+      "answer": 3,
+      "explanation": "Typosquatting memanfaatkan kekeliruan ketik pengguna saat mengetikkan alamat URL di peramban untuk menjebak mereka ke portal palsu penyebar malware.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-009",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Serangan phishing yang dirancang khusus dan ditargetkan pada individu atau organisasi tertentu setelah penyerang melakukan riset mendalam disebut...",
+      "options": [
+        "Spear Phishing",
+        "Broadcasting",
+        "Port Forwarding",
+        "Spamming Massal"
+      ],
+      "answer": 0,
+      "explanation": "Spear Phishing adalah phishing tertarget yang memanfaatkan informasi kontekstual tentang korban agar surel penipuan tampak autentik dan meyakinkan.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-010",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Istilah khusus untuk serangan spear phishing tingkat tinggi yang secara khusus membidik tokoh eksekutif puncak (seperti direktur utama atau menteri) disebut...",
+      "options": [
+        "Fishing Rod",
+        "Trolling",
+        "Baiting",
+        "Whaling"
+      ],
+      "answer": 3,
+      "explanation": "Whaling adalah varian spear phishing berprofil tinggi yang membidik pimpinan puncak organisasi ('ikan paus') demi mengakses informasi rahasia bernilai strategis.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-011",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Modus penipuan di aplikasi perpesanan yang mengirimkan berkas berekstensi `.apk` berkedok 'Undangan Pernikahan' atau 'Resi Paket' bertujuan untuk...",
+      "options": [
+        "Menyusupkan malware pencuri SMS perbankan (OTP) untuk membobol rekening korban",
+        "Mempercepat koneksi internet ponsel penerima pesan",
+        "Membantu kurir ekspedisi melacak alamat rumah secara otomatis",
+        "Menghemat penggunaan kuota data seluler"
+      ],
+      "answer": 0,
+      "explanation": "Berkas APK berbahaya tersebut adalah varian perbankan yang meminta izin akses SMS untuk menyadap kode OTP dan mengambil alih akun transaksi keuangan korban.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-012",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Serangan 'Supply Chain Attack' terjadi ketika penyerang berhasil menyusupkan malware melalui...",
+      "options": [
+        "Pembersihan fisik layar monitor komputer",
+        "Arus listrik dari stopkontak dinding",
+        "Pembaruan perangkat lunak sah (software update) yang didistribusikan oleh vendor resmi yang telah diretas",
+        "Buku manual perangkat keras versi cetak"
+      ],
+      "answer": 2,
+      "explanation": "Supply Chain Attack meretas rantai pasok penyedia perangkat lunak tepercaya sehingga malware terpasang secara sah melalui pembaruan resmi vendor.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-013",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Perangkat keras fisik berwujud flashdisk yang ketika ditancapkan dikenali komputer sebagai keyboard dan mengetikkan kode jahat dengan kecepatan tinggi disebut...",
+      "options": [
+        "Hard Disk Portabel",
+        "USB Hub Multi-port",
+        "BadUSB (seperti Rubber Ducky)",
+        "Sound Card Eksternal"
+      ],
+      "answer": 2,
+      "explanation": "BadUSB memprogram pengontrol USB untuk berpura-pura menjadi keyboard (Human Interface Device) dan mengeksekusi serangkaian perintah baris berbahaya secara instan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-014",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Bagaimana cara kerja virus jalan pintas (Shortcut / LNK Virus) yang sering menyebar melalui flashdisk USB?",
+      "options": [
+        "Mengubah teks berkas menjadi huruf terbalik",
+        "Menghapus semua file video di komputer secara acak",
+        "Membakar port USB secara fisik menggunakan voltase tinggi",
+        "Menyembunyikan folder asli pengguna dan menggantinya dengan berkas shortcut palsu yang menjalankan skrip malware"
+      ],
+      "answer": 3,
+      "explanation": "Virus shortcut mengubah atribut berkas asli menjadi tersembunyi (hidden/system) lalu membuat ikon jalan pintas (.lnk) palsu yang mengeksekusi malware saat diklik.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-015",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Istilah 'Quishing' dalam taktik distribusi tautan jebakan dan malware mengacu pada penyalahgunaan...",
+      "options": [
+        "Kode QR (Quick Response Code) palsu atau berbahaya",
+        "Berkas lagu audio berformat MP3 bajakan",
+        "Siaran radio frekuensi pendek",
+        "Sensor inframerah pada remote televisi"
+      ],
+      "answer": 0,
+      "explanation": "Quishing (QR Phishing) memanfaatkan kode QR yang dimanipulasi untuk mengelabui pengguna agar memindainya dan membuka tautan berbahaya di ponsel mereka.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-016",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Praktik memasang aplikasi dari sumber luar di luar toko aplikasi resmi (seperti mengunduh file `.apk` modifikasi dari situs web pihak ketiga) disebut...",
+      "options": [
+        "Overclocking",
+        "Defragmentasi",
+        "Sideloading",
+        "Paging"
+      ],
+      "answer": 2,
+      "explanation": "Sideloading adalah penginstalan aplikasi di luar ekosistem toko resmi, yang membawa risiko tinggi karena berkas tidak melalui proses kurasi dan pemindaian keamanan toko.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-017",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Serangan 'Clickjacking' (UI Redressing) memperdaya pengguna untuk mengeksekusi malware dengan cara...",
+      "options": [
+        "Menempatkan lapisan antarmuka transparan di atas tombol yang tampak biasa sehingga klik pengguna diarahkan ke aksi berbahaya",
+        "Merusak komponen pegas mouse secara mekanis",
+        "Mengganti keyboard fisik komputer dengan model lama",
+        "Mematikan sambungan internet saat pengguna bermain game"
+      ],
+      "answer": 0,
+      "explanation": "Clickjacking menutupi elemen web dengan frame transparan (invisible layer) sehingga saat korban mengklik tombol yang tampak biasa, klik tersebut mengeksekusi aksi jahat.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-018",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Mengapa jaringan Wi-Fi publik terbuka tanpa kata sandi di tempat umum rentan dimanfaatkan untuk menyebarkan malware?",
+      "options": [
+        "Karena Wi-Fi publik tidak menggunakan gelombang frekuensi radio",
+        "Karena sinyal Wi-Fi publik selalu membuat layar laptop mati mendadak",
+        "Penyerang dapat membuat hotspot tiruan (Evil Twin) atau melakukan Man-in-the-Middle untuk menyuntikkan skrip jahat ke sesi korban",
+        "Karena jaringan Wi-Fi publik hanya bisa diakses oleh komputer mainframe"
+      ],
+      "answer": 2,
+      "explanation": "Pada jaringan terbuka tanpa proteksi, penyerang dapat mencegat dan memanipulasi lalu lintas data untuk mengarahkan korban ke unduhan malware palsu.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-019",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Paket perangkat lunak di server penyerang yang memindai peramban dan plugin pengunjung secara otomatis untuk mencari celah yang bisa dieksploitasi disebut...",
+      "options": [
+        "Exploit Kit",
+        "Operating System Kernel",
+        "Database Engine",
+        "Video Converter"
+      ],
+      "answer": 0,
+      "explanation": "Exploit Kit adalah rangkaian alat di server penyerang yang secara otomatis mendeteksi kerentanan peramban pengunjung lalu mengirimkan exploit yang cocok untuk memasang malware.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-020",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Mengapa menonaktifkan fitur 'Autorun / Autoplay' pada sistem operasi merupakan tindakan keamanan yang sangat disarankan?",
+      "options": [
+        "Agar pemutar musik tidak menyala saat menyalakan komputer",
+        "Untuk menghemat konsumsi daya baterai laptop hingga 50%",
+        "Agar dokumen dapat dicetak di printer tanpa kabel",
+        "Untuk mencegah flashdisk USB asing mengeksekusi berkas kode berbahaya secara otomatis saat pertama kali dicolokkan"
+      ],
+      "answer": 3,
+      "explanation": "Menonaktifkan fitur Autorun mencegah komputer mengeksekusi skrip autorun.inf berbahaya yang mungkin tertanam di dalam media penyimpanan USB asing.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-021",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Dalam rekayasa sosial, penyerang sengaja menciptakan rasa kepanikan ekstrem (misalnya 'Akun Anda akan diblokir dalam 10 menit!') bertujuan untuk...",
+      "options": [
+        "Menguji kecepatan pengetikan pengguna",
+        "Membuat korban bertindak tergesa-gesa tanpa sempat berpikir logis atau melakukan verifikasi",
+        "Membantu institusi perbankan merapikan data nasabah",
+        "Mengurangi pemakaian memori server pengirim pesan"
+      ],
+      "answer": 1,
+      "explanation": "Rasa panik dan ketergesaan melumpuhkan daya kritis seseorang, membuat korban cenderung langsung menuruti instruksi atau mengklik tautan berbahaya tanpa pertimbangan rasional.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-022",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Vektor penyebaran malware dan rekayasa sosial melalui sambungan panggilan suara telepon langsung disebut...",
+      "options": [
+        "Phishing",
+        "Smishing",
+        "Vishing (Voice Phishing)",
+        "Whaling"
+      ],
+      "answer": 2,
+      "explanation": "Vishing adalah varian rekayasa sosial yang menggunakan percakapan telepon langsung untuk menipu korban agar memberikan informasi rahasia atau memasang software remote.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-023",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Apa risiko utama mengunduh berkas perangkat lunak atau game bajakan melalui jaringan Peer-to-Peer (Torrent)?",
+      "options": [
+        "Semua berkas torrent otomatis terhapus dalam waktu 1 jam",
+        "Jaringan torrent hanya dapat diakses melalui ponsel cerdas",
+        "Kabel listrik komputer akan mengalami korsleting mekanis",
+        "Tidak adanya kurasi keamanan terpusat, sehingga berkas populer sangat sering disusupi muatan Trojan dan infostealer oleh pihak yang membagikannya"
+      ],
+      "answer": 3,
+      "explanation": "Jaringan P2P torrent tidak memiliki sistem verifikasi dan pemindaian keamanan terpusat, menjadikannya sarang empuk bagi penyebaran malware berkedok aplikasi populer.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-024",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Mengapa membiarkan port Remote Desktop Protocol (RDP) terbuka langsung ke internet publik tanpa proteksi VPN sangat berbahaya?",
+      "options": [
+        "RDP akan mengubah semua berkas dokumen menjadi teks terbalik",
+        "Komputer korban akan menyiarkan radio otomatis",
+        "Peretas dan bot pemindai dapat melakukan serangan tebakan password (brute-force) atau mengeksploitasi bug RDP untuk menyusupkan ransomware langsung ke sistem",
+        "RDP menyebabkan baterai komputer terisi daya terlalu cepat"
+      ],
+      "answer": 2,
+      "explanation": "Port RDP yang terekspos ke internet publik terus dipindai oleh penyerang otomatis untuk menemukan kredensial lemah dan menanamkan ransomware secara langsung.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-025",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Manakah tindakan yang BENAR saat Anda menerima surel mencurigakan berisi berkas zip berpassword yang mengaku dari instansi perbankan?",
+      "options": [
+        "Segera ekstrak berkas dan jalankan program di dalamnya",
+        "Teruskan pesan tersebut ke seluruh kontak grup kantor",
+        "Balas surel dengan mengirimkan nomor PIN ATM Anda",
+        "Jangan buka berkas atau ekstrak isinya; lakukan verifikasi mandiri ke pihak bank melalui nomor kontak resmi yang terpercaya"
+      ],
+      "answer": 3,
+      "explanation": "Penggunaan arsip zip berpassword sering dipakai penyerang untuk mengelabui filter antivirus surel. Selalu verifikasi langsung ke kontak resmi lembaga terkait.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-026",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Fitur 'Application Whitelisting' pada sistem keamanan perusahaan efektif mencegah malware karena...",
+      "options": [
+        "Mengubah warna teks aplikasi menjadi putih bersih",
+        "Hanya mengizinkan program yang sudah terdaftar dan diverifikasi secara resmi untuk dijalankan, menolak eksekusi semua berkas asing",
+        "Menghapus seluruh file dokumen yang dibuat setelah jam lima sore",
+        "Mematikan sambungan internet perusahaan setiap hari libur"
+      ],
+      "answer": 1,
+      "explanation": "Application Whitelisting memastikan hanya perangkat lunak sah yang telah disetujui yang dapat dieksekusi, memblokir malware baru meskipun berhasil masuk ke penyimpanan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "3-c-027",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Pada contoh kasus dalam modul pembelajaran, staf kantor mencolokkan flashdisk yang ditemukan di parkiran karena...",
+      "options": [
+        "Disuruh oleh manajer secara tertulis",
+        "Tergiur label 'Daftar Kenaikan Gaji dan Bonus' yang memicu rasa penasaran (teknik USB Baiting)",
+        "Flashdisk tersebut berbunyi alarm darurat",
+        "Komputer kantor tidak memiliki ruang penyimpanan internal"
+      ],
+      "answer": 1,
+      "explanation": "Kasus tersebut menunjukkan bagaimana teknik USB Baiting memanfaatkan rasa penasaran manusia untuk menembus pertahanan perimeter fisik dan digital.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3-c-028",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Mengapa pembaruan perangkat lunak (security patching) rutin sangat penting untuk memutus jalur penyebaran malware?",
+      "options": [
+        "Karena patch menutup celah kerentanan teknis pada sistem yang sering dieksploitasi malware untuk menyusup",
+        "Karena patch membuat komputer tidak lagi membutuhkan listrik",
+        "Karena patch menghapus semua akun pengguna yang tidak aktif",
+        "Karena patch otomatis memperbesar resolusi layar monitor"
+      ],
+      "answer": 0,
+      "explanation": "Pembaruan keamanan menambal celah pada sistem operasi dan aplikasi, mencegah worm dan exploit kit memanfaatkan celah tersebut untuk menginfeksi perangkat.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-029",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Taktik penyusupan malware melalui penambahan ekstensi peramban web berbahaya (Malicious Extension) berisiko karena...",
+      "options": [
+        "Ekstensi tersebut mengubah keyboard menjadi bahasa kuno",
+        "Ekstensi tersebut menghapus seluruh file dokumen Word di hard drive",
+        "Ekstensi tersebut membuat kipas pendingin laptop berputar sangat lambat",
+        "Ekstensi peramban memiliki izin untuk membaca seluruh lalu lintas web pengguna, mencuri data sesi, dan menyuntikkan iklan berbahaya"
+      ],
+      "answer": 3,
+      "explanation": "Ekstensi browser memiliki hak istimewa untuk menginspeksi dan memodifikasi lalu lintas halaman web yang dibuka, menjadikannya sarana efektif untuk penyadapan data kredensial.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3-c-030",
+      "chapterId": "3",
+      "subchapterId": "3-c",
+      "question": "Manakah kesimpulan yang paling tepat mengenai peranan manusia dalam rantai penyebaran malware?",
+      "options": [
+        "Manusia tidak memiliki peranan apa pun dalam keamanan karena semua dikelola mesin",
+        "Pengguna komputer selalu kebal terhadap manipulasi psikologis penyerang",
+        "Sebagian besar infeksi malware berhasil terjadi karena kelengahan dan keberhasilan manipulasi terhadap pengguna (faktor manusia sebagai mata rantai terlemah)",
+        "Malware hanya bisa masuk jika pengguna membongkar fisik komponen prosesor komputer"
+      ],
+      "answer": 2,
+      "explanation": "Dalam keamanan siber, manusia sering kali menjadi titik terlemah. Kewaspadaan dan literasi keamanan digital setiap individu adalah perlindungan paling utama.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "cyberwise",
+  "version": "1.0.0",
+  "description": "CyberWise - Digital Security Learning Platform",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-content.js",
+    "validate:full": "node scripts/validate-content.js --full"
+  },
+  "dependencies": {
+    "dompurify": "^3.1.6",
+    "idb": "^8.0.0",
+    "marked": "^13.0.3"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8",
+    "vite-plugin-static-copy": "^1.0.6"
+  }
+}

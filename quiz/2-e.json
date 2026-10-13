@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": "2-e-001",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Langkah pertama yang bijak saat menerima pesan sensasional yang belum jelas kebenarannya di grup pesan adalah...",
+      "options": [
+        "Langsung meneruskannya (forward) ke semua kontak agar cepat tahu",
+        "Melakukan cek fakta (fact-checking) ke sumber berita resmi dan terpercaya sebelum membagikannya",
+        "Menghapus aplikasi percakapan dari perangkat",
+        "Mengomentari pesan tersebut dengan kata-kata kasar"
+      ],
+      "answer": 1,
+      "explanation": "Verifikasi dan klarifikasi ke sumber kredibel merupakan fondasi literasi digital dalam membendung penyebaran hoaks.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-002",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Apa yang dimaksud dengan konsep 'Digital Detox' (Detoksifikasi Digital)?",
+      "options": [
+        "Membersihkan layar perangkat keras menggunakan cairan alkohol",
+        "Mengambil jeda waktu tertentu secara sadar untuk tidak menggunakan gawai atau media sosial demi kesehatan mental",
+        "Menghapus seluruh file foto dari penyimpanan memori telepon",
+        "Memperbarui antivirus ke versi premium berbayar"
+      ],
+      "answer": 1,
+      "explanation": "Detoks digital adalah periode istirahat sukarela dari interaksi dengan perangkat digital guna memulihkan fokus dan kesejahteraan mental.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-003",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Etika dan tata krama dalam berkomunikasi dan berinteraksi di dunia maya dikenal dengan istilah...",
+      "options": [
+        "Netiket (Netiquette)",
+        "Protokol IP",
+        "Algoritma PageRank",
+        "Enkripsi Kunci Publik"
+      ],
+      "answer": 0,
+      "explanation": "Netiket (kependekan dari network etiquette) adalah panduan tata krama dan kesopanan dalam berinteraksi di jaringan internet.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-004",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Jika Anda menyaksikan teman sekelas Anda menjadi korban perundungan siber di media sosial, sikap terbaik sebagai 'Upstander' adalah...",
+      "options": [
+        "Ikut tertawa dan membagikan komentar perundungan tersebut",
+        "Mendukung korban secara privat dan melaporkan (report) konten perundungan ke pihak moderator platform atau guru",
+        "Menyebarkan identitas pribadi pelaku tanpa bukti",
+        "Berpura-pura tidak melihat dan mematikan notifikasi"
+      ],
+      "answer": 1,
+      "explanation": "Menjadi upstander berarti membela korban secara empati dan memanfaatkan mekanisme pelaporan resmi untuk menghentikan intimidasi.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-005",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Fitur di sistem operasi Android atau iOS yang membantu membatasi waktu pemakaian aplikasi tertentu setiap hari disebut...",
+      "options": [
+        "Digital Wellbeing / Screen Time",
+        "Developer Mode",
+        "Airplane Mode",
+        "Bluetooth Tethering"
+      ],
+      "answer": 0,
+      "explanation": "Fitur Digital Wellbeing (Android) atau Screen Time (iOS) dirancang untuk memantau dan membatasi durasi layar demi mencegah kecanduan gawai.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-e-006",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Empat pilar utama dalam Kurikulum Literasi Digital Nasional Indonesia yang dirumuskan Kominfo meliputi...",
+      "options": [
+        "Digital Skills, Digital Ethics, Digital Safety, dan Digital Culture",
+        "Hardware, Software, Brainware, dan Malware",
+        "Facebook, Twitter, Instagram, dan TikTok",
+        "Download, Upload, Streaming, dan Gaming"
+      ],
+      "answer": 0,
+      "explanation": "Empat pilar literasi digital adalah Kecakapan Digital (Skills), Etika Digital (Ethics), Keamanan Digital (Safety), dan Budaya Digital (Culture).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-007",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Aturan kesehatan mata '20-20-20' saat menatap layar komputer menyarankan untuk...",
+      "options": [
+        "Setiap 20 menit menatap layar, istirahatkan mata dengan melihat objek berjarak 20 kaki (6 meter) selama 20 detik",
+        "Mengganti kacamata setiap 20 hari sekali",
+        "Membeli 20 layar monitor berbeda",
+        "Mengedipkan mata 20 kali dalam satu menit"
+      ],
+      "answer": 0,
+      "explanation": "Aturan 20-20-20 merilekskan otot fokus mata (otot siliaris) untuk mencegah sindrom kelelahan mata digital (Computer Vision Syndrome).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-008",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Cara paling efektif untuk memverifikasi apakah foto yang viral di internet merupakan hasil comotan peristiwa lama atau hoaks adalah dengan...",
+      "options": [
+        "Melakukan pencarian gambar terbalik (Reverse Image Search menggunakan Google Lens)",
+        "Memperbesar gambar hingga 500%",
+        "Mengubah warna foto menjadi hitam putih",
+        "Mencetak foto tersebut ke kertas foto"
+      ],
+      "answer": 0,
+      "explanation": "Reverse image search melacak sumber asli, tanggal publikasi perdana, dan konteks berita asal dari foto yang beredar di internet.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-009",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Apa bahaya dari kebiasaan 'Oversharing' (terlalu banyak membagikan detail kehidupan pribadi di media sosial)?",
+      "options": [
+        "Data pribadi seperti tiket pesawat, nama ibu kandung, dan lokasi rumah dapat dimanfaatkan pelaku kejahatan untuk pencurian identitas atau pembobolan rumah",
+        "Pengikut di media sosial akan bertambah terlalu cepat",
+        "Ponsel akan menolak mengunggah foto baru",
+        "Aplikasi kamera akan terkunci secara otomatis"
+      ],
+      "answer": 0,
+      "explanation": "Oversharing memberikan amunisi bagi penjahat siber dan pelaku kejahatan nyata untuk melacak pola hidup dan mengeksploitasi data korban.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-010",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Sikap kritis terhadap judul berita sensasional di media sosial dikenal dengan moto...",
+      "options": [
+        "Saring sebelum sharing (pikirkan dan verifikasi kebenaran sebelum membagikan)",
+        "Bagi dulu baru baca",
+        "Percaya semua yang ada di internet",
+        "Komentari tanpa membaca isinya"
+      ],
+      "answer": 0,
+      "explanation": "Slogan 'Saring sebelum sharing' mengingatkan pengguna untuk memvalidasi akurasi dan kebermanfaatan suatu informasi sebelum menyebarkannya.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-011",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Jika seorang remaja mendapati dirinya menjadi target perundungan siber (cyberbullying), tindakan pertama yang harus dilakukan adalah...",
+      "options": [
+        "Menyimpan tangkapan layar (screenshot) sebagai bukti, memblokir akun pelaku, dan menceritakannya kepada orang tua atau guru yang dipercaya",
+        "Membalas dengan hinaan yang lebih kasar di kolom komentar publik",
+        "Menghapus seluruh akun perbankan orang tua",
+        "Membanting ponsel hingga pecah berkeping-keping"
+      ],
+      "answer": 0,
+      "explanation": "Menyimpan bukti dan mencari dukungan orang dewasa tepercaya adalah langkah tepat menangani perundungan tanpa memperkeruh konflik.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-012",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Apa tujuan dari memeriksa 'Izin Aplikasi' (App Permissions) pada setelan smartphone secara berkala?",
+      "options": [
+        "Memastikan aplikasi kalkulator atau game sederhana tidak memiliki akses mencurigakan ke mikrofon, kamera, lokasi, atau kontak",
+        "Mempercepat waktu pengisian daya baterai",
+        "Mengganti tema warna ponsel",
+        "Menghapus aplikasi tanpa uninstall"
+      ],
+      "answer": 0,
+      "explanation": "Audit izin aplikasi mencegah aplikasi nakal memata-matai atau mencuri data sensitif di luar fungsi yang wajar.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-013",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Prinsip etika digital 'THINK' sebelum mengunggah postingan menyarankan kita memeriksa apakah postingan tersebut...",
+      "options": [
+        "True (Benar), Helpful (Bermanfaat), Inspiring (Menginspirasi), Necessary (Perlu), dan Kind (Santun)",
+        "Total, Heavy, Intense, New, dan Killer",
+        "Tech, Hardware, Internet, Network, dan Kernel",
+        "Trending, Hot, Illegal, Noisy, dan Keen"
+      ],
+      "answer": 0,
+      "explanation": "Akronim T.H.I.N.K adalah panduan refleksi diri agar konten yang diunggah bernilai positif dan tidak menyakiti orang lain.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-014",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Ketika Anda menerima pesan SMS atau chat yang memberitahukan Anda memenangkan undian ratusan juta rupiah dari bank, langkah verifikasi yang benar adalah...",
+      "options": [
+        "Menghubungi nomor call center resmi bank yang tercantum di kartu debit/kredit atau situs resmi bank",
+        "Langsung mentransfer uang 'biaya administrasi' ke nomor rekening pribadi pengirim SMS",
+        "Mengirimkan foto KTP dan nomor PIN ATM melalui WhatsApp",
+        "Mengunggah SMS tersebut dengan rasa bangga ke status media sosial"
+      ],
+      "answer": 0,
+      "explanation": "Konfirmasi langsung ke saluran resmi bank mencegah jebakan penipuan phishing atau rekayasa sosial berkedok undian berhadiah.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-015",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Mengapa pengaturan akun media sosial sebaiknya disetel ke mode privat (Private Account) bagi siswa sekolah?",
+      "options": [
+        "Untuk membatasi agar kiriman foto, video, dan cerita pribadi hanya dapat dilihat oleh teman-teman yang telah disetujui secara sadar",
+        "Agar kuota internet menjadi gratis selamanya",
+        "Agar akun tidak bisa digunakan untuk berkirim pesan",
+        "Karena akun publik dilarang oleh undang-undang"
+      ],
+      "answer": 0,
+      "explanation": "Akun privat melindungi anak dan remaja dari pemantauan orang asing berbahaya, penguntitan (stalking), dan pencurian foto.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-016",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Apa yang dimaksud dengan 'Bystander Effect' dalam kasus perundungan siber di media sosial?",
+      "options": [
+        "Kondisi di mana banyak orang melihat perundungan terjadi namun hanya diam dan tidak melakukan apa pun karena mengira orang lain yang akan menolong",
+        "Kemampuan komputer menolak virus secara otomatis",
+        "Teknik pengeditan foto menggunakan kecerdasan buatan",
+        "Proses backup data ke cloud secara terjadwal"
+      ],
+      "answer": 0,
+      "explanation": "Bystander pasif memperparah perundungan; pengguna internet harus berani menjadi 'Upstander' yang melaporkan konten kekerasan.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-e-017",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Cara paling efektif untuk menghindari jeratan aplikasi pinjaman online (pinjol) ilegal adalah...",
+      "options": [
+        "Memeriksa legalitas entitas pinjaman di situs resmi Otoritas Jasa Keuangan (OJK) dan tidak meminjam untuk kebutuhan konsumtif",
+        "Mengunduh semua aplikasi pinjol yang muncul di iklan media sosial",
+        "Meminjam uang dengan nama teman tanpa izin",
+        "Memberikan izin akses galeri foto kepada aplikasi pinjol"
+      ],
+      "answer": 0,
+      "explanation": "Entitas pinjol resmi wajib terdaftar dan berizin OJK serta dilarang menyedot kontak pribadi peminjam.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-018",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Fitur 'Keluarga Berbagi' atau 'Kontrol Orang Tua' (Parental Controls) pada gawai anak bermanfaat untuk...",
+      "options": [
+        "Menyaring konten dewasa yang tidak sesuai umur anak dan membatasi waktu bermain game",
+        "Menghapus seluruh tugas sekolah anak",
+        "Mengurangi kapasitas RAM ponsel anak",
+        "Mematikan sinyal telepon rumah secara otomatis"
+      ],
+      "answer": 0,
+      "explanation": "Parental control membantu orang tua mendampingi anak dalam berselancar secara aman sesuai tahap perkembangan usia.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-019",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Langkah yang tepat untuk membersihkan jejak digital (digital footprint) sebelum melamar beasiswa atau pekerjaan adalah...",
+      "options": [
+        "Meninjau riwayat postingan masa lalu, menghapus komentar bernada negatif atau tidak pantas, dan mengaktifkan pengaturan privasi yang ketat",
+        "Menghapus seluruh akun internet dan membuang laptop",
+        "Mengganti nama asli dengan nama samaran di kartu identitas resmi",
+        "Membuat 100 akun baru palsu"
+      ],
+      "answer": 0,
+      "explanation": "Kurasi jejak digital (digital hygiene) memastikan profil online mencerminkan kepribadian profesional dan berintegritas.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-020",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Organisasi atau kanal cek fakta independen di Indonesia yang fokus membongkar berita bohong dan disinformasi adalah...",
+      "options": [
+        "MAFINDO (TurnBackHoax.id) dan Cekfakta.com",
+        "Badan Meteorologi Klimatologi dan Geofisika",
+        "Perusahaan Listrik Negara",
+        "Dinas Pertamanan Kota"
+      ],
+      "answer": 0,
+      "explanation": "Masyarakat Anti Fitnah Indonesia (MAFINDO) dan koalisi CekFakta adalah inisiatif sipil rujukan utama klarifikasi hoaks di Indonesia.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-021",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Bagaimana cara menghindari jebakan 'Echo Chamber' (ruang gema opini) di media sosial?",
+      "options": [
+        "Secara sadar mengikuti berbagai sumber berita yang kredibel dengan beragam sudut pandang dan tidak hanya membaca sumber yang sepaham",
+        "Hanya berteman dengan orang yang memiliki pendapat 100% sama",
+        "Memblokir semua orang yang berbeda pandangan politik",
+        "Menolak membaca berita apa pun di internet"
+      ],
+      "answer": 0,
+      "explanation": "Membuka diri terhadap berbagai perspektif kredibel melatih pemikiran kritis dan mencegah fanatisme sempit di media sosial.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-e-022",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Ketika Anda merasa lelah, cemas, dan sulit konsentrasi akibat seharian menatap media sosial, tindakan terbaik adalah...",
+      "options": [
+        "Melakukan jeda detoks digital dengan berolahraga, membaca buku fisik, atau berinteraksi langsung dengan keluarga di dunia nyata",
+        "Membuka media sosial lain untuk mencari hiburan baru",
+        "Bermain game online hingga larut malam",
+        "Mengunggah status mengeluh di semua akun media sosial"
+      ],
+      "answer": 0,
+      "explanation": "Detoksifikasi digital dan aktivitas fisik di dunia nyata memulihkan keseimbangan neurokimia otak dan mengurangi stres mental.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-023",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Fitur 'Komentar Terfilter' (Filtered Comments) di media sosial membantu kreator konten dalam...",
+      "options": [
+        "Menyembunyikan kata-kata kasar, pelecehan, dan spam secara otomatis dari kolom komentar",
+        "Menghilangkan pengikut akun secara acak",
+        "Membuat video menjadi buram",
+        "Mengurangi jumlah penonton video"
+      ],
+      "answer": 0,
+      "explanation": "Filter kata kunci otomatis menciptakan ruang digital yang lebih sehat dan aman dari komentar toksik perundungan siber.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-024",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Pemberian kode OTP (One-Time Password) kepada orang lain yang menelepon dan mengaku sebagai petugas bank...",
+      "options": [
+        "HARAM dilakukan dalam keadaan apa pun karena bank tidak pernah meminta kode OTP nasabah",
+        "Boleh dilakukan jika penelepon berbicara dengan sangat sopan",
+        "Wajib diberikan agar akun perbankan tidak diblokir",
+        "Hanya boleh diberikan jika ditelepon pada malam hari"
+      ],
+      "answer": 0,
+      "explanation": "Kode OTP adalah kunci rahasia transaksi satu kali. Membagikan OTP sama dengan menyerahkan uang tabungan kepada penipu.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-025",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Tindakan 'Unfollow' atau 'Mute' akun yang sering membagikan konten kebencian atau membuat kita merasa rendah diri merupakan bentuk...",
+      "options": [
+        "Menjaga kesehatan mental dan sanitasi linimasa media sosial pribadi",
+        "Pelanggaran hukum pidana perdata",
+        "Kerusakan perangkat keras ponsel",
+        "Penolakan terhadap kemajuan teknologi"
+      ],
+      "answer": 0,
+      "explanation": "Mengurasi linimasa adalah hak setiap pengguna untuk menciptakan lingkungan digital yang positif dan memberdayakan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-026",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Mengapa kita tidak boleh sembarangan mengklik tautan pendek (shortened URL seperti bit.ly) dari pengirim yang tidak dikenal?",
+      "options": [
+        "Karena tautan tersebut dapat menyamarkan alamat situs web palsu berbahaya (phishing) atau memicu unduhan malware otomatis",
+        "Karena tautan pendek akan menghapus saldo pulsa secara otomatis",
+        "Karena tautan pendek hanya berlaku untuk komputer Mac",
+        "Karena tautan pendek merusak resolusi kamera ponsel"
+      ],
+      "answer": 0,
+      "explanation": "Penyerang menyamarkan domain penipuan di balik pemendek URL untuk mengelabui kewaspadaan korban.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-027",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Pendidikan karakter dan penanaman nilai empati di dunia nyata berperan besar dalam mengatasi dampak negatif teknologi digital karena...",
+      "options": [
+        "Perilaku sopan dan empati di dunia nyata akan tercermin dalam sikap saling menghargai saat berinteraksi di ruang siber",
+        "Empati membuat kecepatan internet bertambah",
+        "Pendidikan karakter menggantikan peran antivirus komputer",
+        "Nilai moral otomatis menghapus virus dari hard disk"
+      ],
+      "answer": 0,
+      "explanation": "Ruang digital adalah cerminan manusia; netiket yang baik bersumber dari budi pekerti dan empati yang tertanam dalam diri individu.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2-e-028",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Jika seorang teman mengajak Anda untuk ikut memasang taruhan di situs judi online, sikap penolakan yang tegas dan tepat adalah...",
+      "options": [
+        "Menolak dengan tegas, mengingatkan bahaya hukum dan kecanduannya, serta menjauh dari ajakan tersebut",
+        "Mencoba bertaruh dengan nominal kecil dahulu",
+        "Meminjamkan nomor rekening bank pribadi untuk dipakai teman bertaruh",
+        "Mengajak teman lain untuk ikut serta"
+      ],
+      "answer": 0,
+      "explanation": "Judi online adalah tindak pidana ilegal yang merusak masa depan dan harus ditolak secara tegas tanpa kompromi.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2-e-029",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Mekanisme pelaporan konten negatif (seperti pornografi, judi online, penipuan) resmi kepada Kementerian Kominfo RI dapat dilakukan melalui situs...",
+      "options": [
+        "Aduankonten.id",
+        "Kemenkeu.go.id",
+        "Bappenas.go.id",
+        "Kemendikbud.go.id"
+      ],
+      "answer": 0,
+      "explanation": "Aduankonten.id adalah portal resmi Kominfo bagi masyarakat untuk mengadukan konten negatif di internet agar dapat diblokir.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "2-e-030",
+      "chapterId": "2",
+      "subchapterId": "2-e",
+      "question": "Inti pesan dari pemanfaatan teknologi digital secara bijak (CyberWise) adalah...",
+      "options": [
+        "Menjadikan teknologi digital sebagai sarana belajar dan berkarya yang berdaya guna (Learn Smart) sambil senantiasa membentengi diri dengan kesadaran keamanan dan etika (Stay Secure)",
+        "Menghindari penggunaan teknologi digital seumur hidup",
+        "Mengutamakan kesenangan viralitas tanpa memedulikan dampak bagi orang lain",
+        "Menyerahkan seluruh privasi data pribadi ke internet secara terbuka"
+      ],
+      "answer": 0,
+      "explanation": "Sesuai slogan CyberWise: 'Learn Smart. Stay Secure.' — memetik manfaat ilmu teknologi dengan cerdas dan menjaga keselamatan keamanan diri secara kokoh.",
+      "difficulty": "easy"
+    }
+  ]
+}
