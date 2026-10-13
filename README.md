@@ -15,7 +15,7 @@ Dengan antarmuka yang bersih, modern, dan mendukung mode Gelap (*Dark Mode*) mau
 ### Instalasi dan Menjalankan Server Lokal
 ```bash
 # Masuk ke direktori proyek
-cd "d:\Fardhan\SMP Global Andalan\9A\CyberWise"
+cd "<direktori>"
 
 # Pasang dependensi
 npm install
