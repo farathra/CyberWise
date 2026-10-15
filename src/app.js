@@ -27,6 +27,10 @@ function initTheme() {
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) {
+    metaTheme.setAttribute('content', theme === 'dark' ? '#101820' : '#F2EFE8');
+  }
 }
 
 function initTabNav() {

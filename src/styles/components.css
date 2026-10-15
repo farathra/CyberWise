@@ -1,11 +1,16 @@
-/* Header */
+/* ============================================================
+   CYBERWISE — COMPONENTS
+   Header, nav, footer, buttons, cards, badges, modals
+   ============================================================ */
+
+/* ── Header ──────────────────────────────────────────────── */
 #site-header {
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: var(--header-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border-bottom: 1px solid var(--color-border);
   transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
@@ -48,19 +53,18 @@
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
 .brand-slogan {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--color-text-muted);
   font-weight: 500;
   line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 .header-actions {
@@ -69,23 +73,13 @@
   gap: var(--space-3);
 }
 
-/* Theme toggle icon rules */
-[data-theme="dark"] .icon-moon {
-  display: none !important;
-}
-[data-theme="dark"] .icon-sun {
-  display: block !important;
-}
-:root .icon-sun,
-[data-theme="light"] .icon-sun {
-  display: none !important;
-}
-:root .icon-moon,
-[data-theme="light"] .icon-moon {
-  display: block !important;
-}
+/* ── Theme Toggle ────────────────────────────────────────── */
+[data-theme="dark"] .icon-moon { display: none !important; }
+[data-theme="dark"] .icon-sun  { display: block !important; }
+:root .icon-sun, [data-theme="light"] .icon-sun { display: none !important; }
+:root .icon-moon, [data-theme="light"] .icon-moon { display: block !important; }
 
-/* Tab Navigation */
+/* ── Tab Navigation ──────────────────────────────────────── */
 #tab-nav {
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
@@ -96,7 +90,7 @@
   margin: 0 auto;
   padding: 0 var(--space-4);
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-1);
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -112,16 +106,18 @@
   padding: var(--space-3) var(--space-4);
   color: var(--color-text-muted);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2.5px solid transparent;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  position: relative;
 }
 
 .nav-item:hover {
   color: var(--color-text);
   text-decoration: none;
+  background-color: var(--color-surface-hover);
 }
 
 .nav-item.active {
@@ -134,7 +130,7 @@
   height: 18px;
 }
 
-/* Footer */
+/* ── Footer ──────────────────────────────────────────────── */
 #site-footer {
   margin-top: auto;
   padding: var(--space-6) var(--space-4);
@@ -142,45 +138,52 @@
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
 }
 
-/* Buttons */
+/* ── Buttons ─────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: 0.55rem 1.1rem;
-  border-radius: var(--radius-md);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-lg);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all var(--transition-fast);
   text-decoration: none;
   white-space: nowrap;
+  letter-spacing: 0.01em;
 }
 
 .btn:hover {
   text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 .btn:disabled {
-  opacity: 0.55;
+  opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
+  transform: none;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  background-color: var(--color-primary);
   color: var(--color-primary-contrast);
-  box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .btn-primary:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 4px 8px rgba(2, 132, 199, 0.3);
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 .btn-secondary {
@@ -226,11 +229,12 @@
 .btn-sm {
   padding: 0.35rem 0.75rem;
   font-size: 0.8rem;
+  border-radius: var(--radius-md);
 }
 
 .btn-lg {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.05rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 1rem;
 }
 
 .btn-icon {
@@ -252,11 +256,11 @@
   border-color: var(--color-border);
 }
 
-/* Cards */
+/* ── Cards ───────────────────────────────────────────────── */
 .card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: var(--space-5);
   box-shadow: var(--card-shadow);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
@@ -276,7 +280,7 @@
   border-color: var(--color-primary);
 }
 
-/* Badges */
+/* ── Badges ──────────────────────────────────────────────── */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -313,7 +317,7 @@
   color: var(--color-text-muted);
 }
 
-/* Progress bar */
+/* ── Progress Bar ────────────────────────────────────────── */
 .progress-bar-container {
   width: 100%;
   background-color: var(--color-bg-alt);
@@ -324,12 +328,12 @@
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-mint));
   transition: width var(--transition-normal);
   border-radius: var(--radius-full);
 }
 
-/* Form Controls */
+/* ── Form Controls ───────────────────────────────────────── */
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 0.65rem 0.9rem;
@@ -346,10 +350,10 @@
   outline: none;
 }
 
-/* Alerts */
+/* ── Alerts ──────────────────────────────────────────────── */
 .alert {
   padding: var(--space-4);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   margin-bottom: var(--space-4);
   border-left: 4px solid;
   display: flex;
@@ -357,36 +361,17 @@
   gap: var(--space-3);
 }
 
-.alert-info {
-  background-color: var(--color-info-bg);
-  border-color: var(--color-info);
-  color: var(--color-text);
-}
+.alert-info    { background-color: var(--color-info-bg);    border-color: var(--color-info);    color: var(--color-text); }
+.alert-warning { background-color: var(--color-warning-bg); border-color: var(--color-warning); color: var(--color-text); }
+.alert-danger  { background-color: var(--color-danger-bg);  border-color: var(--color-danger);  color: var(--color-text); }
+.alert-success { background-color: var(--color-success-bg); border-color: var(--color-success); color: var(--color-text); }
 
-.alert-warning {
-  background-color: var(--color-warning-bg);
-  border-color: var(--color-warning);
-  color: var(--color-text);
-}
-
-.alert-danger {
-  background-color: var(--color-danger-bg);
-  border-color: var(--color-danger);
-  color: var(--color-text);
-}
-
-.alert-success {
-  background-color: var(--color-success-bg);
-  border-color: var(--color-success);
-  color: var(--color-text);
-}
-
-/* Modal Dialog */
+/* ── Modal Dialog ────────────────────────────────────────── */
 .modal-backdrop {
   position: fixed;
   inset: 0;
   background-color: var(--modal-overlay);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,20 +383,20 @@
 .modal-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   max-width: 500px;
   width: 100%;
   padding: var(--space-6);
-  box-shadow: var(--card-shadow-hover);
-  animation: slideUp 0.2s ease-out;
+  box-shadow: var(--card-shadow-lg);
+  animation: slideUp 0.2s var(--ease-out);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes slideUp {
   from { transform: translateY(12px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(0);    opacity: 1; }
 }

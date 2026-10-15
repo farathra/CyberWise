@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cyberwise-v1';
+const CACHE_NAME = 'cyberwise-v2';
 const CONTENT_CACHE = 'cyberwise-content-v1';
 
 // App shell files to cache on install

@@ -1,3 +1,8 @@
+/* ============================================================
+   CYBERWISE — BASE STYLES
+   Reset, typography, global elements
+   ============================================================ */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +15,7 @@ html {
   line-height: 1.6;
   scroll-behavior: smooth;
   color-scheme: light dark;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -21,6 +27,7 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 #app {
@@ -37,23 +44,44 @@ body {
   padding: var(--space-6) var(--space-4) var(--space-12);
 }
 
+/* ── Typography Scale ────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
-  line-height: 1.25;
+  line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: 2.25rem; margin-bottom: var(--space-4); }
-h2 { font-size: 1.75rem; margin-top: var(--space-6); margin-bottom: var(--space-3); }
-h3 { font-size: 1.25rem; margin-top: var(--space-4); margin-bottom: var(--space-2); }
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child { margin-top: 0; }
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+h1:first-child, h2:first-child, h3:first-child,
+h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+}
 
 p {
   margin-bottom: var(--space-4);
   color: var(--color-text);
 }
 
+/* ── Links ───────────────────────────────────────────────── */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -64,34 +92,46 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ── Media ───────────────────────────────────────────────── */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* ── Form Elements ───────────────────────────────────────── */
 button, input, textarea, select {
   font-family: inherit;
   font-size: 1rem;
 }
 
+/* ── Focus Ring ──────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--color-border-focus);
   outline-offset: 2px;
 }
 
-/* Scrollbar */
+/* ── Selection ───────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-primary-subtle);
+  color: var(--color-text);
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-alt);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-border-subtle);
   border-radius: var(--radius-full);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-text-muted);
 }
