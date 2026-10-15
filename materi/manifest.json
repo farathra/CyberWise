@@ -1,18 +1,18 @@
 {
   "lessons": [
-    { "id": "1-a", "chapterId": "1", "chapterTitle": "Keamanan Data dan Informasi", "title": "Pengertian Keamanan Digital", "file": "materi/1-a.md", "videoId": "" },
-    { "id": "1-b", "chapterId": "1", "chapterTitle": "Keamanan Data dan Informasi", "title": "Definisi Keamanan Data dan Informasi", "file": "materi/1-b.md", "videoId": "" },
+    { "id": "1-a", "chapterId": "1", "chapterTitle": "Keamanan Data dan Informasi", "title": "Pengertian Keamanan Digital", "file": "materi/1-a.md", "videoId": "IvBfxSJWx6A" },
+    { "id": "1-b", "chapterId": "1", "chapterTitle": "Keamanan Data dan Informasi", "title": "Definisi Keamanan Data dan Informasi", "file": "materi/1-b.md", "videoId": "Nvc_WCVhQco" },
     { "id": "1-c", "chapterId": "1", "chapterTitle": "Keamanan Data dan Informasi", "title": "Perbedaan Data dan Informasi dalam Konteks Keamanan", "file": "materi/1-c.md", "videoId": "" },
-    { "id": "2-a", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Definisi Teknologi Digital", "file": "materi/2-a.md", "videoId": "" },
-    { "id": "2-b", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Peran Teknologi Digital dalam Kehidupan Sehari-hari", "file": "materi/2-b.md", "videoId": "" },
-    { "id": "2-c", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Perkembangan Teknologi Digital dari Masa ke Masa", "file": "materi/2-c.md", "videoId": "" },
-    { "id": "2-d", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Dampak Positif dan Negatif Teknologi Digital", "file": "materi/2-d.md", "videoId": "" },
-    { "id": "2-e", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Cara Mengatasi Dampak Negatif Teknologi Digital", "file": "materi/2-e.md", "videoId": "" },
-    { "id": "3-a", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Pengertian Malware", "file": "materi/3-a.md", "videoId": "" },
-    { "id": "3-b", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Jenis-Jenis Malware", "file": "materi/3-b.md", "videoId": "" },
-    { "id": "3-c", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Cara Penyebaran Malware", "file": "materi/3-c.md", "videoId": "" },
-    { "id": "3-d", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Studi Kasus dan Contoh Nyata", "file": "materi/3-d.md", "videoId": "" },
-    { "id": "4-a", "chapterId": "4", "chapterTitle": "Meningkatkan Keamanan Data dan Informasi", "title": "Prinsip Dasar Keamanan Data dan Informasi", "file": "materi/4-a.md", "videoId": "" },
-    { "id": "4-b", "chapterId": "4", "chapterTitle": "Meningkatkan Keamanan Data dan Informasi", "title": "Teknik dan Strategi Penggunaan Data", "file": "materi/4-b.md", "videoId": "" }
+    { "id": "2-a", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Definisi Teknologi Digital", "file": "materi/2-a.md", "videoId": "ZWdT-6Ld71Q" },
+    { "id": "2-b", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Peran Teknologi Digital dalam Kehidupan Sehari-hari", "file": "materi/2-b.md", "videoId": "YMcI754wroM" },
+    { "id": "2-c", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Perkembangan Teknologi Digital dari Masa ke Masa", "file": "materi/2-c.md", "videoId": "l2cW2n6egvM" },
+    { "id": "2-d", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Dampak Positif dan Negatif Teknologi Digital", "file": "materi/2-d.md", "videoId": "1BGqww-IMXw" },
+    { "id": "2-e", "chapterId": "2", "chapterTitle": "Mengenal Dampak Teknologi Digital", "title": "Cara Mengatasi Dampak Negatif Teknologi Digital", "file": "materi/2-e.md", "videoId": "ThCcmEbBLc8" },
+    { "id": "3-a", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Pengertian Malware", "file": "materi/3-a.md", "videoId": "vL2HaoCg5Tk" },
+    { "id": "3-b", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Jenis-Jenis Malware", "file": "materi/3-b.md", "videoId": "7GUyo0_u_K8" },
+    { "id": "3-c", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Cara Penyebaran Malware", "file": "materi/3-c.md", "videoId": "wobBxH83WKg" },
+    { "id": "3-d", "chapterId": "3", "chapterTitle": "Malware (Malicious Software)", "title": "Studi Kasus dan Contoh Nyata", "file": "materi/3-d.md", "videoId": "-NYbwR_6iyw" },
+    { "id": "4-a", "chapterId": "4", "chapterTitle": "Meningkatkan Keamanan Data dan Informasi", "title": "Prinsip Dasar Keamanan Data dan Informasi", "file": "materi/4-a.md", "videoId": "PxSWRqOosps" },
+    { "id": "4-b", "chapterId": "4", "chapterTitle": "Meningkatkan Keamanan Data dan Informasi", "title": "Teknik dan Strategi Penggunaan Data", "file": "materi/4-b.md", "videoId": "EeKquJpk1Zk" }
   ]
 }
