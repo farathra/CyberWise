@@ -6,19 +6,43 @@ import { initRouter, route } from './router.js';
 import { renderLearn } from './learn/learn.js';
 import { renderQuiz } from './quiz/quiz.js';
 import { renderNotes } from './notes/notes.js';
+import { initSearch } from './search/search.js';
+import { syncProgressWithBackup } from './learn/progress.js';
 
-// Register service worker
+// Service Worker Registration & Dev Mode Protection
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    const swUrl = import.meta.env.BASE_URL + 'sw.js';
-    navigator.serviceWorker.register(swUrl)
-      .then(reg => console.log('[SW] Registered:', reg.scope))
-      .catch(err => console.warn('[SW] Registration failed:', err));
-  });
+  if (import.meta.env.DEV) {
+    // In development mode, unregister any existing service worker so it never
+    // intercepts Vite dev modules or serves stale cache on normal reload.
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (const reg of registrations) {
+        reg.unregister();
+        console.log('[SW] Unregistered in DEV mode:', reg.scope);
+      }
+    });
+    if (typeof caches !== 'undefined') {
+      caches.keys().then(keys => {
+        keys.forEach(k => {
+          if (k.startsWith('cyberwise-')) {
+            caches.delete(k);
+          }
+        });
+      });
+    }
+  } else {
+    // Production PWA registration
+    window.addEventListener('load', () => {
+      const swUrl = import.meta.env.BASE_URL + 'sw.js';
+      navigator.serviceWorker.register(swUrl)
+        .then(reg => {
+          console.log('[SW] Registered:', reg.scope);
+          // Auto-check for updates
+          reg.update();
+        })
+        .catch(err => console.warn('[SW] Registration failed:', err));
+    });
+  }
 }
-
-// Initialize app shell
-initApp();
 
 // Register routes (hash-based)
 route(/^\/learn$/, () => renderLearn());
@@ -30,5 +54,22 @@ route(/^\/notes$/, () => renderNotes());
 route(/^\/notes\/(?<noteId>[\w-]+)$/, ({ noteId }) => renderNotes(noteId));
 route('/', () => renderLearn());
 
-// Start router
-initRouter();
+// Ensure DOM is ready before mounting router & shell
+function startApp() {
+  initApp();
+  try {
+    initSearch();
+  } catch (err) {
+    console.warn('[Search] Failed to init search:', err);
+  }
+  // Dual-layer progress sync (restores progress from IndexedDB if localStorage was cleared)
+  syncProgressWithBackup();
+  // Start router
+  initRouter();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}

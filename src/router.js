@@ -37,7 +37,15 @@ function handleRoute() {
   const hash = window.location.hash || '#/learn';
   const match = matchRoute(hash);
   if (match) {
-    match.handler(match.params);
+    try {
+      match.handler(match.params);
+    } catch (err) {
+      console.error('[Router] Handler error for route:', hash, err);
+      // Fallback to learn dashboard if route handler crashes
+      if (hash !== '#/learn') {
+        navigate('#/learn');
+      }
+    }
   } else {
     // Default to learn
     navigate('#/learn');

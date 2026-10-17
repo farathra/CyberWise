@@ -1,6 +1,7 @@
 // src/notes/editor.js
 import { getNote, saveNote } from '../db.js';
 import DOMPurify from 'dompurify';
+import { notifyNotesChanged } from '../search/search.js';
 
 let autosaveTimer = null;
 let lastSavedContent = null;
@@ -112,6 +113,7 @@ export async function renderEditor(container, noteId) {
       currentNote.content = DOMPurify.sanitize(rawHtml);
       currentNote.updatedAt = Date.now();
       await saveNote(currentNote);
+      notifyNotesChanged();
       lastSavedContent = currentNote.content;
       if (statusEl) {
         const time = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });

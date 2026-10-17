@@ -2,6 +2,7 @@
 import { getAllNotes, saveNote, deleteNote } from '../db.js';
 import { navigate } from '../router.js';
 import DOMPurify from 'dompurify';
+import { notifyNotesChanged } from '../search/search.js';
 
 function getContainer() {
   return document.getElementById('page-container');
@@ -105,6 +106,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
   document.getElementById('new-note-btn')?.addEventListener('click', async () => {
     const note = { id: generateId(), title: 'Untitled Note', content: '', createdAt: Date.now(), updatedAt: Date.now(), pinned: false };
     await saveNote(note);
+    notifyNotesChanged();
     navigate('#/notes/' + note.id);
   });
 
@@ -133,6 +135,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
         };
         await saveNote(clean);
       }
+      notifyNotesChanged();
       const updated = await getAllNotes();
       renderNotesView(container, updated, searchQuery, sortBy);
     } catch (err) {
@@ -161,6 +164,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
       if (note) {
         note.pinned = !note.pinned;
         await saveNote(note);
+        notifyNotesChanged();
         const updated = await getAllNotes();
         renderNotesView(container, updated, searchQuery, sortBy);
       }
@@ -175,6 +179,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
       const name = note ? note.title || 'Untitled' : 'this note';
       if (confirm(`Delete "${name}"? This cannot be undone.`)) {
         await deleteNote(id);
+        notifyNotesChanged();
         const updated = await getAllNotes();
         renderNotesView(container, updated, searchQuery, sortBy);
       }
