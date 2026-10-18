@@ -6,6 +6,7 @@
 import { GLOSSARY_DATA, GLOSSARY_CATEGORIES, LESSON_INFO } from './glossaryData.js';
 import { navigate } from '../router.js';
 import { t } from '../i18n.js';
+import { recordGlossaryTermExplored } from '../achievements/achievementEngine.js';
 
 let currentSearch = '';
 let currentCategory = 'Semua';
@@ -74,6 +75,7 @@ export function renderGlossary(termId = null) {
 
   if (termId) {
     focusedTermId = termId.toLowerCase();
+    recordGlossaryTermExplored(focusedTermId);
     // If targeted term belongs to specific letter/category, reset filters to show it
     const targetItem = GLOSSARY_DATA.find(t => t.id === focusedTermId);
     if (targetItem) {
@@ -424,4 +426,14 @@ function attachEventListeners(container) {
 
   container.querySelector('#glossary-reset-all')?.addEventListener('click', resetHandler);
   container.querySelector('#glossary-empty-reset')?.addEventListener('click', resetHandler);
+
+  // 7. Track explored glossary terms for achievement
+  container.querySelectorAll('.glossary-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const termId = card.id?.replace(/^term-/, '');
+      if (termId) {
+        recordGlossaryTermExplored(termId);
+      }
+    });
+  });
 }

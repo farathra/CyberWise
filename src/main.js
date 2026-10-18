@@ -9,6 +9,8 @@ import { renderNotes } from './notes/notes.js';
 import { renderGlossary } from './glossary/glossary.js';
 import { renderGames } from './games/gamesHub.js';
 import { renderAnalytics } from './insights/studyInsights.js';
+import { renderAchievements } from './achievements/achievementView.js';
+import { initAchievements } from './achievements/achievementEngine.js';
 import { initSearch } from './search/search.js';
 import { syncProgressWithBackup } from './learn/progress.js';
 
@@ -61,6 +63,7 @@ route(/^\/glossary\/(?<termId>[\w-]+)$/, ({ termId }) => renderGlossary(termId))
 route(/^\/games$/, () => renderGames());
 route(/^\/games\/(?<gameId>[\w-]+)$/, ({ gameId }) => renderGames(gameId));
 route(/^\/analytics$/, () => renderAnalytics());
+route(/^\/achievements$/, () => renderAchievements());
 route('/', () => renderLearn());
 
 // Ensure DOM is ready before mounting router & shell
@@ -73,6 +76,8 @@ function startApp() {
   }
   // Dual-layer progress sync (restores progress from IndexedDB if localStorage was cleared)
   syncProgressWithBackup();
+  // Initialize and silently evaluate achievements
+  initAchievements();
   // Start router
   initRouter();
 }

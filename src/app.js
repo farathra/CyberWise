@@ -117,7 +117,8 @@ export function updateAppShellText() {
     notes: t('nav.notes'),
     glossary: t('nav.glossary'),
     games: t('nav.games'),
-    analytics: t('nav.analytics')
+    analytics: t('nav.analytics'),
+    achievements: t('nav.achievements')
   };
 
   document.querySelectorAll('#tab-nav .tab-link').forEach(link => {

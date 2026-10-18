@@ -3,7 +3,7 @@
 [![Build & Deploy](https://img.shields.io/badge/Deployment-GitHub%20Pages-blue?logo=github)](https://farathra.github.io/CyberWise/)
 [![Progressive Web App](https://img.shields.io/badge/PWA-Offline%20Ready-success?logo=pwa)](https://farathra.github.io/CyberWise/)
 [![Bilingual UI](https://img.shields.io/badge/UI-English%20%7C%20Bahasa%20Indonesia-informational)](https://farathra.github.io/CyberWise/)
-[![Tests](https://img.shields.io/badge/Tests-All%20Passed%20(6%2F6)-brightgreen)](https://farathra.github.io/CyberWise/)
+[![Tests](https://img.shields.io/badge/Tests-All%20Passed%20(7%2F7)-brightgreen)](https://farathra.github.io/CyberWise/)
 
 **CyberWise** adalah platform edukasi interaktif berbasis Progressive Web Application (PWA) yang dirancang untuk membekali siswa dan pengguna digital dengan pengetahuan esensial seputar keamanan siber, privasi data, dan etika teknologi.
 
@@ -41,24 +41,30 @@ Dengan antarmuka yang bersih, modern, dan mendukung mode Gelap (*Dark Mode*) mau
 - **Grafik Tren & Aktivitas**: Visualisasi SVG interaktif untuk perkembangan skor kuis dan volume aktivitas 7 hari terakhir, dilengkapi tabel ramah *screen reader* untuk aksesibilitas.
 - **Ad-Blocker Proof**: Arsitektur netral yang kebal terhadap salah deteksi ekstensi pemblokir iklan/pelacak pada peramban.
 
-### 5. 🔍 Pencarian Global (Global Search)
+### 5. 🏆 Sistem Pencapaian & Lencana (Achievement System)
+- **24 Lencana Penghargaan Unik**: Meliputi kategori *Materi Belajar*, *Penguasaan Kuis*, *Simulasi Game*, *Konsistensi*, dan *Eksplorasi*.
+- **Evaluasi Deterministik & Transparan**: Pelacakan progres aktual per lencana dengan indikator terukur (misal `3 / 5 materi`).
+- **Notifikasi Toast Interaktif**: Pemberitahuan lencana terbuka secara non-intrusif dengan dukungan pembaca layar (*screen reader*) dan antrean berurutan.
+- **Penyaring Kategori & Status**: Filter kartu lencana berdasarkan kategori dan status (*Semua*, *Terbuka*, *Terkunci*).
+
+### 6. 🔍 Pencarian Global (Global Search)
 - Fitur pencarian instan dengan shortcut keyboard (`Ctrl + K` / `Cmd + K`).
 - Mengindeks seluruh materi pelajaran, glosarium, catatan, dan permainan secara real-time.
 
-### 6. 📖 Glosarium Keamanan Siber (Glossary)
+### 7. 📖 Glosarium Keamanan Siber (Glossary)
 - Kamus istilah keamanan digital lengkap dengan filter kategori alfabetik, pencarian instan, dan tautan silang ke materi terkait.
 
-### 7. 📝 Catatan Pribadi (Personal Notes)
+### 8. 📝 Catatan Pribadi (Personal Notes)
 - Editor teks kaya WYSIWYG untuk membuat catatan belajar.
 - Fitur autosave, sematkan catatan penting (*pin*), filter pencarian, serta ekspor & impor catatan.
 
-### 8. 🌐 Bahasa Ganda (Bilingual UI: EN / ID)
+### 9. 🌐 Bahasa Ganda (Bilingual UI: EN / ID)
 - Antarmuka pengguna (*UI Chrome*) dapat dialihkan secara instan antara Bahasa Indonesia dan Bahasa Inggris tanpa *page reload*.
 - Seluruh konten edukasi dan skenario pembelajaran tetap disajikan dalam Bahasa Indonesia yang baku dan komunikatif.
 
-### 9. 💾 Pencadangan & Pemulihan (Backup & Restore)
-- Simpan seluruh progres belajar, riwayat kuis, catatan, progres game, dan pengaturan ke berkas cadangan JSON tunggal.
-- Pulihkan data kapan saja pada peramban atau perangkat yang berbeda.
+### 10. 💾 Pencadangan & Pemulihan (Backup & Restore)
+- Simpan seluruh progres belajar, riwayat kuis, catatan, progres game, pencapaian, dan pengaturan ke berkas cadangan JSON tunggal.
+- Pulihkan data kapan saja pada peramban atau perangkat yang berbeda secara aman.
 
 ---
 
@@ -96,7 +102,7 @@ Hasil build siap saji akan dibuat di direktori `dist/`.
 CyberWise dilengkapi rangkaian pengujian otomatis end-to-end tanpa dependensi berat:
 
 ```bash
-# Menjalankan seluruh rangkaian tes (6 test suites)
+# Menjalankan seluruh rangkaian tes (7 test suites)
 npm test
 
 # Menjalankan validasi konten kurikulum dan soal kuis (420 soal)
@@ -116,6 +122,9 @@ npm run test:games
 
 # Menjalankan tes perhitungan analitik & mesin rekomendasi
 npm run test:analytics
+
+# Menjalankan tes integritas sistem pencapaian (24 lencana)
+npm run test:achievements
 ```
 
 ---

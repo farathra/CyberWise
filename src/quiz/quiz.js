@@ -10,6 +10,7 @@ import {
 import { recordResult, getHistory, formatHistoryEntry } from './history.js';
 import { navigate } from '../router.js';
 import { t } from '../i18n.js';
+import { checkAchievements, recordQuizReviewed } from '../achievements/achievementEngine.js';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -425,6 +426,11 @@ async function submitQuiz(container) {
     console.warn('[Quiz] Could not save history:', err);
   }
 
+  // Trigger achievement evaluation
+  checkAchievements({ event: 'quiz_submitted', mode, id, score, total }).catch(err => {
+    console.warn('[Achievements] Error on quiz submission:', err);
+  });
+
   const pct = Math.round((score / total) * 100);
   const pass = pct >= 70;
 
@@ -495,6 +501,16 @@ async function submitQuiz(container) {
         </div>
       </section>
     </div>`;
+
+  container.querySelectorAll('.review-lesson-link').forEach(link => {
+    link.addEventListener('click', () => {
+      recordQuizReviewed();
+    });
+  });
+
+  if (results.some(r => !r.isCorrect)) {
+    recordQuizReviewed();
+  }
 
   document.getElementById('retry-btn')?.addEventListener('click', () => {
     navigate(`#/quiz/${quizState.mode}/${quizState.id}`);

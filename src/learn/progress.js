@@ -1,6 +1,7 @@
 // src/learn/progress.js
 import { get, set } from '../storage.js';
 import { saveProgressBackup, getProgressBackup } from '../db.js';
+import { checkAchievements } from '../achievements/achievementEngine.js';
 
 const KEY = 'progress';
 
@@ -52,6 +53,9 @@ export function markComplete(lessonId) {
   cachedProgress = p;
   set(KEY, p);
   saveProgressBackup(p);
+  checkAchievements({ event: 'lesson_completed', lessonId }).catch(err => {
+    console.warn('[Achievements] Error on lesson completion:', err);
+  });
 }
 
 export function markIncomplete(lessonId) {

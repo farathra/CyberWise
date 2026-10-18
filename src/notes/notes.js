@@ -4,6 +4,7 @@ import { navigate } from '../router.js';
 import DOMPurify from 'dompurify';
 import { notifyNotesChanged } from '../search/search.js';
 import { t } from '../i18n.js';
+import { checkAchievements, getAchievementsBackup, restoreAchievementsBackup } from '../achievements/achievementEngine.js';
 
 function getContainer() {
   return document.getElementById('page-container');
@@ -108,16 +109,21 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
     const note = { id: generateId(), title: t('notes.untitledNote'), content: '', createdAt: Date.now(), updatedAt: Date.now(), pinned: false };
     await saveNote(note);
     notifyNotesChanged();
+    checkAchievements({ event: 'note_saved' }).catch(() => {});
     navigate('#/notes/' + note.id);
   });
 
-  // Export all
+  // Export all (includes notes & achievements)
   document.getElementById('export-all-btn')?.addEventListener('click', () => {
-    const data = JSON.stringify({ exported: new Date().toISOString(), notes }, null, 2);
+    const data = JSON.stringify({
+      exported: new Date().toISOString(),
+      notes,
+      achievements: getAchievementsBackup()
+    }, null, 2);
     downloadFile('cyberwise-notes-backup.json', data, 'application/json');
   });
 
-  // Import
+  // Import (supports notes and achievements)
   document.getElementById('import-btn')?.addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -136,6 +142,12 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
         };
         await saveNote(clean);
       }
+
+      // Restore achievements if present in backup (without deleting existing if missing)
+      if (parsed.achievements) {
+        await restoreAchievementsBackup(parsed.achievements);
+      }
+
       notifyNotesChanged();
       const updated = await getAllNotes();
       renderNotesView(container, updated, searchQuery, sortBy);

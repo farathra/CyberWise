@@ -1,6 +1,7 @@
 // src/games/gamesData.js
 // Games registry and local progress storage for CyberWise Games Lab
 import { get, set } from '../storage.js';
+import { checkAchievements } from '../achievements/achievementEngine.js';
 
 const STORAGE_KEY = 'games_progress';
 
@@ -97,5 +98,8 @@ export function saveGameProgress(gameId, data) {
   };
 
   set(STORAGE_KEY, all);
+  checkAchievements({ event: 'game_completed', gameId, score: data.score }).catch(err => {
+    console.warn('[Achievements] Error on game_completed:', err);
+  });
   return all[gameId];
 }
