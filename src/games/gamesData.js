@@ -24,10 +24,10 @@ export const GAMES_LIST = [
     categoryKey: 'games.ct.category',
     durationKey: 'games.ct.duration',
     difficultyKey: 'games.diffBeginner',
-    status: 'coming-soon',
+    status: 'playable',
     icon: '💬',
-    badge: 'COMING SOON',
-    route: null
+    badge: 'NEW',
+    route: '#/games/chat-trap'
   },
   {
     id: 'password-defender',

@@ -4,6 +4,7 @@
 
 import { GAMES_LIST, getGameProgress } from './gamesData.js';
 import { startEmailDetectiveGame } from './emailDetective/emailDetective.js';
+import { startChatTrapGame } from './chatTrap/chatTrap.js';
 import { navigate } from '../router.js';
 import { t } from '../i18n.js';
 
@@ -21,6 +22,11 @@ export function renderGames(gameId = null) {
 
   if (gameId === 'email-detective') {
     startEmailDetectiveGame(container);
+    return;
+  }
+
+  if (gameId === 'chat-trap') {
+    startChatTrapGame(container);
     return;
   }
 
