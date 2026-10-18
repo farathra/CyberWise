@@ -11,7 +11,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'materi/*', dest: 'materi' },
-        { src: 'quiz/*', dest: 'quiz' }
+        { src: 'quiz/*', dest: 'quiz' },
+        { src: 'glossary/*', dest: 'glossary' }
       ]
     }),
     {
@@ -24,7 +25,7 @@ export default defineConfig({
           if (normalizedBase && relativeUrl.startsWith(normalizedBase)) {
             relativeUrl = relativeUrl.slice(normalizedBase.length);
           }
-          if (relativeUrl.startsWith('/materi/') || relativeUrl.startsWith('/quiz/')) {
+          if (relativeUrl.startsWith('/materi/') || relativeUrl.startsWith('/quiz/') || relativeUrl.startsWith('/glossary/')) {
             const filePath = path.join(process.cwd(), relativeUrl.replace(/^\//, ''));
             if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
               if (filePath.endsWith('.json')) {

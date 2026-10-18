@@ -44,8 +44,8 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 1. Content files (materi markdown & quiz JSON): network-first, fallback to cache
-  if (path.includes('/materi/') || path.includes('/quiz/')) {
+  // 1. Content files (materi markdown, quiz JSON & glossary data): network-first, fallback to cache
+  if (path.includes('/materi/') || path.includes('/quiz/') || path.includes('/glossary/')) {
     event.respondWith(
       fetch(event.request)
         .then(response => {

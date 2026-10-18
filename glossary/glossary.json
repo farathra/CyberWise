@@ -1,0 +1,330 @@
+{
+  "version": "1.0.0",
+  "title": "Glosarium Keamanan Siber CyberWise",
+  "description": "Kamus istilah penting keamanan digital, konsep ancaman, dan strategi proteksi untuk pelajar.",
+  "categories": [
+    "Semua",
+    "Dasar Keamanan Data",
+    "Privasi & Identitas",
+    "Malware & Ancaman",
+    "Serangan & Penipuan",
+    "Proteksi & Kriptografi"
+  ],
+  "terms": [
+    {
+      "id": "adware",
+      "term": "Adware",
+      "category": "Malware & Ancaman",
+      "definition": "Perangkat lunak yang dirancang untuk secara otomatis menampilkan, memutar, atau mengunduh iklan berlebihan tanpa izin pengguna, sering kali mengganggu dan memperlambat kinerja perangkat.",
+      "example": "Setelah mengunduh game gratis dari situs tidak resmi, browser web tiba-tiba terus memunculkan pop-up iklan kasino atau belanjaan setiap kali membuka tab baru.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["malware", "spyware"]
+    },
+    {
+      "id": "antivirus",
+      "term": "Antivirus",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Program keamanan yang dirancang untuk mendeteksi, mencegah, mengisolasi (karantina), dan menghapus berbagai jenis malware dari sistem komputer atau gawai pintar.",
+      "example": "Windows Defender secara otomatis memblokir berkas lampiran email berbahaya sebelum berkas tersebut sempat dibuka dan menginfeksi laptop sekolah.",
+      "relatedLessons": ["4-b"],
+      "relatedTerms": ["malware", "firewall", "pembaruan-keamanan"]
+    },
+    {
+      "id": "autentikasi",
+      "term": "Autentikasi",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Proses pembuktian keabsahan identitas pengguna saat hendak masuk ke suatu akun atau sistem, memastikan bahwa orang yang mencoba mengakses memang pemilik sah akun tersebut.",
+      "example": "Memasukkan nama pengguna dan kata sandi pada laman login portal sekolah adalah bentuk autentikasi berbasis pengetahuan (something you know).",
+      "relatedLessons": ["4-a"],
+      "relatedTerms": ["autentikasi-dua-faktor", "kata-sandi-kuat"]
+    },
+    {
+      "id": "autentikasi-dua-faktor",
+      "term": "Autentikasi Dua Faktor (2FA)",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Lapisan perlindungan tambahan yang mewajibkan dua bukti identitas berbeda sebelum memberikan izin akses akun, seperti kata sandi dipadukan dengan kode OTP atau aplikasi otentikator.",
+      "example": "Saat login akun Instagram di perangkat baru, sistem meminta kata sandi sekaligus kode angka 6 digit yang dikirimkan ke aplikasi Google Authenticator di ponsel Anda.",
+      "relatedLessons": ["4-a"],
+      "relatedTerms": ["autentikasi", "kata-sandi-kuat"]
+    },
+    {
+      "id": "backup",
+      "term": "Backup (Cadangan Data)",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Proses membuat salinan data penting ke media penyimpanan terpisah agar data tersebut dapat dipulihkan (restore) saat terjadi kerusakan perangkat keras, serangan siber, atau penghapusan tak sengaja.",
+      "example": "Menerapkan aturan 3-2-1: menyimpan tugas makalah di laptop (1), salinannya di hard drive eksternal (2), dan salinan ketiga di Google Drive (3).",
+      "relatedLessons": ["4-a"],
+      "relatedTerms": ["ransomware", "ketersediaan-data"]
+    },
+    {
+      "id": "botnet",
+      "term": "Botnet",
+      "category": "Malware & Ancaman",
+      "definition": "Jaringan kumpulan komputer, server, atau perangkat pintar (IoT) yang telah terinfeksi malware dan dikendalikan dari jarak jauh oleh penyerang (botmaster) tanpa disadari pemiliknya.",
+      "example": "Ribuan kamera CCTV dan komputer rumahan yang terinfeksi diperintahkan secara serentak membombardir server website ujian sekolah hingga server tumbang (serangan DDoS).",
+      "relatedLessons": ["3-b", "3-c"],
+      "relatedTerms": ["malware", "worm", "trojan-horse"]
+    },
+    {
+      "id": "dekripsi",
+      "term": "Dekripsi",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Proses matematika untuk mengubah kembali data teracak (ciphertext) menjadi data asli yang dapat dibaca manusia (plaintext) menggunakan kunci dekripsi yang sah.",
+      "example": "Aplikasi perpesanan WhatsApp di ponsel penerima secara otomatis mendekripsi pesan masuk sehingga teks yang sebelumnya teracak di jaringan internet dapat dibaca di layar.",
+      "relatedLessons": ["4-a"],
+      "relatedTerms": ["enkripsi"]
+    },
+    {
+      "id": "enkripsi",
+      "term": "Enkripsi",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Teknik menyandikan data atau pesan menggunakan algoritma matematika khusus sehingga hanya pihak yang memiliki kunci rahasia sah yang dapat membaca dan memahaminya.",
+      "example": "Ketika Anda memasukkan nomor kartu pembayaran pada situs berprotokol HTTPS, data tersebut dienkripsi sebelum dikirim melalui internet agar tidak bisa disadap di tengah jalan.",
+      "relatedLessons": ["4-a", "4-b"],
+      "relatedTerms": ["dekripsi", "kerahasiaan-data"]
+    },
+    {
+      "id": "firewall",
+      "term": "Firewall",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Sistem keamanan jaringan yang memantau dan menyaring lalu lintas data keluar dan masuk berdasarkan seperangkat aturan keamanan yang telah ditentukan, bertindak sebagai gerbang pembatas antara jaringan privat dan internet.",
+      "example": "Firewall di jaringan laboratorium sekolah memblokir upaya koneksi mencurigakan dari alamat IP luar yang mencoba mengakses berkas internal komputer guru.",
+      "relatedLessons": ["4-b"],
+      "relatedTerms": ["antivirus", "jaringan-wi-fi-publik"]
+    },
+    {
+      "id": "integritas-data",
+      "term": "Integritas (Integrity)",
+      "category": "Dasar Keamanan Data",
+      "definition": "Pilar dari Triad CIA yang menjamin bahwa data dan informasi tetap akurat, konsisten, lengkap, dan tidak diubah, dimanipulasi, atau dirusak oleh pihak yang tidak berhak.",
+      "example": "Nilai rapor siswa di database sekolah terlindungi oleh tanda tangan digital dan hak akses ketat sehingga tidak dapat diedit sembarangan oleh siswa.",
+      "relatedLessons": ["1-b", "4-a"],
+      "relatedTerms": ["triad-cia", "kerahasiaan-data", "ketersediaan-data"]
+    },
+    {
+      "id": "jejak-digital",
+      "term": "Jejak Digital (Digital Footprint)",
+      "category": "Privasi & Identitas",
+      "definition": "Rekam jejak seluruh aktivitas yang ditinggalkan seseorang saat menggunakan internet, meliputi jejak aktif (unggahan media sosial, komentar, ulasan) dan jejak pasif (riwayat penelusuran, log IP, data lokasi).",
+      "example": "Komentar negatif atau foto pribadi yang pernah diunggah beberapa tahun lalu masih dapat ditemukan oleh penyaring beasiswa melalui pencarian mesin telusur.",
+      "relatedLessons": ["2-d", "2-e"],
+      "relatedTerms": ["data-pribadi", "privasi-digital"]
+    },
+    {
+      "id": "kata-sandi-kuat",
+      "term": "Kata Sandi Kuat (Strong Password)",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Kombinasi karakter yang dirancang agar sangat sulit ditebak oleh manusia maupun dipecahkan oleh program pembobol kata sandi (brute-force), dengan panjang minimal 12 karakter serta memadukan huruf besar, huruf kecil, angka, dan simbol.",
+      "example": "Menggunakan frasa sandi unik seperti 'Kopi#Pagi89!Dingin' ketimbang kata sandi mudah ditebak seperti 'rahasia123' atau tanggal lahir.",
+      "relatedLessons": ["4-a"],
+      "relatedTerms": ["autentikasi", "autentikasi-dua-faktor"]
+    },
+    {
+      "id": "kebocoran-data",
+      "term": "Kebocoran Data (Data Breach)",
+      "category": "Dasar Keamanan Data",
+      "definition": "Insiden keamanan di mana data rahasia, sensitif, atau terlindungi diakses, disalin, dicuri, atau dipublikasikan oleh pihak yang tidak memiliki wewenang sah.",
+      "example": "Basis data sebuah toko online dibobol peretas, mengakibatkan ribuan nama lengkap, alamat email, dan nomor telepon pengguna beredar bebas di forum gelap (dark web).",
+      "relatedLessons": ["1-c", "4-b"],
+      "relatedTerms": ["kerahasiaan-data", "data-pribadi"]
+    },
+    {
+      "id": "keamanan-data-dan-informasi",
+      "term": "Keamanan Data dan Informasi",
+      "category": "Dasar Keamanan Data",
+      "definition": "Praktik, kebijakan, dan teknologi yang dirancang untuk melindungi aset data mentah dan informasi bernilai dari akses ilegal, pengubahan, gangguan, penghancuran, atau kebocoran.",
+      "example": "Menggabungkan enkripsi berkas, pembatasan hak akses staf, dan cadangan data rutin untuk melindungi data rekam medis pasien di rumah sakit.",
+      "relatedLessons": ["1-b", "1-c"],
+      "relatedTerms": ["keamanan-digital", "triad-cia"]
+    },
+    {
+      "id": "keamanan-digital",
+      "term": "Keamanan Digital (Cybersecurity)",
+      "category": "Dasar Keamanan Data",
+      "definition": "Upaya menyeluruh untuk melindungi sistem komputer, perangkat pintar, jaringan telekomunikasi, program perangkat lunak, dan data digital dari ancaman, pencurian, atau serangan siber.",
+      "example": "Penerapan pembaruan sistem operasi secara berkala, penggunaan kata sandi kuat, dan kewaspadaan terhadap tautan asing saat beraktivitas di ruang maya.",
+      "relatedLessons": ["1-a"],
+      "relatedTerms": ["keamanan-data-dan-informasi", "triad-cia"]
+    },
+    {
+      "id": "kerahasiaan-data",
+      "term": "Kerahasiaan (Confidentiality)",
+      "category": "Dasar Keamanan Data",
+      "definition": "Pilar dari Triad CIA yang memastikan bahwa informasi dan data sensitif hanya boleh diakses dan dibaca oleh individu, proses, atau sistem yang memiliki izin resmi.",
+      "example": "Guru BK mengunci berkas konseling siswa dengan kata sandi enkripsi sehingga teman sekelas tidak dapat membaca catatan rahasia tersebut.",
+      "relatedLessons": ["1-b", "4-a"],
+      "relatedTerms": ["triad-cia", "integritas-data", "enkripsi"]
+    },
+    {
+      "id": "ketersediaan-data",
+      "term": "Ketersediaan (Availability)",
+      "category": "Dasar Keamanan Data",
+      "definition": "Pilar dari Triad CIA yang menjamin bahwa sistem, jaringan, dan data dapat diakses dan digunakan oleh pihak yang berwenang kapan pun dibutuhkan tanpa kendala atau hambatan.",
+      "example": "Website ujian online sekolah tetap dapat dibuka dengan lancar oleh ratusan siswa serentak tanpa mengalami crash karena menggunakan server cadangan.",
+      "relatedLessons": ["1-b", "4-a"],
+      "relatedTerms": ["triad-cia", "backup", "botnet"]
+    },
+    {
+      "id": "keylogger",
+      "term": "Keylogger",
+      "category": "Malware & Ancaman",
+      "definition": "Jenis perangkat lunak berbahaya (atau perangkat keras tersembunyi) yang secara diam-diam merekam setiap ketukan papan ketik (keystroke) pengguna untuk mencuri kata sandi, pesan, dan data kartu kredit.",
+      "example": "Seorang siswa login ke akun email di warnet yang komputernya terinfeksi keylogger, sehingga kata sandinya terekam dan akunnya diambil alih keesokan harinya.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["spyware", "malware", "autentikasi-dua-faktor"]
+    },
+    {
+      "id": "malware",
+      "term": "Malware (Malicious Software)",
+      "category": "Malware & Ancaman",
+      "definition": "Istilah payung (umbrella term) untuk segala bentuk kode atau perangkat lunak berbahaya yang secara sengaja diciptakan untuk merusak, mengganggu, memata-matai, atau mengeksploitasi sistem komputer dan data pengguna.",
+      "example": "Malware mencakup berbagai ragam ancaman digital seperti virus, worm, trojan, ransomware, spyware, dan adware.",
+      "relatedLessons": ["3-a", "3-b"],
+      "relatedTerms": ["virus-komputer", "worm", "trojan-horse", "ransomware", "antivirus"]
+    },
+    {
+      "id": "man-in-the-middle",
+      "term": "Man-in-the-Middle (MitM)",
+      "category": "Serangan & Penipuan",
+      "definition": "Serangan siber di mana penyerang secara diam-diam menyusup di antara komunikasi dua pihak (seperti antara pengguna dan website perbankan) untuk mencegat, membaca, atau mengubah data yang sedang dikirim.",
+      "example": "Penyerang membuat hotspot Wi-Fi palsu gratis di kafe bernama 'Free_Coffee_WiFi' untuk mencegat lalu lintas data pengguna yang sedang login tanpa enkripsi.",
+      "relatedLessons": ["4-b"],
+      "relatedTerms": ["jaringan-wi-fi-publik", "vpn", "enkripsi"]
+    },
+    {
+      "id": "pembaruan-keamanan",
+      "term": "Pembaruan Keamanan (Security Patch)",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Perbaikan perangkat lunak yang dirilis oleh pengembang untuk menambal celah kerentanan (vulnerability) yang ditemukan pada sistem operasi atau aplikasi sebelum celah tersebut dieksploitasi oleh penyerang.",
+      "example": "Rutin menginstal pembaruan Windows Update atau pembaruan browser Chrome setiap kali muncul notifikasi versi baru untuk menutup celah keamanan lama.",
+      "relatedLessons": ["4-b"],
+      "relatedTerms": ["antivirus", "malware"]
+    },
+    {
+      "id": "phishing",
+      "term": "Phishing (Pengelabuan)",
+      "category": "Serangan & Penipuan",
+      "definition": "Bentuk kejahatan siber di mana pelaku menyamar sebagai instansi resmi atau pihak terpercaya melalui email, pesan instan, atau SMS guna memancing korban membocorkan informasi sensitif seperti username, kata sandi, dan nomor rekening.",
+      "example": "Menerima email bertuliskan 'Akun Google Anda akan dihapus dalam 24 jam! Klik tautan ini untuk verifikasi', yang mengarahkan korban ke formulir login tiruan.",
+      "relatedLessons": ["2-d", "3-c"],
+      "relatedTerms": ["spear-phishing", "rekayasa-sosial"]
+    },
+    {
+      "id": "privasi-digital",
+      "term": "Privasi Digital",
+      "category": "Privasi & Identitas",
+      "definition": "Hak setiap individu untuk mengendalikan bagaimana data dan informasi pribadi mereka dikumpulkan, disimpan, digunakan, dan dibagikan kepada pihak lain di dunia digital.",
+      "example": "Menolak izin akses kamera, mikrofon, dan lokasi pada aplikasi kalkulator di ponsel pintar karena izin tersebut tidak relevan dengan fungsinya.",
+      "relatedLessons": ["1-c", "2-e"],
+      "relatedTerms": ["data-pribadi", "jejak-digital"]
+    },
+    {
+      "id": "data-pribadi",
+      "term": "Data Pribadi (Personal Data)",
+      "category": "Privasi & Identitas",
+      "definition": "Setiap data tentang seseorang baik yang teridentifikasi dan/atau dapat diidentifikasi secara tersendiri atau dikombinasikan dengan informasi lainnya baik secara langsung maupun tidak langsung.",
+      "example": "NIK (Nomor Induk Kependudukan), nama ibu kandung, riwayat medis, dan sidik jari adalah data pribadi yang wajib dilindungi dengan ketat.",
+      "relatedLessons": ["1-c", "2-d"],
+      "relatedTerms": ["privasi-digital", "jejak-digital", "kebocoran-data"]
+    },
+    {
+      "id": "ransomware",
+      "term": "Ransomware",
+      "category": "Malware & Ancaman",
+      "definition": "Malware berbahaya yang menyandera data pengguna dengan cara mengenkripsi seluruh berkas di perangkat, lalu menuntut uang tebusan (ransom) jika korban ingin mendapatkan kunci pembukanya.",
+      "example": "Serangan WannaCry pada tahun 2017 yang melumpuhkan sistem komputer puluhan rumah sakit dunia dan meminta tebusan mata uang kripto Bitcoin.",
+      "relatedLessons": ["3-b", "3-d"],
+      "relatedTerms": ["malware", "enkripsi", "backup"]
+    },
+    {
+      "id": "rekayasa-sosial",
+      "term": "Rekayasa Sosial (Social Engineering)",
+      "category": "Serangan & Penipuan",
+      "definition": "Teknik manipulasi psikologis yang memperdaya manusia agar membocorkan informasi rahasia atau melakukan tindakan yang membahayakan keamanan diri sendiri atau organisasinya, memanfaatkan rasa takut, panik, serakah, atau belas kasihan.",
+      "example": "Penipu menelpon orang tua murid sambil berpura-pura menjadi guru dan mengabarkan bahwa anaknya kecelakaan, lalu mendesak segera mentransfer uang pengobatan.",
+      "relatedLessons": ["2-d", "3-c"],
+      "relatedTerms": ["phishing", "spear-phishing"]
+    },
+    {
+      "id": "rootkit",
+      "term": "Rootkit",
+      "category": "Malware & Ancaman",
+      "definition": "Kumpulan program berbahaya yang dirancang untuk menyusup ke tingkat terdalam sistem operasi (root/kernel), menyembunyikan keberadaan malware lain, dan memberikan akses kendali penuh tanpa terdeteksi oleh antivirus standar.",
+      "example": "Peretas menanamkan rootkit di server agar malware pencuri data mereka tidak terlihat pada daftar Task Manager maupun laporan pemindaian berkas.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["malware", "antivirus", "trojan-horse"]
+    },
+    {
+      "id": "spear-phishing",
+      "term": "Spear Phishing",
+      "category": "Serangan & Penipuan",
+      "definition": "Bentuk phishing yang ditargetkan secara khusus dan mendalam kepada individu atau organisasi tertentu, di mana pelaku telah mempelajari profil korban terlebih dahulu agar pesan terlihat sangat meyakinkan.",
+      "example": "Email palsu yang dikirim khusus kepada bendahara OSIS dengan menyertakan nama asli ketua OSIS dan topik proposal acara sekolah yang sedang berlangsung.",
+      "relatedLessons": ["3-c"],
+      "relatedTerms": ["phishing", "rekayasa-sosial"]
+    },
+    {
+      "id": "spyware",
+      "term": "Spyware",
+      "category": "Malware & Ancaman",
+      "definition": "Perangkat lunak berbahaya yang beroperasi secara sembunyi-sembunyi untuk memantau aktivitas pengguna, mengumpulkan data penelusuran, riwayat percakapan, serta informasi pribadi, lalu mengirimkannya ke server penyerang.",
+      "example": "Aplikasi gratis yang disusupi spyware melacak lokasi pengguna 24 jam dan mengunggah daftar kontak telepon korban ke pihak ketiga tanpa pemberitahuan.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["malware", "keylogger", "adware"]
+    },
+    {
+      "id": "triad-cia",
+      "term": "Triad CIA",
+      "category": "Dasar Keamanan Data",
+      "definition": "Model acuan fundamental dalam dunia keamanan informasi yang terdiri dari tiga pilar utama: Kerahasiaan (Confidentiality), Integritas (Integrity), dan Ketersediaan (Availability).",
+      "example": "Sistem perbankan online harus menjamin saldo nasabah rahasia (C), angka saldo tidak berubah sendiri (I), dan aplikasi dapat diakses 24 jam sehari (A).",
+      "relatedLessons": ["1-a", "1-b", "4-a"],
+      "relatedTerms": ["kerahasiaan-data", "integritas-data", "ketersediaan-data", "keamanan-digital"]
+    },
+    {
+      "id": "trojan-horse",
+      "term": "Trojan Horse (Kuda Troya)",
+      "category": "Malware & Ancaman",
+      "definition": "Malware yang menyamar sebagai berkas atau aplikasi yang tampak sah, berguna, atau menarik (seperti game bajakan atau software utility), namun diam-diam memuat muatan berbahaya di dalamnya.",
+      "example": "Mengunduh file yang dinamai 'cheat_game_gratis.exe', namun setelah dijalankan, program tersebut justru membuka pintu belakang (backdoor) bagi penyerang.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["malware", "virus-komputer", "worm"]
+    },
+    {
+      "id": "virus-komputer",
+      "term": "Virus Komputer",
+      "category": "Malware & Ancaman",
+      "definition": "Jenis malware spesifik yang membutuhkan berkas inang (host file) yang masih hidup untuk menempelkan kodenya, dan hanya dapat menyebar serta mengeksekusi diri ketika berkas inang tersebut dibuka oleh pengguna.",
+      "example": "Sebuah berkas dokumen Word terinfeksi virus makro. Ketika dokumen tersebut disalin via flashdisk dan dibuka di laptop lain, virus mulai menular ke dokumen lain di laptop itu.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["malware", "worm", "trojan-horse"]
+    },
+    {
+      "id": "vpn",
+      "term": "VPN (Virtual Private Network)",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Layanan yang mengenkripsi seluruh lalu lintas data internet pengguna dan menyamarkan alamat IP asli dengan mengarahkannya melalui terowongan terenkripsi aman ke server perantara.",
+      "example": "Mengaktifkan VPN saat harus membuka email sekolah melalui koneksi Wi-Fi gratis di bandara agar data browsing tidak dapat disadap oleh pengguna lain di jaringan yang sama.",
+      "relatedLessons": ["4-b"],
+      "relatedTerms": ["jaringan-wi-fi-publik", "enkripsi", "man-in-the-middle"]
+    },
+    {
+      "id": "jaringan-wi-fi-publik",
+      "term": "Wi-Fi Publik & Jaringan Aman",
+      "category": "Proteksi & Kriptografi",
+      "definition": "Konsep pemahaman risiko koneksi internet nirkabel publik yang tidak dienkripsi (tanpa kata sandi atau dengan kata sandi bersama) yang rentan disadap, serta cara mitigasi menggunakan HTTPS dan VPN.",
+      "example": "Menghindari transaksi perbankan atau memasukkan kata sandi penting saat terhubung ke Wi-Fi terbuka di taman kota tanpa menggunakan perlindungan VPN.",
+      "relatedLessons": ["4-b"],
+      "relatedTerms": ["man-in-the-middle", "vpn", "firewall"]
+    },
+    {
+      "id": "worm",
+      "term": "Worm (Cacing Komputer)",
+      "category": "Malware & Ancaman",
+      "definition": "Jenis malware mandiri yang mampu mereplikasi (menggandakan) dirinya sendiri dan menyebar secara otomatis melintasi jaringan komputer tanpa memerlukan berkas inang maupun bantuan tindakan manusia.",
+      "example": "Cacing komputer memanfaatkan celah pada protokol jaringan untuk menulari ratusan komputer di satu kantor dalam hitungan menit tanpa ada karyawan yang mengeklik apa pun.",
+      "relatedLessons": ["3-b"],
+      "relatedTerms": ["malware", "virus-komputer", "botnet"]
+    }
+  ]
+}

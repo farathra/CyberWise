@@ -10,7 +10,8 @@
     "validate": "node scripts/validate-content.js",
     "validate:full": "node scripts/validate-content.js --full",
     "test:search": "node scripts/test-search.js && node scripts/test-search-logic.js",
-    "test": "npm run validate:full && npm run test:search"
+    "test:glossary": "node scripts/test-glossary.js",
+    "test": "npm run validate:full && npm run test:search && npm run test:glossary"
   },
   "dependencies": {
     "dompurify": "^3.1.6",

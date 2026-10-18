@@ -6,6 +6,7 @@ import { initRouter, route } from './router.js';
 import { renderLearn } from './learn/learn.js';
 import { renderQuiz } from './quiz/quiz.js';
 import { renderNotes } from './notes/notes.js';
+import { renderGlossary } from './glossary/glossary.js';
 import { initSearch } from './search/search.js';
 import { syncProgressWithBackup } from './learn/progress.js';
 
@@ -52,6 +53,8 @@ route(/^\/quiz\/(?<mode>[\w]+)\/(?<id>[\w-]+)$/, ({ mode, id }) => renderQuiz(mo
 route(/^\/quiz\/master$/, () => renderQuiz('master', 'all'));
 route(/^\/notes$/, () => renderNotes());
 route(/^\/notes\/(?<noteId>[\w-]+)$/, ({ noteId }) => renderNotes(noteId));
+route(/^\/glossary$/, () => renderGlossary());
+route(/^\/glossary\/(?<termId>[\w-]+)$/, ({ termId }) => renderGlossary(termId));
 route('/', () => renderLearn());
 
 // Ensure DOM is ready before mounting router & shell
