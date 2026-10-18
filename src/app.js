@@ -115,7 +115,8 @@ export function updateAppShellText() {
     learn: t('nav.learn'),
     quiz: t('nav.quiz'),
     notes: t('nav.notes'),
-    glossary: t('nav.glossary')
+    glossary: t('nav.glossary'),
+    games: t('nav.games')
   };
 
   document.querySelectorAll('#tab-nav .tab-link').forEach(link => {

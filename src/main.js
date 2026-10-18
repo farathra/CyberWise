@@ -7,6 +7,7 @@ import { renderLearn } from './learn/learn.js';
 import { renderQuiz } from './quiz/quiz.js';
 import { renderNotes } from './notes/notes.js';
 import { renderGlossary } from './glossary/glossary.js';
+import { renderGames } from './games/gamesHub.js';
 import { initSearch } from './search/search.js';
 import { syncProgressWithBackup } from './learn/progress.js';
 
@@ -55,6 +56,8 @@ route(/^\/notes$/, () => renderNotes());
 route(/^\/notes\/(?<noteId>[\w-]+)$/, ({ noteId }) => renderNotes(noteId));
 route(/^\/glossary$/, () => renderGlossary());
 route(/^\/glossary\/(?<termId>[\w-]+)$/, ({ termId }) => renderGlossary(termId));
+route(/^\/games$/, () => renderGames());
+route(/^\/games\/(?<gameId>[\w-]+)$/, ({ gameId }) => renderGames(gameId));
 route('/', () => renderLearn());
 
 // Ensure DOM is ready before mounting router & shell
