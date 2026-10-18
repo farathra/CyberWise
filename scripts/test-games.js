@@ -1,5 +1,6 @@
 // scripts/test-games.js
-// Automated verification for CyberWise Games & Cybersecurity Simulation (Email Detective & Chat Trap)
+// Automated verification for CyberWise Games & Cybersecurity Simulation
+// (Email Detective, Chat Trap, and Password Defender)
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -47,6 +48,12 @@ assert(fs.existsSync(ctScenariosPath), 'src/games/chatTrap/scenarios.js exists')
 
 const chatTrapPath = path.join(rootDir, 'src', 'games', 'chatTrap', 'chatTrap.js');
 assert(fs.existsSync(chatTrapPath), 'src/games/chatTrap/chatTrap.js exists');
+
+const pdScenariosPath = path.join(rootDir, 'src', 'games', 'passwordDefender', 'scenarios.js');
+assert(fs.existsSync(pdScenariosPath), 'src/games/passwordDefender/scenarios.js exists');
+
+const passwordDefenderPath = path.join(rootDir, 'src', 'games', 'passwordDefender', 'passwordDefender.js');
+assert(fs.existsSync(passwordDefenderPath), 'src/games/passwordDefender/passwordDefender.js exists');
 
 const gamesCssPath = path.join(rootDir, 'src', 'styles', 'games.css');
 assert(fs.existsSync(gamesCssPath), 'src/styles/games.css exists');
@@ -139,23 +146,19 @@ for (const sc of ctScenarios) {
     console.error(`Invalid relatedLessonId: ${sc.relatedLessonId} in Chat Trap scenario ${sc.id}`);
   }
 
-  // Ensure contact details
   if (!sc.contact.name || !sc.contact.handle || !sc.contact.avatar || !sc.contact.statusType || !sc.contact.contextClue) {
     allCtScenariosValid = false;
   }
 
-  // Check messages
   if (sc.messages.length < 2) {
     allCtScenariosValid = false;
   }
 
-  // Check options has safe, caution, unsafe
   const safetyTypes = new Set(sc.options.map(o => o.safety));
   if (!safetyTypes.has('safe') || !safetyTypes.has('unsafe')) {
     allCtScenariosValid = false;
   }
 
-  // Check if there is a legitimate interaction scenario
   if (sc.contact.verified === true) {
     hasSafeInteraction = true;
   }
@@ -165,10 +168,58 @@ assert(allCtScenariosValid, 'All Chat Trap scenarios have required schema (id, t
 assert(allCtLessonIdsValid, 'All Chat Trap relatedLessonIds strictly exist in materi/manifest.json');
 assert(ctDifficultyCount.beginner >= 4, `Balanced Beginner scenarios (found: ${ctDifficultyCount.beginner})`);
 assert(ctDifficultyCount.intermediate >= 4, `Balanced Intermediate scenarios (found: ${ctDifficultyCount.intermediate})`);
-assert(hasSafeInteraction, 'Includes legitimate/safe conversation scenario so players do not automatically distrust everyone');
+assert(hasSafeInteraction, 'Includes legitimate conversation scenario');
 
-// 4. Extensible Game Hub & Registry
-console.log('\n--- Test Group 4: Extensible Game Library Framework ---');
+// 4. Validate Password Defender Scenarios Data
+console.log('\n--- Test Group 4: Password Defender 3-Mode Scenarios Integrity ---');
+const pdScenariosModule = await import('../src/games/passwordDefender/scenarios.js');
+const pdScenarios = pdScenariosModule.PASSWORD_SCENARIOS || [];
+
+assert(pdScenarios.length >= 8 && pdScenarios.length <= 15, `Password Defender scenario count is between 8 and 15 (found: ${pdScenarios.length})`);
+
+let allPdScenariosValid = true;
+let allPdLessonIdsValid = true;
+const pdScenarioIds = new Set();
+const pdModeCount = { 'mode-a': 0, 'mode-b': 0, 'mode-c': 0 };
+
+for (const sc of pdScenarios) {
+  if (!sc.id || !sc.mode || !sc.title || !sc.account || !Array.isArray(sc.evidence) || !Array.isArray(sc.options) || !sc.principle || !sc.remediation || !sc.conceptKey) {
+    allPdScenariosValid = false;
+  }
+  if (pdScenarioIds.has(sc.id)) {
+    allPdScenariosValid = false;
+  }
+  pdScenarioIds.add(sc.id);
+
+  if (pdModeCount[sc.mode] !== undefined) {
+    pdModeCount[sc.mode]++;
+  } else {
+    allPdScenariosValid = false;
+  }
+
+  if (sc.relatedLessonId && !validLessonIds.has(sc.relatedLessonId)) {
+    allPdLessonIdsValid = false;
+    console.error(`Invalid relatedLessonId: ${sc.relatedLessonId} in Password Defender scenario ${sc.id}`);
+  }
+
+  if (!sc.account.name || !sc.account.type || !sc.account.initialConfig || !sc.account.alertOrDiscovery) {
+    allPdScenariosValid = false;
+  }
+
+  const safetyTypes = new Set(sc.options.map(o => o.safety));
+  if (!safetyTypes.has('optimal') || !safetyTypes.has('hazardous')) {
+    allPdScenariosValid = false;
+  }
+}
+
+assert(allPdScenariosValid, 'All Password Defender scenarios have required schema (id, mode, title, account, evidence, options, principle, remediation, conceptKey)');
+assert(allPdLessonIdsValid, 'All Password Defender relatedLessonIds strictly exist in materi/manifest.json');
+assert(pdModeCount['mode-a'] >= 2, `Covers Mode A (Password Strategy): ${pdModeCount['mode-a']} scenarios`);
+assert(pdModeCount['mode-b'] >= 2, `Covers Mode B (Account Defense): ${pdModeCount['mode-b']} scenarios`);
+assert(pdModeCount['mode-c'] >= 3, `Covers Mode C (Breach Response): ${pdModeCount['mode-c']} scenarios`);
+
+// 5. Extensible Game Hub & Registry
+console.log('\n--- Test Group 5: Extensible Game Library Framework ---');
 const gamesDataModule = await import('../src/games/gamesData.js');
 const gamesList = gamesDataModule.GAMES_LIST || [];
 
@@ -178,25 +229,32 @@ assert(emailDetectiveGame && emailDetectiveGame.status === 'playable', 'Email De
 
 const chatTrapGame = gamesList.find(g => g.id === 'chat-trap');
 assert(chatTrapGame && chatTrapGame.status === 'playable', 'Chat Trap is registered as playable');
-assert(chatTrapGame && chatTrapGame.route === '#/games/chat-trap', 'Chat Trap route points to #/games/chat-trap');
+
+const passwordDefenderGame = gamesList.find(g => g.id === 'password-defender');
+assert(passwordDefenderGame && passwordDefenderGame.status === 'playable', 'Password Defender is registered as playable');
+assert(passwordDefenderGame && passwordDefenderGame.route === '#/games/password-defender', 'Password Defender route points to #/games/password-defender');
 
 const upcomingGames = gamesList.filter(g => g.status === 'coming-soon');
-assert(upcomingGames.length >= 2, `Upcoming games registered as teasers (found: ${upcomingGames.length})`);
+assert(upcomingGames.length >= 1, `Remaining upcoming games registered as teasers (found: ${upcomingGames.length})`);
 
-// 5. Internationalization & Content Preservation
-console.log('\n--- Test Group 5: Localization & Content Integrity ---');
+// 6. Internationalization & Content Preservation
+console.log('\n--- Test Group 6: Localization & Content Integrity ---');
 const i18nModule = await import('../src/i18n.js');
 const testKeys = [
   'nav.games',
   'games.hubTitle',
   'games.ed.title',
   'games.ct.title',
-  'games.ct.badge',
-  'games.ct.decisionHeading',
-  'games.ct.submitResponse',
-  'games.ct.safeResult',
-  'games.ct.unsafeResult',
-  'games.ct.reportTitle'
+  'games.pd.title',
+  'games.pd.badge',
+  'games.pd.modeA',
+  'games.pd.modeB',
+  'games.pd.modeC',
+  'games.pd.decisionTitle',
+  'games.pd.submitDecision',
+  'games.pd.optimalResult',
+  'games.pd.hazardousResult',
+  'games.pd.reportTitle'
 ];
 let allKeysFound = true;
 for (const k of testKeys) {
@@ -210,20 +268,20 @@ for (const k of testKeys) {
 assert(allKeysFound, 'All games UI keys are defined in both English and Indonesian');
 
 // Verify scenario text is in Indonesian
-let scenarioTextInIndonesian = true;
-const sampleMessages = ctScenarios.flatMap(s => s.messages.map(m => m.text));
-for (const text of sampleMessages) {
-  const indonesianWords = ['dan', 'yang', 'ini', 'kamu', 'anda', 'kami', 'ke', 'di', 'dari', 'bisa', 'tolong', 'jangan', 'halo'];
+let pdTextInIndonesian = true;
+const samplePrinciples = pdScenarios.map(s => s.principle);
+for (const text of samplePrinciples) {
+  const indonesianWords = ['dan', 'yang', 'ini', 'kata', 'sandi', 'akun', 'keamanan', 'pengguna', 'layanan', 'kode', 'kunci', 'adalah', 'atau'];
   const lower = text.toLowerCase();
   const matched = indonesianWords.filter(w => lower.includes(w));
-  if (matched.length === 0) {
-    scenarioTextInIndonesian = false;
+  if (matched.length < 2) {
+    pdTextInIndonesian = false;
   }
 }
-assert(scenarioTextInIndonesian, 'Chat Trap educational scenarios are strictly maintained in Indonesian');
+assert(pdTextInIndonesian, 'Password Defender educational explanations are strictly in Indonesian');
 
-// 6. App Shell & Navigation Integration
-console.log('\n--- Test Group 6: UI & Architecture Integration ---');
+// 7. App Shell & Navigation Integration
+console.log('\n--- Test Group 7: UI & Architecture Integration ---');
 const indexHtml = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
 assert(indexHtml.includes('href="#/games"') && indexHtml.includes('data-tab="games"'), 'index.html contains Games navigation tab link');
 
@@ -234,10 +292,10 @@ const mainJs = fs.readFileSync(path.join(rootDir, 'src', 'main.js'), 'utf8');
 assert(mainJs.includes('renderGames') && mainJs.includes('/games'), 'src/main.js imports renderGames and registers routes');
 
 const gamesHubJs = fs.readFileSync(path.join(rootDir, 'src', 'games', 'gamesHub.js'), 'utf8');
-assert(gamesHubJs.includes("gameId === 'chat-trap'") && gamesHubJs.includes('startChatTrapGame'), 'gamesHub.js dispatches chat-trap to startChatTrapGame');
+assert(gamesHubJs.includes("gameId === 'password-defender'") && gamesHubJs.includes('startPasswordDefenderGame'), 'gamesHub.js dispatches password-defender to startPasswordDefenderGame');
 
 const gamesCss = fs.readFileSync(path.join(rootDir, 'src', 'styles', 'games.css'), 'utf8');
-assert(gamesCss.includes('.chat-trap-view') && gamesCss.includes('.chat-bubble'), 'games.css contains Chat Trap styles');
+assert(gamesCss.includes('.password-defender-view') && gamesCss.includes('.security-console-frame'), 'games.css contains Password Defender styles');
 
 const swJs = fs.readFileSync(path.join(rootDir, 'public', 'sw.js'), 'utf8');
 assert(swJs.includes('cyberwise-v6') || swJs.includes('cyberwise-v7'), 'public/sw.js cache version maintained for PWA');

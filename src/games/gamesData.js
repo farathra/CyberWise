@@ -36,10 +36,10 @@ export const GAMES_LIST = [
     categoryKey: 'games.pd.category',
     durationKey: 'games.pd.duration',
     difficultyKey: 'games.diffIntermediate',
-    status: 'coming-soon',
+    status: 'playable',
     icon: '🛡️',
-    badge: 'COMING SOON',
-    route: null
+    badge: 'NEW',
+    route: '#/games/password-defender'
   },
   {
     id: 'malware-mission',
