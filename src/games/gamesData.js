@@ -42,6 +42,18 @@ export const GAMES_LIST = [
     route: '#/games/password-defender'
   },
   {
+    id: 'incident-commander',
+    titleKey: 'games.cic.title',
+    descKey: 'games.cic.desc',
+    categoryKey: 'games.cic.category',
+    durationKey: 'games.cic.duration',
+    difficultyKey: 'games.diffAdvanced',
+    status: 'playable',
+    icon: '🚨',
+    badge: 'NEW',
+    route: '#/games/incident-commander'
+  },
+  {
     id: 'malware-mission',
     titleKey: 'games.mm.title',
     descKey: 'games.mm.desc',

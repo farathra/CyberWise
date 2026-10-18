@@ -55,6 +55,12 @@ assert(fs.existsSync(pdScenariosPath), 'src/games/passwordDefender/scenarios.js 
 const passwordDefenderPath = path.join(rootDir, 'src', 'games', 'passwordDefender', 'passwordDefender.js');
 assert(fs.existsSync(passwordDefenderPath), 'src/games/passwordDefender/passwordDefender.js exists');
 
+const cicScenariosPath = path.join(rootDir, 'src', 'games', 'incidentCommander', 'scenarios.js');
+assert(fs.existsSync(cicScenariosPath), 'src/games/incidentCommander/scenarios.js exists');
+
+const incidentCommanderPath = path.join(rootDir, 'src', 'games', 'incidentCommander', 'incidentCommander.js');
+assert(fs.existsSync(incidentCommanderPath), 'src/games/incidentCommander/incidentCommander.js exists');
+
 const gamesCssPath = path.join(rootDir, 'src', 'styles', 'games.css');
 assert(fs.existsSync(gamesCssPath), 'src/styles/games.css exists');
 
@@ -218,12 +224,74 @@ assert(pdModeCount['mode-a'] >= 2, `Covers Mode A (Password Strategy): ${pdModeC
 assert(pdModeCount['mode-b'] >= 2, `Covers Mode B (Account Defense): ${pdModeCount['mode-b']} scenarios`);
 assert(pdModeCount['mode-c'] >= 3, `Covers Mode C (Breach Response): ${pdModeCount['mode-c']} scenarios`);
 
-// 5. Extensible Game Hub & Registry
-console.log('\n--- Test Group 5: Extensible Game Library Framework ---');
+// 5. Validate Cyber Incident Commander Scenarios Data
+console.log('\n--- Test Group 5: Cyber Incident Commander Scenarios Integrity ---');
+const cicScenariosModule = await import('../src/games/incidentCommander/scenarios.js');
+const cicScenarios = cicScenariosModule.INCIDENT_SCENARIOS || [];
+
+assert(cicScenarios.length >= 3, `Cyber Incident Commander scenario count is at least 3 (found: ${cicScenarios.length})`);
+
+let allCicScenariosValid = true;
+let allCicLessonIdsValid = true;
+const cicScenarioIds = new Set();
+
+for (const sc of cicScenarios) {
+  if (!sc.id || !sc.code || !sc.title || !sc.org || !sc.initialSeverity || sc.initialRisk === undefined || sc.initialAvailability === undefined || !sc.overview || !Array.isArray(sc.assets) || !Array.isArray(sc.alerts) || !sc.evidenceLogs || !sc.phases || !sc.aar) {
+    allCicScenariosValid = false;
+  }
+  if (cicScenarioIds.has(sc.id)) {
+    allCicScenariosValid = false;
+  }
+  cicScenarioIds.add(sc.id);
+
+  // Check valid lesson IDs in AAR and scenario
+  if (Array.isArray(sc.relatedLessonIds)) {
+    for (const lid of sc.relatedLessonIds) {
+      if (!validLessonIds.has(lid)) {
+        allCicLessonIdsValid = false;
+        console.error(`Invalid relatedLessonId: ${lid} in Cyber Incident Commander scenario ${sc.id}`);
+      }
+    }
+  }
+
+  if (sc.aar && Array.isArray(sc.aar.recommendedLessonIds)) {
+    for (const lid of sc.aar.recommendedLessonIds) {
+      if (!validLessonIds.has(lid)) {
+        allCicLessonIdsValid = false;
+        console.error(`Invalid AAR recommendedLessonId: ${lid} in Cyber Incident Commander scenario ${sc.id}`);
+      }
+    }
+  }
+
+  // Check 4 operational phases exist with questions and valid options
+  const reqPhases = ['phaseA', 'phaseB', 'phaseC', 'phaseD'];
+  for (const ph of reqPhases) {
+    const pData = sc.phases[ph];
+    if (!pData || !pData.title || !pData.question || !Array.isArray(pData.options) || pData.options.length < 3) {
+      allCicScenariosValid = false;
+    } else {
+      const types = new Set(pData.options.map(o => o.type));
+      if (!types.has('optimal') || !types.has('hazardous')) {
+        allCicScenariosValid = false;
+      }
+    }
+  }
+
+  // Check telemetry logs
+  if (!Array.isArray(sc.evidenceLogs.auth) || !Array.isArray(sc.evidenceLogs.endpoint) || !Array.isArray(sc.evidenceLogs.network)) {
+    allCicScenariosValid = false;
+  }
+}
+
+assert(allCicScenariosValid, 'All Cyber Incident Commander scenarios have required schema (assets, alerts, evidenceLogs, phases A-D, and AAR)');
+assert(allCicLessonIdsValid, 'All Cyber Incident Commander relatedLessonIds strictly exist in materi/manifest.json');
+
+// 6. Extensible Game Hub & Registry
+console.log('\n--- Test Group 6: Extensible Game Library Framework ---');
 const gamesDataModule = await import('../src/games/gamesData.js');
 const gamesList = gamesDataModule.GAMES_LIST || [];
 
-assert(gamesList.length >= 4, `Games registry supports multiple games (found: ${gamesList.length})`);
+assert(gamesList.length >= 5, `Games registry supports multiple games (found: ${gamesList.length})`);
 const emailDetectiveGame = gamesList.find(g => g.id === 'email-detective');
 assert(emailDetectiveGame && emailDetectiveGame.status === 'playable', 'Email Detective is registered as playable');
 
@@ -234,11 +302,15 @@ const passwordDefenderGame = gamesList.find(g => g.id === 'password-defender');
 assert(passwordDefenderGame && passwordDefenderGame.status === 'playable', 'Password Defender is registered as playable');
 assert(passwordDefenderGame && passwordDefenderGame.route === '#/games/password-defender', 'Password Defender route points to #/games/password-defender');
 
+const incidentCommanderGame = gamesList.find(g => g.id === 'incident-commander');
+assert(incidentCommanderGame && incidentCommanderGame.status === 'playable', 'Cyber Incident Commander is registered as playable');
+assert(incidentCommanderGame && incidentCommanderGame.route === '#/games/incident-commander', 'Cyber Incident Commander route points to #/games/incident-commander');
+
 const upcomingGames = gamesList.filter(g => g.status === 'coming-soon');
 assert(upcomingGames.length >= 1, `Remaining upcoming games registered as teasers (found: ${upcomingGames.length})`);
 
-// 6. Internationalization & Content Preservation
-console.log('\n--- Test Group 6: Localization & Content Integrity ---');
+// 7. Internationalization & Content Preservation
+console.log('\n--- Test Group 7: Localization & Content Integrity ---');
 const i18nModule = await import('../src/i18n.js');
 const testKeys = [
   'nav.games',
@@ -254,7 +326,20 @@ const testKeys = [
   'games.pd.submitDecision',
   'games.pd.optimalResult',
   'games.pd.hazardousResult',
-  'games.pd.reportTitle'
+  'games.pd.reportTitle',
+  'games.cic.title',
+  'games.cic.badge',
+  'games.cic.scenarioProgress',
+  'games.cic.riskGauge',
+  'games.cic.availabilityGauge',
+  'games.cic.phaseA',
+  'games.cic.phaseB',
+  'games.cic.phaseC',
+  'games.cic.phaseD',
+  'games.cic.phaseE',
+  'games.cic.reportTitle',
+  'games.cic.submitAction',
+  'games.cic.rankMaster'
 ];
 let allKeysFound = true;
 for (const k of testKeys) {
@@ -268,20 +353,20 @@ for (const k of testKeys) {
 assert(allKeysFound, 'All games UI keys are defined in both English and Indonesian');
 
 // Verify scenario text is in Indonesian
-let pdTextInIndonesian = true;
-const samplePrinciples = pdScenarios.map(s => s.principle);
-for (const text of samplePrinciples) {
-  const indonesianWords = ['dan', 'yang', 'ini', 'kata', 'sandi', 'akun', 'keamanan', 'pengguna', 'layanan', 'kode', 'kunci', 'adalah', 'atau'];
+let cicTextInIndonesian = true;
+const sampleOverviews = cicScenarios.map(s => s.overview);
+for (const text of sampleOverviews) {
+  const indonesianWords = ['dan', 'yang', 'ini', 'akun', 'keamanan', 'pengguna', 'layanan', 'sistem', 'adalah', 'atau', 'data', 'pada'];
   const lower = text.toLowerCase();
   const matched = indonesianWords.filter(w => lower.includes(w));
   if (matched.length < 2) {
-    pdTextInIndonesian = false;
+    cicTextInIndonesian = false;
   }
 }
-assert(pdTextInIndonesian, 'Password Defender educational explanations are strictly in Indonesian');
+assert(cicTextInIndonesian, 'Cyber Incident Commander educational scenarios are strictly in Indonesian');
 
-// 7. App Shell & Navigation Integration
-console.log('\n--- Test Group 7: UI & Architecture Integration ---');
+// 8. App Shell & Navigation Integration
+console.log('\n--- Test Group 8: UI & Architecture Integration ---');
 const indexHtml = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
 assert(indexHtml.includes('href="#/games"') && indexHtml.includes('data-tab="games"'), 'index.html contains Games navigation tab link');
 
@@ -293,9 +378,11 @@ assert(mainJs.includes('renderGames') && mainJs.includes('/games'), 'src/main.js
 
 const gamesHubJs = fs.readFileSync(path.join(rootDir, 'src', 'games', 'gamesHub.js'), 'utf8');
 assert(gamesHubJs.includes("gameId === 'password-defender'") && gamesHubJs.includes('startPasswordDefenderGame'), 'gamesHub.js dispatches password-defender to startPasswordDefenderGame');
+assert(gamesHubJs.includes("gameId === 'incident-commander'") && gamesHubJs.includes('startIncidentCommanderGame'), 'gamesHub.js dispatches incident-commander to startIncidentCommanderGame');
 
 const gamesCss = fs.readFileSync(path.join(rootDir, 'src', 'styles', 'games.css'), 'utf8');
 assert(gamesCss.includes('.password-defender-view') && gamesCss.includes('.security-console-frame'), 'games.css contains Password Defender styles');
+assert(gamesCss.includes('.incident-commander-view') && gamesCss.includes('.cic-console-grid'), 'games.css contains Cyber Incident Commander styles');
 
 const swJs = fs.readFileSync(path.join(rootDir, 'public', 'sw.js'), 'utf8');
 assert(swJs.includes('cyberwise-v6') || swJs.includes('cyberwise-v7'), 'public/sw.js cache version maintained for PWA');

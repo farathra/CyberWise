@@ -1,6 +1,6 @@
 // public/sw.js
 // CyberWise Service Worker — Offline PWA Support
-const CACHE_NAME = 'cyberwise-v6';
+const CACHE_NAME = 'cyberwise-v7';
 const CONTENT_CACHE = 'cyberwise-content-v2';
 
 // Essential app shell files to cache on install
