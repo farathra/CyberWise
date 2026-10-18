@@ -5,6 +5,7 @@
 
 import { GLOSSARY_DATA, GLOSSARY_CATEGORIES, LESSON_INFO } from './glossaryData.js';
 import { navigate } from '../router.js';
+import { t } from '../i18n.js';
 
 let currentSearch = '';
 let currentCategory = 'Semua';
@@ -148,30 +149,27 @@ function renderGlossaryView(container) {
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
           </svg>
-          <span>Kamus Resmi Keamanan Siber</span>
+          <span>${t('glossary.heroBadge')}</span>
         </div>
-        <h1 class="glossary-title">Glosarium Keamanan Siber</h1>
-        <p class="glossary-subtitle">
-          Eksplorasi istilah penting keamanan digital, konsep ancaman, dan strategi proteksi data dengan penjelasan ramah pelajar serta contoh skenario nyata.
-        </p>
+        <h1 class="glossary-title">${t('glossary.title')}</h1>
+        <p class="glossary-subtitle">${t('glossary.subtitle')}</p>
         <div class="glossary-metrics">
           <div class="glossary-metric-pill">
             <span>📚 Total:</span>
-            <strong>${totalTerms} Istilah</strong>
+            <strong>${t('glossary.totalTerms', { count: totalTerms })}</strong>
           </div>
           <div class="glossary-metric-pill">
-            <span>🏷️ Kategori:</span>
-            <strong>${GLOSSARY_CATEGORIES.length - 1} Topik</strong>
+            <span>🏷️ ${t('glossary.totalCategories', { count: GLOSSARY_CATEGORIES.length - 1 })}</span>
           </div>
           <div class="glossary-metric-pill">
-            <span>🔗 Terintegrasi:</span>
-            <strong>Materi Bab 1–4</strong>
+            <span>🔗 ${t('glossary.integratedLabel')}</span>
+            <strong>${t('glossary.integrated')}</strong>
           </div>
         </div>
       </header>
 
       <!-- Controls: Search, Category Pills, Alphabet Bar -->
-      <section class="glossary-controls" aria-label="Alat pencarian dan filter istilah">
+      <section class="glossary-controls" aria-label="${t('glossary.toolsAria')}">
         <!-- Search Input -->
         <div class="glossary-search-wrap">
           <svg class="glossary-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -182,14 +180,14 @@ function renderGlossaryView(container) {
             type="search"
             id="glossary-search"
             class="glossary-search-input"
-            placeholder="Cari istilah, definisi, malware, enkripsi, phishing..."
+            placeholder="${t('glossary.searchPlaceholder')}"
             value="${escapeHtml(currentSearch)}"
-            aria-label="Cari istilah glosarium"
+            aria-label="${t('glossary.searchAria')}"
             autocomplete="off"
             spellcheck="false"
           />
           ${currentSearch.trim() ? `
-            <button type="button" id="glossary-clear-search" class="glossary-clear-btn" title="Hapus pencarian" aria-label="Hapus kata kunci">
+            <button type="button" id="glossary-clear-search" class="glossary-clear-btn" title="${t('glossary.clearSearch')}" aria-label="${t('glossary.clearSearchAria')}">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;">
                 <line x1="18" y1="6" x2="6" y2="18"/>
                 <line x1="6" y1="6" x2="18" y2="18"/>
@@ -199,7 +197,7 @@ function renderGlossaryView(container) {
         </div>
 
         <!-- Category Filter Pills -->
-        <div class="glossary-categories" role="tablist" aria-label="Filter kategori istilah">
+        <div class="glossary-categories" role="tablist" aria-label="${t('glossary.filterCategoriesAria')}">
           ${GLOSSARY_CATEGORIES.map(cat => `
             <button
               type="button"
@@ -208,20 +206,20 @@ function renderGlossaryView(container) {
               role="tab"
               aria-selected="${cat === currentCategory ? 'true' : 'false'}"
             >
-              ${escapeHtml(cat)}
+              ${cat === 'Semua' ? t('glossary.allCategories') : escapeHtml(cat)}
             </button>
           `).join('')}
         </div>
 
         <!-- Alphabetical Bar -->
-        <nav class="glossary-alpha-bar" aria-label="Navigasi alfabet A sampai Z">
+        <nav class="glossary-alpha-bar" aria-label="${t('glossary.alphaNavAria')}">
           <button
             type="button"
             class="glossary-alpha-pill all-btn ${currentLetter === 'ALL' ? 'active' : ''}"
             data-letter="ALL"
-            title="Tampilkan seluruh huruf A-Z"
+            title="${t('glossary.allAlphaTitle')}"
           >
-            Semua A-Z
+            ${t('glossary.allAlpha')}
           </button>
           ${allAlphabet.map(letter => {
             const hasItems = availableLetters.has(letter);
@@ -232,7 +230,7 @@ function renderGlossaryView(container) {
                 class="glossary-alpha-pill ${hasItems ? 'has-items' : 'disabled'} ${isActive ? 'active' : ''}"
                 data-letter="${letter}"
                 ${!hasItems ? 'disabled aria-disabled="true"' : ''}
-                title="${hasItems ? `Lihat istilah huruf ${letter}` : `Tidak ada istilah berawalan ${letter}`}"
+                title="${hasItems ? t('glossary.alphaWithItems', { letter }) : t('glossary.alphaNoItems', { letter })}"
               >
                 ${letter}
               </button>
@@ -244,13 +242,13 @@ function renderGlossaryView(container) {
       <!-- Status Bar -->
       <div class="glossary-status-bar">
         <span>
-          Menampilkan <strong>${filteredTerms.length}</strong> dari <strong>${totalTerms}</strong> istilah
-          ${currentCategory !== 'Semua' ? `dalam kategori <em>"${escapeHtml(currentCategory)}"</em>` : ''}
-          ${currentLetter !== 'ALL' ? `(Huruf <strong>${currentLetter}</strong>)` : ''}
+          ${t('glossary.showing', { count: filteredTerms.length, total: totalTerms })}
+          ${currentCategory !== 'Semua' ? ` ${t('glossary.inCategory', { category: escapeHtml(currentCategory) })}` : ''}
+          ${currentLetter !== 'ALL' ? ` ${t('glossary.letterFilter', { letter: currentLetter })}` : ''}
         </span>
         ${isFiltered ? `
           <button type="button" id="glossary-reset-all" class="glossary-reset-link">
-            ↺ Reset Semua Filter
+            ${t('glossary.resetAll')}
           </button>
         ` : ''}
       </div>
@@ -260,14 +258,15 @@ function renderGlossaryView(container) {
         <!-- Empty State -->
         <div class="glossary-empty">
           <span class="glossary-empty-icon" aria-hidden="true">📖</span>
-          <h2 class="glossary-empty-title">Tidak Ada Istilah Ditemukan</h2>
+          <h2 class="glossary-empty-title">${t('glossary.emptyTitle')}</h2>
           <p class="glossary-empty-desc">
-            Tidak ditemukan istilah yang cocok dengan kata kunci <strong>"${escapeHtml(currentSearch)}"</strong>
-            ${currentCategory !== 'Semua' ? `pada kategori "${escapeHtml(currentCategory)}"` : ''}.
-            Coba gunakan kata kunci lain atau setel ulang filter.
+            ${t('glossary.emptyDesc', {
+              query: escapeHtml(currentSearch),
+              cat: currentCategory !== 'Semua' ? ` ${t('glossary.inCategory', { category: escapeHtml(currentCategory) })}` : ''
+            })}
           </p>
           <button type="button" id="glossary-empty-reset" class="btn btn-primary">
-            Reset Pencarian & Filter
+            ${t('glossary.resetSearchBtn')}
           </button>
         </div>
       ` : `
@@ -311,7 +310,7 @@ function renderGlossaryCard(item) {
                 <line x1="12" y1="16" x2="12" y2="12"/>
                 <line x1="12" y1="8" x2="12.01" y2="8"/>
               </svg>
-              <span>Skenario / Contoh Nyata</span>
+              <span>${t('glossary.exampleLabel')}</span>
             </div>
             <div>${escapeHtml(item.example)}</div>
           </div>
@@ -319,11 +318,11 @@ function renderGlossaryCard(item) {
 
         <div class="glossary-relations">
           ${item.relatedLessons && item.relatedLessons.length > 0 ? `
-            <div class="glossary-related-title">Materi Terkait:</div>
+            <div class="glossary-related-title">${t('glossary.relatedLessons')}</div>
             ${item.relatedLessons.map(lessonId => {
               const meta = LESSON_INFO[lessonId] || { title: `Sub-bab ${lessonId}`, chapter: '' };
               return `
-                <a href="#/learn/${escapeHtml(lessonId)}" class="glossary-lesson-link" title="Buka materi ${escapeHtml(meta.title)}">
+                <a href="#/learn/${escapeHtml(lessonId)}" class="glossary-lesson-link" title="${t('glossary.openLessonTitle', { title: escapeHtml(meta.title) })}">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;" aria-hidden="true">
                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
@@ -335,13 +334,13 @@ function renderGlossaryCard(item) {
           ` : ''}
 
           ${item.relatedTerms && item.relatedTerms.length > 0 ? `
-            <div class="glossary-related-title" style="margin-top:6px;">Istilah Terkait:</div>
+            <div class="glossary-related-title" style="margin-top:6px;">${t('glossary.relatedTerms')}</div>
             <div class="glossary-terms-chips">
               ${item.relatedTerms.map(relId => {
                 const relItem = GLOSSARY_DATA.find(t => t.id === relId);
                 const label = relItem ? relItem.term : relId;
                 return `
-                  <button type="button" class="glossary-term-chip" data-jump-term="${escapeHtml(relId)}" title="Buka istilah ${escapeHtml(label)}">
+                  <button type="button" class="glossary-term-chip" data-jump-term="${escapeHtml(relId)}" title="${t('glossary.viewTermTitle', { term: escapeHtml(label) })}">
                     ${escapeHtml(label)}
                   </button>
                 `;

@@ -4,6 +4,7 @@
 // Quiz questions (without revealing answers/explanations), and user Notes.
 
 import { getAllNotes } from '../db.js';
+import { t } from '../i18n.js';
 
 const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || '/';
 
@@ -277,7 +278,9 @@ async function buildLearnIndex() {
 }
 
 /**
- * Loads and indexes Quiz question banks (ONLY question text, NO answers/explanations)
+/**
+ * Loads and indexes Quiz modules (subchapter quizzes and master quiz)
+ * NOTE: Individual questions are deliberately EXCLUDED to prevent cheating!
  */
 async function buildQuizIndex() {
   if (quizIndex) return quizIndex;
@@ -302,56 +305,24 @@ async function buildQuizIndex() {
 
     const items = [];
 
-    await Promise.all(
-      subchapters.map(async (sub) => {
-        const lesson = lessonMap[sub.id] || {};
-        const subTitle = lesson.title || `Sub-bab ${sub.id}`;
-        const chapterTitle = lesson.chapterTitle || `Bab ${sub.chapterId}`;
+    subchapters.forEach((sub) => {
+      const lesson = lessonMap[sub.id] || {};
+      const subTitle = lesson.title || `Sub-bab ${sub.id}`;
+      const chapterTitle = lesson.chapterTitle || `Bab ${sub.chapterId}`;
 
-        // Add subchapter quiz entry
-        items.push({
-          id: `quiz-sub-${sub.id}`,
-          category: 'quiz',
-          categoryLabel: 'Kuis',
-          targetId: sub.id,
-          route: `#/quiz/subchapter/${sub.id}`,
-          title: `Kuis: ${subTitle}`,
-          chapterTitle: chapterTitle,
-          subchapterId: sub.id,
-          plainContent: `Kuis sub-bab evaluasi pemahaman ${subTitle} (${sub.id}). Uji kemampuan dengan 10 soal acak.`
-        });
-
-        // Load questions safely without answers
-        try {
-          const qRes = await fetch(BASE_URL + sub.file);
-          if (qRes.ok) {
-            const qData = await qRes.json();
-            const questions = qData.questions || [];
-
-            questions.forEach((q, idx) => {
-              // SECURITY & INTEGRITY REQUIREMENT:
-              // DO NOT INDEX OR REVEAL: q.answer, q.options, or q.explanation!
-              // Only index the question prompt itself.
-              if (q.question) {
-                items.push({
-                  id: `quiz-q-${q.id || `${sub.id}-${idx}`}`,
-                  category: 'quiz',
-                  categoryLabel: 'Soal Kuis',
-                  targetId: sub.id,
-                  route: `#/quiz/subchapter/${sub.id}`,
-                  title: `Soal Kuis (${sub.id}): ${q.question.slice(0, 75)}${q.question.length > 75 ? '...' : ''}`,
-                  chapterTitle: chapterTitle,
-                  subchapterId: sub.id,
-                  plainContent: q.question
-                });
-              }
-            });
-          }
-        } catch (err) {
-          console.warn(`[Search] Could not index quiz file ${sub.file}:`, err);
-        }
-      })
-    );
+      // Add subchapter quiz entry ONLY (no question prompts to prevent cheating)
+      items.push({
+        id: `quiz-sub-${sub.id}`,
+        category: 'quiz',
+        categoryLabel: 'Quiz',
+        targetId: sub.id,
+        route: `#/quiz/subchapter/${sub.id}`,
+        title: `Quiz: ${subTitle}`,
+        chapterTitle: chapterTitle,
+        subchapterId: sub.id,
+        plainContent: `Kuis sub-bab evaluasi pemahaman ${subTitle} (${sub.id}). Uji kemampuan dengan 10 soal acak.`
+      });
+    });
 
     // Add Master Quiz entry
     items.push({
@@ -387,16 +358,16 @@ async function buildNotesIndex(forceRefresh = false) {
       .filter(note => note && typeof note === 'object')
       .map((note) => {
         const plainContent = stripHtml(note.content || '');
-        const title = (note.title || '').trim() || 'Catatan Tanpa Judul';
+        const title = (note.title || '').trim() || t('search.untitledNote');
 
         return {
           id: `note-${note.id || Math.random().toString(36).slice(2)}`,
           category: 'notes',
-          categoryLabel: 'Catatan',
+          categoryLabel: t('search.catNote'),
           targetId: note.id,
           route: `#/notes/${note.id}`,
           title: title,
-          chapterTitle: note.pinned ? '📌 Catatan Disematkan' : 'Catatan Pribadi',
+          chapterTitle: note.pinned ? t('search.notePinned') : t('search.notePersonal'),
           plainContent: plainContent,
           pinned: !!note.pinned,
           updatedAt: note.updatedAt || Date.now()
@@ -590,7 +561,7 @@ export async function searchContent(query = '', filterCategory = 'all') {
       scoredResults.push({
         id: item.id || `res-${Math.random().toString(36).slice(2)}`,
         category: item.category || 'learn',
-        categoryLabel: item.categoryLabel || 'Materi',
+        categoryLabel: item.category === 'quiz' ? t('search.catQuiz') : (item.category === 'notes' ? t('search.catNote') : t('search.catLesson')),
         route: item.route || '#/learn',
         titleHtml: titleHtml,
         plainTitle: String(item.title || ''),

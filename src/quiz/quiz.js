@@ -9,6 +9,7 @@ import {
 } from './engine.js';
 import { recordResult, getHistory, formatHistoryEntry } from './history.js';
 import { navigate } from '../router.js';
+import { t } from '../i18n.js';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -18,7 +19,7 @@ function getContainer() {
 
 export async function renderQuiz(mode = null, id = null) {
   const container = getContainer();
-  container.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading Quiz Center...</p></div>';
+  container.innerHTML = `<div class="loading"><div class="spinner"></div><p>${t('quiz.loading')}</p></div>`;
 
   try {
     if (mode && id) {
@@ -29,9 +30,9 @@ export async function renderQuiz(mode = null, id = null) {
   } catch (err) {
     container.innerHTML = `
       <div class="error-state">
-        <h2>Quiz Error</h2>
+        <h2>${t('quiz.errorTitle')}</h2>
         <p>${err.message}</p>
-        <a href="#/quiz" class="btn btn-primary">Back to Quizzes</a>
+        <a href="#/quiz" class="btn btn-primary">${t('quiz.backToQuizzes')}</a>
       </div>`;
   }
 }
@@ -86,28 +87,28 @@ async function renderQuizSelection(container) {
     <div class="quiz-selection">
       <!-- Header -->
       <header class="quiz-selection-header">
-        <h1>Quiz Center</h1>
-        <p>Test your understanding with Subchapter Quizzes, Chapter Quizzes, or the comprehensive Master Quiz.</p>
+        <h1>${t('quiz.centerTitle')}</h1>
+        <p>${t('quiz.centerSubtitle')}</p>
       </header>
 
       <!-- Master Quiz Banner -->
-      <section class="master-quiz-section" aria-label="Master Quiz">
+      <section class="master-quiz-section" aria-label="${t('quiz.masterTitle')}">
         <div class="master-quiz-card">
           <div class="master-quiz-badge-row">
-            <span class="badge badge-accent">🏆 Full Curriculum</span>
-            <span class="badge ${masterCanRun ? 'badge-success' : 'badge-warning'}">${totalQuestions}/50 Questions Available</span>
+            <span class="badge badge-accent">${t('quiz.fullCurriculum')}</span>
+            <span class="badge ${masterCanRun ? 'badge-success' : 'badge-warning'}">${t('quiz.questionsAvail', { count: totalQuestions })}</span>
           </div>
           <div class="master-quiz-content">
             <div class="master-quiz-info">
-              <h2>MASTER QUIZ (50 Questions)</h2>
-              <p>Challenges you with 50 randomly selected questions balanced across all 4 chapters. Tests your overall digital security mastery.</p>
+              <h2>${t('quiz.masterTitle')}</h2>
+              <p>${t('quiz.masterDesc')}</p>
             </div>
             <div class="master-quiz-action">
               ${masterCanRun
-                ? `<a href="#/quiz/master/all" class="btn btn-master">Start Master Quiz (50 Q) →</a>`
+                ? `<a href="#/quiz/master/all" class="btn btn-master">${t('quiz.startMasterBtn')}</a>`
                 : `<div class="quiz-unavailable-box">
-                     <span class="unavailable-status">Not enough questions yet</span>
-                     <span class="unavailable-detail">Needs ${50 - totalQuestions} more questions (50 required). Available in Phase 2.</span>
+                     <span class="unavailable-status">${t('quiz.notEnoughQuestions')}</span>
+                     <span class="unavailable-detail">${t('quiz.needsMoreQuestions', { diff: 50 - totalQuestions })}</span>
                    </div>`}
             </div>
           </div>
@@ -123,11 +124,11 @@ async function renderQuizSelection(container) {
               <!-- Chapter Section Header -->
               <div class="quiz-chapter-header">
                 <div class="quiz-chapter-header-main">
-                  <span class="chapter-badge">Chapter ${ch.id}</span>
+                  <span class="chapter-badge">${t('lesson.chapterPrefix', { id: ch.id })}</span>
                   <h2 class="quiz-chapter-title">${ch.title}</h2>
                 </div>
                 <div class="quiz-chapter-header-stats">
-                  <span class="badge badge-outline">${chData.total} Questions in Bank</span>
+                  <span class="badge badge-outline">${t('quiz.inBank', { count: chData.total })}</span>
                 </div>
               </div>
 
@@ -135,24 +136,23 @@ async function renderQuizSelection(container) {
               <div class="chapter-quiz-action-box">
                 <div class="chapter-quiz-action-info">
                   <div class="chapter-quiz-action-title">
-                    <strong>Chapter ${ch.id} Comprehensive Quiz</strong>
-                    <span class="badge badge-info">30 Questions</span>
+                    <strong>${t('quiz.chapterQuizTitle', { id: ch.id })}</strong>
+                    <span class="badge badge-info">${t('quiz.chapterQuizBadge')}</span>
                   </div>
-                  <p class="chapter-quiz-action-desc">Evaluates all subchapters in Chapter ${ch.id}. Randomly selects 30 questions.</p>
+                  <p class="chapter-quiz-action-desc">${t('quiz.chapterQuizDesc', { id: ch.id })}</p>
                 </div>
                 <div class="chapter-quiz-action-cta">
                   ${chData.canRun
-                    ? `<a href="#/quiz/chapter/${ch.id}" class="btn btn-primary chapter-action-btn">Start Chapter Quiz (30 Q) →</a>`
+                    ? `<a href="#/quiz/chapter/${ch.id}" class="btn btn-primary chapter-action-btn">${t('quiz.startChapterBtn')}</a>`
                     : `<div class="chapter-unavailable-pill">
-                         <span class="pill-label">Needs ${30 - chData.total} more questions</span>
-                         <span class="pill-sub">(${chData.total}/30 available • Phase 2)</span>
+                         <span class="pill-label">${t('quiz.needsMoreQuestions', { diff: 30 - chData.total })}</span>
                        </div>`}
                 </div>
               </div>
 
               <!-- Subchapter Cards Section -->
               <div class="subchapters-quiz-container">
-                <h3 class="subchapters-section-heading">Subchapter Quizzes (10 Questions Each)</h3>
+                <h3 class="subchapters-section-heading">${t('quiz.subchapterSection')}</h3>
                 <div class="quiz-subchapter-grid">
                   ${ch.subchapters.map(sub => {
                     const subData = subAvailMap[sub.id] || { available: 0, canRun: false };
@@ -160,13 +160,13 @@ async function renderQuizSelection(container) {
                       <a href="#/quiz/subchapter/${sub.id}" class="quiz-subchapter-card ${subData.canRun ? 'can-run' : 'pending-content'}" aria-label="Quiz for ${sub.id}: ${sub.title}">
                         <div class="subchapter-card-top">
                           <span class="subchapter-id-badge">${sub.id}</span>
-                          <span class="subchapter-bank-count">${subData.available} Q in bank</span>
+                          <span class="subchapter-bank-count">${t('quiz.subInBank', { count: subData.available })}</span>
                         </div>
                         <h4 class="subchapter-card-title">${sub.title}</h4>
                         <div class="subchapter-card-footer">
                           ${subData.canRun
-                            ? `<span class="card-action-label ready">Take Quiz (10 Q) →</span>`
-                            : `<span class="card-action-label pending">Sample: ${subData.available}/10 Q (Needs 10) →</span>`}
+                            ? `<span class="card-action-label ready">${t('quiz.takeSubchapterBtn')}</span>`
+                            : `<span class="card-action-label pending">${subData.available}/10 Q →</span>`}
                         </div>
                       </a>
                     `;
@@ -181,16 +181,16 @@ async function renderQuizSelection(container) {
       <!-- History Section -->
       ${history.length > 0 ? `
       <section class="quiz-history-section">
-        <h2>Recent Quiz Attempts</h2>
+        <h2>${t('quiz.recentAttempts')}</h2>
         <div class="quiz-history-table-wrapper">
           <table class="quiz-history-table">
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Mode</th>
-                <th>Topic / Chapter</th>
-                <th>Score</th>
-                <th>Result</th>
+                <th>${t('quiz.thDate')}</th>
+                <th>${t('quiz.thMode')}</th>
+                <th>${t('quiz.thTopic')}</th>
+                <th>${t('quiz.thScore')}</th>
+                <th>${t('quiz.thResult')}</th>
               </tr>
             </thead>
             <tbody>
@@ -204,7 +204,7 @@ async function renderQuizSelection(container) {
                     <td><span class="badge badge-outline">${h.mode}</span></td>
                     <td><strong>${h.subjectId}</strong></td>
                     <td>${h.score} / ${h.total} (${pct}%)</td>
-                    <td><span class="badge ${pass ? 'badge-success' : 'badge-danger'}">${pass ? 'Passed' : 'Retry'}</span></td>
+                    <td><span class="badge ${pass ? 'badge-success' : 'badge-danger'}">${pass ? t('quiz.passBadge') : t('quiz.retryBadge')}</span></td>
                   </tr>
                 `;
               }).join('')}
@@ -228,9 +228,9 @@ async function startQuiz(container, mode, id) {
   } catch (err) {
     container.innerHTML = `
       <div class="error-state">
-        <h2>Failed to Load Quiz</h2>
+        <h2>${t('quiz.errorTitle')}</h2>
         <p>${err.message}</p>
-        <a href="#/quiz" class="btn btn-primary">Back to Quizzes</a>
+        <a href="#/quiz" class="btn btn-primary">${t('quiz.backToQuizzes')}</a>
       </div>`;
     return;
   }
@@ -238,13 +238,9 @@ async function startQuiz(container, mode, id) {
   if (!result.ok) {
     container.innerHTML = `
       <div class="error-state">
-        <h2>Quiz Unavailable</h2>
+        <h2>${t('quiz.errorTitle')}</h2>
         <p>${result.error}</p>
-        <div class="error-detail">Currently Available: ${result.available} questions | Needed: ${result.needed} questions</div>
-        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--space-4);">
-          During Phase 1, sample question banks contain 5 questions per subchapter. The complete 420-question bank (30 per subchapter) will be populated in Phase 2.
-        </p>
-        <a href="#/quiz" class="btn btn-primary" style="margin-top: var(--space-4);">Back to Quiz Center</a>
+        <a href="#/quiz" class="btn btn-primary" style="margin-top: var(--space-4);">${t('quiz.backToCenter')}</a>
       </div>`;
     return;
   }
@@ -266,7 +262,6 @@ function renderQuizQuestion(container) {
   const q = questions[current];
   const total = questions.length;
   const answeredCount = answers.filter(a => a !== null).length;
-  const progressPct = Math.round((answeredCount / total) * 100);
 
   container.innerHTML = `
     <div class="quiz-session">
@@ -275,32 +270,32 @@ function renderQuizQuestion(container) {
         <div class="quiz-header-top">
           <a href="#/quiz" class="btn btn-ghost btn-sm" onclick="return confirmLeave()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><polyline points="15 18 9 12 15 6"/></svg>
-            <span>Exit Quiz</span>
+            <span>${t('quiz.exitQuiz')}</span>
           </a>
           <span class="quiz-mode-pill">${getModeLabel(quizState.mode, quizState.id)}</span>
           <div class="quiz-progress-counter">
-            <span class="counter-main">Q <strong>${current + 1}</strong> of ${total}</span>
-            <span class="counter-sub">(${answeredCount} answered)</span>
+            <span class="counter-main">${t('quiz.qProgress', { current: current + 1, total })}</span>
+            <span class="counter-sub">${t('quiz.answeredCount', { count: answeredCount })}</span>
           </div>
         </div>
       </header>
 
       <!-- Compact Question Navigator with Legend -->
-      <nav class="question-navigator" aria-label="Question Navigator">
+      <nav class="question-navigator" aria-label="${t('quiz.navigatorTitle')}">
         <div class="navigator-header">
-          <span class="navigator-title">Question Navigator</span>
+          <span class="navigator-title">${t('quiz.navigatorTitle')}</span>
           <div class="navigator-legend">
             <div class="legend-item">
               <span class="legend-indicator unanswered" aria-hidden="true"></span>
-              <span>Unanswered</span>
+              <span>${t('quiz.unanswered')}</span>
             </div>
             <div class="legend-item">
               <span class="legend-indicator current" aria-hidden="true"></span>
-              <span>Current</span>
+              <span>${t('quiz.current')}</span>
             </div>
             <div class="legend-item">
               <span class="legend-indicator answered" aria-hidden="true"></span>
-              <span>Answered</span>
+              <span>${t('quiz.answered')}</span>
             </div>
           </div>
         </div>
@@ -327,12 +322,12 @@ function renderQuizQuestion(container) {
       <!-- Active Question Box -->
       <article class="question-container" aria-live="polite">
         <div class="question-meta-row">
-          <span class="question-badge">Pertanyaan ${current + 1}</span>
+          <span class="question-badge">${t('quiz.questionBadge', { current: current + 1 })}</span>
           ${q.difficulty ? `<span class="badge badge-outline">${q.difficulty}</span>` : ''}
         </div>
         <h2 class="question-text">${q.question}</h2>
 
-        <div class="options-list" role="radiogroup" aria-label="Pilihan jawaban">
+        <div class="options-list" role="radiogroup" aria-label="${t('quiz.optionsAria')}">
           ${q.options.map((opt, i) => {
             const isSelected = answers[current] === i;
             return `
@@ -342,7 +337,7 @@ function renderQuizQuestion(container) {
                   name="quiz-answer"
                   value="${i}"
                   ${isSelected ? 'checked' : ''}
-                  aria-label="Pilihan ${String.fromCharCode(65 + i)}: ${opt}"
+                  aria-label="Option ${String.fromCharCode(65 + i)}: ${opt}"
                 />
                 <span class="option-letter" aria-hidden="true">${String.fromCharCode(65 + i)}</span>
                 <span class="option-text">${opt}</span>
@@ -355,10 +350,10 @@ function renderQuizQuestion(container) {
       <!-- Controls Footer -->
       <footer class="quiz-footer">
         <div class="quiz-nav-btns">
-          <button type="button" class="btn btn-outline" id="prev-btn" ${current === 0 ? 'disabled' : ''}>← Previous</button>
-          <button type="button" class="btn btn-outline" id="next-btn" ${current === total - 1 ? 'disabled' : ''}>Next →</button>
+          <button type="button" class="btn btn-outline" id="prev-btn" ${current === 0 ? 'disabled' : ''}>${t('quiz.prevBtn')}</button>
+          <button type="button" class="btn btn-outline" id="next-btn" ${current === total - 1 ? 'disabled' : ''}>${t('quiz.nextBtn')}</button>
         </div>
-        <button type="button" class="btn btn-primary" id="submit-btn">Submit Quiz</button>
+        <button type="button" class="btn btn-primary" id="submit-btn">${t('quiz.submitBtn')}</button>
       </footer>
     </div>`;
 
@@ -378,7 +373,7 @@ function renderQuizQuestion(container) {
       // Update counter
       const answeredNow = quizState.answers.filter(a => a !== null).length;
       const counterSub = container.querySelector('.counter-sub');
-      if (counterSub) counterSub.textContent = `(${answeredNow} answered)`;
+      if (counterSub) counterSub.textContent = t('quiz.answeredCount', { count: answeredNow });
     });
   });
 
@@ -410,8 +405,8 @@ function renderQuizQuestion(container) {
   document.getElementById('submit-btn')?.addEventListener('click', () => {
     const unanswered = quizState.answers.filter(a => a === null).length;
     const msg = unanswered > 0
-      ? `You have ${unanswered} unanswered question(s). Are you sure you want to submit?`
-      : 'Ready to submit? You cannot change your answers after submission.';
+      ? t('quiz.confirmUnanswered', { count: unanswered })
+      : t('quiz.confirmSubmit');
     if (confirm(msg)) {
       quizState.submitted = true;
       submitQuiz(container);
@@ -446,23 +441,23 @@ async function submitQuiz(container) {
       <div class="results-header">
         <div class="score-circle ${pass ? 'pass' : 'fail'}" aria-label="Score: ${pct}%">
           <span class="score-pct">${pct}%</span>
-          <span class="score-label">${pass ? 'Passed' : 'Try Again'}</span>
+          <span class="score-label">${pass ? t('quiz.passBadge') : t('quiz.tryAgain')}</span>
         </div>
         <div class="results-summary">
-          <h1>${pass ? 'Congratulations! 🎉' : 'Keep Learning! 📚'}</h1>
-          <p class="score-detail">You answered <strong>${score} out of ${total}</strong> questions correctly (${pct}%).</p>
+          <h1>${pass ? t('quiz.congrats') : t('quiz.keepLearning')}</h1>
+          <p class="score-detail">${t('quiz.scoreSummary', { score, total, pct })}</p>
           <p class="mode-detail">${getModeLabel(mode, id)}</p>
         </div>
       </div>
 
       <div class="results-actions">
-        <button class="btn btn-primary" id="retry-btn">Retry Quiz</button>
-        <a href="#/quiz" class="btn btn-outline">Back to Quiz Center</a>
+        <button class="btn btn-primary" id="retry-btn">${t('quiz.retryQuiz')}</button>
+        <a href="#/quiz" class="btn btn-outline">${t('quiz.backToCenter')}</a>
       </div>
 
       <!-- Detailed Review Section -->
       <section class="review-section" aria-label="Review of Answers">
-        <h2>Detailed Review & Explanations</h2>
+        <h2>${t('quiz.detailedReview')}</h2>
         <div class="review-list">
           ${results.map((r, i) => {
             const lessonId = r.question.subchapterId;
@@ -470,30 +465,30 @@ async function submitQuiz(container) {
             return `
               <div class="review-item ${r.isCorrect ? 'correct' : 'incorrect'}">
                 <div class="review-header">
-                  <span class="review-num">Question ${i + 1} (${r.question.subchapterId})</span>
+                  <span class="review-num">${t('quiz.reviewItemNum', { idx: i + 1, subId: r.question.subchapterId })}</span>
                   <span class="review-status ${r.isCorrect ? 'correct' : 'incorrect'}">
-                    ${r.isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                    ${r.isCorrect ? t('quiz.correctLabel') : t('quiz.incorrectLabel')}
                   </span>
                 </div>
                 <p class="review-question">${r.question.question}</p>
                 ${!r.isCorrect ? `
                 <div class="review-answers">
                   <div class="review-answer your-answer">
-                    <strong>Your answer:</strong>
-                    ${r.givenAnswer !== null ? r.question.options[r.givenAnswer] : '<em>Not answered</em>'}
+                    <strong>${t('quiz.yourAnswer')}</strong>
+                    ${r.givenAnswer !== null ? r.question.options[r.givenAnswer] : `<em>${t('quiz.notAnswered')}</em>`}
                   </div>
                   <div class="review-answer correct-answer">
-                    <strong>Correct answer:</strong> ${r.question.options[r.correctAnswer]}
+                    <strong>${t('quiz.correctAnswer')}</strong> ${r.question.options[r.correctAnswer]}
                   </div>
                 </div>` : ''}
                 <div class="review-explanation">
-                  <span class="explanation-title">Penjelasan:</span>
+                  <span class="explanation-title">${t('quiz.explanation')}</span>
                   <p>${r.question.explanation}</p>
                 </div>
                 ${lesson ? `
                   <a href="#/learn/${lessonId}" class="review-lesson-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    <span>Pelajari materi terkait: ${lesson.title}</span>
+                    <span>${t('quiz.learnRelated', { title: lesson.title })}</span>
                   </a>` : ''}
               </div>`;
           }).join('')}
@@ -507,12 +502,12 @@ async function submitQuiz(container) {
 }
 
 function getModeLabel(mode, id) {
-  if (mode === 'master') return 'Master Quiz — All Chapters (50 Q)';
-  if (mode === QUIZ_MODES.CHAPTER) return `Chapter ${id} Quiz (30 Q)`;
-  if (mode === QUIZ_MODES.SUBCHAPTER) return `Subchapter ${id} Quiz (10 Q)`;
-  return 'Quiz';
+  if (mode === 'master') return t('quiz.modeMaster');
+  if (mode === QUIZ_MODES.CHAPTER) return t('quiz.modeChapter', { id });
+  if (mode === QUIZ_MODES.SUBCHAPTER) return t('quiz.modeSubchapter', { id });
+  return t('nav.quiz');
 }
 
 window.confirmLeave = () => {
-  return quizState && !quizState.submitted ? confirm('Leave the quiz? Your current answers will be discarded.') : true;
+  return quizState && !quizState.submitted ? confirm(t('quiz.confirmLeave')) : true;
 };

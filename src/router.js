@@ -33,6 +33,10 @@ export function initRouter() {
   handleRoute();
 }
 
+export function refreshCurrentRoute() {
+  handleRoute();
+}
+
 function handleRoute() {
   const hash = window.location.hash || '#/learn';
   const match = matchRoute(hash);

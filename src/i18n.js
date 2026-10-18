@@ -1,0 +1,594 @@
+// src/i18n.js
+// Centralized internationalization module for CyberWise UI
+// IMPORTANT: Only UI labels and controls are localized.
+// Educational content (lessons, chapter titles, quiz questions/answers/explanations,
+// glossary definitions) MUST ALWAYS REMAIN IN INDONESIAN.
+
+import { get, set } from './storage.js';
+
+const STORAGE_KEY = 'language';
+const DEFAULT_LANG = 'en';
+
+export const SUPPORTED_LANGUAGES = ['en', 'id'];
+
+// Centralized dictionaries
+export const translations = {
+  en: {
+    // Navigation & Shell
+    'nav.learn': 'Learn',
+    'nav.quiz': 'Quiz',
+    'nav.notes': 'Notes',
+    'nav.glossary': 'Glossary',
+    'nav.mainNavAria': 'Main navigation',
+    'brand.title': 'CyberWise',
+    'brand.slogan': 'Learn Smart. Stay Secure.',
+    'brand.homeAria': 'CyberWise Home',
+    'footer.madeBy': 'Made by',
+    'theme.toggleDark': 'Switch to dark mode',
+    'theme.toggleLight': 'Switch to light mode',
+    'theme.toggleTitle': 'Toggle dark mode',
+    'lang.selectorAria': 'Language selector',
+    'lang.switchToEn': 'Switch language to English',
+    'lang.switchToId': 'Ganti bahasa ke Indonesia',
+
+    // Global Search
+    'search.triggerLabel': 'Search...',
+    'search.triggerAria': 'Search lessons, quizzes, or notes',
+    'search.triggerTitle': 'Search (Press / or Ctrl+K)',
+    'search.modalAria': 'CyberWise Global Search',
+    'search.placeholder': 'Search lessons, concepts, quizzes, or notes... (Press Esc to close)',
+    'search.clearTitle': 'Clear search',
+    'search.clearAria': 'Clear search keyword',
+    'search.closeTitle': 'Close (Esc)',
+    'search.closeAria': 'Close search dialog',
+    'search.filterAria': 'Filter search category',
+    'search.filterAll': 'All',
+    'search.filterLearn': 'Lessons',
+    'search.filterQuiz': 'Quizzes',
+    'search.filterNotes': 'Notes',
+    'search.hintSelect': 'Select',
+    'search.hintOpen': 'Open',
+    'search.hintClose': 'Close',
+    'search.brand': 'CyberWise Offline Search',
+    'search.searching': 'Searching lessons, quizzes, and notes...',
+    'search.errorTitle': 'An Error Occurred',
+    'search.errorDesc': 'Unable to load search results. Please try again.',
+    'search.popularTopics': 'Popular Topics & Key Concepts',
+    'search.featLearnTitle': 'Lessons & Concepts',
+    'search.featLearnDesc': 'Find in-depth explanations, case studies, and cybersecurity terms.',
+    'search.featNotesTitle': 'Study Notes',
+    'search.featNotesDesc': 'Search text and summaries stored in your personal local notes.',
+    'search.featQuizTitle': 'Quizzes & Modules',
+    'search.featQuizDesc': 'Quick access to chapter and subchapter quiz assessments.',
+    'search.emptyTitle': 'No results found',
+    'search.emptyDesc': 'No matches found for <strong>"{query}"</strong>. Check your spelling or try more general cybersecurity terms.',
+    'search.resultsCount': 'Found <strong>{count}</strong> {label}',
+    'search.resultSingular': 'result',
+    'search.resultPlural': 'results',
+    'search.catLesson': 'Lesson',
+    'search.catQuiz': 'Quiz',
+    'search.catNote': 'Note',
+    'search.notePinned': '📌 Pinned Note',
+    'search.notePersonal': 'Personal Note',
+    'search.untitledNote': 'Untitled Note',
+
+    // Dashboard
+    'dashboard.title': 'Learning Dashboard',
+    'dashboard.subtitle': 'Track your progress through the Digital Security curriculum.',
+    'dashboard.completedOf': 'of {total} lessons completed',
+    'dashboard.continueLabel': 'Continue Learning',
+    'dashboard.continueBtn': 'Continue →',
+    'dashboard.allDoneTitle': 'All lessons completed!',
+    'dashboard.allDoneDesc': "Great work! You've finished the entire curriculum.",
+    'dashboard.chapters': 'Chapters',
+    'dashboard.chPrefix': 'Ch. {id}',
+
+    // Lesson View
+    'lesson.loading': 'Loading lesson...',
+    'lesson.notFoundTitle': 'Lesson Not Found',
+    'lesson.notFoundDesc': 'Lesson "{id}" does not exist.',
+    'lesson.backToDashboard': 'Back to Dashboard',
+    'lesson.loadErrorTitle': 'Failed to Load Lesson',
+    'lesson.loadErrorDesc': 'Could not load "{title}".',
+    'lesson.onThisPage': 'On This Page',
+    'lesson.videoNote': '📹 Video requires internet connection',
+    'lesson.curriculum': 'Curriculum',
+    'lesson.curriculumAndToc': 'Curriculum & Table of Contents',
+    'lesson.curriculumNav': 'Curriculum Navigation',
+    'lesson.tableOfContents': 'Table of contents',
+    'lesson.chapterPrefix': 'Chapter {id}',
+    'lesson.doneCount': '{completed}/{total} done',
+    'lesson.completedBadge': '✓ Completed',
+    'lesson.markAsComplete': 'Mark as Complete',
+    'lesson.takeQuiz': 'Take Subchapter Quiz ({id}) →',
+    'lesson.prevLesson': '← Previous Lesson',
+    'lesson.nextLesson': 'Next Lesson →',
+    'lesson.firstLesson': '← First Lesson',
+    'lesson.curriculumStart': 'Beginning of curriculum',
+    'lesson.curriculumComplete': 'Curriculum Complete →',
+    'lesson.curriculumEnd': 'End of lessons',
+
+    // Quiz Center & Engine
+    'quiz.loading': 'Loading Quiz Center...',
+    'quiz.errorTitle': 'Quiz Error',
+    'quiz.backToQuizzes': 'Back to Quizzes',
+    'quiz.centerTitle': 'Quiz Center',
+    'quiz.centerSubtitle': 'Test your understanding with Subchapter Quizzes, Chapter Quizzes, or the comprehensive Master Quiz.',
+    'quiz.fullCurriculum': '🏆 Full Curriculum',
+    'quiz.questionsAvail': '{count}/50 Questions Available',
+    'quiz.masterTitle': 'MASTER QUIZ (50 Questions)',
+    'quiz.masterDesc': 'Challenges you with 50 randomly selected questions balanced across all 4 chapters. Tests your overall digital security mastery.',
+    'quiz.startMasterBtn': 'Start Master Quiz (50 Q) →',
+    'quiz.notEnoughQuestions': 'Not enough questions yet',
+    'quiz.needsMoreQuestions': 'Needs {diff} more questions (50 required). Available in Phase 2.',
+    'quiz.chapterQuizTitle': 'Chapter {id} Comprehensive Quiz',
+    'quiz.chapterQuizBadge': '30 Questions',
+    'quiz.chapterQuizDesc': 'Evaluates all subchapters in Chapter {id}. Randomly selects 30 questions.',
+    'quiz.startChapterBtn': 'Start Chapter Quiz (30 Q) →',
+    'quiz.subchapterSection': 'Subchapter Quizzes (10 Questions Each)',
+    'quiz.takeSubchapterBtn': 'Take Quiz (10 Q) →',
+    'quiz.inBank': '{count} Questions in Bank',
+    'quiz.subInBank': '{count} Q in bank',
+    'quiz.recentAttempts': 'Recent Quiz Attempts',
+    'quiz.thDate': 'Date',
+    'quiz.thMode': 'Mode',
+    'quiz.thTopic': 'Topic / Chapter',
+    'quiz.thScore': 'Score',
+    'quiz.thResult': 'Result',
+    'quiz.passBadge': 'Passed',
+    'quiz.retryBadge': 'Retry',
+    'quiz.exitQuiz': 'Exit Quiz',
+    'quiz.qProgress': 'Q <strong>{current}</strong> of {total}',
+    'quiz.answeredCount': '({count} answered)',
+    'quiz.navigatorTitle': 'Question Navigator',
+    'quiz.unanswered': 'Unanswered',
+    'quiz.current': 'Current',
+    'quiz.answered': 'Answered',
+    'quiz.questionBadge': 'Question {current}',
+    'quiz.optionsAria': 'Answer choices',
+    'quiz.prevBtn': '← Previous',
+    'quiz.nextBtn': 'Next →',
+    'quiz.submitBtn': 'Submit Quiz',
+    'quiz.confirmUnanswered': 'You have {count} unanswered question(s). Are you sure you want to submit?',
+    'quiz.confirmSubmit': 'Ready to submit? You cannot change your answers after submission.',
+    'quiz.confirmLeave': 'Leave the quiz? Your current answers will be discarded.',
+    'quiz.congrats': 'Congratulations! 🎉',
+    'quiz.keepLearning': 'Keep Learning! 📚',
+    'quiz.scoreSummary': 'You answered <strong>{score} out of {total}</strong> questions correctly ({pct}%).',
+    'quiz.tryAgain': 'Try Again',
+    'quiz.retryQuiz': 'Retry Quiz',
+    'quiz.backToCenter': 'Back to Quiz Center',
+    'quiz.detailedReview': 'Detailed Review & Explanations',
+    'quiz.reviewItemNum': 'Question {idx} ({subId})',
+    'quiz.correctLabel': '✓ Correct',
+    'quiz.incorrectLabel': '✗ Incorrect',
+    'quiz.yourAnswer': 'Your answer:',
+    'quiz.correctAnswer': 'Correct answer:',
+    'quiz.notAnswered': 'Not answered',
+    'quiz.explanation': 'Explanation:',
+    'quiz.learnRelated': 'Learn related material: {title}',
+    'quiz.modeMaster': 'Master Quiz — All Chapters (50 Q)',
+    'quiz.modeChapter': 'Chapter {id} Quiz (30 Q)',
+    'quiz.modeSubchapter': 'Subchapter {id} Quiz (10 Q)',
+
+    // Notes
+    'notes.loading': 'Loading notes...',
+    'notes.loadError': 'Could not load notes',
+    'notes.title': 'Notes',
+    'notes.newBtn': '+ New Note',
+    'notes.exportAll': 'Export All',
+    'notes.importBtn': 'Import',
+    'notes.syncNotice': '📌 Notes are stored locally on this device and do not sync across other devices or browsers.',
+    'notes.searchPlaceholder': 'Search notes...',
+    'notes.sortRecent': 'Sort: Recent',
+    'notes.sortTitle': 'Sort: Title',
+    'notes.noMatch': 'No notes matching "{query}"',
+    'notes.empty': 'No notes yet. Create your first note!',
+    'notes.untitled': 'Untitled',
+    'notes.untitledNote': 'Untitled Note',
+    'notes.pin': 'Pin',
+    'notes.unpin': 'Unpin',
+    'notes.pinAria': 'Pin note',
+    'notes.unpinAria': 'Unpin note',
+    'notes.delete': 'Delete',
+    'notes.deleteAria': 'Delete note',
+    'notes.open': 'Open →',
+    'notes.deleteConfirm': 'Delete "{name}"? This cannot be undone.',
+    'notes.importError': 'Could not import notes: {msg}',
+    'notes.editorBack': '← Notes',
+    'notes.editorSaved': 'Saved',
+    'notes.editorSaving': 'Saving...',
+    'notes.editorSavedAt': 'Saved at {time}',
+    'notes.editorSaveFailed': 'Save failed',
+    'notes.editorExport': 'Export',
+    'notes.editorTitlePlaceholder': 'Note title',
+    'notes.editorContentAria': 'Note content',
+    'notes.tbBold': 'Bold (Ctrl+B)',
+    'notes.tbItalic': 'Italic (Ctrl+I)',
+    'notes.tbUnderline': 'Underline (Ctrl+U)',
+    'notes.tbH2': 'Heading 2',
+    'notes.tbH3': 'Heading 3',
+    'notes.tbBullet': 'Bullet list',
+    'notes.tbNumbered': 'Numbered list',
+    'notes.tbQuote': 'Blockquote',
+    'notes.tbLink': 'Insert link',
+    'notes.enterUrl': 'Enter URL:',
+    'notes.notFoundTitle': 'Note Not Found',
+    'notes.notFoundDesc': 'This note does not exist or was deleted.',
+
+    // Glossary
+    'glossary.heroBadge': 'Official Cybersecurity Glossary',
+    'glossary.title': 'Cybersecurity Glossary',
+    'glossary.subtitle': 'Explore essential digital security terminology, threat concepts, and data protection strategies with student-friendly explanations and real-world scenarios.',
+    'glossary.totalTerms': '{count} Terms',
+    'glossary.totalCategories': '{count} Categories',
+    'glossary.integrated': 'Chapters 1–4',
+    'glossary.integratedLabel': 'Integrated with:',
+    'glossary.toolsAria': 'Glossary search and filtering tools',
+    'glossary.searchPlaceholder': 'Search terms, definitions, malware, encryption, phishing...',
+    'glossary.searchAria': 'Search glossary terms',
+    'glossary.clearSearch': 'Clear search',
+    'glossary.clearSearchAria': 'Clear search keyword',
+    'glossary.filterCategoriesAria': 'Filter by term category',
+    'glossary.allCategories': 'All',
+    'glossary.alphaNavAria': 'Alphabetical A to Z navigation',
+    'glossary.allAlpha': 'All A-Z',
+    'glossary.allAlphaTitle': 'Show all letters A-Z',
+    'glossary.alphaWithItems': 'View terms starting with {letter}',
+    'glossary.alphaNoItems': 'No terms starting with {letter}',
+    'glossary.showing': 'Showing <strong>{count}</strong> of <strong>{total}</strong> terms',
+    'glossary.inCategory': 'in category <em>"{category}"</em>',
+    'glossary.letterFilter': '(Letter <strong>{letter}</strong>)',
+    'glossary.resetAll': '↺ Reset All Filters',
+    'glossary.emptyTitle': 'No Terms Found',
+    'glossary.emptyDesc': 'No terms matching <strong>"{query}"</strong>{cat}. Try different keywords or reset your filters.',
+    'glossary.resetSearchBtn': 'Reset Search & Filters',
+    'glossary.exampleLabel': 'Real-World Scenario / Example',
+    'glossary.relatedLessons': 'Related Lessons:',
+    'glossary.relatedTerms': 'Related Terms:',
+    'glossary.openLessonTitle': 'Open lesson: {title}',
+    'glossary.viewTermTitle': 'View term: {term}',
+
+    // General Error
+    'error.contentTitle': 'Failed to Load Content',
+    'error.contentDesc': 'Could not load the lesson manifest. Please check your connection and try again.',
+    'error.retry': 'Retry'
+  },
+  id: {
+    // Navigation & Shell
+    'nav.learn': 'Belajar',
+    'nav.quiz': 'Kuis',
+    'nav.notes': 'Catatan',
+    'nav.glossary': 'Glosarium',
+    'nav.mainNavAria': 'Navigasi utama',
+    'brand.title': 'CyberWise',
+    'brand.slogan': 'Learn Smart. Stay Secure.',
+    'brand.homeAria': 'Beranda CyberWise',
+    'footer.madeBy': 'Dibuat oleh',
+    'theme.toggleDark': 'Ganti ke mode gelap',
+    'theme.toggleLight': 'Ganti ke mode terang',
+    'theme.toggleTitle': 'Ganti mode gelap/terang',
+    'lang.selectorAria': 'Pemilih bahasa',
+    'lang.switchToEn': 'Switch language to English',
+    'lang.switchToId': 'Ganti bahasa ke Indonesia',
+
+    // Global Search
+    'search.triggerLabel': 'Cari...',
+    'search.triggerAria': 'Cari materi, kuis, atau catatan',
+    'search.triggerTitle': 'Cari (Tekan / atau Ctrl+K)',
+    'search.modalAria': 'Pencarian Global CyberWise',
+    'search.placeholder': 'Cari materi, konsep, kuis, atau catatan... (Tekan Esc untuk tutup)',
+    'search.clearTitle': 'Hapus pencarian',
+    'search.clearAria': 'Hapus kata kunci pencarian',
+    'search.closeTitle': 'Tutup (Esc)',
+    'search.closeAria': 'Tutup jendela pencarian',
+    'search.filterAria': 'Filter kategori pencarian',
+    'search.filterAll': 'Semua',
+    'search.filterLearn': 'Materi',
+    'search.filterQuiz': 'Kuis',
+    'search.filterNotes': 'Catatan',
+    'search.hintSelect': 'Pilih',
+    'search.hintOpen': 'Buka',
+    'search.hintClose': 'Tutup',
+    'search.brand': 'Pencarian Offline CyberWise',
+    'search.searching': 'Mencari di materi, kuis, dan catatan...',
+    'search.errorTitle': 'Terjadi Kesalahan',
+    'search.errorDesc': 'Tidak dapat memuat hasil pencarian. Silakan coba lagi.',
+    'search.popularTopics': 'Topik Populer & Konsep Kunci',
+    'search.featLearnTitle': 'Materi & Definisi',
+    'search.featLearnDesc': 'Temukan penjelasan lengkap, studi kasus, dan istilah keamanan siber.',
+    'search.featNotesTitle': 'Catatan Belajar',
+    'search.featNotesDesc': 'Cari teks dan rangkuman dalam catatan pribadi yang Anda simpan di perangkat ini.',
+    'search.featQuizTitle': 'Kuis & Evaluasi',
+    'search.featQuizDesc': 'Akses cepat ke evaluasi kuis bab dan sub-bab kurikulum.',
+    'search.emptyTitle': 'Tidak ada hasil ditemukan',
+    'search.emptyDesc': 'Tidak ditemukan kecocokan untuk <strong>"{query}"</strong>. Coba periksa ejaan kata atau gunakan istilah keamanan siber yang lebih umum.',
+    'search.resultsCount': 'Ditemukan <strong>{count}</strong> hasil',
+    'search.resultSingular': 'hasil',
+    'search.resultPlural': 'hasil',
+    'search.catLesson': 'Materi',
+    'search.catQuiz': 'Kuis',
+    'search.catNote': 'Catatan',
+    'search.notePinned': '📌 Catatan Disematkan',
+    'search.notePersonal': 'Catatan Pribadi',
+    'search.untitledNote': 'Catatan Tanpa Judul',
+
+    // Dashboard
+    'dashboard.title': 'Dasbor Pembelajaran',
+    'dashboard.subtitle': 'Pantau progres pembelajaran kurikulum Keamanan Digital Anda.',
+    'dashboard.completedOf': 'dari {total} materi selesai',
+    'dashboard.continueLabel': 'Lanjutkan Belajar',
+    'dashboard.continueBtn': 'Lanjutkan →',
+    'dashboard.allDoneTitle': 'Semua materi telah selesai!',
+    'dashboard.allDoneDesc': 'Kerja luar biasa! Anda telah menuntaskan seluruh materi kurikulum.',
+    'dashboard.chapters': 'Daftar Bab',
+    'dashboard.chPrefix': 'Bab {id}',
+
+    // Lesson View
+    'lesson.loading': 'Memuat materi...',
+    'lesson.notFoundTitle': 'Materi Tidak Ditemukan',
+    'lesson.notFoundDesc': 'Materi "{id}" tidak ditemukan.',
+    'lesson.backToDashboard': 'Kembali ke Dasbor',
+    'lesson.loadErrorTitle': 'Gagal Memuat Materi',
+    'lesson.loadErrorDesc': 'Tidak dapat memuat materi "{title}".',
+    'lesson.onThisPage': 'Di Halaman Ini',
+    'lesson.videoNote': '📹 Video memerlukan koneksi internet',
+    'lesson.curriculum': 'Kurikulum',
+    'lesson.curriculumAndToc': 'Kurikulum & Daftar Isi',
+    'lesson.curriculumNav': 'Navigasi Kurikulum',
+    'lesson.tableOfContents': 'Daftar isi',
+    'lesson.chapterPrefix': 'Bab {id}',
+    'lesson.doneCount': '{completed}/{total} selesai',
+    'lesson.completedBadge': '✓ Selesai',
+    'lesson.markAsComplete': 'Tandai Selesai',
+    'lesson.takeQuiz': 'Mulai Kuis Sub-bab ({id}) →',
+    'lesson.prevLesson': '← Pelajaran Sebelumnya',
+    'lesson.nextLesson': 'Pelajaran Berikutnya →',
+    'lesson.firstLesson': '← Pelajaran Pertama',
+    'lesson.curriculumStart': 'Awal kurikulum',
+    'lesson.curriculumComplete': 'Kurikulum Selesai →',
+    'lesson.curriculumEnd': 'Akhir materi',
+
+    // Quiz Center & Engine
+    'quiz.loading': 'Memuat Pusat Kuis...',
+    'quiz.errorTitle': 'Kesalahan Kuis',
+    'quiz.backToQuizzes': 'Kembali ke Kuis',
+    'quiz.centerTitle': 'Pusat Kuis',
+    'quiz.centerSubtitle': 'Uji pemahaman Anda dengan Kuis Sub-bab, Kuis Bab, atau Master Quiz komprehensif.',
+    'quiz.fullCurriculum': '🏆 Seluruh Kurikulum',
+    'quiz.questionsAvail': '{count}/50 Soal Tersedia',
+    'quiz.masterTitle': 'MASTER QUIZ (50 Soal)',
+    'quiz.masterDesc': 'Tantang diri Anda dengan 50 soal pilihan acak seimbang dari ke-4 bab. Menguji penguasaan keamanan digital Anda secara menyeluruh.',
+    'quiz.startMasterBtn': 'Mulai Master Quiz (50 Soal) →',
+    'quiz.notEnoughQuestions': 'Belum cukup soal tersedia',
+    'quiz.needsMoreQuestions': 'Memerlukan {diff} soal lagi (50 soal dibutuhkan).',
+    'quiz.chapterQuizTitle': 'Kuis Komprehensif Bab {id}',
+    'quiz.chapterQuizBadge': '30 Soal',
+    'quiz.chapterQuizDesc': 'Mengevaluasi seluruh sub-bab pada Bab {id}. Memilih 30 soal acak.',
+    'quiz.startChapterBtn': 'Mulai Kuis Bab (30 Soal) →',
+    'quiz.subchapterSection': 'Kuis Sub-bab (Masing-masing 10 Soal)',
+    'quiz.takeSubchapterBtn': 'Mulai Kuis (10 Soal) →',
+    'quiz.inBank': '{count} Soal dalam Bank',
+    'quiz.subInBank': '{count} soal di bank',
+    'quiz.recentAttempts': 'Riwayat Percobaan Kuis Terakhir',
+    'quiz.thDate': 'Tanggal',
+    'quiz.thMode': 'Mode',
+    'quiz.thTopic': 'Topik / Bab',
+    'quiz.thScore': 'Skor',
+    'quiz.thResult': 'Hasil',
+    'quiz.passBadge': 'Lulus',
+    'quiz.retryBadge': 'Ulangi',
+    'quiz.exitQuiz': 'Keluar Kuis',
+    'quiz.qProgress': 'Soal <strong>{current}</strong> dari {total}',
+    'quiz.answeredCount': '({count} terjawab)',
+    'quiz.navigatorTitle': 'Navigasi Soal',
+    'quiz.unanswered': 'Belum Dijawab',
+    'quiz.current': 'Sedang Dikerjakan',
+    'quiz.answered': 'Sudah Dijawab',
+    'quiz.questionBadge': 'Pertanyaan {current}',
+    'quiz.optionsAria': 'Pilihan jawaban',
+    'quiz.prevBtn': '← Sebelumnya',
+    'quiz.nextBtn': 'Berikutnya →',
+    'quiz.submitBtn': 'Kumpulkan Kuis',
+    'quiz.confirmUnanswered': 'Anda memiliki {count} pertanyaan yang belum dijawab. Apakah Anda yakin ingin mengumpulkan?',
+    'quiz.confirmSubmit': 'Siap untuk mengumpulkan? Anda tidak dapat mengubah jawaban setelah dikumpulkan.',
+    'quiz.confirmLeave': 'Tinggalkan kuis? Jawaban saat ini tidak akan tersimpan.',
+    'quiz.congrats': 'Selamat! 🎉',
+    'quiz.keepLearning': 'Tetap Semangat Belajar! 📚',
+    'quiz.scoreSummary': 'Anda menjawab dengan benar <strong>{score} dari {total}</strong> pertanyaan ({pct}%).',
+    'quiz.tryAgain': 'Coba Lagi',
+    'quiz.retryQuiz': 'Ulangi Kuis',
+    'quiz.backToCenter': 'Kembali ke Pusat Kuis',
+    'quiz.detailedReview': 'Pembahasan & Penjelasan Detail',
+    'quiz.reviewItemNum': 'Pertanyaan {idx} ({subId})',
+    'quiz.correctLabel': '✓ Benar',
+    'quiz.incorrectLabel': '✗ Salah',
+    'quiz.yourAnswer': 'Jawaban Anda:',
+    'quiz.correctAnswer': 'Jawaban benar:',
+    'quiz.notAnswered': 'Tidak dijawab',
+    'quiz.explanation': 'Penjelasan:',
+    'quiz.learnRelated': 'Pelajari materi terkait: {title}',
+    'quiz.modeMaster': 'Master Quiz — Seluruh Bab (50 Soal)',
+    'quiz.modeChapter': 'Kuis Bab {id} (30 Soal)',
+    'quiz.modeSubchapter': 'Kuis Sub-bab {id} (10 Soal)',
+
+    // Notes
+    'notes.loading': 'Memuat catatan...',
+    'notes.loadError': 'Tidak dapat memuat catatan',
+    'notes.title': 'Catatan',
+    'notes.newBtn': '+ Catatan Baru',
+    'notes.exportAll': 'Ekspor Semua',
+    'notes.importBtn': 'Impor',
+    'notes.syncNotice': '📌 Catatan disimpan secara lokal di perangkat ini dan tidak tersinkronisasi antar perangkat atau peramban lain.',
+    'notes.searchPlaceholder': 'Cari catatan...',
+    'notes.sortRecent': 'Urutkan: Terbaru',
+    'notes.sortTitle': 'Urutkan: Judul',
+    'notes.noMatch': 'Tidak ada catatan yang cocok dengan "{query}"',
+    'notes.empty': 'Belum ada catatan. Buat catatan pertamamu!',
+    'notes.untitled': 'Tanpa Judul',
+    'notes.untitledNote': 'Catatan Tanpa Judul',
+    'notes.pin': 'Sematkan',
+    'notes.unpin': 'Lepas Sematan',
+    'notes.pinAria': 'Sematkan catatan',
+    'notes.unpinAria': 'Lepas sematan catatan',
+    'notes.delete': 'Hapus',
+    'notes.deleteAria': 'Hapus catatan',
+    'notes.open': 'Buka →',
+    'notes.deleteConfirm': 'Hapus "{name}"? Tindakan ini tidak dapat dibatalkan.',
+    'notes.importError': 'Gagal mengimpor catatan: {msg}',
+    'notes.editorBack': '← Catatan',
+    'notes.editorSaved': 'Tersimpan',
+    'notes.editorSaving': 'Menyimpan...',
+    'notes.editorSavedAt': 'Tersimpan pukul {time}',
+    'notes.editorSaveFailed': 'Gagal menyimpan',
+    'notes.editorExport': 'Ekspor',
+    'notes.editorTitlePlaceholder': 'Judul catatan',
+    'notes.editorContentAria': 'Isi catatan',
+    'notes.tbBold': 'Tebal (Ctrl+B)',
+    'notes.tbItalic': 'Miring (Ctrl+I)',
+    'notes.tbUnderline': 'Garis Bawah (Ctrl+U)',
+    'notes.tbH2': 'Judul 2',
+    'notes.tbH3': 'Judul 3',
+    'notes.tbBullet': 'Daftar Poin',
+    'notes.tbNumbered': 'Daftar Angka',
+    'notes.tbQuote': 'Kutipan',
+    'notes.tbLink': 'Sisipkan tautan',
+    'notes.enterUrl': 'Masukkan URL:',
+    'notes.notFoundTitle': 'Catatan Tidak Ditemukan',
+    'notes.notFoundDesc': 'Catatan ini tidak ada atau telah dihapus.',
+
+    // Glossary
+    'glossary.heroBadge': 'Kamus Resmi Keamanan Siber',
+    'glossary.title': 'Glosarium Keamanan Siber',
+    'glossary.subtitle': 'Eksplorasi istilah penting keamanan digital, konsep ancaman, dan strategi proteksi data dengan penjelasan ramah pelajar serta contoh skenario nyata.',
+    'glossary.totalTerms': '{count} Istilah',
+    'glossary.totalCategories': '{count} Kategori',
+    'glossary.integrated': 'Materi Bab 1–4',
+    'glossary.integratedLabel': 'Terintegrasi:',
+    'glossary.toolsAria': 'Alat pencarian dan filter istilah',
+    'glossary.searchPlaceholder': 'Cari istilah, definisi, malware, enkripsi, phishing...',
+    'glossary.searchAria': 'Cari istilah glosarium',
+    'glossary.clearSearch': 'Hapus pencarian',
+    'glossary.clearSearchAria': 'Hapus kata kunci',
+    'glossary.filterCategoriesAria': 'Filter kategori istilah',
+    'glossary.allCategories': 'Semua',
+    'glossary.alphaNavAria': 'Navigasi alfabet A sampai Z',
+    'glossary.allAlpha': 'Semua A-Z',
+    'glossary.allAlphaTitle': 'Tampilkan seluruh huruf A-Z',
+    'glossary.alphaWithItems': 'Lihat istilah berawalan {letter}',
+    'glossary.alphaNoItems': 'Tidak ada istilah berawalan {letter}',
+    'glossary.showing': 'Menampilkan <strong>{count}</strong> dari <strong>{total}</strong> istilah',
+    'glossary.inCategory': 'dalam kategori <em>"{category}"</em>',
+    'glossary.letterFilter': '(Huruf <strong>{letter}</strong>)',
+    'glossary.resetAll': '↺ Reset Semua Filter',
+    'glossary.emptyTitle': 'Tidak Ada Istilah Ditemukan',
+    'glossary.emptyDesc': 'Tidak ditemukan istilah yang cocok dengan kata kunci <strong>"{query}"</strong>{cat}. Coba gunakan kata kunci lain atau setel ulang filter.',
+    'glossary.resetSearchBtn': 'Reset Pencarian & Filter',
+    'glossary.exampleLabel': 'Skenario / Contoh Nyata',
+    'glossary.relatedLessons': 'Materi Terkait:',
+    'glossary.relatedTerms': 'Istilah Terkait:',
+    'glossary.openLessonTitle': 'Buka materi: {title}',
+    'glossary.viewTermTitle': 'Buka istilah: {term}',
+
+    // General Error
+    'error.contentTitle': 'Gagal Memuat Materi',
+    'error.contentDesc': 'Tidak dapat memuat berkas manifest pelajaran. Silakan periksa koneksi Anda dan coba lagi.',
+    'error.retry': 'Coba Lagi'
+  }
+};
+
+let currentLanguage = DEFAULT_LANG;
+const listeners = new Set();
+
+/**
+ * Initializes language from storage and sets up document attributes
+ */
+export function initI18n() {
+  const saved = get(STORAGE_KEY, null);
+  if (saved && SUPPORTED_LANGUAGES.includes(saved)) {
+    currentLanguage = saved;
+  } else {
+    currentLanguage = DEFAULT_LANG;
+  }
+  applyLanguage(currentLanguage, false);
+}
+
+/**
+ * Gets currently active language ('en' | 'id')
+ */
+export function getLanguage() {
+  return currentLanguage;
+}
+
+/**
+ * Sets active language, persists to storage, and notifies listeners
+ */
+export function setLanguage(lang) {
+  if (!SUPPORTED_LANGUAGES.includes(lang)) {
+    console.warn(`[i18n] Unsupported language: ${lang}`);
+    return;
+  }
+  if (lang === currentLanguage) return;
+
+  currentLanguage = lang;
+  set(STORAGE_KEY, lang);
+  applyLanguage(lang, true);
+}
+
+/**
+ * Applies language to HTML root and notifies subscribers
+ */
+function applyLanguage(lang, notify = true) {
+  if (typeof document !== 'undefined') {
+    document.documentElement.setAttribute('lang', lang);
+  }
+  if (notify) {
+    listeners.forEach(fn => {
+      try {
+        fn(lang);
+      } catch (err) {
+        console.error('[i18n] Listener error:', err);
+      }
+    });
+  }
+}
+
+/**
+ * Subscribes to language changes
+ */
+export function onLanguageChange(fn) {
+  if (typeof fn === 'function') {
+    listeners.add(fn);
+    return () => listeners.delete(fn);
+  }
+  return () => {};
+}
+
+/**
+ * Retrieves translated string by key with parameter interpolation and fallbacks
+ * @param {string} key Translation key (e.g. 'nav.learn')
+ * @param {object} params Optional key-value substitutions (e.g. { count: 5 })
+ * @returns {string} Translated string
+ */
+export function t(key, params = {}) {
+  const dict = translations[currentLanguage] || translations[DEFAULT_LANG];
+  let val = dict[key];
+
+  // Fallback to English dictionary if missing in current language
+  if (val === undefined) {
+    val = translations[DEFAULT_LANG][key];
+  }
+
+  // Ultimate fallback to key itself
+  if (val === undefined) {
+    return key;
+  }
+
+  if (params && typeof params === 'object') {
+    return Object.entries(params).reduce((acc, [k, v]) => {
+      return acc.replace(new RegExp(`\\{${k}\\}`, 'g'), v !== undefined && v !== null ? v : '');
+    }, val);
+  }
+
+  return val;
+}

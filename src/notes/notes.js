@@ -3,6 +3,7 @@ import { getAllNotes, saveNote, deleteNote } from '../db.js';
 import { navigate } from '../router.js';
 import DOMPurify from 'dompurify';
 import { notifyNotesChanged } from '../search/search.js';
+import { t } from '../i18n.js';
 
 function getContainer() {
   return document.getElementById('page-container');
@@ -23,13 +24,13 @@ export async function renderNotes(noteId = null) {
 }
 
 async function renderNotesList(container) {
-  container.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading notes...</p></div>';
+  container.innerHTML = `<div class="loading"><div class="spinner"></div><p>${t('notes.loading')}</p></div>`;
 
   let notes = [];
   try {
     notes = await getAllNotes();
   } catch (err) {
-    container.innerHTML = `<div class="error-state"><h2>Could not load notes</h2><p>${err.message}</p></div>`;
+    container.innerHTML = `<div class="error-state"><h2>${t('notes.loadError')}</h2><p>${err.message}</p></div>`;
     return;
   }
 
@@ -53,24 +54,24 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
   container.innerHTML = `
     <div class="notes-module">
       <div class="notes-header">
-        <h1>Notes</h1>
+        <h1>${t('notes.title')}</h1>
         <div class="notes-header-actions">
-          <button class="btn btn-primary" id="new-note-btn">+ New Note</button>
-          <button class="btn btn-outline" id="export-all-btn" ${notes.length === 0 ? 'disabled' : ''}>Export All</button>
+          <button class="btn btn-primary" id="new-note-btn">${t('notes.newBtn')}</button>
+          <button class="btn btn-outline" id="export-all-btn" ${notes.length === 0 ? 'disabled' : ''}>${t('notes.exportAll')}</button>
           <label class="btn btn-outline" style="cursor:pointer;">
-            Import
+            ${t('notes.importBtn')}
             <input type="file" id="import-btn" accept=".json" style="display:none" />
           </label>
         </div>
       </div>
 
-      <p class="notes-sync-notice">📌 Notes are stored locally on this device and do not sync across other devices or browsers.</p>
+      <p class="notes-sync-notice">${t('notes.syncNotice')}</p>
 
       <div class="notes-toolbar">
-        <input type="search" id="notes-search" placeholder="Search notes..." value="${searchQuery}" class="search-input" />
+        <input type="search" id="notes-search" placeholder="${t('notes.searchPlaceholder')}" value="${escapeHtml(searchQuery)}" class="search-input" />
         <select id="notes-sort" class="sort-select">
-          <option value="date" ${sortBy === 'date' ? 'selected' : ''}>Sort: Recent</option>
-          <option value="title" ${sortBy === 'title' ? 'selected' : ''}>Sort: Title</option>
+          <option value="date" ${sortBy === 'date' ? 'selected' : ''}>${t('notes.sortRecent')}</option>
+          <option value="title" ${sortBy === 'title' ? 'selected' : ''}>${t('notes.sortTitle')}</option>
         </select>
       </div>
 
@@ -78,24 +79,24 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
         ${filtered.length === 0 ? `
           <div class="notes-empty">
             ${searchQuery
-              ? `<p>No notes matching "${searchQuery}"</p>`
-              : '<p>No notes yet. Create your first note!</p>'}
+              ? `<p>${t('notes.noMatch', { query: escapeHtml(searchQuery) })}</p>`
+              : `<p>${t('notes.empty')}</p>`}
           </div>` : ''}
         ${filtered.map(note => `
           <div class="note-card ${note.pinned ? 'pinned' : ''}" data-note-id="${note.id}">
             <div class="note-card-header">
-              <h3 class="note-card-title">${escapeHtml(note.title) || 'Untitled'}</h3>
+              <h3 class="note-card-title">${escapeHtml(note.title) || t('notes.untitled')}</h3>
               <div class="note-card-actions">
-                <button class="btn-icon pin-btn" data-id="${note.id}" title="${note.pinned ? 'Unpin' : 'Pin'}" aria-label="${note.pinned ? 'Unpin note' : 'Pin note'}">
+                <button class="btn-icon pin-btn" data-id="${note.id}" title="${note.pinned ? t('notes.unpin') : t('notes.pin')}" aria-label="${note.pinned ? t('notes.unpinAria') : t('notes.pinAria')}">
                   ${note.pinned ? '📌' : '📍'}
                 </button>
-                <button class="btn-icon delete-btn" data-id="${note.id}" title="Delete" aria-label="Delete note">🗑</button>
+                <button class="btn-icon delete-btn" data-id="${note.id}" title="${t('notes.delete')}" aria-label="${t('notes.deleteAria')}">🗑</button>
               </div>
             </div>
             <div class="note-card-preview">${getPreview(note.content)}</div>
             <div class="note-card-footer">
               <span class="note-date">${formatDate(note.updatedAt)}</span>
-              <a href="#/notes/${note.id}" class="btn btn-ghost btn-sm">Open →</a>
+              <a href="#/notes/${note.id}" class="btn btn-ghost btn-sm">${t('notes.open')}</a>
             </div>
           </div>
         `).join('')}
@@ -104,7 +105,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
 
   // New note
   document.getElementById('new-note-btn')?.addEventListener('click', async () => {
-    const note = { id: generateId(), title: 'Untitled Note', content: '', createdAt: Date.now(), updatedAt: Date.now(), pinned: false };
+    const note = { id: generateId(), title: t('notes.untitledNote'), content: '', createdAt: Date.now(), updatedAt: Date.now(), pinned: false };
     await saveNote(note);
     notifyNotesChanged();
     navigate('#/notes/' + note.id);
@@ -127,7 +128,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
       for (const n of importedNotes) {
         const clean = {
           id: n.id || generateId(),
-          title: String(n.title || 'Imported Note').slice(0, 200),
+          title: String(n.title || t('notes.untitledNote')).slice(0, 200),
           content: DOMPurify.sanitize(n.content || ''),
           createdAt: n.createdAt || Date.now(),
           updatedAt: n.updatedAt || Date.now(),
@@ -139,7 +140,7 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
       const updated = await getAllNotes();
       renderNotesView(container, updated, searchQuery, sortBy);
     } catch (err) {
-      alert('Could not import notes: ' + err.message);
+      alert(t('notes.importError', { msg: err.message }));
     }
   });
 
@@ -176,8 +177,8 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
     btn.addEventListener('click', async () => {
       const id = btn.getAttribute('data-id');
       const note = notes.find(n => n.id === id);
-      const name = note ? note.title || 'Untitled' : 'this note';
-      if (confirm(`Delete "${name}"? This cannot be undone.`)) {
+      const name = note ? note.title || t('notes.untitled') : 'this note';
+      if (confirm(t('notes.deleteConfirm', { name }))) {
         await deleteNote(id);
         notifyNotesChanged();
         const updated = await getAllNotes();

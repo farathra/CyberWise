@@ -1,6 +1,7 @@
 // src/learn/dashboard.js
 import { getProgress, isComplete, getChapterProgress } from './progress.js';
 import { navigate } from '../router.js';
+import { t } from '../i18n.js';
 
 export function renderDashboard(container, manifest) {
   const { lessons } = manifest;
@@ -32,15 +33,15 @@ export function renderDashboard(container, manifest) {
   container.innerHTML = `
     <div class="learn-dashboard">
       <div class="dashboard-hero">
-        <h1 class="dashboard-title">Learning Dashboard</h1>
-        <p class="dashboard-subtitle">Track your progress through the Digital Security curriculum.</p>
+        <h1 class="dashboard-title">${t('dashboard.title')}</h1>
+        <p class="dashboard-subtitle">${t('dashboard.subtitle')}</p>
       </div>
 
       <div class="progress-overview">
         <div class="progress-stats">
           <div class="stat">
             <span class="stat-value">${completed}</span>
-            <span class="stat-label">of ${total} lessons completed</span>
+            <span class="stat-label">${t('dashboard.completedOf', { total })}</span>
           </div>
           <span class="stat-pct">${pct}%</span>
         </div>
@@ -53,23 +54,23 @@ export function renderDashboard(container, manifest) {
       <div class="continue-section">
         <div class="continue-card">
           <div class="continue-info">
-            <span class="continue-label">Continue Learning</span>
+            <span class="continue-label">${t('dashboard.continueLabel')}</span>
             <h2 class="continue-title">${continueLesson.title}</h2>
             <span class="continue-chapter">${continueLesson.chapterTitle}</span>
           </div>
-          <a href="#/learn/${continueLesson.id}" class="btn btn-primary">Continue →</a>
+          <a href="#/learn/${continueLesson.id}" class="btn btn-primary">${t('dashboard.continueBtn')}</a>
         </div>
       </div>` : `
       <div class="continue-section">
         <div class="all-done-card">
           <span class="all-done-icon">🎉</span>
-          <h2>All lessons completed!</h2>
-          <p>Great work! You've finished the entire curriculum.</p>
+          <h2>${t('dashboard.allDoneTitle')}</h2>
+          <p>${t('dashboard.allDoneDesc')}</p>
         </div>
       </div>`}
 
       <div class="chapters-section">
-        <h2 class="section-title">Chapters</h2>
+        <h2 class="section-title">${t('dashboard.chapters')}</h2>
         <div class="chapters-list">
           ${chapters.map(ch => renderChapterCard(ch, lessons)).join('')}
         </div>
@@ -104,9 +105,9 @@ function renderChapterCard(chapter, allLessons) {
   return `
     <div class="chapter-card" data-chapter="${chapter.id}">
       <div class="chapter-card-header" role="button" tabindex="0" aria-expanded="true"
-           aria-label="Chapter ${chapter.id}: ${chapter.title}">
+           aria-label="${t('dashboard.chPrefix', { id: chapter.id })}: ${chapter.title}">
         <div class="chapter-header-main">
-          <span class="chapter-badge">Ch. ${chapter.id}</span>
+          <span class="chapter-badge">${t('dashboard.chPrefix', { id: chapter.id })}</span>
           <h3 class="chapter-title">${chapter.title}</h3>
         </div>
         <div class="chapter-header-right">

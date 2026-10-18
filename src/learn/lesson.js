@@ -3,6 +3,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import { markComplete, markIncomplete, isComplete, setLastAccessed, getCompletedIds } from './progress.js';
 import { navigate } from '../router.js';
+import { t } from '../i18n.js';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -14,7 +15,7 @@ export async function renderLesson(container, manifest, lessonId) {
   const lessonIndex = lessons.findIndex(l => l.id === lessonId);
 
   if (lessonIndex === -1) {
-    container.innerHTML = `<div class="error-state"><h2>Lesson Not Found</h2><p>Lesson "${lessonId}" does not exist.</p><a href="#/learn" class="btn btn-primary">Back to Dashboard</a></div>`;
+    container.innerHTML = `<div class="error-state"><h2>${t('lesson.notFoundTitle')}</h2><p>${t('lesson.notFoundDesc', { id: lessonId })}</p><a href="#/learn" class="btn btn-primary">${t('lesson.backToDashboard')}</a></div>`;
     return;
   }
 
@@ -25,7 +26,7 @@ export async function renderLesson(container, manifest, lessonId) {
   setLastAccessed(lesson.id);
 
   // Show loading
-  container.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading lesson...</p></div>';
+  container.innerHTML = `<div class="loading"><div class="spinner"></div><p>${t('lesson.loading')}</p></div>`;
 
   let rawMarkdown = '';
   try {
@@ -35,10 +36,10 @@ export async function renderLesson(container, manifest, lessonId) {
   } catch (err) {
     container.innerHTML = `
       <div class="error-state">
-        <h2>Failed to Load Lesson</h2>
-        <p>Could not load "${lesson.title}".</p>
+        <h2>${t('lesson.loadErrorTitle')}</h2>
+        <p>${t('lesson.loadErrorDesc', { title: lesson.title })}</p>
         <p class="error-detail">${err.message}</p>
-        <a href="#/learn" class="btn btn-outline">Back to Dashboard</a>
+        <a href="#/learn" class="btn btn-outline">${t('lesson.backToDashboard')}</a>
       </div>`;
     return;
   }
@@ -79,9 +80,9 @@ export async function renderLesson(container, manifest, lessonId) {
   const tocHtml = tocItems.length > 0 ? `
     <div class="sidebar-card toc-card">
       <div class="sidebar-card-header">
-        <span class="sidebar-section-title">On This Page</span>
+        <span class="sidebar-section-title">${t('lesson.onThisPage')}</span>
       </div>
-      <nav class="toc" aria-label="Table of contents">
+      <nav class="toc" aria-label="${t('lesson.tableOfContents')}">
         <ul class="toc-list">
           ${tocItems.map(item => `
             <li class="toc-item ${item.level === 2 ? 'toc-item-h2' : 'toc-item-h3'}">
@@ -104,7 +105,7 @@ export async function renderLesson(container, manifest, lessonId) {
           loading="lazy"
         ></iframe>
       </div>
-      <p class="video-note">📹 Video requires internet connection</p>
+      <p class="video-note">${t('lesson.videoNote')}</p>
     </div>` : '';
 
   container.innerHTML = `
@@ -115,30 +116,30 @@ export async function renderLesson(container, manifest, lessonId) {
       <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="lesson-sidebar">
         <span class="sidebar-toggle-main">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="sidebar-toggle-icon"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
-          <span>Curriculum & Table of Contents</span>
+          <span>${t('lesson.curriculumAndToc')}</span>
         </span>
-        <span class="sidebar-toggle-badge">${completedCount}/${lessons.length} done</span>
+        <span class="sidebar-toggle-badge">${t('lesson.doneCount', { completed: completedCount, total: lessons.length })}</span>
         <svg class="sidebar-toggle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
 
       <div class="lesson-layout">
         <!-- Sidebar: compact, 280-320px on desktop -->
-        <aside class="lesson-sidebar" id="lesson-sidebar" role="complementary" aria-label="Curriculum Navigation">
+        <aside class="lesson-sidebar" id="lesson-sidebar" role="complementary" aria-label="${t('lesson.curriculumNav')}">
           <a href="#/learn" class="back-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><polyline points="15 18 9 12 15 6"/></svg>
-            <span>Back to Dashboard</span>
+            <span>${t('lesson.backToDashboard')}</span>
           </a>
 
           <!-- Curriculum Navigator in Sidebar -->
           <div class="sidebar-card curriculum-card">
             <div class="sidebar-card-header">
-              <span class="sidebar-section-title">Curriculum</span>
+              <span class="sidebar-section-title">${t('lesson.curriculum')}</span>
               <span class="sidebar-progress-badge">${completedCount}/${lessons.length}</span>
             </div>
             <div class="sidebar-chapters-list">
               ${chapters.map(ch => `
                 <div class="sidebar-chapter-group ${ch.id === lesson.chapterId ? 'current-chapter' : ''}">
-                  <div class="sidebar-chapter-title">Chapter ${ch.id}</div>
+                  <div class="sidebar-chapter-title">${t('lesson.chapterPrefix', { id: ch.id })}</div>
                   <ul class="sidebar-subchapter-list">
                     ${ch.lessons.map(l => {
                       const active = l.id === lesson.id;
@@ -164,18 +165,18 @@ export async function renderLesson(container, manifest, lessonId) {
         <!-- Main Content Area: generous, comfortable reading width -->
         <main class="lesson-main">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="#/learn">Learn</a>
+            <a href="#/learn">${t('nav.learn')}</a>
             <span class="breadcrumb-sep" aria-hidden="true">/</span>
-            <span>Chapter ${lesson.chapterId}</span>
+            <span>${t('lesson.chapterPrefix', { id: lesson.chapterId })}</span>
             <span class="breadcrumb-sep" aria-hidden="true">/</span>
             <span aria-current="page" class="breadcrumb-current">${lesson.title}</span>
           </nav>
 
           <header class="lesson-header">
             <div class="lesson-badge-row">
-              <span class="badge badge-info">Chapter ${lesson.chapterId}</span>
+              <span class="badge badge-info">${t('lesson.chapterPrefix', { id: lesson.chapterId })}</span>
               <span class="badge badge-outline">${lesson.id}</span>
-              ${isComplete(lesson.id) ? '<span class="badge badge-success">✓ Completed</span>' : ''}
+              ${isComplete(lesson.id) ? `<span class="badge badge-success">${t('lesson.completedBadge')}</span>` : ''}
             </div>
             <h1 class="lesson-title">${lesson.title}</h1>
           </header>
@@ -190,24 +191,24 @@ export async function renderLesson(container, manifest, lessonId) {
               class="btn ${isComplete(lesson.id) ? 'btn-success' : 'btn-primary'}"
               data-lesson-id="${lesson.id}"
             >
-              ${isComplete(lesson.id) ? '✓ Completed' : 'Mark as Complete'}
+              ${isComplete(lesson.id) ? t('lesson.completedBadge') : t('lesson.markAsComplete')}
             </button>
-            <a href="#/quiz/subchapter/${lesson.id}" class="btn btn-outline">Take Subchapter Quiz (${lesson.id}) →</a>
+            <a href="#/quiz/subchapter/${lesson.id}" class="btn btn-outline">${t('lesson.takeQuiz', { id: lesson.id })}</a>
           </div>
 
           <nav class="lesson-nav" aria-label="Lesson navigation">
             ${prevLesson
               ? `<a href="#/learn/${prevLesson.id}" class="lesson-nav-btn prev">
-                   <span class="nav-dir-label">← Previous Lesson</span>
+                   <span class="nav-dir-label">${t('lesson.prevLesson')}</span>
                    <span class="nav-title-label">${prevLesson.title}</span>
                  </a>`
-              : '<span class="lesson-nav-btn prev disabled"><span class="nav-dir-label">← First Lesson</span><span class="nav-title-label">Beginning of curriculum</span></span>'}
+              : `<span class="lesson-nav-btn prev disabled"><span class="nav-dir-label">${t('lesson.firstLesson')}</span><span class="nav-title-label">${t('lesson.curriculumStart')}</span></span>`}
             ${nextLesson
               ? `<a href="#/learn/${nextLesson.id}" class="lesson-nav-btn next">
-                   <span class="nav-dir-label">Next Lesson →</span>
+                   <span class="nav-dir-label">${t('lesson.nextLesson')}</span>
                    <span class="nav-title-label">${nextLesson.title}</span>
                  </a>`
-              : '<span class="lesson-nav-btn next disabled"><span class="nav-dir-label">Curriculum Complete →</span><span class="nav-title-label">End of lessons</span></span>'}
+              : `<span class="lesson-nav-btn next disabled"><span class="nav-dir-label">${t('lesson.curriculumComplete')}</span><span class="nav-title-label">${t('lesson.curriculumEnd')}</span></span>`}
           </nav>
         </main>
       </div>
@@ -261,11 +262,11 @@ export async function renderLesson(container, manifest, lessonId) {
       const id = completeBtn.getAttribute('data-lesson-id');
       if (isComplete(id)) {
         markIncomplete(id);
-        completeBtn.textContent = 'Mark as Complete';
+        completeBtn.textContent = t('lesson.markAsComplete');
         completeBtn.className = 'btn btn-primary';
       } else {
         markComplete(id);
-        completeBtn.textContent = '✓ Completed';
+        completeBtn.textContent = t('lesson.completedBadge');
         completeBtn.className = 'btn btn-success';
       }
     });

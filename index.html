@@ -25,14 +25,19 @@
           </div>
         </a>
         <div class="header-actions">
-          <button id="global-search-btn" class="search-trigger-btn" aria-label="Cari materi, kuis, atau catatan" title="Cari (Tekan / atau Ctrl+K)">
+          <button id="global-search-btn" class="search-trigger-btn" aria-label="Search lessons, quizzes, or notes" title="Search (Press / or Ctrl+K)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <circle cx="11" cy="11" r="8"/>
               <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
-            <span class="search-trigger-label">Cari...</span>
+            <span class="search-trigger-label">Search...</span>
             <kbd class="search-kbd-shortcut">/</kbd>
           </button>
+          <div class="lang-selector" id="lang-selector" role="group" aria-label="Language selector">
+            <button type="button" class="lang-btn active" data-lang="en" aria-label="Switch language to English" title="English">EN</button>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <button type="button" class="lang-btn" data-lang="id" aria-label="Ganti bahasa ke Indonesia" title="Bahasa Indonesia">ID</button>
+          </div>
           <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark mode" title="Toggle dark mode">
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>

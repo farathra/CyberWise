@@ -5,6 +5,7 @@
 
 import { searchContent, initSearchIndex, invalidateNotesIndex, escapeHtml } from './searchIndex.js';
 import { navigate } from '../router.js';
+import { t, onLanguageChange } from '../i18n.js';
 
 let modalElement = null;
 let inputElement = null;
@@ -17,7 +18,7 @@ let debounceTimer = null;
 let lastFocusedElement = null;
 let isSearchOpen = false;
 
-// Quick search topic suggestions in Indonesian
+// Quick search topic suggestions (Indonesian key technical concepts)
 const QUICK_TOPICS = [
   'Triad CIA',
   'Malware',
@@ -53,6 +54,12 @@ export function initSearch() {
       setTimeout(() => initSearchIndex(), 1000);
     }
   }
+
+  // When UI language changes, re-render modal chrome & empty state if open
+  onLanguageChange(() => {
+    updateModalLanguage();
+    bindHeaderButton();
+  });
 }
 
 /**
@@ -73,7 +80,7 @@ function createSearchModal() {
   modal.className = 'search-modal-backdrop';
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-modal', 'true');
-  modal.setAttribute('aria-label', 'Pencarian Global CyberWise');
+  modal.setAttribute('aria-label', t('search.modalAria'));
   modal.style.display = 'none';
 
   modal.innerHTML = `
@@ -89,7 +96,7 @@ function createSearchModal() {
           type="search"
           id="global-search-input"
           class="search-input-field"
-          placeholder="Cari materi, konsep, kuis, atau catatan... (Tekan Esc untuk tutup)"
+          placeholder="${t('search.placeholder')}"
           autocomplete="off"
           autocorrect="off"
           autocapitalize="off"
@@ -102,8 +109,8 @@ function createSearchModal() {
           type="button"
           id="global-search-clear"
           class="search-clear-btn"
-          title="Hapus pencarian"
-          aria-label="Hapus kata kunci pencarian"
+          title="${t('search.clearTitle')}"
+          aria-label="${t('search.clearAria')}"
           style="display: none;"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;">
@@ -116,26 +123,26 @@ function createSearchModal() {
           type="button"
           id="global-search-close"
           class="search-close-btn"
-          title="Tutup (Esc)"
-          aria-label="Tutup jendela pencarian"
+          title="${t('search.closeTitle')}"
+          aria-label="${t('search.closeAria')}"
         >
           <kbd class="search-esc-badge">Esc</kbd>
         </button>
       </div>
 
       <!-- Filter Categories -->
-      <div class="search-filter-bar" role="tablist" aria-label="Filter kategori pencarian">
+      <div class="search-filter-bar" role="tablist" aria-label="${t('search.filterAria')}">
         <button type="button" class="search-filter-pill active" data-filter="all" role="tab" aria-selected="true">
-          Semua
+          ${t('search.filterAll')}
         </button>
         <button type="button" class="search-filter-pill" data-filter="learn" role="tab" aria-selected="false">
-          Materi
+          ${t('search.filterLearn')}
         </button>
         <button type="button" class="search-filter-pill" data-filter="quiz" role="tab" aria-selected="false">
-          Kuis
+          ${t('search.filterQuiz')}
         </button>
         <button type="button" class="search-filter-pill" data-filter="notes" role="tab" aria-selected="false">
-          Catatan
+          ${t('search.filterNotes')}
         </button>
       </div>
 
@@ -147,11 +154,11 @@ function createSearchModal() {
       <!-- Search Footer with Keyboard Hints -->
       <footer class="search-modal-footer">
         <div class="search-footer-hints">
-          <span class="search-hint-item"><kbd>↑</kbd><kbd>↓</kbd> Pilih</span>
-          <span class="search-hint-item"><kbd>↵</kbd> Buka</span>
-          <span class="search-hint-item"><kbd>Esc</kbd> Tutup</span>
+          <span class="search-hint-item"><kbd>↑</kbd><kbd>↓</kbd> ${t('search.hintSelect')}</span>
+          <span class="search-hint-item"><kbd>↵</kbd> ${t('search.hintOpen')}</span>
+          <span class="search-hint-item"><kbd>Esc</kbd> ${t('search.hintClose')}</span>
         </div>
-        <span class="search-footer-brand">CyberWise Offline Search</span>
+        <span class="search-footer-brand">${t('search.brand')}</span>
       </footer>
     </div>
   `;
@@ -209,6 +216,58 @@ function createSearchModal() {
   });
 }
 
+function updateModalLanguage() {
+  if (!modalElement) return;
+
+  modalElement.setAttribute('aria-label', t('search.modalAria'));
+  if (inputElement) {
+    inputElement.setAttribute('placeholder', t('search.placeholder'));
+  }
+
+  const clearBtn = modalElement.querySelector('#global-search-clear');
+  if (clearBtn) {
+    clearBtn.setAttribute('title', t('search.clearTitle'));
+    clearBtn.setAttribute('aria-label', t('search.clearAria'));
+  }
+
+  const closeBtn = modalElement.querySelector('#global-search-close');
+  if (closeBtn) {
+    closeBtn.setAttribute('title', t('search.closeTitle'));
+    closeBtn.setAttribute('aria-label', t('search.closeAria'));
+  }
+
+  const filterBar = modalElement.querySelector('.search-filter-bar');
+  if (filterBar) {
+    filterBar.setAttribute('aria-label', t('search.filterAria'));
+    const allBtn = filterBar.querySelector('[data-filter="all"]');
+    const learnBtn = filterBar.querySelector('[data-filter="learn"]');
+    const quizBtn = filterBar.querySelector('[data-filter="quiz"]');
+    const notesBtn = filterBar.querySelector('[data-filter="notes"]');
+    if (allBtn) allBtn.textContent = t('search.filterAll');
+    if (learnBtn) learnBtn.textContent = t('search.filterLearn');
+    if (quizBtn) quizBtn.textContent = t('search.filterQuiz');
+    if (notesBtn) notesBtn.textContent = t('search.filterNotes');
+  }
+
+  const footerHints = modalElement.querySelector('.search-footer-hints');
+  if (footerHints) {
+    footerHints.innerHTML = `
+      <span class="search-hint-item"><kbd>↑</kbd><kbd>↓</kbd> ${t('search.hintSelect')}</span>
+      <span class="search-hint-item"><kbd>↵</kbd> ${t('search.hintOpen')}</span>
+      <span class="search-hint-item"><kbd>Esc</kbd> ${t('search.hintClose')}</span>
+    `;
+  }
+
+  const footerBrand = modalElement.querySelector('.search-footer-brand');
+  if (footerBrand) {
+    footerBrand.textContent = t('search.brand');
+  }
+
+  if (isSearchOpen) {
+    performSearch();
+  }
+}
+
 /**
  * Ensures search button exists in header and attaches click handler
  */
@@ -221,21 +280,31 @@ export function bindHeaderButton() {
     btn = document.createElement('button');
     btn.id = 'global-search-btn';
     btn.className = 'search-trigger-btn';
-    btn.setAttribute('aria-label', 'Cari materi, kuis, atau catatan');
-    btn.setAttribute('title', 'Cari (Tekan / atau Ctrl+K)');
+    btn.setAttribute('aria-label', t('search.triggerAria'));
+    btn.setAttribute('title', t('search.triggerTitle'));
     btn.innerHTML = `
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;" aria-hidden="true">
         <circle cx="11" cy="11" r="8"/>
         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
-      <span class="search-trigger-label">Cari...</span>
+      <span class="search-trigger-label">${t('search.triggerLabel')}</span>
       <kbd class="search-kbd-shortcut">/</kbd>
     `;
 
-    if (themeToggle && themeToggle.parentNode === headerActions) {
+    const langSelector = document.getElementById('lang-selector');
+    if (langSelector && langSelector.parentNode === headerActions) {
+      headerActions.insertBefore(btn, langSelector);
+    } else if (themeToggle && themeToggle.parentNode === headerActions) {
       headerActions.insertBefore(btn, themeToggle);
     } else {
       headerActions.appendChild(btn);
+    }
+  } else if (btn) {
+    btn.setAttribute('aria-label', t('search.triggerAria'));
+    btn.setAttribute('title', t('search.triggerTitle'));
+    const labelSpan = btn.querySelector('.search-trigger-label');
+    if (labelSpan) {
+      labelSpan.textContent = t('search.triggerLabel');
     }
   }
 
@@ -350,7 +419,7 @@ async function performSearch() {
   resultsContainer.innerHTML = `
     <div class="search-loading-state">
       <div class="spinner" style="width:24px;height:24px;border-width:2.5px;"></div>
-      <span>Mencari di materi, kuis, dan catatan...</span>
+      <span>${t('search.searching')}</span>
     </div>
   `;
 
@@ -364,8 +433,8 @@ async function performSearch() {
     const detailMsg = err && err.message ? escapeHtml(err.message) : '';
     resultsContainer.innerHTML = `
       <div class="search-empty-state">
-        <p class="search-empty-title">Terjadi Kesalahan</p>
-        <p class="search-empty-desc">Tidak dapat memuat hasil pencarian. Silakan coba lagi.${detailMsg ? `<br><small style="opacity:0.75;font-size:0.8rem;margin-top:6px;display:inline-block;">(${detailMsg})</small>` : ''}</p>
+        <p class="search-empty-title">${t('search.errorTitle')}</p>
+        <p class="search-empty-desc">${t('search.errorDesc')}${detailMsg ? `<br><small style="opacity:0.75;font-size:0.8rem;margin-top:6px;display:inline-block;">(${detailMsg})</small>` : ''}</p>
       </div>
     `;
   }
@@ -381,7 +450,7 @@ function renderEmptyState() {
   resultsContainer.innerHTML = `
     <div class="search-initial-state">
       <div class="search-suggestions-header">
-        <span class="search-section-label">Topik Populer & Konsep Kunci</span>
+        <span class="search-section-label">${t('search.popularTopics')}</span>
       </div>
       <div class="search-chips-grid">
         ${QUICK_TOPICS.map(topic => `
@@ -399,22 +468,22 @@ function renderEmptyState() {
         <div class="search-info-card">
           <span class="info-icon">📚</span>
           <div class="info-text">
-            <strong>Materi & Definisi</strong>
-            <p>Temukan penjelasan lengkap, studi kasus, dan istilah keamanan siber.</p>
+            <strong>${t('search.featLearnTitle')}</strong>
+            <p>${t('search.featLearnDesc')}</p>
           </div>
         </div>
         <div class="search-info-card">
           <span class="info-icon">✍️</span>
           <div class="info-text">
-            <strong>Catatan Belajar</strong>
-            <p>Cari teks dan rangkuman dalam catatan pribadi yang Anda simpan di perangkat ini.</p>
+            <strong>${t('search.featNotesTitle')}</strong>
+            <p>${t('search.featNotesDesc')}</p>
           </div>
         </div>
         <div class="search-info-card">
           <span class="info-icon">🎯</span>
           <div class="info-text">
-            <strong>Kuis & Evaluasi</strong>
-            <p>Akses cepat ke kuis sub-bab dan latihan soal terkait.</p>
+            <strong>${t('search.featQuizTitle')}</strong>
+            <p>${t('search.featQuizDesc')}</p>
           </div>
         </div>
       </div>
@@ -442,19 +511,20 @@ function renderResults(results, total, query) {
     resultsContainer.innerHTML = `
       <div class="search-empty-state">
         <div class="search-empty-icon">🔍</div>
-        <p class="search-empty-title">Tidak ada hasil ditemukan</p>
+        <p class="search-empty-title">${t('search.emptyTitle')}</p>
         <p class="search-empty-desc">
-          Tidak ditemukan kecocokan untuk <strong>"${escapeHtml(query)}"</strong>.
-          Coba periksa ejaan kata atau gunakan istilah keamanan siber yang lebih umum.
+          ${t('search.emptyDesc', { query: escapeHtml(query) })}
         </p>
       </div>
     `;
     return;
   }
 
+  const label = total === 1 ? t('search.resultSingular') : t('search.resultPlural');
+
   resultsContainer.innerHTML = `
     <div class="search-results-summary">
-      <span>Ditemukan <strong>${total}</strong> hasil</span>
+      <span>${t('search.resultsCount', { count: total, label })}</span>
     </div>
     <ul class="search-results-list" role="listbox" id="search-results-list">
       ${results.map((item, idx) => `
