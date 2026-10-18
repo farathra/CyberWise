@@ -73,6 +73,12 @@ export async function getQuizHistory(limit = 20) {
   return all.sort((a, b) => b.date - a.date).slice(0, limit);
 }
 
+export async function getAllQuizHistory() {
+  const db = await getDB();
+  const all = await db.getAll('quiz_history');
+  return (all || []).sort((a, b) => (b.date || 0) - (a.date || 0));
+}
+
 // Progress backup in IndexedDB (survives hard reload and cache clearing)
 export async function saveProgressBackup(progress) {
   try {

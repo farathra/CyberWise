@@ -8,12 +8,14 @@ import { renderQuiz } from './quiz/quiz.js';
 import { renderNotes } from './notes/notes.js';
 import { renderGlossary } from './glossary/glossary.js';
 import { renderGames } from './games/gamesHub.js';
+import { renderAnalytics } from './insights/studyInsights.js';
 import { initSearch } from './search/search.js';
 import { syncProgressWithBackup } from './learn/progress.js';
 
 // Service Worker Registration & Dev Mode Protection
 if ('serviceWorker' in navigator) {
-  if (import.meta.env.DEV) {
+  const isLocalDev = import.meta.env.DEV || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  if (isLocalDev) {
     // In development mode, unregister any existing service worker so it never
     // intercepts Vite dev modules or serves stale cache on normal reload.
     navigator.serviceWorker.getRegistrations().then(registrations => {
@@ -21,7 +23,7 @@ if ('serviceWorker' in navigator) {
         reg.unregister();
         console.log('[SW] Unregistered in DEV mode:', reg.scope);
       }
-    });
+    }).catch(err => console.warn('[SW] Unregister failed:', err));
     if (typeof caches !== 'undefined') {
       caches.keys().then(keys => {
         keys.forEach(k => {
@@ -29,7 +31,7 @@ if ('serviceWorker' in navigator) {
             caches.delete(k);
           }
         });
-      });
+      }).catch(err => console.warn('[SW] Cache clear failed:', err));
     }
   } else {
     // Production PWA registration
@@ -58,6 +60,7 @@ route(/^\/glossary$/, () => renderGlossary());
 route(/^\/glossary\/(?<termId>[\w-]+)$/, ({ termId }) => renderGlossary(termId));
 route(/^\/games$/, () => renderGames());
 route(/^\/games\/(?<gameId>[\w-]+)$/, ({ gameId }) => renderGames(gameId));
+route(/^\/analytics$/, () => renderAnalytics());
 route('/', () => renderLearn());
 
 // Ensure DOM is ready before mounting router & shell

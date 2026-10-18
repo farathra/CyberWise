@@ -13,7 +13,8 @@
     "test:glossary": "node scripts/test-glossary.js",
     "test:i18n": "node scripts/test-i18n.js",
     "test:games": "node scripts/test-games.js",
-    "test": "npm run validate:full && npm run test:search && npm run test:glossary && npm run test:i18n && npm run test:games"
+    "test:analytics": "node scripts/test-analytics.js",
+    "test": "npm run validate:full && npm run test:search && npm run test:glossary && npm run test:i18n && npm run test:games && npm run test:analytics"
   },
   "dependencies": {
     "dompurify": "^3.1.6",

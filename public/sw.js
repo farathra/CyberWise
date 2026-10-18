@@ -39,6 +39,11 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   const path = url.pathname;
 
+  // In local development, never intercept or cache — let Vite dev server handle everything directly
+  if (url.hostname === 'localhost' || url.hostname === '127.0.0.1') {
+    return;
+  }
+
   // Only handle HTTP/HTTPS GET requests
   if (event.request.method !== 'GET' || !url.protocol.startsWith('http')) {
     return;
