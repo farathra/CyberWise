@@ -7,6 +7,7 @@ import { startEmailDetectiveGame } from './emailDetective/emailDetective.js';
 import { startChatTrapGame } from './chatTrap/chatTrap.js';
 import { startPasswordDefenderGame } from './passwordDefender/passwordDefender.js';
 import { startIncidentCommanderGame } from './incidentCommander/incidentCommander.js';
+import { startMalwareMissionGame } from './malwareMission/malwareMission.js';
 import { navigate } from '../router.js';
 import { t } from '../i18n.js';
 
@@ -39,6 +40,11 @@ export function renderGames(gameId = null) {
 
   if (gameId === 'incident-commander') {
     startIncidentCommanderGame(container);
+    return;
+  }
+
+  if (gameId === 'malware-mission') {
+    startMalwareMissionGame(container);
     return;
   }
 

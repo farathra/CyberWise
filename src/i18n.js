@@ -481,7 +481,27 @@ export const translations = {
     'games.cic.statusNormal': 'Operational',
     'games.cic.statusInvestigating': 'Under Investigation',
     'games.cic.statusIsolated': 'Isolated',
-    'games.cic.statusRemediated': 'Remediated'
+    'games.cic.statusRemediated': 'Remediated',
+
+    // Malware Mission Gameplay
+    'games.mm.caseProgress': 'Case {current} of {total}',
+    'games.mm.decisionConsole': 'Forensic Decision Console',
+    'games.mm.chooseAction': 'Evaluate Risk & Select Defensive Action',
+    'games.mm.submitAction': 'Commit Forensic Verdict',
+    'games.mm.nextCase': 'Next Case →',
+    'games.mm.viewReport': 'Generate Final Mission Report →',
+    'games.mm.reportKicker': 'Final Capstone Mission Evaluation',
+    'games.mm.reportTitle': 'Malware Investigation Mission Report',
+    'games.mm.reportSubtitle': 'Comprehensive forensic evaluation and threat classification breakdown.',
+    'games.mm.rankMaster': 'Master Malware Analyst 🏆',
+    'games.mm.rankSenior': 'Senior File Investigator 🛡️',
+    'games.mm.rankOperator': 'Tactical Security Operator 🔍',
+    'games.mm.rankCadet': 'Threat Analysis Cadet 🌱',
+    'games.mm.reviewPerfect': 'Flawless forensic eye! You uncovered double extensions, caught weaponized macros, inspected password-protected archives safely, and avoided false positives on legitimate documents.',
+    'games.mm.reviewGood': 'Strong defensive awareness! You detected most disguised files and investigated metadata thoroughly. Review the missed clues below to achieve bulletproof file inspection.',
+    'games.mm.reviewPractice': 'Valuable security drill! Deceptive filenames, disguised executables, and malicious macros require layered inspection. Explore the recommended lessons below to strengthen your defenses.',
+    'games.mm.replayBtn': 'Replay Mission',
+    'games.mm.hubBtn': 'Back to Games Lab'
   },
   id: {
     // Navigation & Shell
@@ -951,7 +971,27 @@ export const translations = {
     'games.cic.statusNormal': 'Operasional Normal',
     'games.cic.statusInvestigating': 'Dalam Penyelidikan',
     'games.cic.statusIsolated': 'Terisolasi',
-    'games.cic.statusRemediated': 'Telah Dipulihkan'
+    'games.cic.statusRemediated': 'Telah Dipulihkan',
+
+    // Malware Mission Gameplay
+    'games.mm.caseProgress': 'Kasus {current} dari {total}',
+    'games.mm.decisionConsole': 'Konsol Keputusan Forensik',
+    'games.mm.chooseAction': 'Taksir Risiko & Ambil Tindakan Defensif',
+    'games.mm.submitAction': 'Terapkan Keputusan Analis',
+    'games.mm.nextCase': 'Lanjut ke Kasus Berikutnya →',
+    'games.mm.viewReport': 'Lihat Laporan Akhir Misi →',
+    'games.mm.reportKicker': 'Evaluasi Misi Pamungkas Analisis Berkas',
+    'games.mm.reportTitle': 'Laporan Akhir Misi Investigasi Malware',
+    'games.mm.reportSubtitle': 'Rangkuman lengkap evaluasi forensik dan klasifikasi ancaman berkas.',
+    'games.mm.rankMaster': 'Panglima Analis Malware 🏆',
+    'games.mm.rankSenior': 'Penyelidik Berkas Handal 🛡️',
+    'games.mm.rankOperator': 'Operator Keamanan Taktis 🔍',
+    'games.mm.rankCadet': 'Kadet Analisis Ancaman 🌱',
+    'games.mm.reviewPerfect': 'Kemampuan forensik yang sempurna! Anda membongkar ekstensi ganda, melumpuhkan makro bersenjata, mengamankan arsip terkunci sandi, dan menghindari pemblokiran salah pada dokumen resmi.',
+    'games.mm.reviewGood': 'Kewaspadaan defensif yang kuat! Anda mendeteksi sebagian besar penyamaran berkas dan memeriksa metadata secara cermat. Pelajari bukti yang terlewat untuk menyempurnakan insting analisis Anda.',
+    'games.mm.reviewPractice': 'Latihan keamanan yang berharga! Nama berkas penipu, eksekusi tersembunyi, dan makro berbahaya membutuhkan pemeriksaan berlapis. Pelajari materi di bawah untuk memperkuat analisis Anda.',
+    'games.mm.replayBtn': 'Simulasi Ulang Misi',
+    'games.mm.hubBtn': 'Kembali ke Lab Permainan'
   }
 };
 

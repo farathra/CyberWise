@@ -2988,5 +2988,874 @@
   }
 }
 
+/* ==========================================================================
+   MALWARE MISSION (ADVANCED FINAL GAME) SIMULATION STYLES
+   ========================================================================== */
+
+.malware-mission-view {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-4) var(--space-12);
+}
+
+.mm-code-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 3px 10px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.pulse-dot-mm {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a855f7;
+  animation: pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ── Case Briefing Banner ────────────────────────────────────── */
+.mm-briefing-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+  box-shadow: var(--card-shadow);
+}
+
+.mm-briefing-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.mm-meta-tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.mm-workstation-tag {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.mm-danger-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mm-danger-tag.danger-critical {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.mm-danger-tag.danger-high {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.mm-danger-tag.danger-medium {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.mm-danger-tag.danger-low {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.mm-source-text {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.mm-case-title {
+  margin: 0 0 var(--space-1);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.mm-case-subtitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ── Workspace Grid ─────────────────────────────────────────── */
+.mm-workspace-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.mm-inspector-panel,
+.mm-decision-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: var(--space-5);
+}
+
+/* ── File Hero Box ──────────────────────────────────────────── */
+.mm-file-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-5);
+}
+
+.mm-file-icon-wrap {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.mm-file-details {
+  flex: 1;
+  overflow: hidden;
+}
+
+.mm-file-name {
+  margin: 0 0 var(--space-1);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mm-file-subprops {
+  display: flex;
+  gap: var(--space-4);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+/* ── Forensic Inspection Tools ──────────────────────────────── */
+.mm-tools-section {
+  margin-bottom: var(--space-5);
+}
+
+.mm-tools-header {
+  margin-bottom: var(--space-3);
+}
+
+.mm-section-label {
+  margin: 0 0 2px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.mm-tools-hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.mm-tools-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2);
+}
+
+.mm-tool-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.mm-tool-btn:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  transform: translateY(-1px);
+}
+
+.mm-tool-btn.revealed {
+  border-color: var(--color-success);
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--color-success);
+}
+
+.mm-tool-btn .tool-icon {
+  font-weight: 800;
+}
+
+/* ── Discovered Evidence Findings Dossier ────────────────────── */
+.mm-dossier-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mm-findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.mm-empty-findings {
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.mm-finding-card {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.mm-finding-card.finding-warn {
+  border-left: 4px solid var(--color-danger);
+}
+
+.mm-finding-card.finding-safe {
+  border-left: 4px solid var(--color-success);
+}
+
+.finding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-1);
+}
+
+.finding-label {
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+
+.finding-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.finding-badge.badge-sus {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.finding-badge.badge-clean {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+}
+
+.finding-value {
+  margin-bottom: var(--space-1);
+}
+
+.finding-value code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.finding-detail {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* ── Decision Console (Right Panel) ──────────────────────────── */
+.mm-panel-header {
+  margin-bottom: var(--space-4);
+}
+
+.mm-console-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+.mm-console-title {
+  margin: var(--space-1) 0 0;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.mm-step-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+/* Step 1: Risk Selector */
+.mm-risk-selector-wrap {
+  margin-bottom: var(--space-5);
+}
+
+.mm-risk-pills-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mm-risk-btn {
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mm-risk-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.mm-risk-btn.active-low {
+  border-color: var(--color-success);
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.mm-risk-btn.active-med {
+  border-color: var(--color-warning);
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--color-warning);
+  font-weight: 700;
+}
+
+.mm-risk-btn.active-high {
+  border-color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+/* Step 2: Action Options */
+.mm-action-options-wrap {
+  margin-bottom: var(--space-5);
+}
+
+.mm-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mm-option-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.mm-option-card:hover:not(.card-optimal):not(.card-incorrect):not(.card-dimmed) {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.mm-option-card:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.mm-option-card.card-selected {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.mm-option-card.card-selected .inner-circle {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mm-option-card.card-optimal {
+  border-color: var(--color-success);
+  background: rgba(16, 185, 129, 0.08);
+  cursor: default;
+}
+
+.mm-option-card.card-optimal .inner-circle {
+  background: var(--color-success);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mm-option-card.card-incorrect {
+  border-color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.08);
+  cursor: default;
+}
+
+.mm-option-card.card-incorrect .inner-circle {
+  background: var(--color-danger);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mm-option-card.card-dimmed {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.option-radio-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-selected .option-radio-dot {
+  border-color: var(--color-primary);
+}
+
+.inner-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all var(--transition-fast);
+}
+
+.option-content {
+  flex: 1;
+}
+
+.option-label {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+/* ── Feedback Banner ────────────────────────────────────────── */
+.mm-feedback-banner {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--color-border);
+}
+
+.mm-feedback-banner.fb-optimal {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.mm-feedback-banner.fb-suboptimal {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.mm-feedback-banner.fb-hazardous {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.fb-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.fb-badge-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.fb-pts-pill {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+.fb-explanation {
+  margin: 0 0 var(--space-3);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.fb-consequence-box {
+  padding: var(--space-3);
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+  border: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+}
+
+.fb-consequence-box strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--color-text);
+}
+
+.fb-consequence-box p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.fb-takeaway-box {
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+}
+
+.fb-takeaway-box strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--color-primary);
+}
+
+.fb-takeaway-box p {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+/* ── Final Mission Report (AAR) ─────────────────────────────── */
+.mm-report-frame {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--card-shadow);
+}
+
+.mm-report-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.mm-report-kicker {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a855f7;
+  letter-spacing: 0.5px;
+}
+
+.mm-report-title {
+  margin: var(--space-1) 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.mm-report-sub {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+.mm-rank-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.rank-badge-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.rank-info {
+  flex: 1;
+}
+
+.rank-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.rank-name {
+  margin: var(--space-1) 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.rank-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.score-total {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.mm-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.metric-box {
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mm-cases-breakdown {
+  margin-bottom: var(--space-6);
+}
+
+.breakdown-heading {
+  margin: 0 0 var(--space-3);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.case-review-item {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.case-review-item.item-correct {
+  border-left: 4px solid var(--color-success);
+}
+
+.case-review-item.item-partial {
+  border-left: 4px solid var(--color-warning);
+}
+
+.case-review-item.item-hazardous {
+  border-left: 4px solid var(--color-danger);
+}
+
+.review-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  font-size: 0.75rem;
+}
+
+.review-code {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.review-points {
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+.review-case-title {
+  margin: 0 0 var(--space-1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.review-item-meta {
+  display: flex;
+  gap: var(--space-4);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+.review-item-meta strong {
+  color: var(--color-text);
+}
+
+.mm-recommended-lessons {
+  margin-bottom: var(--space-6);
+}
+
+.lessons-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.mm-lesson-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.mm-lesson-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.mm-report-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  flex-wrap: wrap;
+}
+
+/* ── Responsive Adaptations for Malware Mission ──────────────── */
+@media (max-width: 900px) {
+  .mm-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mm-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mm-rank-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .mm-briefing-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mm-file-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mm-file-subprops {
+    justify-content: center;
+  }
+
+  .mm-tools-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mm-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mm-report-frame {
+    padding: var(--space-4);
+  }
+}
+
+
 
 

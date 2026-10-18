@@ -60,10 +60,10 @@ export const GAMES_LIST = [
     categoryKey: 'games.mm.category',
     durationKey: 'games.mm.duration',
     difficultyKey: 'games.diffAdvanced',
-    status: 'coming-soon',
+    status: 'playable',
     icon: '🦠',
-    badge: 'COMING SOON',
-    route: null
+    badge: 'NEW',
+    route: '#/games/malware-mission'
   }
 ];
 
