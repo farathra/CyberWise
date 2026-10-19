@@ -275,7 +275,7 @@ CyberWise dirancang sepenuhnya statis dan kompatibel dengan **GitHub Pages**:
 - **Markdown Parser:** `marked.js` v13.
 - **Keamanan & Sanitasi HTML:** `dompurify` v3 (Mencegah kerentanan injeksi XSS pada konten dinamis dan editor catatan).
 - **Penyimpanan Klien:** `idb` v8 (IndexedDB untuk catatan, riwayat kuis, game data) dan `localStorage` (untuk preferensi tema, bahasa, dan sinkronisasi progres).
-- **Styling:** Pure Modular CSS3 modern dengan CSS Custom Properties (Variabel Desain) tanpa framework tambahan.
+- **Styling & Desain Visual:** Pure Modular CSS3 modern dengan sistem permukaan **Frosted Glass** (*Glassmorphism* berlapis menggunakan `backdrop-filter: blur(...)`, pantulan cahaya tepi spekular, dan partisi semi-transparan), pencahayaan ambient (*ambient glowing orbs* dinamis), *spring micro-physics* interaktif, serta animasi transisi halus dengan dukungan *fallback* peramban dan mode ramah gerak (`prefers-reduced-motion: reduce`). Tanpa dependensi framework CSS eksternal.
 
 ---
 

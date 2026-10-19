@@ -151,14 +151,26 @@
 }
 
 .quiz-chapter-section {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-2xl);
   overflow: hidden;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
   display: flex;
   flex-direction: column;
-  transition: border-color var(--transition-fast);
+  position: relative;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.quiz-chapter-section::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 /* Distinct Chapter Borders */
@@ -185,8 +197,8 @@
   flex-wrap: wrap;
   gap: var(--space-3);
   padding: var(--space-4) var(--space-6);
-  background-color: var(--color-bg-alt);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--glass-bg-subtle);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .quiz-chapter-header-main {
@@ -494,12 +506,25 @@
 
 /* ── Question Number Navigator (Compact Grid) ───────────── */
 .question-navigator {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   padding: var(--space-4);
   margin-bottom: var(--space-5);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.question-navigator::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 .navigator-header {
@@ -510,7 +535,7 @@
   gap: var(--space-2);
   margin-bottom: var(--space-3);
   padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .navigator-title {
@@ -582,8 +607,8 @@
   font-size: 0.825rem;
   font-weight: 700;
   cursor: pointer;
-  border: 1.5px solid var(--color-border);
-  background-color: var(--color-bg-alt);
+  border: 1.5px solid var(--glass-border);
+  background-color: var(--glass-bg-subtle);
   color: var(--color-text-muted);
   transition: all var(--transition-fast);
   padding: 0;
@@ -593,7 +618,7 @@
 .nav-dot:hover {
   border-color: var(--accent-violet);
   color: var(--accent-violet);
-  background-color: var(--color-surface-hover);
+  background-color: var(--glass-bg-hover);
   transform: translateY(-1px);
 }
 
@@ -622,11 +647,13 @@
 
 /* ── Active Question Card ───────────────────────────────── */
 .question-container {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur-lg));
+  -webkit-backdrop-filter: blur(var(--glass-blur-lg));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-2xl);
   padding: var(--space-6);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow), 0 0 35px rgba(169, 154, 232, 0.08);
   margin-bottom: var(--space-5);
   position: relative;
   overflow: hidden;
@@ -640,6 +667,7 @@
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--accent-violet), var(--accent-teal));
+  box-shadow: 0 0 12px rgba(169, 154, 232, 0.4);
 }
 
 @media (min-width: 680px) {
@@ -691,13 +719,25 @@
   align-items: flex-start;
   gap: var(--space-4);
   padding: 1rem 1.25rem;
-  border: 2px solid var(--color-border);
+  border: 1.5px solid var(--glass-border);
   border-radius: var(--radius-xl);
   cursor: pointer;
-  background-color: var(--color-surface);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
   transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
   user-select: none;
   position: relative;
+  overflow: hidden;
+}
+
+.option-item::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 .option-item input[type="radio"] {
@@ -707,10 +747,10 @@
 }
 
 .option-item:hover {
-  background-color: var(--color-surface-hover);
+  background-color: var(--glass-bg-hover);
   border-color: var(--accent-violet);
-  transform: var(--transform-hover);
-  box-shadow: var(--card-shadow);
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-hover);
 }
 
 .option-item:active {
@@ -720,8 +760,8 @@
 .option-item.selected {
   border-color: var(--accent-violet);
   background-color: var(--accent-violet-muted);
-  box-shadow: 0 0 0 1px var(--accent-violet), var(--card-shadow);
-  transform: scale(1.005);
+  box-shadow: 0 0 0 1px var(--accent-violet), 0 6px 20px rgba(169, 154, 232, 0.22);
+  transform: scale(1.008);
 }
 
 .option-letter {

@@ -14,6 +14,7 @@ import { initAchievements } from './achievements/achievementEngine.js';
 import { renderFlashcards, renderFlashcardsStudy } from './flashcards/flashcardsView.js';
 import { initSearch } from './search/search.js';
 import { syncProgressWithBackup } from './learn/progress.js';
+import { initScrollReveal } from './utils/scrollReveal.js';
 
 // Service Worker Registration & Dev Mode Protection
 if ('serviceWorker' in navigator) {
@@ -83,6 +84,8 @@ function startApp() {
   initAchievements();
   // Start router
   initRouter();
+  // Initialize subtle scroll reveal
+  initScrollReveal();
 }
 
 if (document.readyState === 'loading') {

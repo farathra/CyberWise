@@ -121,8 +121,10 @@
 
 .continue-card {
   width: 100%;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-left: 5px solid var(--accent-coral);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
@@ -130,16 +132,25 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-4);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   position: relative;
   overflow: hidden;
 }
 
+.continue-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
+}
+
 .continue-card:hover {
   transform: var(--transform-hover);
-  box-shadow: var(--card-shadow-hover);
-  border-color: var(--color-border-subtle);
+  box-shadow: var(--glass-shadow-hover), 0 0 24px rgba(240, 128, 101, 0.16);
+  border-color: var(--glass-border-highlight);
   border-left-color: var(--accent-coral);
 }
 
@@ -217,15 +228,28 @@
 
 .all-done-card {
   width: 100%;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-success);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-left: 5px solid var(--color-success);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   display: flex;
   align-items: center;
   gap: var(--space-5);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.all-done-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 .all-done-icon {
@@ -248,16 +272,29 @@
 
 /* ── Readiness Matrix (Progress Overview) ───────────────── */
 .progress-overview {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-4);
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-overview::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 .readiness-header {
@@ -394,17 +431,30 @@
 
 /* ── Chapter Card (Dashboard Accordion) ─────────────────── */
 .chapter-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
+  position: relative;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
+.chapter-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
+}
+
 .chapter-card:hover {
-  border-color: var(--color-border-subtle);
-  box-shadow: var(--card-shadow-hover);
+  border-color: var(--glass-border-highlight);
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-2px);
 }
 
 /* Distinct Chapter Colors */
@@ -432,11 +482,11 @@
   user-select: none;
   transition: background-color var(--transition-fast);
   gap: var(--space-4);
-  background-color: var(--color-surface);
+  background-color: transparent;
 }
 
 .chapter-card-header:hover {
-  background-color: var(--color-surface-hover);
+  background-color: var(--glass-bg-hover);
 }
 
 .chapter-card-header:focus-visible {
@@ -546,9 +596,11 @@
   list-style: none;
   display: none;
   flex-direction: column;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--glass-border);
   position: relative;
-  background-color: var(--color-bg);
+  background-color: var(--glass-bg-subtle);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
 }
 
 .chapter-card.expanded .subchapter-list {
@@ -556,7 +608,7 @@
 }
 
 .subchapter-item {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--glass-border);
   position: relative;
 }
 
@@ -800,11 +852,24 @@
 
 /* Sidebar Cards (Curriculum & TOC) */
 .sidebar-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   padding: var(--space-4);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 .sidebar-card-header {
@@ -813,7 +878,7 @@
   justify-content: space-between;
   margin-bottom: var(--space-3);
   padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .sidebar-section-title {
@@ -876,7 +941,7 @@
 }
 
 .sidebar-nav-link:hover {
-  background-color: var(--color-surface-hover);
+  background-color: var(--glass-bg-hover);
   text-decoration: none;
   color: var(--color-primary);
 }
@@ -953,7 +1018,7 @@
 .toc-link:hover,
 .toc-link.active {
   color: var(--color-primary);
-  background-color: var(--color-surface-hover);
+  background-color: var(--glass-bg-hover);
   text-decoration: none;
 }
 
@@ -989,14 +1054,26 @@
 
 /* ── Markdown Lesson Content ────────────────────────────── */
 .lesson-content {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-2xl);
   padding: var(--space-6);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glass-shadow);
   margin-bottom: var(--space-6);
   line-height: 1.85;
   max-width: 860px;
+  position: relative;
+}
+
+.lesson-content::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: var(--glass-reflection);
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {

@@ -69,6 +69,11 @@
   --color-warning-bg: rgba(245, 158, 11, 0.12);
   --color-info:       #3b82f6;
   --color-info-bg:    rgba(59, 130, 246, 0.12);
+
+  /* ── Frosted Glass System ───────────────────────────────── */
+  --glass-blur-sm: 8px;
+  --glass-blur:    16px;
+  --glass-blur-lg: 24px;
 }
 
 /* ── Light Theme ─────────────────────────────────────────── */
@@ -98,11 +103,26 @@
   --color-accent-hover:     #E06A4D;
   --color-accent-subtle:    rgba(240, 128, 101, 0.10);
 
-  --header-bg: rgba(242, 239, 232, 0.92);
+  --header-bg: rgba(242, 239, 232, 0.65);
   --card-shadow: 0 1px 3px rgba(26, 29, 35, 0.06), 0 1px 2px rgba(26, 29, 35, 0.04);
   --card-shadow-hover: 0 8px 24px rgba(26, 29, 35, 0.10), 0 2px 6px rgba(26, 29, 35, 0.06);
   --card-shadow-lg: 0 16px 40px rgba(26, 29, 35, 0.12);
   --modal-overlay: rgba(26, 29, 35, 0.55);
+
+  /* Frosted Glass - Light (Higher Transparency) */
+  --glass-bg:             rgba(255, 255, 255, 0.58);
+  --glass-bg-subtle:      rgba(255, 255, 255, 0.32);
+  --glass-bg-hover:       rgba(255, 255, 255, 0.76);
+  --glass-border:         rgba(221, 216, 206, 0.55);
+  --glass-border-highlight: rgba(255, 255, 255, 0.95);
+  --glass-reflection:     linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  --glass-shadow:         0 10px 32px rgba(26, 29, 35, 0.07), 0 1px 2px rgba(26, 29, 35, 0.04);
+  --glass-shadow-hover:   0 18px 44px rgba(26, 29, 35, 0.12), 0 4px 12px rgba(26, 29, 35, 0.06);
+
+  /* Ambient light fields behind glass */
+  --ambient-orb-1: rgba(26, 138, 122, 0.16);
+  --ambient-orb-2: rgba(240, 128, 101, 0.12);
+  --ambient-orb-3: rgba(169, 154, 232, 0.14);
 }
 
 /* ── Dark Theme ──────────────────────────────────────────── */
@@ -131,11 +151,26 @@
   --color-accent-hover:     #F49A83;
   --color-accent-subtle:    rgba(240, 128, 101, 0.12);
 
-  --header-bg: rgba(16, 24, 32, 0.92);
+  --header-bg: rgba(16, 24, 32, 0.65);
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.25);
   --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.3);
   --card-shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
   --modal-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Frosted Glass - Dark (Higher Transparency) */
+  --glass-bg:             rgba(24, 36, 46, 0.48);
+  --glass-bg-subtle:      rgba(16, 24, 32, 0.35);
+  --glass-bg-hover:       rgba(32, 48, 60, 0.65);
+  --glass-border:         rgba(255, 255, 255, 0.10);
+  --glass-border-highlight: rgba(255, 255, 255, 0.18);
+  --glass-reflection:     linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+  --glass-shadow:         0 12px 38px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --glass-shadow-hover:   0 20px 54px rgba(0, 0, 0, 0.65), 0 0 20px rgba(97, 205, 168, 0.15);
+
+  /* Ambient light fields behind glass */
+  --ambient-orb-1: rgba(97, 205, 168, 0.20);
+  --ambient-orb-2: rgba(240, 128, 101, 0.14);
+  --ambient-orb-3: rgba(169, 154, 232, 0.18);
 
   /* Dark-mode status overrides for slightly more vivid */
   --color-success: #34d399;

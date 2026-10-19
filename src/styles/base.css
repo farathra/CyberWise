@@ -14,6 +14,7 @@ html {
   font-size: 16px;
   line-height: 1.6;
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
   color-scheme: light dark;
   -webkit-text-size-adjust: 100%;
 }
@@ -34,6 +35,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 #main-content {
@@ -46,13 +49,13 @@ body {
 
 #page-container {
   width: 100%;
-  animation: pageFadeSlide 0.22s var(--ease-out);
+  animation: pageFadeSlide 0.28s var(--ease-out);
 }
 
 @keyframes pageFadeSlide {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -60,9 +63,129 @@ body {
   }
 }
 
+/* ── Ambient Glowing Field (Frosted Glass Depth) ────────── */
+.ambient-glow-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 520px;
+  height: 520px;
+  top: -120px;
+  left: -80px;
+  background: radial-gradient(circle, var(--ambient-orb-1) 0%, transparent 68%);
+  animation: floatOrb1 26s infinite ease-in-out alternate;
+}
+
+.orb-2 {
+  width: 480px;
+  height: 480px;
+  top: 35%;
+  right: -120px;
+  background: radial-gradient(circle, var(--ambient-orb-2) 0%, transparent 68%);
+  animation: floatOrb2 22s infinite ease-in-out alternate;
+}
+
+.orb-3 {
+  width: 440px;
+  height: 440px;
+  bottom: -60px;
+  left: 28%;
+  background: radial-gradient(circle, var(--ambient-orb-3) 0%, transparent 68%);
+  animation: floatOrb3 30s infinite ease-in-out alternate;
+}
+
+@keyframes floatOrb1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(50px, 40px) scale(1.08); }
+  100% { transform: translate(-30px, 80px) scale(0.95); }
+}
+
+@keyframes floatOrb2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-60px, -40px) scale(1.05); }
+  100% { transform: translate(30px, 60px) scale(0.92); }
+}
+
+@keyframes floatOrb3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(40px, -50px) scale(1.1); }
+  100% { transform: translate(-40px, 20px) scale(0.96); }
+}
+
+/* ── Staggered Entrance Animations ───────────────────────── */
+.stagger-in {
+  animation: staggerFadeUp 0.35s var(--ease-out) both;
+}
+
+@keyframes staggerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-1 { animation-delay: 40ms; }
+.stagger-2 { animation-delay: 80ms; }
+.stagger-3 { animation-delay: 130ms; }
+.stagger-4 { animation-delay: 180ms; }
+.stagger-5 { animation-delay: 240ms; }
+.stagger-6 { animation-delay: 300ms; }
+
+/* ── Gentle, Non-Intrusive Scroll Reveal ─────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.42s var(--ease-out), transform 0.42s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-done {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Glass Fallback Support ──────────────────────────────── */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-panel,
+  .glass-card,
+  #site-header,
+  #tab-nav {
+    background-color: var(--color-surface) !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  #page-container {
+  #page-container,
+  .stagger-in,
+  .ambient-orb,
+  .scroll-reveal {
     animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    opacity: 1 !important;
   }
 }
 
@@ -139,21 +262,24 @@ button, input, textarea, select {
   color: var(--color-text);
 }
 
-/* ── Scrollbar ───────────────────────────────────────────── */
+/* ── Sleek Glass Scrollbar ───────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-alt);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border-subtle);
+  background: var(--glass-border);
   border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  transition: background-color var(--transition-fast);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+  background: var(--color-text-subtle);
 }

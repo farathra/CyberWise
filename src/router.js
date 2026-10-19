@@ -43,6 +43,9 @@ function handleRoute() {
   if (match) {
     try {
       match.handler(match.params);
+      if (typeof window !== 'undefined' && !hash.includes('#heading-')) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
     } catch (err) {
       console.error('[Router] Handler error for route:', hash, err);
       // Fallback to learn dashboard if route handler crashes
