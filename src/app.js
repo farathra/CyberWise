@@ -114,9 +114,10 @@ export function updateAppShellText() {
   const tabMap = {
     learn: t('nav.learn'),
     quiz: t('nav.quiz'),
+    flashcards: t('nav.flashcards'),
+    games: t('nav.games'),
     notes: t('nav.notes'),
     glossary: t('nav.glossary'),
-    games: t('nav.games'),
     analytics: t('nav.analytics'),
     achievements: t('nav.achievements')
   };

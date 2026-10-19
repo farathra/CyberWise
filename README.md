@@ -3,7 +3,7 @@
 [![Build & Deploy](https://img.shields.io/badge/Deployment-GitHub%20Pages-blue?logo=github)](https://farathra.github.io/CyberWise/)
 [![Progressive Web App](https://img.shields.io/badge/PWA-Offline%20Ready-success?logo=pwa)](https://farathra.github.io/CyberWise/)
 [![Bilingual UI](https://img.shields.io/badge/UI-English%20%7C%20Bahasa%20Indonesia-informational)](https://farathra.github.io/CyberWise/)
-[![Tests](https://img.shields.io/badge/Tests-All%20Passed%20(7%2F7)-brightgreen)](https://farathra.github.io/CyberWise/)
+[![Tests](https://img.shields.io/badge/Tests-All%20Passed%20(8%2F8)-brightgreen)](https://farathra.github.io/CyberWise/)
 
 **CyberWise** adalah platform edukasi interaktif berbasis Progressive Web Application (PWA) yang dirancang untuk membekali siswa dan pengguna digital dengan pengetahuan esensial seputar keamanan siber, privasi data, dan etika teknologi.
 
@@ -26,14 +26,21 @@ Dengan antarmuka yang bersih, modern, dan mendukung mode Gelap (*Dark Mode*) mau
 - **Master Quiz**: Ujian berbobot 50 soal acak seimbang dari seluruh kurikulum.
 - Fitur peninjauan jawaban salah (*Review Mistakes*), penjelasan rinci untuk setiap jawaban, pengacakan algoritma Fisher-Yates, dan pencatatan riwayat skor ke IndexedDB.
 
-### 3. 🎮 5 Simulasi Permainan Keamanan Siber (Games Hub)
+### 3. 🃏 Kartu Belajar & Pengulangan Cerdas (Flashcards & Smart Review)
+- **35 Kartu Autentik Kurikulum**: Pertanyaan konsep, jawaban, dan penjelasan mendalam mencakup seluruh 4 bab dan 14 sub-bab materi keamanan digital.
+- **Algoritma Spaced Repetition (SuperMemo SM-2)**: Penjadwalan cerdas berbasis daya ingat pengguna (*Again*, *Hard*, *Good*, *Easy*). Konsep sulit diulang lebih cepat, sedangkan materi yang dikuasai dijadwalkan lebih jauh ke depan.
+- **Player Active Recall 3D**: Animasi putar balik kartu 3D, dukungan pintasan keyboard (`Space`, `1-4`, `H`, `B/S`, `Esc`), tombol petunjuk (*hint*), dan tautan langsung ke materi terkait.
+- **Dasbor Metrik & Filter Cepat**: Pantau kartu jatuh tempo (*Due Today*), kartu baru, dan tingkat penguasaan (*Mastered*). Dilengkapi Quick Filter Pills (Bab 1–4, Jatuh Tempo, Baru, Berbintang, Perlu Latihan) serta pencarian real-time.
+- **Integrasi Penuh**: Tersimpan aman secara luring (*offline-first*) dengan sinkronisasi ganda (`localStorage` + `IndexedDB`) dan terhubung ke fitur Ekspor/Impor Cadangan JSON.
+
+### 4. 🎮 5 Simulasi Permainan Keamanan Siber (Games Hub)
 1. **Email Detective (Pemula)**: Investigasi email mencurigakan, analisis header pengirim, tautan tipuan (*typosquatting*), dan deteksi phishing.
 2. **Chat Trap (Pemula - Menengah)**: Simulasi percakapan chat interaktif menghadapi rekayasa sosial (*social engineering*), penipuan OTP, hadiah palsu, dan impersonasi.
 3. **Password Defender (Menengah)**: Strategi kekuatan sandi, pertahanan akun dengan MFA/2FA, dan respons insiden kebocoran data (*credential stuffing*).
 4. **Cyber Incident Commander (Lanjutan)**: Simulasi komando insiden SOC profesional — mencakup triase peringatan, investigasi log forensik, kontainmen, eradikasi malware, dan laporan pasca-insiden (*After-Action Report*).
 5. **Malware Mission (Lanjutan)**: Analisis keamanan berkas sebelum dieksekusi — mendeteksi ekstensi ganda (misal `.pdf.exe`), makro dokumen mencurigakan, entropy tinggi, sertifikat tidak valid, dan keputusan isolasi sistem.
 
-### 4. 📊 Analisis Belajar & Rekomendasi Personal (Learning Analytics & Insights)
+### 5. 📊 Analisis Belajar & Rekomendasi Personal (Learning Analytics & Insights)
 - **Dasbor Metrik KPI**: Progres materi, persentase kelulusan kuis, jumlah simulasi selesai, dan tanggal aktivitas terakhir.
 - **Rekomendasi Personal Deterministik**: Saran langkah belajar berikutnya yang dihitung secara cerdas dari topik yang perlu perbaikan, tanpa memerlukan API eksternal atau backend server.
 - **Target Belajar Mingguan (Weekly Goals)**: Pantau dan atur target baca materi dan pengerjaan kuis mingguan.
@@ -41,29 +48,29 @@ Dengan antarmuka yang bersih, modern, dan mendukung mode Gelap (*Dark Mode*) mau
 - **Grafik Tren & Aktivitas**: Visualisasi SVG interaktif untuk perkembangan skor kuis dan volume aktivitas 7 hari terakhir, dilengkapi tabel ramah *screen reader* untuk aksesibilitas.
 - **Ad-Blocker Proof**: Arsitektur netral yang kebal terhadap salah deteksi ekstensi pemblokir iklan/pelacak pada peramban.
 
-### 5. 🏆 Sistem Pencapaian & Lencana (Achievement System)
+### 6. 🏆 Sistem Pencapaian & Lencana (Achievement System)
 - **24 Lencana Penghargaan Unik**: Meliputi kategori *Materi Belajar*, *Penguasaan Kuis*, *Simulasi Game*, *Konsistensi*, dan *Eksplorasi*.
 - **Evaluasi Deterministik & Transparan**: Pelacakan progres aktual per lencana dengan indikator terukur (misal `3 / 5 materi`).
 - **Notifikasi Toast Interaktif**: Pemberitahuan lencana terbuka secara non-intrusif dengan dukungan pembaca layar (*screen reader*) dan antrean berurutan.
 - **Penyaring Kategori & Status**: Filter kartu lencana berdasarkan kategori dan status (*Semua*, *Terbuka*, *Terkunci*).
 
-### 6. 🔍 Pencarian Global (Global Search)
+### 7. 🔍 Pencarian Global (Global Search)
 - Fitur pencarian instan dengan shortcut keyboard (`Ctrl + K` / `Cmd + K`).
 - Mengindeks seluruh materi pelajaran, glosarium, catatan, dan permainan secara real-time.
 
-### 7. 📖 Glosarium Keamanan Siber (Glossary)
+### 8. 📖 Glosarium Keamanan Siber (Glossary)
 - Kamus istilah keamanan digital lengkap dengan filter kategori alfabetik, pencarian instan, dan tautan silang ke materi terkait.
 
-### 8. 📝 Catatan Pribadi (Personal Notes)
+### 9. 📝 Catatan Pribadi (Personal Notes)
 - Editor teks kaya WYSIWYG untuk membuat catatan belajar.
 - Fitur autosave, sematkan catatan penting (*pin*), filter pencarian, serta ekspor & impor catatan.
 
-### 9. 🌐 Bahasa Ganda (Bilingual UI: EN / ID)
+### 10. 🌐 Bahasa Ganda (Bilingual UI: EN / ID)
 - Antarmuka pengguna (*UI Chrome*) dapat dialihkan secara instan antara Bahasa Indonesia dan Bahasa Inggris tanpa *page reload*.
 - Seluruh konten edukasi dan skenario pembelajaran tetap disajikan dalam Bahasa Indonesia yang baku dan komunikatif.
 
-### 10. 💾 Pencadangan & Pemulihan (Backup & Restore)
-- Simpan seluruh progres belajar, riwayat kuis, catatan, progres game, pencapaian, dan pengaturan ke berkas cadangan JSON tunggal.
+### 11. 💾 Pencadangan & Pemulihan (Backup & Restore)
+- Simpan seluruh progres belajar, riwayat kuis, catatan, kartu flashcard, progres game, pencapaian, dan pengaturan ke berkas cadangan JSON tunggal.
 - Pulihkan data kapan saja pada peramban atau perangkat yang berbeda secara aman.
 
 ---
@@ -102,7 +109,7 @@ Hasil build siap saji akan dibuat di direktori `dist/`.
 CyberWise dilengkapi rangkaian pengujian otomatis end-to-end tanpa dependensi berat:
 
 ```bash
-# Menjalankan seluruh rangkaian tes (7 test suites)
+# Menjalankan seluruh rangkaian tes (8 test suites)
 npm test
 
 # Menjalankan validasi konten kurikulum dan soal kuis (420 soal)
@@ -125,6 +132,9 @@ npm run test:analytics
 
 # Menjalankan tes integritas sistem pencapaian (24 lencana)
 npm run test:achievements
+
+# Menjalankan tes sistem kartu belajar & algoritma SRS (SM-2)
+npm run test:flashcards
 ```
 
 ---
@@ -160,10 +170,12 @@ CyberWise/
 │   ├── test-glossary.js         # Verifikasi glosarium
 │   ├── test-i18n.js             # Verifikasi paritas terjemahan EN/ID
 │   ├── test-games.js            # Verifikasi skenario 5 game edukasi
-│   └── test-analytics.js        # Verifikasi metrik analitik & rekomendasi
+│   ├── test-analytics.js        # Verifikasi metrik analitik & rekomendasi
+│   ├── test-achievements.js     # Verifikasi integritas sistem pencapaian
+│   └── test-flashcards.js       # Verifikasi Spaced Repetition System & flashcards
 └── src/                         # Kode Sumber Aplikasi
     ├── main.js                  # Titik masuk utama (Entry point) & router
-    ├── app.js                   # Shell aplikasi: tema, bahasa, dialog modal
+    ├── app.js                   # Shell aplikasi: tema, bahasa, tab navigasi
     ├── router.js                # Hash router kompatibel dengan GitHub Pages
     ├── storage.js               # Utilitas localStorage terisolasi
     ├── db.js                    # Wrapper IndexedDB (Catatan, Riwayat Kuis, Backup)
@@ -177,6 +189,10 @@ CyberWise/
     │   ├── quiz.js              # Tampilan pemilihan kuis & sesi ujian
     │   ├── engine.js            # Engine pengacakan soal (Fisher-Yates) & skor
     │   └── history.js           # Pencatatan riwayat skor kuis ke IndexedDB
+    ├── flashcards/              # Modul Kartu Belajar & Spaced Repetition
+    │   ├── flashcardsData.js    # 35 kartu kurikulum autentik (Bab 1-4)
+    │   ├── srsEngine.js         # Mesin algoritma SM-2 & persistensi ganda
+    │   └── flashcardsView.js    # Dasbor ulasan & player kartu putar 3D
     ├── games/                   # Modul Simulasi Permainan (Games)
     │   ├── gamesHub.js          # Hub daftar permainan & pelacak progres
     │   ├── gamesData.js         # Registrasi metadata 5 permainan
@@ -189,8 +205,13 @@ CyberWise/
     │   ├── studyInsights.js     # UI Controller dasbor analitik & grafik
     │   ├── studyData.js         # Agregator metrik belajar & target mingguan
     │   └── recommendations.js   # Engine rekomendasi personal deterministik
+    ├── achievements/            # Modul Pencapaian & Lencana
+    │   ├── achievementRegistry.js  # Registri 24 definisi lencana
+    │   ├── achievementEngine.js    # Mesin evaluasi & persistensi
+    │   ├── achievementView.js      # Dasbor lencana & filter status
+    │   └── achievementNotification.js # Notifikasi toast interaktif
     ├── notes/                   # Modul Catatan Pribadi (Notes)
-    │   ├── notes.js             # Pengelola daftar catatan & ekspor
+    │   ├── notes.js             # Pengelola daftar catatan & ekspor/impor
     │   └── editor.js            # Editor teks WYSIWYG
     ├── glossary/                # Modul Glosarium Istilah
     ├── search/                  # Modul Pencarian Global
@@ -200,8 +221,10 @@ CyberWise/
         ├── components.css       # Tombol, kartu, badge, modal, header
         ├── learn.css            # Gaya modul belajar & materi
         ├── quiz.css             # Gaya antarmuka ujian & hasil kuis
+        ├── flashcards.css       # Gaya dasbor kartu & animasi flip 3D
         ├── games.css            # Gaya simulasi 5 permainan siber
         ├── insights.css         # Gaya dasbor analitik & grafik SVG
+        ├── achievements.css     # Gaya dasbor pencapaian & toast
         ├── notes.css            # Gaya editor catatan
         ├── glossary.css         # Gaya daftar istilah glosarium
         ├── search.css           # Gaya modal pencarian global
@@ -240,7 +263,7 @@ CyberWise menerapkan sistem identifikasi konsisten di seluruh modul materi, kuis
 CyberWise dirancang sepenuhnya statis dan kompatibel dengan **GitHub Pages**:
 
 1. Basis path dikonfigurasi melalui Vite pada `/CyberWise/`.
-2. Menggunakan **Hash-based Routing** (`#/learn`, `#/quiz`, `#/games`, `#/analytics`, `#/notes`, `#/glossary`) sehingga pengguna dapat me-refresh atau membagikan URL secara langsung tanpa kendala galat 404 pada server statis.
+2. Menggunakan **Hash-based Routing** (`#/learn`, `#/quiz`, `#/flashcards`, `#/games`, `#/notes`, `#/glossary`, `#/analytics`, `#/achievements`) sehingga pengguna dapat me-refresh atau membagikan URL secara langsung tanpa kendala galat 404 pada server statis.
 3. Service Worker mendukung cache offline yang efisien dengan pembaruan aset otomatis pada setiap rilis baru.
 
 ---

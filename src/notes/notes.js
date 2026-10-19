@@ -5,6 +5,7 @@ import DOMPurify from 'dompurify';
 import { notifyNotesChanged } from '../search/search.js';
 import { t } from '../i18n.js';
 import { checkAchievements, getAchievementsBackup, restoreAchievementsBackup } from '../achievements/achievementEngine.js';
+import { getFlashcardsBackup, restoreFlashcardsBackup } from '../flashcards/srsEngine.js';
 
 function getContainer() {
   return document.getElementById('page-container');
@@ -118,12 +119,13 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
     const data = JSON.stringify({
       exported: new Date().toISOString(),
       notes,
-      achievements: getAchievementsBackup()
+      achievements: getAchievementsBackup(),
+      flashcards: getFlashcardsBackup()
     }, null, 2);
     downloadFile('cyberwise-notes-backup.json', data, 'application/json');
   });
 
-  // Import (supports notes and achievements)
+  // Import (supports notes, achievements, and flashcards)
   document.getElementById('import-btn')?.addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -146,6 +148,11 @@ function renderNotesView(container, notes, searchQuery = '', sortBy = 'date') {
       // Restore achievements if present in backup (without deleting existing if missing)
       if (parsed.achievements) {
         await restoreAchievementsBackup(parsed.achievements);
+      }
+
+      // Restore flashcards if present in backup (without deleting existing if missing)
+      if (parsed.flashcards) {
+        await restoreFlashcardsBackup(parsed.flashcards);
       }
 
       notifyNotesChanged();
