@@ -101,17 +101,45 @@
   flex-direction: column;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: var(--space-6);
   box-shadow: var(--card-shadow);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   position: relative;
+  overflow: hidden;
+}
+
+/* Distinct Game Identifiers */
+#card-email-detective { border-top: 4px solid var(--accent-teal); }
+#card-chat-trap { border-top: 4px solid var(--accent-coral); }
+#card-password-defender { border-top: 4px solid var(--accent-mint); }
+#card-incident-commander { border-top: 4px solid var(--accent-amber); }
+#card-malware-mission { border-top: 4px solid var(--accent-violet); }
+
+#card-email-detective .game-icon-wrap { background: rgba(46, 196, 182, 0.12); }
+#card-chat-trap .game-icon-wrap { background: rgba(240, 128, 101, 0.12); }
+#card-password-defender .game-icon-wrap { background: rgba(97, 205, 168, 0.12); }
+#card-incident-commander .game-icon-wrap { background: rgba(242, 187, 96, 0.12); }
+#card-malware-mission .game-icon-wrap { background: rgba(169, 154, 232, 0.12); }
+
+.game-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
 }
 
 .game-card.playable:hover {
-  transform: translateY(-3px);
+  transform: var(--transform-hover);
   box-shadow: var(--card-shadow-hover);
   border-color: var(--color-border-subtle);
+}
+
+.game-card.playable:hover .game-icon-wrap {
+  transform: rotate(6deg) scale(1.08);
 }
 
 .game-card.coming-soon {
@@ -132,10 +160,14 @@
 }
 
 .game-status-badge {
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-full);
 }
@@ -156,6 +188,17 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.game-mechanics-badge {
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  display: inline-block;
+  user-select: none;
 }
 
 .game-card-title {

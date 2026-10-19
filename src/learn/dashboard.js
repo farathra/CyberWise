@@ -33,44 +33,86 @@ export function renderDashboard(container, manifest) {
   container.innerHTML = `
     <div class="learn-dashboard">
       <div class="dashboard-hero">
-        <h1 class="dashboard-title">${t('dashboard.title')}</h1>
-        <p class="dashboard-subtitle">${t('dashboard.subtitle')}</p>
-      </div>
-
-      <div class="progress-overview">
-        <div class="progress-stats">
-          <div class="stat">
-            <span class="stat-value">${completed}</span>
-            <span class="stat-label">${t('dashboard.completedOf', { total })}</span>
+        <div class="dashboard-hero-header">
+          <div class="dashboard-hero-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>CYBER OPERATIONS LEARNING MATRIX</span>
           </div>
-          <span class="stat-pct">${pct}%</span>
-        </div>
-        <div class="progress-bar-track">
-          <div class="progress-bar-fill" style="width: ${pct}%"></div>
+          <h1 class="dashboard-title">${t('dashboard.title')}</h1>
+          <p class="dashboard-subtitle">${t('dashboard.subtitle')}</p>
         </div>
       </div>
 
-      ${continueLesson ? `
-      <div class="continue-section">
-        <div class="continue-card">
-          <div class="continue-info">
-            <span class="continue-label">${t('dashboard.continueLabel')}</span>
-            <h2 class="continue-title">${continueLesson.title}</h2>
-            <span class="continue-chapter">${continueLesson.chapterTitle}</span>
+      <!-- Asymmetric Command Hub: Active Mission & Readiness Matrix -->
+      <div class="dashboard-command-hub">
+        <!-- Spotlight: Active Mission -->
+        ${continueLesson ? `
+        <div class="continue-section">
+          <div class="continue-card">
+            <div class="continue-card-badge-row">
+              <span class="badge badge-tech">MISSION: ${continueLesson.id.toUpperCase()}</span>
+              <span class="continue-time-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~5-8 min
+              </span>
+            </div>
+            <div class="continue-info">
+              <span class="continue-label">${t('dashboard.continueLabel')}</span>
+              <h2 class="continue-title">${continueLesson.title}</h2>
+              <span class="continue-chapter">${continueLesson.chapterTitle}</span>
+            </div>
+            <div class="continue-action-row">
+              <a href="#/learn/${continueLesson.id}" class="btn btn-primary continue-cta-btn">
+                <span>${t('dashboard.continueBtn')}</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="cta-arrow" style="width:16px;height:16px;" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </div>
           </div>
-          <a href="#/learn/${continueLesson.id}" class="btn btn-primary">${t('dashboard.continueBtn')}</a>
+        </div>` : `
+        <div class="continue-section">
+          <div class="all-done-card">
+            <span class="all-done-icon">🎉</span>
+            <div class="all-done-info">
+              <h2>${t('dashboard.allDoneTitle')}</h2>
+              <p>${t('dashboard.allDoneDesc')}</p>
+            </div>
+          </div>
+        </div>`}
+
+        <!-- Security Readiness Overview Matrix -->
+        <div class="progress-overview">
+          <div class="readiness-header">
+            <span class="readiness-title">KEAMANAN & KURIKULUM</span>
+            <span class="stat-pct">${pct}%</span>
+          </div>
+          <div class="progress-stats">
+            <div class="stat">
+              <span class="stat-value">${completed}</span>
+              <span class="stat-label">${t('dashboard.completedOf', { total })}</span>
+            </div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" style="width: ${pct}%"></div>
+          </div>
+          <div class="dashboard-quick-actions">
+            <a href="#/quiz" class="quick-action-chip" title="Uji Pemahaman">
+              <span>✍️ Kuis</span>
+            </a>
+            <a href="#/flashcards" class="quick-action-chip" title="Kartu Belajar SRS">
+              <span>🃏 Flashcards</span>
+            </a>
+            <a href="#/games" class="quick-action-chip" title="Simulasi Siber">
+              <span>🎮 Games</span>
+            </a>
+          </div>
         </div>
-      </div>` : `
-      <div class="continue-section">
-        <div class="all-done-card">
-          <span class="all-done-icon">🎉</span>
-          <h2>${t('dashboard.allDoneTitle')}</h2>
-          <p>${t('dashboard.allDoneDesc')}</p>
-        </div>
-      </div>`}
+      </div>
 
       <div class="chapters-section">
-        <h2 class="section-title">${t('dashboard.chapters')}</h2>
+        <div class="chapters-section-header">
+          <h2 class="section-title">${t('dashboard.chapters')}</h2>
+          <span class="chapters-count-badge">${chapters.length} Modul Utama</span>
+        </div>
         <div class="chapters-list">
           ${chapters.map(ch => renderChapterCard(ch, lessons)).join('')}
         </div>
@@ -101,17 +143,35 @@ function renderChapterCard(chapter, allLessons) {
   const completedCount = chapterLessons.filter(l => isComplete(l.id)).length;
   const total = chapterLessons.length;
   const pct = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+  const isAllDone = completedCount === total && total > 0;
+
+  const chapterIcons = {
+    '1': '🛡️',
+    '2': '🌐',
+    '3': '🦠',
+    '4': '🔐'
+  };
+  const icon = chapterIcons[chapter.id] || '📖';
 
   return `
-    <div class="chapter-card" data-chapter="${chapter.id}">
+    <div class="chapter-card ${isAllDone ? 'chapter-all-done' : ''}" data-chapter="${chapter.id}">
       <div class="chapter-card-header" role="button" tabindex="0" aria-expanded="true"
            aria-label="${t('dashboard.chPrefix', { id: chapter.id })}: ${chapter.title}">
         <div class="chapter-header-main">
-          <span class="chapter-badge">${t('dashboard.chPrefix', { id: chapter.id })}</span>
-          <h3 class="chapter-title">${chapter.title}</h3>
+          <span class="chapter-icon" aria-hidden="true">${icon}</span>
+          <div class="chapter-title-group">
+            <div class="chapter-badge-line">
+              <span class="chapter-badge">${t('dashboard.chPrefix', { id: chapter.id })}</span>
+              ${isAllDone ? `<span class="badge badge-success badge-sm">LENGKAP</span>` : ''}
+            </div>
+            <h3 class="chapter-title">${chapter.title}</h3>
+          </div>
         </div>
         <div class="chapter-header-right">
-          <span class="chapter-progress-text">${completedCount}/${total}</span>
+          <div class="chapter-metric-box">
+            <span class="chapter-progress-text">${completedCount}/${total}</span>
+            <span class="chapter-progress-pct">${pct}%</span>
+          </div>
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
@@ -119,14 +179,25 @@ function renderChapterCard(chapter, allLessons) {
         <div class="chapter-progress-fill" style="width: ${pct}%"></div>
       </div>
       <ul class="subchapter-list">
-        ${chapterLessons.map(lesson => `
-          <li class="subchapter-item ${isComplete(lesson.id) ? 'completed' : ''}">
+        ${chapterLessons.map((lesson, idx) => {
+          const done = isComplete(lesson.id);
+          return `
+          <li class="subchapter-item ${done ? 'completed' : ''}" data-lesson-id="${lesson.id}">
             <a href="#/learn/${lesson.id}" class="subchapter-link">
-              <span class="subchapter-check" aria-hidden="true">${isComplete(lesson.id) ? '✓' : '○'}</span>
-              <span class="subchapter-title">${lesson.title}</span>
+              <div class="subchapter-track-node">
+                <span class="subchapter-check" aria-hidden="true">${done ? '✓' : idx + 1}</span>
+              </div>
+              <div class="subchapter-text-wrap">
+                <div class="subchapter-meta-line">
+                  <span class="subchapter-code">${lesson.id.toUpperCase()}</span>
+                  <span class="subchapter-time">~5m</span>
+                </div>
+                <span class="subchapter-title">${lesson.title}</span>
+              </div>
+              <svg class="subchapter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
-          </li>
-        `).join('')}
+          </li>`;
+        }).join('')}
       </ul>
     </div>`;
 }

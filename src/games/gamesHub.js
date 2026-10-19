@@ -103,16 +103,30 @@ function renderGamesHubView(container) {
           const isPlayable = game.status === 'playable';
           const bestScore = game.progress?.bestScore;
 
+          const mechanicsMap = {
+            'email-detective': 'RADAR PHISHING & HEADER INSPECTION',
+            'chat-trap': 'SOCIAL ENGINEERING TRIAGE',
+            'password-defender': 'ENTROPY & BRUTE-FORCE DEFENSE',
+            'incident-commander': 'SOC CRISIS TRIAGE',
+            'malware-mission': 'ENDPOINT QUARANTINE PROTOCOL'
+          };
+          const mechanics = mechanicsMap[game.id] || 'SIMULATION LAB';
+
           return `
             <article class="game-card ${isPlayable ? 'playable' : 'coming-soon'}" id="card-${game.id}">
               <div class="game-card-top">
-                <span class="game-card-icon" aria-hidden="true">${game.icon}</span>
-                <span class="game-status-badge ${isPlayable ? 'ready' : 'soon'}">
-                  ${isPlayable ? t('games.statusPlayable') : t('games.statusComingSoon')}
-                </span>
+                <div class="game-icon-wrap">
+                  <span class="game-card-icon" aria-hidden="true">${game.icon}</span>
+                </div>
+                <div class="game-card-tags">
+                  <span class="game-status-badge ${isPlayable ? 'ready' : 'soon'}">
+                    ${isPlayable ? `<span class="pulse-dot" aria-hidden="true"></span> ${t('games.statusPlayable')}` : t('games.statusComingSoon')}
+                  </span>
+                </div>
               </div>
 
               <div class="game-card-body">
+                <span class="game-mechanics-badge">${mechanics}</span>
                 <h2 class="game-card-title">${t(game.titleKey)}</h2>
                 <p class="game-card-desc">${t(game.descKey)}</p>
 
